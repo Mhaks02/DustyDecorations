@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "dustydecorations:block/bamboo_banister_top",
+    "pane": "dustydecorations:block/bamboo_banister"
+  },
+  "render_type": "cutout_mipped"
+}

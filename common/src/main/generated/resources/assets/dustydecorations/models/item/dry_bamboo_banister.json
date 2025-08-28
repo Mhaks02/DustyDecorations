@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dustydecorations:block/dry_bamboo_banister"
+  }
+}

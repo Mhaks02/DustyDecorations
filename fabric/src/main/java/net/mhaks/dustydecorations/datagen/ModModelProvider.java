@@ -42,6 +42,16 @@ public class ModModelProvider extends FabricModelProvider {
 //        ;
 //        blockStateModelGenerator.family(ModBlocks.ACACIA_BANISTER.get()).generateFor(TEST_FAMILY);        // same as above but appending a BlockFamily created above instead
 
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.OAK_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.SPRUCE_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.BIRCH_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.JUNGLE_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.ACACIA_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.DARK_OAK_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.MANGROVE_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.CHERRY_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.BAMBOO_BANISTER.get());
+        CustomBlockModelGenerators.createPane(blockStateModelGenerator, ModBlocks.DRY_BAMBOO_BANISTER.get());
 
     }
 
@@ -49,5 +59,39 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
 //        itemModelGenerator.generateFlatItem(ModItems.TEST_ITEM_LOL.get(), ModelTemplates.FLAT_ITEM);
     }
+
+    public static class CustomBlockModelGenerators {
+
+        public static void createPane(BlockModelGenerators generator, Block paneBlock) {
+            TextureMapping textureMapping = new TextureMapping()
+                    .put(TextureSlot.PANE, getBlockTexture(paneBlock))
+                    .put(TextureSlot.EDGE, getBlockTexture(paneBlock, "_top"));
+            ResourceLocation pane_post = ModelTemplates.STAINED_GLASS_PANE_POST.create(paneBlock, textureMapping, generator.modelOutput);
+            ResourceLocation pane_side = ModelTemplates.STAINED_GLASS_PANE_SIDE.create(paneBlock, textureMapping, generator.modelOutput);
+            ResourceLocation pane_side_alt = ModelTemplates.STAINED_GLASS_PANE_SIDE_ALT.create(paneBlock, textureMapping, generator.modelOutput);
+            ResourceLocation pane_noside = ModelTemplates.STAINED_GLASS_PANE_NOSIDE.create(paneBlock, textureMapping, generator.modelOutput);
+            ResourceLocation pane_noside_alt = ModelTemplates.STAINED_GLASS_PANE_NOSIDE_ALT.create(paneBlock, textureMapping, generator.modelOutput);
+            Item item = paneBlock.asItem();
+            ModelTemplates.FLAT_ITEM.create(ModelLocationUtils.getModelLocation(item), TextureMapping.layer0(paneBlock), generator.modelOutput);
+            generator.blockStateOutput.accept(MultiPartGenerator.multiPart(paneBlock)
+                    .with(Variant.variant().with(VariantProperties.MODEL, pane_post))
+                    .with(Condition.condition().term(BlockStateProperties.NORTH, true),
+                            Variant.variant().with(VariantProperties.MODEL, pane_side))
+                    .with(Condition.condition().term(BlockStateProperties.EAST, true),
+                            Variant.variant().with(VariantProperties.MODEL, pane_side).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .with(Condition.condition().term(BlockStateProperties.SOUTH, true),
+                            Variant.variant().with(VariantProperties.MODEL, pane_side_alt)).with(Condition.condition().term(BlockStateProperties.WEST, true),
+                            Variant.variant().with(VariantProperties.MODEL, pane_side_alt).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .with(Condition.condition().term(BlockStateProperties.NORTH, false),
+                            Variant.variant().with(VariantProperties.MODEL, pane_noside))
+                    .with(Condition.condition().term(BlockStateProperties.EAST, false),
+                            Variant.variant().with(VariantProperties.MODEL, pane_noside_alt))
+                    .with(Condition.condition().term(BlockStateProperties.SOUTH, false),
+                            Variant.variant().with(VariantProperties.MODEL, pane_noside_alt)
+                                    .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)).with(Condition.condition().term(BlockStateProperties.WEST, false),
+                            Variant.variant().with(VariantProperties.MODEL, pane_noside).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)));
+        }
+    }
+
 
 }

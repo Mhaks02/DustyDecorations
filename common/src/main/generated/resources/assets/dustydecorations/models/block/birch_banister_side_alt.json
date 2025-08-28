@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "dustydecorations:block/birch_banister_top",
+    "pane": "dustydecorations:block/birch_banister"
+  },
+  "render_type": "cutout_mipped"
+}
