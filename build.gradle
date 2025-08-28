@@ -3,4 +3,16 @@ plugins {
     id 'fabric-loom' version '1.10-SNAPSHOT' apply false
     // see https://projects.neoforged.net/neoforged/moddevgradle for new versions
     id 'net.neoforged.moddev' version '2.0.107' apply false
+    // The latest reg version can be found at https://plugins.gradle.org/plugin/com.matyrobbrt.mc.registrationutils
+    // Please make sure to use a version compatible with your minecraft version
+    id 'com.matyrobbrt.mc.registrationutils' version '1.21.0-0.2.2'
+}
+
+registrationUtils {
+    group 'net.mhaks.dustydecorations.registration'
+    projects {
+        common { type 'common' } // The common project
+        fabric { type 'fabric' } // The fabric project
+        neoforge { type 'neoforge' } // The neoforge project
+    }
 }
