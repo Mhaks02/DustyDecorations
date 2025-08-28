@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.platform;
 
-import net.mhaks.dustydecorations.Constants;
+import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
@@ -24,7 +24,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOGGER.debug("Loaded {} for service {}", loadedService, clazz);
+        DustyDecorationsConstants.LOGGER.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }
