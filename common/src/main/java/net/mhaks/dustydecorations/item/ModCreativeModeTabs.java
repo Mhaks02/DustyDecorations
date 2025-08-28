@@ -19,6 +19,17 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.dustydecorations.test_tab"))
                     .displayItems((parameters, output) -> {
 
+                        output.accept(ModBlocks.OAK_BANISTER.get());
+                        output.accept(ModBlocks.SPRUCE_BANISTER.get());
+                        output.accept(ModBlocks.BIRCH_BANISTER.get());
+                        output.accept(ModBlocks.JUNGLE_BANISTER.get());
+                        output.accept(ModBlocks.ACACIA_BANISTER.get());
+                        output.accept(ModBlocks.DARK_OAK_BANISTER.get());
+                        output.accept(ModBlocks.MANGROVE_BANISTER.get());
+                        output.accept(ModBlocks.CHERRY_BANISTER.get());
+                        output.accept(ModBlocks.BAMBOO_BANISTER.get());
+                        output.accept(ModBlocks.DRY_BAMBOO_BANISTER.get());
+
                     }).build());
     
 
