@@ -1,10 +1,21 @@
 package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.model.ModelLocationUtils;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.IronBarsBlock;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -14,10 +25,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        createBanisterWithItem(ModBlocks.OAK_BANISTER);
+        createBanisterWithItem(ModBlocks.SPRUCE_BANISTER);
+        createBanisterWithItem(ModBlocks.BIRCH_BANISTER);
+        createBanisterWithItem(ModBlocks.JUNGLE_BANISTER);
+        createBanisterWithItem(ModBlocks.ACACIA_BANISTER);
+        createBanisterWithItem(ModBlocks.DARK_OAK_BANISTER);
+        createBanisterWithItem(ModBlocks.MANGROVE_BANISTER);
+        createBanisterWithItem(ModBlocks.CHERRY_BANISTER);
+        createBanisterWithItem(ModBlocks.BAMBOO_BANISTER);
+        createBanisterWithItem(ModBlocks.DRY_BAMBOO_BANISTER);
 
     }
 
-    private void blockWithItem(RegistryObject<Block, Block> registryObject) {
-        simpleBlockWithItem(registryObject.get(), cubeAll(registryObject.get()));
+
+
+    private void blockWithItem(RegistryObject<Block, Block> block) {
+        simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
+    private void createBanisterWithItem(RegistryObject<Block, Block> block) {
+        paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(block), getPath(block, "_top"), "cutout_mipped");
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath());
+    }
+
+    private void blockItem(RegistryObject<Block, Block> block) {
+        simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()));
+    }
+    private void blockItem(RegistryObject<Block, Block> block, String appendix) {
+        simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile("dustydcorations:block/" + block.getId().getPath() + appendix));
+    }
+
+
+    private ResourceLocation getPath(RegistryObject<Block, Block> block) {
+        return ModelLocationUtils.getModelLocation(block.get());
+    }
+    private ResourceLocation getPath(RegistryObject<Block, Block> block, String suffix) {
+        return ModelLocationUtils.getModelLocation(block.get(), suffix);
+    }
+
 }

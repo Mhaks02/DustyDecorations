@@ -15,32 +15,6 @@
     },
     {
       "apply": {
-        "model": "dustydecorations:block/dry_bamboo_banister_side",
-        "y": 90
-      },
-      "when": {
-        "east": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "dustydecorations:block/dry_bamboo_banister_side_alt"
-      },
-      "when": {
-        "south": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "dustydecorations:block/dry_bamboo_banister_side_alt",
-        "y": 90
-      },
-      "when": {
-        "west": "true"
-      }
-    },
-    {
-      "apply": {
         "model": "dustydecorations:block/dry_bamboo_banister_noside"
       },
       "when": {
@@ -49,10 +23,10 @@
     },
     {
       "apply": {
-        "model": "dustydecorations:block/dry_bamboo_banister_noside_alt"
+        "model": "dustydecorations:block/dry_bamboo_banister_side_alt"
       },
       "when": {
-        "east": "false"
+        "south": "true"
       }
     },
     {
@@ -66,11 +40,37 @@
     },
     {
       "apply": {
+        "model": "dustydecorations:block/dry_bamboo_banister_side_alt",
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
         "model": "dustydecorations:block/dry_bamboo_banister_noside",
         "y": 270
       },
       "when": {
         "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "dustydecorations:block/dry_bamboo_banister_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dustydecorations:block/dry_bamboo_banister_noside_alt"
+      },
+      "when": {
+        "east": "false"
       }
     }
   ]

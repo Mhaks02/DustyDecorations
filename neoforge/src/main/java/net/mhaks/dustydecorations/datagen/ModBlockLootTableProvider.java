@@ -34,7 +34,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     }
 
     @Override
-    protected @NotNull Iterable<Block> getKnownBlocks() {
+    protected Iterable<Block> getKnownBlocks() {
         DustyDecorationsConstants.LOGGER.info("Getting known blocks!");
         return ModBlocks.BLOCKS.getEntries().stream().map(blockRegistryObject -> (Block) blockRegistryObject.get()).toList();
     }
