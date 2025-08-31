@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.datagen.DataGenerators;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -22,7 +23,6 @@ public class DustyDecorationsNeoforge {
 
         // Use NeoForge to bootstrap the Common mod.
         DustyDecorationsConstants.LOGGER.info("Hello NeoForge world!");
-//        ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_BANISTER.get(), RenderType.CUTOUT_MIPPED);
         DustyDecorations.init();
 
 

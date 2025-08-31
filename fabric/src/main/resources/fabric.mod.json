@@ -20,9 +20,6 @@
         ],
         "client": [
           "net.mhaks.dustydecorations.DustyDecorationsClientFabric"
-        ],
-        "fabric-datagen": [
-          "net.mhaks.dustydecorations.datagen.DataGenerators"
         ]
     },
     "mixins": [

@@ -37,9 +37,3 @@ loom {
         }
     }
 }
-
-fabricApi {
-    configureDataGeneration() {
-        setOutputDirectory(project(":common").file("src/main/generated/resources"))
-    }
-}

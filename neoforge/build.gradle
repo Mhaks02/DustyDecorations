@@ -31,6 +31,12 @@ neoForge {
         server {
             server()
         }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all',
+            '--output', rootProject.project(':common').file('src/main/generated/resources').getAbsolutePath(),
+            '--existing', rootProject.project(':common').file('src/main/resources').getAbsolutePath()
+        }
     }
     mods {
         "${mod_id}" {
