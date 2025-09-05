@@ -1,0 +1,14 @@
+{
+  "corrugated_metal_open": {
+    "subtitle": "subtitles.dustydecorations.block.corrugated_metal_open",
+    "sounds": [
+      "dustydecorations:corrugated_metal_open"
+    ]
+  },
+  "corrugated_metal_close": {
+    "subtitle": "subtitles.dustydecorations.block.corrugated_metal_close",
+    "sounds": [
+      "dustydecorations:corrugated_metal_close"
+    ]
+  }
+}

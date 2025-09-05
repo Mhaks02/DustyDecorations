@@ -4,6 +4,7 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.item.ModCreativeModeTabs;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.platform.Services;
+import net.mhaks.dustydecorations.sound.ModSounds;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 
@@ -25,6 +26,8 @@ public class DustyDecorations {
         ModCreativeModeTabs.registerModCreativeModeTabs();
         ModBlocks.registerModBlocks();
         ModBlockEntities.registerModBlockEntities();
+        ModSounds.registerModSounds();
+
 
         // It is common for all supported loaders to provide a similar feature that can not be used directly in the
         // common code. A popular way to get around this is using Java's built-in service loader feature to create

@@ -88,6 +88,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         paperLanternItem(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN);
         paperLanternItem(ModBlocks.PILLAGER_PAPER_LANTERN);
         paperLanternItem(ModBlocks.WARDEN_PAPER_LANTERN);
+        blockWithItem(ModBlocks.CORRUGATED_METAL_BLOCK);
+        stairsBlock((StairBlock) ModBlocks.CORRUGATED_METAL_STAIRS.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_STAIRS);
+        slabBlock((SlabBlock) ModBlocks.CORRUGATED_METAL_SLAB.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_SLAB);
+        fenceBlock((FenceBlock) ModBlocks.CORRUGATED_METAL_FENCE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            fenceItem(ModBlocks.CORRUGATED_METAL_FENCE, ModBlocks.CORRUGATED_METAL_BLOCK);
+        fenceGateBlock((FenceGateBlock) ModBlocks.CORRUGATED_METAL_FENCE_GATE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_FENCE_GATE);
+        doorBlock((DoorBlock) ModBlocks.CORRUGATED_METAL_DOOR.get(), modLoc("block/corrugated_metal_door_bottom"), modLoc("block/corrugated_metal_door_top"));
+            flatItem(ModBlocks.CORRUGATED_METAL_DOOR);
+        trapdoorBlock((TrapDoorBlock) ModBlocks.CORRUGATED_METAL_TRAPDOOR.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()), true);
+            blockItem(ModBlocks.CORRUGATED_METAL_TRAPDOOR, "_bottom");
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE);
+        buttonBlock((ButtonBlock) ModBlocks.CORRUGATED_METAL_BUTTON.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            buttonItem(ModBlocks.CORRUGATED_METAL_BUTTON, ModBlocks.CORRUGATED_METAL_BLOCK);
+        customBlockWithItem(ModBlocks.CORRUGATED_METAL_ROOFING);
+
     }
 
 
@@ -124,7 +143,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()), 180);
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "item/" + block.getId().getPath());
     }
-
+    private void fenceItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+    private void buttonItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
 
     private void blockItem(RegistryObject<Block, Block> block) {
         simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()));
@@ -132,7 +160,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockItem(RegistryObject<Block, Block> block, String appendix) {
         simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath() + appendix));
     }
-
+    private void flatItem(RegistryObject<Block, Block> block) {
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "item/" + block.getId().getPath());
+    }
 
     private ResourceLocation getPath(RegistryObject<Block, Block> block) {
         return ModelLocationUtils.getModelLocation(block.get());

@@ -11,6 +11,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 import java.util.function.Supplier;
 
@@ -358,7 +360,59 @@ public class ModBlocks {
 
 
 
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_BLOCK = registerBlock("corrugated_metal_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_STAIRS = registerBlock("corrugated_metal_stairs",
+            () -> new StairBlock(ModBlocks.CORRUGATED_METAL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_SLAB = registerBlock("corrugated_metal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE = registerBlock("corrugated_metal_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            )); //TODO fence tags
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE_GATE = registerBlock("corrugated_metal_fence_gate",
+            () -> new CorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_DOOR = registerBlock("corrugated_metal_door",
+            () -> new CorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_TRAPDOOR = registerBlock("corrugated_metal_trapdoor",
+            () -> new CorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_PRESSURE_PLATE = registerBlock("corrugated_metal_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_BUTTON = registerBlock("corrugated_metal_button",
+            () -> new ButtonBlock(BlockSetType.COPPER, 30, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_ROOFING = registerBlock("corrugated_metal_roofing",
+            () -> new CorrugatedMetalRoofingBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
 
+
+//TODO piston behaviours, check all strengths and hardness
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
