@@ -78,6 +78,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customBlockWithItem(ModBlocks.MAGENTA_WOOL_AWNING);
         customBlockWithItem(ModBlocks.PINK_WOOL_AWNING);
 
+        paperLanternItem(ModBlocks.PAPER_LANTERN);
+        paperLanternItem(ModBlocks.SAKURA_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.TAIGA_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.ORCHID_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.PANDA_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.VILLAGER_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.CREEPER_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.PILLAGER_PAPER_LANTERN);
+        paperLanternItem(ModBlocks.WARDEN_PAPER_LANTERN);
     }
 
 
@@ -110,6 +120,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         simpleBlockItem(block.get(), models().cubeAll(block.getId().getPath(), ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID, "block/" + block.getId().getPath() + "/0")));
     }
+    private void paperLanternItem(RegistryObject<Block, Block> block) {
+        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()), 180);
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "item/" + block.getId().getPath());
+    }
+
 
     private void blockItem(RegistryObject<Block, Block> block) {
         simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()));

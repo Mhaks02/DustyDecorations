@@ -303,6 +303,59 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
 
+    //TODO lantern sound, strength, instabreak?, etc...
+    //TODO LIGHT EMISSION
+    public static final RegistryObject<Block, Block> PAPER_LANTERN = registerBlock("paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> SAKURA_PAPER_LANTERN = registerBlock("sakura_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> TAIGA_PAPER_LANTERN = registerBlock("taiga_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> ORCHID_PAPER_LANTERN = registerBlock("orchid_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> PANDA_PAPER_LANTERN = registerBlock("panda_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> VILLAGER_PAPER_LANTERN = registerBlock("villager_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> CREEPER_PAPER_LANTERN = registerBlock("creeper_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> CHICKEN_JOCKEY_PAPER_LANTERN = registerBlock("chicken_jockey_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> PILLAGER_PAPER_LANTERN = registerBlock("pillager_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> WARDEN_PAPER_LANTERN = registerBlock("warden_paper_lantern",
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+
 
 
 

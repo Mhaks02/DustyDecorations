@@ -1,10 +1,12 @@
 package net.mhaks.dustydecorations;
 
+import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.datagen.DataGenerators;
+import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -67,6 +69,7 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
 
+            BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
         }
     }
 

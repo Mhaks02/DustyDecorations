@@ -78,6 +78,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MAGENTA_WOOL_AWNING.get());
                         output.accept(ModBlocks.PINK_WOOL_AWNING.get());
 
+                        output.accept(ModBlocks.PAPER_LANTERN.get());
+                        output.accept(ModBlocks.SAKURA_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.TAIGA_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.ORCHID_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.PANDA_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.VILLAGER_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.CREEPER_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.PILLAGER_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.WARDEN_PAPER_LANTERN.get());
+
                     }).build());
     
 

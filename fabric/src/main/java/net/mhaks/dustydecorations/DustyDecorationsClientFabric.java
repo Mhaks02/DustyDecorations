@@ -2,8 +2,11 @@ package net.mhaks.dustydecorations;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
 public class DustyDecorationsClientFabric implements ClientModInitializer {
     @Override
@@ -37,5 +40,6 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
 
+        BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
     }
 }

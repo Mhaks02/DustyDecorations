@@ -24,6 +24,7 @@ public class DustyDecorations {
         ModItems.registerModItems();
         ModCreativeModeTabs.registerModCreativeModeTabs();
         ModBlocks.registerModBlocks();
+        ModBlockEntities.registerModBlockEntities();
 
         // It is common for all supported loaders to provide a similar feature that can not be used directly in the
         // common code. A popular way to get around this is using Java's built-in service loader feature to create
