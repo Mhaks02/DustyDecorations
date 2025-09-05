@@ -2,6 +2,7 @@ package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.custom.WallpaperBlock;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.model.ModelLocationUtils;
@@ -54,6 +55,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customBlockWithItem(ModBlocks.SALMON_BARREL);
         customBlockWithItem(ModBlocks.EMPTY_BARREL);
 
+        wallpaperWithItem(ModBlocks.SUNFLOWER_WALLPAPER);
+        blockWithItem(ModBlocks.REGAL_WALLPAPER);
+        wallpaperWithItem(ModBlocks.VINE_WALLPAPER);
+        blockWithItem(ModBlocks.MONSTER_WALLPAPER);
+        blockWithItem(ModBlocks.SAILOR_WALLPAPER);
+
     }
 
 
@@ -69,6 +76,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void customBlockWithItem(RegistryObject<Block, Block> block) {
         horizontalBlock(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()), 180);
         blockItem(block);
+    }
+    private void wallpaperWithItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            switch (blockState.getValue(WallpaperBlock.WEIGHT)) {
+                case 1 -> {
+                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(block.getId().getPath() + "_1", ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID, "block/" + block.getId().getPath() + "/1"))) };
+                }
+                case 2 -> {
+                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(block.getId().getPath() + "_2", ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID, "block/" + block.getId().getPath() + "/2"))) };
+                }
+                default -> {
+                    return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(block.getId().getPath() + "_0", ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID, "block/" + block.getId().getPath() + "/0")))};
+                }
+            }
+        });
+        simpleBlockItem(block.get(), models().cubeAll(block.getId().getPath(), ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID, "block/" + block.getId().getPath() + "/0")));
     }
 
     private void blockItem(RegistryObject<Block, Block> block) {

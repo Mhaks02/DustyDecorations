@@ -1,7 +1,6 @@
 package net.mhaks.dustydecorations.block;
 
 import net.mhaks.dustydecorations.DustyDecorationsConstants;
-import net.mhaks.dustydecorations.block.custom.BanisterBlock;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
@@ -196,6 +195,32 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)
             ));
 
+    public static final RegistryObject<Block, Block> SUNFLOWER_WALLPAPER = registerBlock("sunflower_wallpaper",
+            () -> new WallpaperBlock(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> REGAL_WALLPAPER = registerBlock("regal_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> VINE_WALLPAPER = registerBlock("vine_wallpaper",
+            () -> new WallpaperBlock(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> MONSTER_WALLPAPER = registerBlock("monster_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> SAILOR_WALLPAPER = registerBlock("sailor_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+
 
 
 
@@ -206,7 +231,7 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T, T> block) {
+    private static <T extends Block> void registerBlockItem(String name, Supplier<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

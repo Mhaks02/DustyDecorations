@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "weight=0": {
+      "model": "dustydecorations:block/sunflower_wallpaper_0"
+    },
+    "weight=1": {
+      "model": "dustydecorations:block/sunflower_wallpaper_1"
+    },
+    "weight=2": {
+      "model": "dustydecorations:block/sunflower_wallpaper_2"
+    }
+  }
+}
