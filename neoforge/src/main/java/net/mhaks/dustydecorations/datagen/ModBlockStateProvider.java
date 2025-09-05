@@ -36,6 +36,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createBanisterWithItem(ModBlocks.BAMBOO_BANISTER);
         createBanisterWithItem(ModBlocks.DRY_BAMBOO_BANISTER);
 
+        customBlockWithItem(ModBlocks.OAK_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.SPRUCE_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.BIRCH_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.JUNGLE_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.ACACIA_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.DARK_OAK_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.MANGROVE_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.CHERRY_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.BAMBOO_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.CRIMSON_LARGE_SHELF);
+        customBlockWithItem(ModBlocks.WARPED_LARGE_SHELF);
+
     }
 
 
@@ -46,6 +58,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void createBanisterWithItem(RegistryObject<Block, Block> block) {
         paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(block), getPath(block, "_top"), "cutout_mipped");
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath());
+    }
+//  Creates blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
+    private void customBlockWithItem(RegistryObject<Block, Block> block) {
+        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()), 180);
+        blockItem(block);
     }
 
     private void blockItem(RegistryObject<Block, Block> block) {

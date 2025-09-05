@@ -30,6 +30,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BAMBOO_BANISTER.get());
                         output.accept(ModBlocks.DRY_BAMBOO_BANISTER.get());
 
+                        output.accept(ModBlocks.OAK_LARGE_SHELF.get());
+                        output.accept(ModBlocks.SPRUCE_LARGE_SHELF.get());
+                        output.accept(ModBlocks.BIRCH_LARGE_SHELF.get());
+                        output.accept(ModBlocks.JUNGLE_LARGE_SHELF.get());
+                        output.accept(ModBlocks.ACACIA_LARGE_SHELF.get());
+                        output.accept(ModBlocks.DARK_OAK_LARGE_SHELF.get());
+                        output.accept(ModBlocks.MANGROVE_LARGE_SHELF.get());
+                        output.accept(ModBlocks.CHERRY_LARGE_SHELF.get());
+                        output.accept(ModBlocks.BAMBOO_LARGE_SHELF.get());
+                        output.accept(ModBlocks.CRIMSON_LARGE_SHELF.get());
+                        output.accept(ModBlocks.WARPED_LARGE_SHELF.get());
+
                     }).build());
     
 
