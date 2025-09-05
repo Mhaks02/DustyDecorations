@@ -3,13 +3,14 @@ package net.mhaks.dustydecorations.block;
 import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.block.custom.*;
 import net.mhaks.dustydecorations.block.custom.BarrelBlock;
+import net.mhaks.dustydecorations.block.custom.PaperLanternBlock;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -311,51 +312,61 @@ public class ModBlocks {
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> SAKURA_PAPER_LANTERN = registerBlock("sakura_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> TAIGA_PAPER_LANTERN = registerBlock("taiga_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> ORCHID_PAPER_LANTERN = registerBlock("orchid_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> PANDA_PAPER_LANTERN = registerBlock("panda_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> VILLAGER_PAPER_LANTERN = registerBlock("villager_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> CREEPER_PAPER_LANTERN = registerBlock("creeper_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> CHICKEN_JOCKEY_PAPER_LANTERN = registerBlock("chicken_jockey_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> PILLAGER_PAPER_LANTERN = registerBlock("pillager_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> WARDEN_PAPER_LANTERN = registerBlock("warden_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noCollission()
+                    .lightLevel(value -> 12)
             ));
 
 

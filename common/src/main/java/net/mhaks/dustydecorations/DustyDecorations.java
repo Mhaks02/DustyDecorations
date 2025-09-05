@@ -1,5 +1,6 @@
 package net.mhaks.dustydecorations;
 
+import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.item.ModCreativeModeTabs;
 import net.mhaks.dustydecorations.item.ModItems;

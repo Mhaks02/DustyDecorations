@@ -18,7 +18,15 @@ public class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(
                             PaperLanternBlockEntity::new,
                             ModBlocks.PAPER_LANTERN.get(),
-                            ModBlocks.SAKURA_PAPER_LANTERN.get()
+                            ModBlocks.SAKURA_PAPER_LANTERN.get(),
+                            ModBlocks.TAIGA_PAPER_LANTERN.get(),
+                            ModBlocks.ORCHID_PAPER_LANTERN.get(),
+                            ModBlocks.PANDA_PAPER_LANTERN.get(),
+                            ModBlocks.VILLAGER_PAPER_LANTERN.get(),
+                            ModBlocks.CREEPER_PAPER_LANTERN.get(),
+                            ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN.get(),
+                            ModBlocks.PILLAGER_PAPER_LANTERN.get(),
+                            ModBlocks.WARDEN_PAPER_LANTERN.get()
                     ).build(null));
 
 

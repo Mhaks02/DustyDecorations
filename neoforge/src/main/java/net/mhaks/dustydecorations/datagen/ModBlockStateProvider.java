@@ -4,11 +4,13 @@ import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.custom.WallpaperBlock;
 import net.mhaks.dustydecorations.registration.RegistryObject;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.model.ModelLocationUtils;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.Half;
+import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -78,16 +80,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customBlockWithItem(ModBlocks.MAGENTA_WOOL_AWNING);
         customBlockWithItem(ModBlocks.PINK_WOOL_AWNING);
 
-        paperLanternItem(ModBlocks.PAPER_LANTERN);
-        paperLanternItem(ModBlocks.SAKURA_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.TAIGA_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.ORCHID_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.PANDA_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.VILLAGER_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.CREEPER_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.PILLAGER_PAPER_LANTERN);
-        paperLanternItem(ModBlocks.WARDEN_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.SAKURA_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.TAIGA_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.ORCHID_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.PANDA_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.VILLAGER_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.CREEPER_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.PILLAGER_PAPER_LANTERN);
+        paperLanternWithItem(ModBlocks.WARDEN_PAPER_LANTERN);
+
         blockWithItem(ModBlocks.CORRUGATED_METAL_BLOCK);
         stairsBlock((StairBlock) ModBlocks.CORRUGATED_METAL_STAIRS.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
             blockItem(ModBlocks.CORRUGATED_METAL_STAIRS);
@@ -107,6 +110,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
             buttonItem(ModBlocks.CORRUGATED_METAL_BUTTON, ModBlocks.CORRUGATED_METAL_BLOCK);
         customBlockWithItem(ModBlocks.CORRUGATED_METAL_ROOFING);
 
+
+
+
     }
 
 
@@ -114,14 +120,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockWithItem(RegistryObject<Block, Block> block) {
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
-    private void banisterWithItem(RegistryObject<Block, Block> block) {
-        paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(block), getPath(block, "_top"), "cutout");
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath());
-    }
 //  Creates blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
     private void customBlockWithItem(RegistryObject<Block, Block> block) {
         horizontalBlock(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()), 180);
         blockItem(block);
+    }
+
+    private void banisterWithItem(RegistryObject<Block, Block> block) {
+        paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(block), getPath(block, "_top"), "cutout");
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath());
     }
     private void wallpaperWithItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
@@ -139,7 +146,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         simpleBlockItem(block.get(), models().cubeAll(block.getId().getPath(), ResourceLocation.fromNamespaceAndPath(DustyDecorationsConstants.MOD_ID, "block/" + block.getId().getPath() + "/0")));
     }
-    private void paperLanternItem(RegistryObject<Block, Block> block) {
+    private void paperLanternWithItem(RegistryObject<Block, Block> block) {
         horizontalBlock(block.get(), new ModelFile.UncheckedModelFile("dustydecorations:block/" + block.getId().getPath()), 180);
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "item/" + block.getId().getPath());
     }
