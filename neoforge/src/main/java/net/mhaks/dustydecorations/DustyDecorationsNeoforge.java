@@ -50,6 +50,23 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRY_BAMBOO_BANISTER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_BANISTER.get(), RenderType.cutout());
 
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAY_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BROWN_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIME_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BLUE_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
+
         }
     }
 

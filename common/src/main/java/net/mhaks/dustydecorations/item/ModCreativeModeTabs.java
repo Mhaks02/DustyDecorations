@@ -61,6 +61,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MONSTER_WALLPAPER.get());
                         output.accept(ModBlocks.SAILOR_WALLPAPER.get());
 
+                        output.accept(ModBlocks.WHITE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get());
+                        output.accept(ModBlocks.GRAY_WOOL_AWNING.get());
+                        output.accept(ModBlocks.BLACK_WOOL_AWNING.get());
+                        output.accept(ModBlocks.BROWN_WOOL_AWNING.get());
+                        output.accept(ModBlocks.RED_WOOL_AWNING.get());
+                        output.accept(ModBlocks.ORANGE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.YELLOW_WOOL_AWNING.get());
+                        output.accept(ModBlocks.LIME_WOOL_AWNING.get());
+                        output.accept(ModBlocks.GREEN_WOOL_AWNING.get());
+                        output.accept(ModBlocks.CYAN_WOOL_AWNING.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.BLUE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.PURPLE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.MAGENTA_WOOL_AWNING.get());
+                        output.accept(ModBlocks.PINK_WOOL_AWNING.get());
+
                     }).build());
     
 

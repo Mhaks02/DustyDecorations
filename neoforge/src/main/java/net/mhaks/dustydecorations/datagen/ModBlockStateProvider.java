@@ -61,6 +61,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MONSTER_WALLPAPER);
         blockWithItem(ModBlocks.SAILOR_WALLPAPER);
 
+        customBlockWithItem(ModBlocks.WHITE_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.LIGHT_GRAY_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.GRAY_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.BLACK_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.BROWN_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.RED_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.ORANGE_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.YELLOW_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.LIME_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.GREEN_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.CYAN_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.LIGHT_BLUE_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.BLUE_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.PURPLE_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.MAGENTA_WOOL_AWNING);
+        customBlockWithItem(ModBlocks.PINK_WOOL_AWNING);
+
     }
 
 
