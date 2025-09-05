@@ -5,16 +5,11 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.model.ModelLocationUtils;
-import net.minecraft.data.models.model.ModelTemplates;
-import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.IronBarsBlock;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -47,6 +42,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customBlockWithItem(ModBlocks.BAMBOO_LARGE_SHELF);
         customBlockWithItem(ModBlocks.CRIMSON_LARGE_SHELF);
         customBlockWithItem(ModBlocks.WARPED_LARGE_SHELF);
+
+        customBlockWithItem(ModBlocks.APPLE_BARREL);
+        customBlockWithItem(ModBlocks.SWEET_BERRIES_BARREL);
+        customBlockWithItem(ModBlocks.GLOW_BERRIES_BARREL);
+        customBlockWithItem(ModBlocks.CARROT_BARREL);
+        customBlockWithItem(ModBlocks.POTATO_BARREL);
+        customBlockWithItem(ModBlocks.BEETROOT_BARREL);
+        customBlockWithItem(ModBlocks.SEA_PICKLE_BARREL);
+        customBlockWithItem(ModBlocks.COD_BARREL);
+        customBlockWithItem(ModBlocks.SALMON_BARREL);
+        customBlockWithItem(ModBlocks.EMPTY_BARREL);
 
     }
 

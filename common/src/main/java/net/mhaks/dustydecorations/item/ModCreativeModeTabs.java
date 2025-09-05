@@ -42,6 +42,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CRIMSON_LARGE_SHELF.get());
                         output.accept(ModBlocks.WARPED_LARGE_SHELF.get());
 
+                        output.accept(ModBlocks.APPLE_BARREL.get());
+                        output.accept(ModBlocks.SWEET_BERRIES_BARREL.get());
+                        output.accept(ModBlocks.GLOW_BERRIES_BARREL.get());
+                        output.accept(ModBlocks.CARROT_BARREL.get());
+                        output.accept(ModBlocks.POTATO_BARREL.get());
+                        output.accept(ModBlocks.BEETROOT_BARREL.get());
+                        output.accept(ModBlocks.SEA_PICKLE_BARREL.get());
+                        output.accept(ModBlocks.COD_BARREL.get());
+                        output.accept(ModBlocks.SALMON_BARREL.get());
+                        output.accept(ModBlocks.EMPTY_BARREL.get());
+
                     }).build());
     
 
