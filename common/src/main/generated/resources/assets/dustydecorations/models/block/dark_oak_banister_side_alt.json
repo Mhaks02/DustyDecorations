@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_glass_pane_side_alt",
-  "render_type": "minecraft:cutout_mipped",
+  "render_type": "minecraft:cutout",
   "textures": {
     "edge": "dustydecorations:block/dark_oak_banister_top",
     "pane": "dustydecorations:block/dark_oak_banister"

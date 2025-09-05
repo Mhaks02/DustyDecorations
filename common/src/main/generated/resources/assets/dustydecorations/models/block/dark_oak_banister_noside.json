@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside",
-  "render_type": "minecraft:cutout_mipped",
+  "render_type": "minecraft:cutout",
   "textures": {
     "pane": "dustydecorations:block/dark_oak_banister"
   }
