@@ -499,6 +499,81 @@ public class ModBlocks {
             ));
 
 //TODO piston behaviours, check all strengths and hardness
+    public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW = registerBlock("hazel_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> MOCHA_SEA_WINDOW = registerBlock("mocha_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> SCARLET_SEA_WINDOW = registerBlock("scarlet_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> HONEY_SEA_WINDOW = registerBlock("honey_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> MINT_SEA_WINDOW = registerBlock("mint_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> TEAL_SEA_WINDOW = registerBlock("teal_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> CERULEAN_SEA_WINDOW = registerBlock("cerulean_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> TAUPE_SEA_WINDOW = registerBlock("taupe_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+
+    public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW_PANE = registerBlock("hazel_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> MOCHA_SEA_WINDOW_PANE = registerBlock("mocha_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> SCARLET_SEA_WINDOW_PANE = registerBlock("scarlet_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> HONEY_SEA_WINDOW_PANE = registerBlock("honey_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> MINT_SEA_WINDOW_PANE = registerBlock("mint_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> TEAL_SEA_WINDOW_PANE = registerBlock("teal_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> CERULEAN_SEA_WINDOW_PANE = registerBlock("cerulean_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> TAUPE_SEA_WINDOW_PANE = registerBlock("taupe_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
