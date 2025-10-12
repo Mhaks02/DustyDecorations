@@ -89,6 +89,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PILLAGER_PAPER_LANTERN.get());
                         output.accept(ModBlocks.WARDEN_PAPER_LANTERN.get());
 
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING.get());
+
                         output.accept(ModBlocks.HAZEL_SEA_GLASS.get());
                         output.accept(ModBlocks.MOCHA_SEA_GLASS.get());
                         output.accept(ModBlocks.SCARLET_SEA_GLASS.get());
