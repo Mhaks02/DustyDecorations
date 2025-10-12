@@ -422,6 +422,81 @@ public class ModBlocks {
                     .sound(SoundType.COPPER)
             ));
 
+    //TODO: propagateSkyLightDown or something
+    public static final RegistryObject<Block, Block> HAZEL_SEA_GLASS = registerBlock("hazel_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> MOCHA_SEA_GLASS = registerBlock("mocha_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> SCARLET_SEA_GLASS = registerBlock("scarlet_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> HONEY_SEA_GLASS = registerBlock("honey_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> MINT_SEA_GLASS = registerBlock("mint_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> TEAL_SEA_GLASS = registerBlock("teal_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> CERULEAN_SEA_GLASS = registerBlock("cerulean_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> TAUPE_SEA_GLASS = registerBlock("taupe_sea_glass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+
+    public static final RegistryObject<Block, Block> HAZEL_SEA_GLASS_PANE = registerBlock("hazel_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> MOCHA_SEA_GLASS_PANE = registerBlock("mocha_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> SCARLET_SEA_GLASS_PANE = registerBlock("scarlet_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> HONEY_SEA_GLASS_PANE = registerBlock("honey_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> MINT_SEA_GLASS_PANE = registerBlock("mint_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> TEAL_SEA_GLASS_PANE = registerBlock("teal_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> CERULEAN_SEA_GLASS_PANE = registerBlock("cerulean_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> TAUPE_SEA_GLASS_PANE = registerBlock("taupe_sea_glass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
 
 //TODO piston behaviours, check all strengths and hardness
 

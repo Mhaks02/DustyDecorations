@@ -89,6 +89,24 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PILLAGER_PAPER_LANTERN.get());
                         output.accept(ModBlocks.WARDEN_PAPER_LANTERN.get());
 
+                        output.accept(ModBlocks.HAZEL_SEA_GLASS.get());
+                        output.accept(ModBlocks.MOCHA_SEA_GLASS.get());
+                        output.accept(ModBlocks.SCARLET_SEA_GLASS.get());
+                        output.accept(ModBlocks.HONEY_SEA_GLASS.get());
+                        output.accept(ModBlocks.MINT_SEA_GLASS.get());
+                        output.accept(ModBlocks.TEAL_SEA_GLASS.get());
+                        output.accept(ModBlocks.CERULEAN_SEA_GLASS.get());
+                        output.accept(ModBlocks.TAUPE_SEA_GLASS.get());
+
+                        output.accept(ModBlocks.HAZEL_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.MOCHA_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.SCARLET_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.HONEY_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.MINT_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.TEAL_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.CERULEAN_SEA_GLASS_PANE.get());
+                        output.accept(ModBlocks.TAUPE_SEA_GLASS_PANE.get());
+
 
                     }).build());
     
