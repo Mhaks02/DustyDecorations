@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_wall",
+  "textures": {
+    "texture": "dustydecorations:block/rusted_corrugated_metal_block"
+  }
+}

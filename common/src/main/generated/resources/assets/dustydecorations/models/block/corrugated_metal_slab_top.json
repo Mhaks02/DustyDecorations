@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "dustydecorations:block/corrugated_metal_block",
-    "side": "dustydecorations:block/corrugated_metal_block",
-    "top": "dustydecorations:block/corrugated_metal_block"
-  }
-}

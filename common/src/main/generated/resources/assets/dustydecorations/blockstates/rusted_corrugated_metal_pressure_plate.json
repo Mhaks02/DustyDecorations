@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dustydecorations:block/rusted_corrugated_metal_pressure_plate"
+    },
+    "powered=true": {
+      "model": "dustydecorations:block/rusted_corrugated_metal_pressure_plate_down"
+    }
+  }
+}
