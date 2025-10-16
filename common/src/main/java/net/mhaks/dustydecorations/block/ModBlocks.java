@@ -728,6 +728,31 @@ public class ModBlocks {
                     .strength(.3f)
                     .sound(SoundType.GLASS)
             ));
+    public static final RegistryObject<Block, Block> CLUTTERED_SMALL_SHELF = registerBlock("cluttered_small_shelf",
+            () -> new ClutteredSmallShelfBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> EMPTY_SMALL_SHELF = registerBlock("empty_small_shelf",
+            () -> new EmptySmallShelfBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> SMALL_BOOKSHELF = registerBlock("small_bookshelf",
+            () -> new SmallBookshelfBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> BOOKS = registerBlock("books",
+            () -> new BooksBlock(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> BOOK_STACK = registerBlock("book_stack",
+            () -> new BookStackBlock(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .sound(SoundType.WOOD)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

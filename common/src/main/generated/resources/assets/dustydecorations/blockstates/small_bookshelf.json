@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=east,model_weight=0,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf",
+      "y": 90
+    },
+    "facing=east,model_weight=0,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf",
+      "y": 90
+    },
+    "facing=east,model_weight=1,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_1",
+      "y": 90
+    },
+    "facing=east,model_weight=1,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_1",
+      "y": 90
+    },
+    "facing=east,model_weight=2,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_2",
+      "y": 90
+    },
+    "facing=east,model_weight=2,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_2",
+      "y": 90
+    },
+    "facing=north,model_weight=0,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf"
+    },
+    "facing=north,model_weight=0,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf"
+    },
+    "facing=north,model_weight=1,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_1"
+    },
+    "facing=north,model_weight=1,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_1"
+    },
+    "facing=north,model_weight=2,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_2"
+    },
+    "facing=north,model_weight=2,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_2"
+    },
+    "facing=south,model_weight=0,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf",
+      "y": 180
+    },
+    "facing=south,model_weight=0,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf",
+      "y": 180
+    },
+    "facing=south,model_weight=1,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_1",
+      "y": 180
+    },
+    "facing=south,model_weight=1,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_1",
+      "y": 180
+    },
+    "facing=south,model_weight=2,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_2",
+      "y": 180
+    },
+    "facing=south,model_weight=2,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_2",
+      "y": 180
+    },
+    "facing=west,model_weight=0,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf",
+      "y": 270
+    },
+    "facing=west,model_weight=0,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf",
+      "y": 270
+    },
+    "facing=west,model_weight=1,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_1",
+      "y": 270
+    },
+    "facing=west,model_weight=1,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_1",
+      "y": 270
+    },
+    "facing=west,model_weight=2,waterlogged=false": {
+      "model": "dustydecorations:block/small_bookshelf_2",
+      "y": 270
+    },
+    "facing=west,model_weight=2,waterlogged=true": {
+      "model": "dustydecorations:block/small_bookshelf_2",
+      "y": 270
+    }
+  }
+}

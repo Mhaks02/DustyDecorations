@@ -163,6 +163,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.JARS.get());
                         output.accept(ModBlocks.HONEY_JAR.get());
                         output.accept(ModBlocks.INK_AND_QUILL.get());
+                        output.accept(ModBlocks.CLUTTERED_SMALL_SHELF.get());
+                        output.accept(ModBlocks.EMPTY_SMALL_SHELF.get());
+                        output.accept(ModBlocks.SMALL_BOOKSHELF.get());
+                        output.accept(ModBlocks.BOOKS.get());
+                        output.accept(ModBlocks.BOOK_STACK.get());
 
                     }).build());
     
