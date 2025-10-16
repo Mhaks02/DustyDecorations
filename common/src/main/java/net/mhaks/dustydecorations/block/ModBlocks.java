@@ -857,6 +857,9 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
+    private static RegistryObject<Block, Block> registerBlockWithoutItem(String name, Supplier<Block> block) {
+        return BLOCKS.register(name, block);
+    }
 
     private static <T extends Block> void registerBlockItem(String name, Supplier<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
