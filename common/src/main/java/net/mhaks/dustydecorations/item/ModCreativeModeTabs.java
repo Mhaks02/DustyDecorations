@@ -181,6 +181,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
                         output.accept(ModBlocks.GOLD_COINS.get());
                         output.accept(ModBlocks.SCATTERED_GOLD_COINS.get());
+                        output.accept(ModBlocks.SANDSTONE_TILE_BLOCK.get());
+                        output.accept(ModBlocks.SANDSTONE_TILE_STAIRS.get());
+                        output.accept(ModBlocks.SANDSTONE_TILE_SLAB.get());
+                        output.accept(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK.get());
 
                     }).build());
     

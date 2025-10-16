@@ -830,6 +830,27 @@ public class ModBlocks {
                     .strength(.3f)
                     .sound(SoundType.METAL)
             ));
+    public static final RegistryObject<Block, Block> SANDSTONE_TILE_BLOCK = registerBlock("sandstone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.TUFF)
+            ));
+    public static final RegistryObject<Block, Block> SANDSTONE_TILE_STAIRS = registerBlock("sandstone_tile_stairs",
+            () -> new StairBlock(ModBlocks.SANDSTONE_TILE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.TUFF)
+            ));
+    public static final RegistryObject<Block, Block> SANDSTONE_TILE_SLAB = registerBlock("sandstone_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.TUFF)
+            ));
+    public static final RegistryObject<Block, Block> MOSAIC_SANDSTONE_TILE_BLOCK = registerBlock("mosaic_sandstone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.TUFF)
+            ));
+
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
