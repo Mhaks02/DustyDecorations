@@ -11,7 +11,7 @@ public class DustyDecorationsFabric implements ModInitializer {
         // project.
 
         // Use Fabric to bootstrap the Common mod.
-        DustyDecorationsConstants.LOGGER.info("Hello Fabric world!");
+        ModConstants.LOGGER.info("Hello Fabric world!");
         DustyDecorations.init();
 
     }

@@ -2,6 +2,7 @@ package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.item.ModItems;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -14,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagProvider extends ItemTagsProvider {
     public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                               CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, blockTags, DustyDecorationsConstants.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, blockTags, ModConstants.MOD_ID, existingFileHelper);
     }
 
     @Override

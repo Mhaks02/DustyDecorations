@@ -1,7 +1,7 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -16,7 +16,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, DustyDecorationsConstants.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, ModConstants.MOD_ID, existingFileHelper);
     }
 
     @Override

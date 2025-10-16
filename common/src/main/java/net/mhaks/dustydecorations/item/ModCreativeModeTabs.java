@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.item;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.function.Supplier;
 
 public class ModCreativeModeTabs {
-    public static final RegistrationProvider<CreativeModeTab> CREATIVE_TABS = RegistrationProvider.get(BuiltInRegistries.CREATIVE_MODE_TAB, DustyDecorationsConstants.MOD_ID);
+    public static final RegistrationProvider<CreativeModeTab> CREATIVE_TABS = RegistrationProvider.get(BuiltInRegistries.CREATIVE_MODE_TAB, ModConstants.MOD_ID);
 
     public static final Supplier<CreativeModeTab> TEST_TAB = CREATIVE_TABS.register("test_tab",
             () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
@@ -190,7 +190,7 @@ public class ModCreativeModeTabs {
     
 
     public static void registerModCreativeModeTabs() {
-        DustyDecorationsConstants.LOGGER.info("Registering Mod Creative Tabs for " + DustyDecorationsConstants.MOD_ID);
+        ModConstants.LOGGER.info("Registering Mod Creative Tabs for " + ModConstants.MOD_ID);
     }
 
 }

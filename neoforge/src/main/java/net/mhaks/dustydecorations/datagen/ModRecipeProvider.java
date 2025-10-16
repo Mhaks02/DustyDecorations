@@ -1,8 +1,8 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.item.ModItems;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -58,7 +58,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                                                                        List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(recipeOutput, DustyDecorationsConstants.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+                    .save(recipeOutput, ModConstants.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
 

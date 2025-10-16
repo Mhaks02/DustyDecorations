@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.mixin;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +14,7 @@ public class MixinTitleScreen {
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
         
-        DustyDecorationsConstants.LOGGER.info("This line is printed by an example mod mixin from Fabric!");
-        DustyDecorationsConstants.LOGGER.info("MC Version: {}", Minecraft.getInstance().getVersionType());
+        ModConstants.LOGGER.info("This line is printed by an example mod mixin from Fabric!");
+        ModConstants.LOGGER.info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }

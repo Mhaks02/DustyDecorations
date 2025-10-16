@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.mixin;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,7 +13,7 @@ public class MixinMinecraft {
     @Inject(at = @At("TAIL"), method = "<init>")
     private void init(CallbackInfo info) {
         
-        DustyDecorationsConstants.LOGGER.info("This line is printed by an example mod common mixin!");
-        DustyDecorationsConstants.LOGGER.info("MC Version: {}", Minecraft.getInstance().getVersionType());
+        ModConstants.LOGGER.info("This line is printed by an example mod common mixin!");
+        ModConstants.LOGGER.info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }

@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.Holder;
@@ -19,7 +19,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        DustyDecorationsConstants.LOGGER.info("Generating!!");
+        ModConstants.LOGGER.info("Generating!!");
         dropSelf(ModBlocks.OAK_BANISTER.get());
         dropSelf(ModBlocks.SPRUCE_BANISTER.get());
         dropSelf(ModBlocks.BIRCH_BANISTER.get());
@@ -35,7 +35,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        DustyDecorationsConstants.LOGGER.info("Getting known blocks!");
+        ModConstants.LOGGER.info("Getting known blocks!");
         return ModBlocks.BLOCKS.getEntries().stream().map(blockRegistryObject -> (Block) blockRegistryObject.get()).toList();
     }
 

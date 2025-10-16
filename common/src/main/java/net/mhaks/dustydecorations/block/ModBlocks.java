@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.block;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.custom.*;
 import net.mhaks.dustydecorations.block.custom.BarrelBlock;
 import net.mhaks.dustydecorations.block.custom.PaperLanternBlock;
@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(BuiltInRegistries.BLOCK, DustyDecorationsConstants.MOD_ID);
+    public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(BuiltInRegistries.BLOCK, ModConstants.MOD_ID);
 
     public static final RegistryObject<Block, Block> OAK_BANISTER = registerBlock("oak_banister",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
@@ -864,6 +864,6 @@ public class ModBlocks {
 
 
     public static void registerModBlocks() {
-        DustyDecorationsConstants.LOGGER.info("Registering Mod Blocks for " + DustyDecorationsConstants.MOD_ID);
+        ModConstants.LOGGER.info("Registering Mod Blocks for " + ModConstants.MOD_ID);
     }
 }

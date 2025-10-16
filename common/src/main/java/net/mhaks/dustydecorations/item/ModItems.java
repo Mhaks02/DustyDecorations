@@ -1,13 +1,13 @@
 package net.mhaks.dustydecorations.item;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 
 public class ModItems {
-    public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(BuiltInRegistries.ITEM, DustyDecorationsConstants.MOD_ID);
+    public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(BuiltInRegistries.ITEM, ModConstants.MOD_ID);
 
 //    public static final RegistryObject<Item, Item> TEST_ITEM_LOL = ITEMS.register("test_item_lol",
 //            () -> new Item(new Item.Properties()
@@ -21,7 +21,7 @@ public class ModItems {
 
 
     public static void registerModItems() {
-        DustyDecorationsConstants.LOGGER.info("Registering Mod Items for " + DustyDecorationsConstants.MOD_ID);
+        ModConstants.LOGGER.info("Registering Mod Items for " + ModConstants.MOD_ID);
     }
 
 }

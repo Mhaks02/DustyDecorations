@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.custom.WallpaperBlock;
 import net.mhaks.dustydecorations.registration.RegistryObject;
@@ -18,7 +18,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, DustyDecorationsConstants.MOD_ID, exFileHelper);
+        super(output, ModConstants.MOD_ID, exFileHelper);
     }
 
     @Override

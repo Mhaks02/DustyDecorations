@@ -20,8 +20,8 @@ public class DustyDecorations {
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
 
-        DustyDecorationsConstants.LOGGER.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
-        DustyDecorationsConstants.LOGGER.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
+        ModConstants.LOGGER.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
+        ModConstants.LOGGER.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
 
         ModItems.registerModItems();
         ModCreativeModeTabs.registerModCreativeModeTabs();
@@ -37,7 +37,7 @@ public class DustyDecorations {
         // the platform specific approach.
         if (Services.PLATFORM.isModLoaded("dustydecorations")) {
 
-            DustyDecorationsConstants.LOGGER.info("Hello to DustyDecorations");
+            ModConstants.LOGGER.info("Hello to DustyDecorations");
         }
     }
 

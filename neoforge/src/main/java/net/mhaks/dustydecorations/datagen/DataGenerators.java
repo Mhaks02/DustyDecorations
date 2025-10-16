@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -16,11 +16,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = DustyDecorationsConstants.MOD_ID)
+@EventBusSubscriber(modid = ModConstants.MOD_ID)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        DustyDecorationsConstants.LOGGER.info("GatherData event is indeed eventing");
+        ModConstants.LOGGER.info("GatherData event is indeed eventing");
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();

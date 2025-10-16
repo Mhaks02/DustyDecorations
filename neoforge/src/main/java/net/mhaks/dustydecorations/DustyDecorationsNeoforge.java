@@ -15,7 +15,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
-@Mod(DustyDecorationsConstants.MOD_ID)
+@Mod(ModConstants.MOD_ID)
 public class DustyDecorationsNeoforge {
 
     public DustyDecorationsNeoforge(IEventBus eventBus, ModContainer modContainer) {
@@ -24,21 +24,21 @@ public class DustyDecorationsNeoforge {
         // project.
 
         // Use NeoForge to bootstrap the Common mod.
-        DustyDecorationsConstants.LOGGER.info("Hello NeoForge world!");
+        ModConstants.LOGGER.info("Hello NeoForge world!");
         DustyDecorations.init();
 
 
     }
 
-    @EventBusSubscriber(modid = DustyDecorationsConstants.MOD_ID, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
-            DustyDecorationsConstants.LOGGER.info("HELLO FROM CLIENT SETUP");
-            DustyDecorationsConstants.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            ModConstants.LOGGER.info("HELLO FROM CLIENT SETUP");
+            ModConstants.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_BANISTER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_BANISTER.get(), RenderType.cutout());
