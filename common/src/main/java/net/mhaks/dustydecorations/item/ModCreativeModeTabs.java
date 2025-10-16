@@ -168,6 +168,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMALL_BOOKSHELF.get());
                         output.accept(ModBlocks.BOOKS.get());
                         output.accept(ModBlocks.BOOK_STACK.get());
+                        output.accept(ModBlocks.GLOBE.get());
+                        output.accept(ModBlocks.VINTAGE_GLOBE.get());
 
                     }).build());
     

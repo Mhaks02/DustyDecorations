@@ -753,6 +753,16 @@ public class ModBlocks {
                     .strength(1f)
                     .sound(SoundType.WOOD)
             ));
+    public static final RegistryObject<Block, Block> GLOBE = registerBlock("globe",
+            () -> new GlobeBlock(BlockBehaviour.Properties.of()
+                    .strength(2.5f)
+                    .sound(SoundType.METAL)
+            ));
+    public static final RegistryObject<Block, Block> VINTAGE_GLOBE = registerBlock("vintage_globe",
+            () -> new GlobeBlock(BlockBehaviour.Properties.of()
+                    .strength(2.5f)
+                    .sound(SoundType.METAL)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
