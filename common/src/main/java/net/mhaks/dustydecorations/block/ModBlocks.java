@@ -657,6 +657,34 @@ public class ModBlocks {
                     .sound(SoundType.SLIME_BLOCK)
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> HANGING_KNIVES = registerBlock("hanging_knives",
+            () -> new HangingKnivesBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> WEDGED_KNIFE = registerBlock("wedged_knife",
+            () -> new WedgedKnifeBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.METAL)
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> WEDGED_CLEAVER = registerBlock("wedged_cleaver",
+            () -> new WedgedKnifeBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.METAL)
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> CUTTING_BOARD = registerBlock("cutting_board",
+            () -> new CuttingBoardBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> KNIFE_AND_CUTTING_BOARD = registerBlock("knife_and_cutting_board",
+            () -> new CuttingBoardBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

@@ -150,6 +150,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.COILED_ROPE.get());
                         output.accept(ModBlocks.HANGING_COD.get());
                         output.accept(ModBlocks.HANGING_SALMON.get());
+                        output.accept(ModBlocks.HANGING_KNIVES.get());
+                        output.accept(ModBlocks.WEDGED_KNIFE.get());
+                        output.accept(ModBlocks.WEDGED_CLEAVER.get());
+                        output.accept(ModBlocks.CUTTING_BOARD.get());
+                        output.accept(ModBlocks.KNIFE_AND_CUTTING_BOARD.get());
 
                     }).build());
     
