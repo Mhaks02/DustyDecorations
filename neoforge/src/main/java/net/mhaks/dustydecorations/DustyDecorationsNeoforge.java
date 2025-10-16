@@ -77,6 +77,9 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GLASS_BUOY.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SMALL_GLASS_BUOYS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WOODEN_BUOYS.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROPE.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_COD.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_SALMON.get(), RenderType.cutout());
         }
     }
 

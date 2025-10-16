@@ -146,6 +146,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GLASS_BUOY.get());
                         output.accept(ModBlocks.SMALL_GLASS_BUOYS.get());
                         output.accept(ModBlocks.WOODEN_BUOYS.get());
+                        output.accept(ModBlocks.ROPE.get());
+                        output.accept(ModBlocks.COILED_ROPE.get());
+                        output.accept(ModBlocks.HANGING_COD.get());
+                        output.accept(ModBlocks.HANGING_SALMON.get());
 
                     }).build());
     

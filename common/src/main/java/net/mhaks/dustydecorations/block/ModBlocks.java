@@ -634,6 +634,29 @@ public class ModBlocks {
                     .strength(.3f)
                     .sound(SoundType.WOOD)
             ));
+    //TODO: conditional blockstate to connect rope to coiled rope
+    public static final RegistryObject<Block, Block> ROPE = registerBlock("rope",
+            () -> new ChainBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> COILED_ROPE = registerBlock("coiled_rope",
+            () -> new CoiledRopeBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> HANGING_COD = registerBlock("hanging_cod",
+            () -> new HangingFishBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.SLIME_BLOCK)
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> HANGING_SALMON = registerBlock("hanging_salmon",
+            () -> new HangingFishBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.SLIME_BLOCK)
+                    .noCollission()
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
