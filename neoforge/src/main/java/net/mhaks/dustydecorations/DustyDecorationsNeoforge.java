@@ -70,6 +70,9 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
 
             BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSTED_ANCHOR.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIFE_PRESERVER.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREASURE_MAP.get(), RenderType.cutout());
         }
     }
 

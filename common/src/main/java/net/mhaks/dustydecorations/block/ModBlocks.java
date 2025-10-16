@@ -574,6 +574,32 @@ public class ModBlocks {
                     .strength(0.3f)
             ));
 
+    //TODO: la hitbox est pas dingue tbh
+    public static final RegistryObject<Block, Block> RUSTED_ANCHOR = registerBlock("rusted_anchor",
+            () -> new RustedAnchorBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.METAL)
+            ));
+    public static final RegistryObject<Block, Block> LIFE_PRESERVER = registerBlock("life_preserver",
+            () -> new LifePreserverBlock(BlockBehaviour.Properties.of()
+                    .strength(.6f)
+                    .sound(SoundType.WOOL)
+            ));
+    //TODO: 3.5 pixels thickness au lieu de 4
+    public static final RegistryObject<Block, Block> DISPLAYED_OARS = registerBlock("displayed_oars",
+            () -> new DisplayedOarsBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.CHISELED_BOOKSHELF)
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    //TODO: vérifier toprim / fullface etc...
+    public static final RegistryObject<Block, Block> TREASURE_MAP = registerBlock("treasure_map",
+            () -> new TreasureMapBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+                    .noCollission()
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

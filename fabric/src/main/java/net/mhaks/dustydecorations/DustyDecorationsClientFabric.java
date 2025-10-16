@@ -41,5 +41,8 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
 
         BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUSTED_ANCHOR.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIFE_PRESERVER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TREASURE_MAP.get(), RenderType.cutout());
     }
 }

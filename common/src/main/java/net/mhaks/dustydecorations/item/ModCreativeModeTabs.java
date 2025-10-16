@@ -136,6 +136,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CERULEAN_SEA_WINDOW_PANE.get());
                         output.accept(ModBlocks.TAUPE_SEA_WINDOW_PANE.get());
 
+                        output.accept(ModBlocks.RUSTED_ANCHOR.get());
+                        output.accept(ModBlocks.LIFE_PRESERVER.get());
+                        output.accept(ModBlocks.DISPLAYED_OARS.get());
+                        output.accept(ModBlocks.TREASURE_MAP.get());
 
                     }).build());
     

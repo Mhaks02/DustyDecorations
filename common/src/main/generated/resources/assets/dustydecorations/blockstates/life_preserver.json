@@ -1,0 +1,212 @@
+{
+  "variants": {
+    "down=false,facing=down,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=false,facing=down,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=false,facing=down,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=false,facing=down,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=false,facing=east,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=false,facing=east,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=false,facing=east,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=false,facing=east,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=false,facing=north,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=false,facing=north,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=false,facing=north,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=false,facing=north,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=false,facing=south,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=false,facing=south,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=false,facing=south,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=false,facing=south,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=false,facing=up,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=false,facing=up,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=false,facing=up,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=false,facing=up,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=false,facing=west,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=false,facing=west,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=false,facing=west,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=false,facing=west,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=true,facing=down,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=true,facing=down,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=true,facing=down,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=true,facing=down,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 180
+    },
+    "down=true,facing=east,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=true,facing=east,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=true,facing=east,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=true,facing=east,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 90
+    },
+    "down=true,facing=north,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=true,facing=north,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=true,facing=north,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=true,facing=north,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90
+    },
+    "down=true,facing=south,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=true,facing=south,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=true,facing=south,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=true,facing=south,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 180
+    },
+    "down=true,facing=up,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=true,facing=up,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=true,facing=up,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=true,facing=up,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver"
+    },
+    "down=true,facing=west,up=false,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=true,facing=west,up=false,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=true,facing=west,up=true,waterlogged=false": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    },
+    "down=true,facing=west,up=true,waterlogged=true": {
+      "model": "dustydecorations:block/life_preserver",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
