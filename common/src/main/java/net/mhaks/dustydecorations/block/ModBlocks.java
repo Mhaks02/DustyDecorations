@@ -148,6 +148,7 @@ public class ModBlocks {
                     .noOcclusion()
             ));
 
+    //TODO: VoxelShapes can be simplified with a Shapes.join with BooleanOP.ONLY_FIRST I think
     public static final RegistryObject<Block, Block> APPLE_BARREL = registerBlock("apple_barrel",
             () -> new BarrelBlock(BlockBehaviour.Properties.of()
                     .strength(2.5f)
@@ -498,7 +499,6 @@ public class ModBlocks {
                     .strength(0.3f)
             ));
 
-//TODO piston behaviours, check all strengths and hardness
     public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW = registerBlock("hazel_sea_window",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
@@ -851,6 +851,9 @@ public class ModBlocks {
                     .sound(SoundType.TUFF)
             ));
 
+
+
+//TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
