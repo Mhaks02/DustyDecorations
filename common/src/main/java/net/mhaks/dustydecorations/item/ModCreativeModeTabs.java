@@ -170,6 +170,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BOOK_STACK.get());
                         output.accept(ModBlocks.GLOBE.get());
                         output.accept(ModBlocks.VINTAGE_GLOBE.get());
+                        output.accept(ModBlocks.BOVINE_SKULL.get());
+                        output.accept(ModBlocks.EQUINE_SKULL.get());
+                        output.accept(ModBlocks.CANINE_SKULL.get());
 
                     }).build());
     

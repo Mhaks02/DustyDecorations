@@ -763,6 +763,21 @@ public class ModBlocks {
                     .strength(2.5f)
                     .sound(SoundType.METAL)
             ));
+    public static final RegistryObject<Block, Block> BOVINE_SKULL = registerBlock("bovine_skull",
+            () -> new BovineSkullBlock(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+    public static final RegistryObject<Block, Block> EQUINE_SKULL = registerBlock("equine_skull",
+            () -> new EquineSkullBlock(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+    public static final RegistryObject<Block, Block> CANINE_SKULL = registerBlock("canine_skull",
+            () -> new CanineSkullBlock(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

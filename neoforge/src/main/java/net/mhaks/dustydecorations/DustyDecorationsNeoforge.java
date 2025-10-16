@@ -89,6 +89,9 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLUTTERED_SMALL_SHELF.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GLOBE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.VINTAGE_GLOBE.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BOVINE_SKULL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.EQUINE_SKULL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CANINE_SKULL.get(), RenderType.cutout());
         }
     }
 
