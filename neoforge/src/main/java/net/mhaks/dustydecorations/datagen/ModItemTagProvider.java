@@ -1,7 +1,5 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.DustyDecorationsConstants;
-import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -20,6 +18,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        //TODO: CorrugatedFence, Rope
 //        tag(ModItems.<MY_ITEM>.get());
     }
 }

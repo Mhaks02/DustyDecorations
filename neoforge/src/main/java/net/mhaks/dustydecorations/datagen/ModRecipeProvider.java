@@ -1,7 +1,5 @@
 package net.mhaks.dustydecorations.datagen;
 
-import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

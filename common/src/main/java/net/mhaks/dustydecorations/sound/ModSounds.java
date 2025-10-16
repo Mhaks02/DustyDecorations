@@ -10,7 +10,7 @@ import net.minecraft.sounds.SoundEvent;
 public class ModSounds {
     public static final RegistrationProvider<SoundEvent> SOUND_EVENTS = RegistrationProvider.get(BuiltInRegistries.SOUND_EVENT, ModConstants.MOD_ID);
 
-    //TODO actually add the sound assets lol
+    //TODO: actually add the sound assets lol
     public static final RegistryObject<SoundEvent, SoundEvent> CORRUGATED_METAL_OPEN = registerSoundEvent("corrugated_metal_open");
     public static final RegistryObject<SoundEvent, SoundEvent> CORRUGATED_METAL_CLOSE = registerSoundEvent("corrugated_metal_close");
 
