@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=east,stacked_pots=1,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_1",
+      "y": 90
+    },
+    "facing=east,stacked_pots=1,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_1",
+      "y": 90
+    },
+    "facing=east,stacked_pots=2,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_2",
+      "y": 90
+    },
+    "facing=east,stacked_pots=2,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_2",
+      "y": 90
+    },
+    "facing=east,stacked_pots=3,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_3",
+      "y": 90
+    },
+    "facing=east,stacked_pots=3,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_3",
+      "y": 90
+    },
+    "facing=east,stacked_pots=4,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_4",
+      "y": 90
+    },
+    "facing=east,stacked_pots=4,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_4",
+      "y": 90
+    },
+    "facing=north,stacked_pots=1,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_1"
+    },
+    "facing=north,stacked_pots=1,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_1"
+    },
+    "facing=north,stacked_pots=2,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_2"
+    },
+    "facing=north,stacked_pots=2,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_2"
+    },
+    "facing=north,stacked_pots=3,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_3"
+    },
+    "facing=north,stacked_pots=3,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_3"
+    },
+    "facing=north,stacked_pots=4,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_4"
+    },
+    "facing=north,stacked_pots=4,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_4"
+    },
+    "facing=south,stacked_pots=1,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_1",
+      "y": 180
+    },
+    "facing=south,stacked_pots=1,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_1",
+      "y": 180
+    },
+    "facing=south,stacked_pots=2,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_2",
+      "y": 180
+    },
+    "facing=south,stacked_pots=2,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_2",
+      "y": 180
+    },
+    "facing=south,stacked_pots=3,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_3",
+      "y": 180
+    },
+    "facing=south,stacked_pots=3,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_3",
+      "y": 180
+    },
+    "facing=south,stacked_pots=4,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_4",
+      "y": 180
+    },
+    "facing=south,stacked_pots=4,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_4",
+      "y": 180
+    },
+    "facing=west,stacked_pots=1,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_1",
+      "y": 270
+    },
+    "facing=west,stacked_pots=1,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_1",
+      "y": 270
+    },
+    "facing=west,stacked_pots=2,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_2",
+      "y": 270
+    },
+    "facing=west,stacked_pots=2,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_2",
+      "y": 270
+    },
+    "facing=west,stacked_pots=3,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_3",
+      "y": 270
+    },
+    "facing=west,stacked_pots=3,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_3",
+      "y": 270
+    },
+    "facing=west,stacked_pots=4,waterlogged=false": {
+      "model": "dustydecorations:block/pots_and_pans_4",
+      "y": 270
+    },
+    "facing=west,stacked_pots=4,waterlogged=true": {
+      "model": "dustydecorations:block/pots_and_pans_4",
+      "y": 270
+    }
+  }
+}

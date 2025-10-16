@@ -155,6 +155,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WEDGED_CLEAVER.get());
                         output.accept(ModBlocks.CUTTING_BOARD.get());
                         output.accept(ModBlocks.KNIFE_AND_CUTTING_BOARD.get());
+                        output.accept(ModBlocks.IRON_FRYING_PAN.get());
+                        output.accept(ModBlocks.COPPER_FRYING_PAN.get());
+                        output.accept(ModBlocks.BIG_COOKING_POT.get());
+                        output.accept(ModBlocks.POTS_AND_PANS.get());
+                        output.accept(Items.BOWL);
 
                     }).build());
     

@@ -685,6 +685,33 @@ public class ModBlocks {
                     .strength(1.5f)
                     .sound(SoundType.WOOD)
             ));
+    //TODO: particles have wood texture i need to change that
+    public static final RegistryObject<Block, Block> IRON_FRYING_PAN = registerBlock("iron_frying_pan",
+            () -> new FryingPanBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .sound(SoundType.METAL)
+            ));
+    public static final RegistryObject<Block, Block> COPPER_FRYING_PAN = registerBlock("copper_frying_pan",
+            () -> new FryingPanBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> BIG_COOKING_POT = registerBlock("big_cooking_pot",
+            () -> new BigCookingPotBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .sound(SoundType.METAL)
+            ));
+    //TODO: different voxelshapes for each blockstate
+    public static final RegistryObject<Block, Block> POTS_AND_PANS = registerBlock("pots_and_pans",
+            () -> new PotsAndPansBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .sound(SoundType.METAL)
+                ));
+    public static final RegistryObject<Block, Block> DECORATIVE_BOWL = registerBlockWithoutItem("decorative_bowl",
+            () -> new DecorativeBowlBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.WOOD)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
