@@ -1,0 +1,77 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"particle": "dustydecorations:block/big_shark_jaw",
+		"sharkjaws": "dustydecorations:block/big_shark_jaw"
+	},
+	"elements": [
+		{
+			"name": "lower_jaw",
+			"from": [-8, 0.52466, -6.71189],
+			"to": [24, 0.52466, 9.28811],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 3.34034, 8.09808]},
+			"faces": {
+				"up": {"uv": [0, 8, 16, 16], "rotation": 180, "texture": "#sharkjaws"},
+				"down": {"uv": [16, 8, 0, 16], "texture": "#sharkjaws"}
+			}
+		},
+		{
+			"name": "upper_jaw",
+			"from": [-8, 0.51595, 6.90445],
+			"to": [24, 0.51595, 22.90445],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 3.34034, 8.09808]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 8], "rotation": 180, "texture": "#sharkjaws"},
+				"down": {"uv": [16, 0, 0, 8], "texture": "#sharkjaws"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 3, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 3, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 74, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 74, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.33, 0.33, 0.33]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"translation": [2.75, -4.5, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, -6.5, -10]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "big_shark_jaw",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

@@ -173,6 +173,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BOVINE_SKULL.get());
                         output.accept(ModBlocks.EQUINE_SKULL.get());
                         output.accept(ModBlocks.CANINE_SKULL.get());
+                        output.accept(ModBlocks.FISH_BONES.get());
+                        output.accept(ModBlocks.SMALL_SHARK_JAW.get());
+                        output.accept(ModBlocks.BIG_SHARK_JAW.get());
+                        output.accept(ModBlocks.MEGALODON_TOOTH.get());
+                        output.accept(ModBlocks.FISHING_LURES.get());
 
                     }).build());
     

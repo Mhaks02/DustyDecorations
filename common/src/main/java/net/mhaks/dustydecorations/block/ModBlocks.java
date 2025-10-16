@@ -778,6 +778,41 @@ public class ModBlocks {
                     .strength(1f)
                     .sound(SoundType.BONE_BLOCK)
             ));
+    public static final RegistryObject<Block, Block> FISH_BONES = registerBlock("fish_bones",
+            () -> new FishBonesBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.BONE_BLOCK)
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> SMALL_SHARK_JAW = registerBlock("small_shark_jaw",
+            () -> new SmallSharkJawBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.BONE_BLOCK)
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    //TODO: trouver un moyen de changer les placement rules parce que là j'aime pas
+    public static final RegistryObject<Block, Block> BIG_SHARK_JAW = registerBlock("big_shark_jaw",
+            () -> new BigSharkJawBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.BONE_BLOCK)
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> MEGALODON_TOOTH = registerBlock("megalodon_tooth",
+            () -> new SmallSharkJawBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.BONE_BLOCK)
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> FISHING_LURES = registerBlock("fishing_lures",
+            () -> new FishingLuresBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.BONE_BLOCK)
+                    .noOcclusion()
+                    .noCollission()
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

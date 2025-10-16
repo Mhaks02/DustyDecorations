@@ -92,6 +92,11 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BOVINE_SKULL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.EQUINE_SKULL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CANINE_SKULL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FISH_BONES.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SMALL_SHARK_JAW.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIG_SHARK_JAW.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MEGALODON_TOOTH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FISHING_LURES.get(), RenderType.cutout());
         }
     }
 
