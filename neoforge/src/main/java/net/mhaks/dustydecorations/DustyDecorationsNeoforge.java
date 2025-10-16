@@ -97,6 +97,8 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIG_SHARK_JAW.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MEGALODON_TOOTH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FISHING_LURES.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SCATTERED_GOLD_COINS.get(), RenderType.cutout());
+
         }
     }
 

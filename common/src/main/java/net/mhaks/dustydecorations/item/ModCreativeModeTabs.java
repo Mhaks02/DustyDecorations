@@ -178,6 +178,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BIG_SHARK_JAW.get());
                         output.accept(ModBlocks.MEGALODON_TOOTH.get());
                         output.accept(ModBlocks.FISHING_LURES.get());
+                        output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
+                        output.accept(ModBlocks.GOLD_COINS.get());
+                        output.accept(ModBlocks.SCATTERED_GOLD_COINS.get());
 
                     }).build());
     
