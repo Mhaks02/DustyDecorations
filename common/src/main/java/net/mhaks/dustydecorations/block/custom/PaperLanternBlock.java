@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class PaperLanternBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final MapCodec<PaperLanternBlock> CODEC = simpleCodec(PaperLanternBlock::new);
+
     public PaperLanternBlock(Properties properties) {
         super(properties);
     }

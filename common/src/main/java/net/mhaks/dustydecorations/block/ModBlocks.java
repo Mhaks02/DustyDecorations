@@ -306,8 +306,8 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
 
-    //TODO lantern sound, strength, instabreak?, etc...
-    //TODO LIGHT EMISSION
+    //TODO: lantern sound, strength, instabreak?, etc...
+    // TODO: CHANGE ANIMATION TO NEW ONE
     public static final RegistryObject<Block, Block> PAPER_LANTERN = registerBlock("paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
