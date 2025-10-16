@@ -1,0 +1,177 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "dustydecorations:block/posters",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_1",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_2",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_3",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_4",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_5",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_6",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_7",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_8",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_9",
+        "y": 90
+      },
+      {
+        "model": "dustydecorations:block/posters_10",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "dustydecorations:block/posters"
+      },
+      {
+        "model": "dustydecorations:block/posters_1"
+      },
+      {
+        "model": "dustydecorations:block/posters_2"
+      },
+      {
+        "model": "dustydecorations:block/posters_3"
+      },
+      {
+        "model": "dustydecorations:block/posters_4"
+      },
+      {
+        "model": "dustydecorations:block/posters_5"
+      },
+      {
+        "model": "dustydecorations:block/posters_6"
+      },
+      {
+        "model": "dustydecorations:block/posters_7"
+      },
+      {
+        "model": "dustydecorations:block/posters_8"
+      },
+      {
+        "model": "dustydecorations:block/posters_9"
+      },
+      {
+        "model": "dustydecorations:block/posters_10"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "dustydecorations:block/posters",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_1",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_2",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_3",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_4",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_5",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_6",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_7",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_8",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_9",
+        "y": 180
+      },
+      {
+        "model": "dustydecorations:block/posters_10",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "dustydecorations:block/posters",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_1",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_2",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_3",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_4",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_5",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_6",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_7",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_8",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_9",
+        "y": 270
+      },
+      {
+        "model": "dustydecorations:block/posters_10",
+        "y": 270
+      }
+    ]
+  }
+}

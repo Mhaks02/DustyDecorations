@@ -140,6 +140,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIFE_PRESERVER.get());
                         output.accept(ModBlocks.DISPLAYED_OARS.get());
                         output.accept(ModBlocks.TREASURE_MAP.get());
+                        output.accept(ModBlocks.SCATTERED_PAPERS.get());
+                        output.accept(ModBlocks.POSTERS.get());
+                        output.accept(ModBlocks.PAPER_STACK.get());
 
                     }).build());
     

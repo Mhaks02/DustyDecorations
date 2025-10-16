@@ -600,6 +600,25 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
                     .noCollission()
             ));
+    //TODO: scattered papers model offset
+    public static final RegistryObject<Block, Block> SCATTERED_PAPERS = registerBlock("scattered_papers",
+            () -> new ScatteredPapersBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+                    .noCollission()
+            ));
+    //TODO: determine if it's better to randomise the textures or to be able to choose by breaking and placing
+    public static final RegistryObject<Block, Block> POSTERS = registerBlock("posters",
+            () -> new PostersBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> PAPER_STACK = registerBlock("paper_stack",
+            () -> new PaperStackBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

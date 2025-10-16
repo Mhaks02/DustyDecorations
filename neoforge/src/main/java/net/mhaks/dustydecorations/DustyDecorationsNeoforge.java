@@ -73,6 +73,7 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSTED_ANCHOR.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIFE_PRESERVER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREASURE_MAP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.POSTERS.get(), RenderType.cutout());
         }
     }
 
