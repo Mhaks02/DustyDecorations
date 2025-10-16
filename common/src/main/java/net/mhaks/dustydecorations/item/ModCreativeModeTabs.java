@@ -160,6 +160,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BIG_COOKING_POT.get());
                         output.accept(ModBlocks.POTS_AND_PANS.get());
                         output.accept(Items.BOWL);
+                        output.accept(ModBlocks.JARS.get());
+                        output.accept(ModBlocks.HONEY_JAR.get());
+                        output.accept(ModBlocks.INK_AND_QUILL.get());
 
                     }).build());
     

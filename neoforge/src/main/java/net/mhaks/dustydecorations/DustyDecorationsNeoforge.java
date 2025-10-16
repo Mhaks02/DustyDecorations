@@ -84,6 +84,8 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WEDGED_KNIFE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WEDGED_CLEAVER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.KNIFE_AND_CUTTING_BOARD.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.JARS.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.INK_AND_QUILL.get(), RenderType.cutout());
         }
     }
 

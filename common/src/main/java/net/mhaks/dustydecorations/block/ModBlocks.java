@@ -712,6 +712,22 @@ public class ModBlocks {
                     .strength(1.5f)
                     .sound(SoundType.WOOD)
             ));
+    //TODO: different voxelshapes for each blockstate
+    public static final RegistryObject<Block, Block> JARS = registerBlock("jars",
+            () -> new JarsBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> HONEY_JAR = registerBlock("honey_jar",
+            () -> new HoneyJarBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> INK_AND_QUILL = registerBlock("ink_and_quill",
+            () -> new InkAndQuillBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.GLASS)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
