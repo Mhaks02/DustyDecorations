@@ -813,6 +813,23 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    //TODO: custom sounds
+    public static final RegistryObject<Block, Block> GOLD_COINS_BLOCK = registerBlock("gold_coins_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(6f)
+                    .sound(SoundType.METAL)
+            ));
+    public static final RegistryObject<Block, Block> GOLD_COINS = registerBlock("gold_coins",
+            () -> new GoldCoinsLayerBlock(BlockBehaviour.Properties.of()
+                    .strength(.6f)
+                    .sound(SoundType.METAL)
+                    .isViewBlocking((state, level, pos) -> state.getValue(GoldCoinsLayerBlock.LAYERS) >= 8)
+            ));
+    public static final RegistryObject<Block, Block> SCATTERED_GOLD_COINS = registerBlock("scattered_gold_coins",
+            () -> new ScatteredGoldCoinsBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.METAL)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
