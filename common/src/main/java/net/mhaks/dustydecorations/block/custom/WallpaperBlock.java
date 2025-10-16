@@ -9,23 +9,24 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class WallpaperBlock extends Block {
-    public static final IntegerProperty WEIGHT = IntegerProperty.create("weight", 0, 2);
+    public static final IntegerProperty MODEL_WEIGHT = IntegerProperty.create("model_weight", 0, 2);
+
     public WallpaperBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState()
-                .setValue(WEIGHT, 0));
+                .setValue(MODEL_WEIGHT, 0));
     }
 
     @Override
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
-        this.registerDefaultState(defaultBlockState().setValue(WEIGHT, RandomSource.create().nextInt(0, 3)));
-
+        this.registerDefaultState(defaultBlockState()
+                .setValue(MODEL_WEIGHT, RandomSource.create().nextInt(0, 3)));
     }
 
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(WEIGHT);
+        builder.add(MODEL_WEIGHT);
     }
 }

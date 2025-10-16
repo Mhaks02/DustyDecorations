@@ -1,12 +1,12 @@
 {
   "variants": {
-    "weight=0": {
-      "model": "dustydecorations:block/vine_wallpaper_0"
+    "model_weight=0": {
+      "model": "dustydecorations:block/vine_wallpaper"
     },
-    "weight=1": {
+    "model_weight=1": {
       "model": "dustydecorations:block/vine_wallpaper_1"
     },
-    "weight=2": {
+    "model_weight=2": {
       "model": "dustydecorations:block/vine_wallpaper_2"
     }
   }

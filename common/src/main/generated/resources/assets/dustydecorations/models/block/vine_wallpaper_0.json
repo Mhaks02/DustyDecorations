@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "dustydecorations:block/vine_wallpaper/0"
-  }
-}

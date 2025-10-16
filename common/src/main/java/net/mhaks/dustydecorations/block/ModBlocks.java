@@ -199,27 +199,27 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)
             ));
 
-    public static final RegistryObject<Block, Block> SUNFLOWER_WALLPAPER = registerBlock("sunflower_wallpaper",
+    public static final RegistryObject<Block, Block> SUNFLOWER_WALLPAPER_BLOCK = registerBlock("sunflower_wallpaper",
             () -> new WallpaperBlock(BlockBehaviour.Properties.of()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)
             ));
-    public static final RegistryObject<Block, Block> REGAL_WALLPAPER = registerBlock("regal_wallpaper",
+    public static final RegistryObject<Block, Block> REGAL_WALLPAPER_BLOCK = registerBlock("regal_wallpaper",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)
             ));
-    public static final RegistryObject<Block, Block> VINE_WALLPAPER = registerBlock("vine_wallpaper",
+    public static final RegistryObject<Block, Block> VINE_WALLPAPER_BLOCK = registerBlock("vine_wallpaper",
             () -> new WallpaperBlock(BlockBehaviour.Properties.of()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)
             ));
-    public static final RegistryObject<Block, Block> MONSTER_WALLPAPER = registerBlock("monster_wallpaper",
+    public static final RegistryObject<Block, Block> MONSTER_WALLPAPER_BLOCK = registerBlock("monster_wallpaper",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)
             ));
-    public static final RegistryObject<Block, Block> SAILOR_WALLPAPER = registerBlock("sailor_wallpaper",
+    public static final RegistryObject<Block, Block> SAILOR_WALLPAPER_BLOCK = registerBlock("sailor_wallpaper",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)

@@ -55,11 +55,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SALMON_BARREL.get());
                         output.accept(ModBlocks.EMPTY_BARREL.get());
 
-                        output.accept(ModBlocks.SUNFLOWER_WALLPAPER.get());
-                        output.accept(ModBlocks.REGAL_WALLPAPER.get());
-                        output.accept(ModBlocks.VINE_WALLPAPER.get());
-                        output.accept(ModBlocks.MONSTER_WALLPAPER.get());
-                        output.accept(ModBlocks.SAILOR_WALLPAPER.get());
+                        output.accept(ModBlocks.SUNFLOWER_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.REGAL_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.VINE_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.MONSTER_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SAILOR_WALLPAPER_BLOCK.get());
 
                         output.accept(ModBlocks.WHITE_WOOL_AWNING.get());
                         output.accept(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get());
