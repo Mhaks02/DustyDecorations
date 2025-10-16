@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "model_weight=0,waterlogged=false": {
+      "model": "dustydecorations:block/glass_buoy"
+    },
+    "model_weight=0,waterlogged=true": {
+      "model": "dustydecorations:block/glass_buoy"
+    },
+    "model_weight=1,waterlogged=false": {
+      "model": "dustydecorations:block/glass_buoy_1"
+    },
+    "model_weight=1,waterlogged=true": {
+      "model": "dustydecorations:block/glass_buoy_1"
+    },
+    "model_weight=2,waterlogged=false": {
+      "model": "dustydecorations:block/glass_buoy_2"
+    },
+    "model_weight=2,waterlogged=true": {
+      "model": "dustydecorations:block/glass_buoy_2"
+    },
+    "model_weight=3,waterlogged=false": {
+      "model": "dustydecorations:block/glass_buoy_3"
+    },
+    "model_weight=3,waterlogged=true": {
+      "model": "dustydecorations:block/glass_buoy_3"
+    }
+  }
+}

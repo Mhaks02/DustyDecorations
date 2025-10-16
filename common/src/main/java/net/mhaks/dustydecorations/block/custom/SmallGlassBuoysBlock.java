@@ -1,0 +1,110 @@
+package net.mhaks.dustydecorations.block.custom;
+
+import com.mojang.serialization.MapCodec;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.stream.Stream;
+
+public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final IntegerProperty MODEL_WEIGHT = IntegerProperty.create("model_weight", 0, 2);
+    public static final MapCodec<SmallGlassBuoysBlock> CODEC = simpleCodec(SmallGlassBuoysBlock::new);
+
+    public SmallGlassBuoysBlock(Properties properties) {
+        super(properties);
+        registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(MODEL_WEIGHT, 0));
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+        return CODEC;
+    }
+
+    private static final VoxelShape SHAPE_N = Stream.of(
+            Block.box(0, 0, 2, 16, 8, 14),
+            Block.box(3, 8, 5, 12, 16, 14)
+    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_S = Stream.of(
+            Block.box(0, 0, 2, 16, 8, 14),
+            Block.box(4, 8, 2, 13, 16, 11)
+    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_E = Stream.of(
+            Block.box(2, 0, 0, 14, 8, 16),
+            Block.box(2, 8, 3, 11, 16, 12)
+    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_W = Stream.of(
+            Block.box(2, 0, 0, 14, 8, 16),
+            Block.box(5, 8, 4, 14, 16, 13)
+    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        switch (state.getValue(FACING)) {
+            case NORTH -> {
+                return SHAPE_N;
+            }
+            case EAST -> {
+                return SHAPE_E;
+            }
+            case WEST -> {
+                return SHAPE_W;
+            }
+            default -> {
+                return SHAPE_S;
+            }
+        }    }
+
+    @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+        super.onPlace(state, level, pos, oldState, movedByPiston);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(MODEL_WEIGHT, RandomSource.create().nextInt(0, 3)));
+    }
+
+    @Override
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState()
+                .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
+    }
+
+    @Override
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        if (state.getValue(WATERLOGGED)) {
+            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
+        return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+    }
+
+    @Override
+    protected FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, WATERLOGGED, MODEL_WEIGHT);
+    }
+}

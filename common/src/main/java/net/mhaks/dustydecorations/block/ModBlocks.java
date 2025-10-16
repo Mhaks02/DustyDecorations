@@ -619,6 +619,21 @@ public class ModBlocks {
                     .strength(.2f)
                     .sound(SoundType.WOOL)
             ));
+    public static final RegistryObject<Block, Block> GLASS_BUOY = registerBlock("glass_buoy",
+            () -> new GlassBuoyBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> SMALL_GLASS_BUOYS = registerBlock("small_glass_buoys",
+            () -> new SmallGlassBuoysBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> WOODEN_BUOYS = registerBlock("wooden_buoys",
+            () -> new WoodenBuoysBlock(BlockBehaviour.Properties.of()
+                    .strength(.3f)
+                    .sound(SoundType.WOOD)
+            ));
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);

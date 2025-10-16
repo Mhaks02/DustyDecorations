@@ -143,6 +143,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SCATTERED_PAPERS.get());
                         output.accept(ModBlocks.POSTERS.get());
                         output.accept(ModBlocks.PAPER_STACK.get());
+                        output.accept(ModBlocks.GLASS_BUOY.get());
+                        output.accept(ModBlocks.SMALL_GLASS_BUOYS.get());
+                        output.accept(ModBlocks.WOODEN_BUOYS.get());
 
                     }).build());
     
