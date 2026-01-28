@@ -422,9 +422,68 @@ public class ModBlocks {
                     .lightLevel(value -> 12)
             ));
 
-
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_BLOCK = registerBlock("corrugated_metal_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_GRATE = registerBlock("corrugated_metal_grate",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_STAIRS = registerBlock("corrugated_metal_stairs",
+            () -> new StairBlock(ModBlocks.CORRUGATED_METAL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_SLAB = registerBlock("corrugated_metal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE = registerBlock("corrugated_metal_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            )); //TODO: fence tags
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE_GATE = registerBlock("corrugated_metal_fence_gate",
+            () -> new RustedCorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_DOOR = registerBlock("corrugated_metal_door",
+            () -> new RustedCorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_TRAPDOOR = registerBlock("corrugated_metal_trapdoor",
+            () -> new RustedCorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_PRESSURE_PLATE = registerBlock("corrugated_metal_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_BUTTON = registerBlock("corrugated_metal_button",
+            () -> new ButtonBlock(BlockSetType.COPPER, 30, BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> CORRUGATED_METAL_ROOFING = registerBlock("corrugated_metal_roofing",
+            () -> new CorrugatedMetalRoofingBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
 
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_BLOCK = registerBlock("rusted_corrugated_metal_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_GRATE = registerBlock("rusted_corrugated_metal_grate",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
