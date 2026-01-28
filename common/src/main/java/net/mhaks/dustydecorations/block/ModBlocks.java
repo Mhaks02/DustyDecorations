@@ -695,6 +695,45 @@ public class ModBlocks {
                     .strength(0.3f)
             ));
 
+    public static final RegistryObject<Block, Block> CREAM_SEAGLASS_LAMP = registerBlock("cream_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> HAZEL_SEAGLASS_LAMP = registerBlock("hazel_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> MOCHA_SEAGLASS_LAMP = registerBlock("mocha_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> SCARLET_SEAGLASS_LAMP = registerBlock("scarlet_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> HONEY_SEAGLASS_LAMP = registerBlock("honey_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> MINT_SEAGLASS_LAMP = registerBlock("mint_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> TEAL_SEAGLASS_LAMP = registerBlock("teal_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> CERULEAN_SEAGLASS_LAMP = registerBlock("cerulean_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+    public static final RegistryObject<Block, Block> TAUPE_SEAGLASS_LAMP = registerBlock("taupe_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+            ));
+
     //TODO: la hitbox est pas dingue tbh
     public static final RegistryObject<Block, Block> RUSTED_ANCHOR = registerBlock("rusted_anchor",
             () -> new RustedAnchorBlock(BlockBehaviour.Properties.of()

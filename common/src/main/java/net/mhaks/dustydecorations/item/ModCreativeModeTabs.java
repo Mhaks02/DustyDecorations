@@ -161,6 +161,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CERULEAN_SEA_WINDOW_PANE.get());
                         output.accept(ModBlocks.TAUPE_SEA_WINDOW_PANE.get());
 
+                        output.accept(ModBlocks.CREAM_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.HAZEL_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.MOCHA_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.SCARLET_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.HONEY_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.MINT_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.TEAL_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.CERULEAN_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.TAUPE_SEAGLASS_LAMP.get());
+
                         output.accept(ModBlocks.RUSTED_ANCHOR.get());
                         output.accept(ModBlocks.LIFE_PRESERVER.get());
                         output.accept(ModBlocks.DISPLAYED_OARS.get());
