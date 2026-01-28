@@ -80,6 +80,18 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)
                     .noOcclusion()
             ));
+    public static final RegistryObject<Block, Block> CRIMSON_BANISTER = registerBlock("crimson_banister",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(1.0f)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> WARPED_BANISTER = registerBlock("warped_banister",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(1.0f)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()
+            ));
 
     public static final RegistryObject<Block, Block> OAK_LARGE_SHELF = registerBlock("oak_large_shelf",
             () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
