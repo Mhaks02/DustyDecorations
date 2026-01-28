@@ -535,81 +535,86 @@ public class ModBlocks {
             ));
 
     //TODO: propagateSkyLightDown or something
-    public static final RegistryObject<Block, Block> HAZEL_SEA_GLASS = registerBlock("hazel_sea_glass",
+    public static final RegistryObject<Block, Block> HAZEL_SEAGLASS = registerBlock("hazel_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> MOCHA_SEA_GLASS = registerBlock("mocha_sea_glass",
+    public static final RegistryObject<Block, Block> MOCHA_SEAGLASS = registerBlock("mocha_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> SCARLET_SEA_GLASS = registerBlock("scarlet_sea_glass",
+    public static final RegistryObject<Block, Block> SCARLET_SEAGLASS = registerBlock("scarlet_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> HONEY_SEA_GLASS = registerBlock("honey_sea_glass",
+    public static final RegistryObject<Block, Block> HONEY_SEAGLASS = registerBlock("honey_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> MINT_SEA_GLASS = registerBlock("mint_sea_glass",
+    public static final RegistryObject<Block, Block> MINT_SEAGLASS = registerBlock("mint_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> TEAL_SEA_GLASS = registerBlock("teal_sea_glass",
+    public static final RegistryObject<Block, Block> TEAL_SEAGLASS = registerBlock("teal_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> CERULEAN_SEA_GLASS = registerBlock("cerulean_sea_glass",
+    public static final RegistryObject<Block, Block> CERULEAN_SEAGLASS = registerBlock("cerulean_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
-    public static final RegistryObject<Block, Block> TAUPE_SEA_GLASS = registerBlock("taupe_sea_glass",
+    public static final RegistryObject<Block, Block> TAUPE_SEAGLASS = registerBlock("taupe_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
             ));
 
-    public static final RegistryObject<Block, Block> HAZEL_SEA_GLASS_PANE = registerBlock("hazel_sea_glass_pane",
+    public static final RegistryObject<Block, Block> HAZEL_SEAGLASS_PANE = registerBlock("hazel_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .sound(SoundType.GLASS)
             ));
-    public static final RegistryObject<Block, Block> MOCHA_SEA_GLASS_PANE = registerBlock("mocha_sea_glass_pane",
+    public static final RegistryObject<Block, Block> MOCHA_SEAGLASS_PANE = registerBlock("mocha_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
-    public static final RegistryObject<Block, Block> SCARLET_SEA_GLASS_PANE = registerBlock("scarlet_sea_glass_pane",
+    public static final RegistryObject<Block, Block> SCARLET_SEAGLASS_PANE = registerBlock("scarlet_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
-    public static final RegistryObject<Block, Block> HONEY_SEA_GLASS_PANE = registerBlock("honey_sea_glass_pane",
+    public static final RegistryObject<Block, Block> HONEY_SEAGLASS_PANE = registerBlock("honey_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
-    public static final RegistryObject<Block, Block> MINT_SEA_GLASS_PANE = registerBlock("mint_sea_glass_pane",
+    public static final RegistryObject<Block, Block> MINT_SEAGLASS_PANE = registerBlock("mint_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
-    public static final RegistryObject<Block, Block> TEAL_SEA_GLASS_PANE = registerBlock("teal_sea_glass_pane",
+    public static final RegistryObject<Block, Block> TEAL_SEAGLASS_PANE = registerBlock("teal_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
-    public static final RegistryObject<Block, Block> CERULEAN_SEA_GLASS_PANE = registerBlock("cerulean_sea_glass_pane",
+    public static final RegistryObject<Block, Block> CERULEAN_SEAGLASS_PANE = registerBlock("cerulean_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
-    public static final RegistryObject<Block, Block> TAUPE_SEA_GLASS_PANE = registerBlock("taupe_sea_glass_pane",
+    public static final RegistryObject<Block, Block> TAUPE_SEAGLASS_PANE = registerBlock("taupe_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
             ));
 
+    public static final RegistryObject<Block, Block> CREAM_SEA_WINDOW = registerBlock("cream_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
     public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW = registerBlock("hazel_sea_window",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
@@ -651,6 +656,11 @@ public class ModBlocks {
                     .noOcclusion()
             ));
 
+    public static final RegistryObject<Block, Block> CREAM_SEA_WINDOW_PANE = registerBlock("cream_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
     public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW_PANE = registerBlock("hazel_sea_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
