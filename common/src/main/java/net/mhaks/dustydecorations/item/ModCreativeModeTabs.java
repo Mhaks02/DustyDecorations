@@ -62,6 +62,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.VINE_WALLPAPER_BLOCK.get());
                         output.accept(ModBlocks.MONSTER_WALLPAPER_BLOCK.get());
                         output.accept(ModBlocks.SAILOR_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.COPPER_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.STELLAR_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.PUMPKIN_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SOUL_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.FOREST_FESTIVE_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.STRIPED_FESTIVE_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SNOWMEN_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK.get());
 
                         output.accept(ModBlocks.WHITE_WOOL_AWNING.get());
                         output.accept(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get());

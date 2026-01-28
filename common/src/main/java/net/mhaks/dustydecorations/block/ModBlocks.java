@@ -237,6 +237,46 @@ public class ModBlocks {
                     .strength(0.8f)
                     .sound(SoundType.WOOL)
             ));
+    public static final RegistryObject<Block, Block> COPPER_WALLPAPER_BLOCK = registerBlock("copper_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> STELLAR_WALLPAPER_BLOCK = registerBlock("stellar_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PUMPKIN_WALLPAPER_BLOCK = registerBlock("pumpkin_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> SOUL_WALLPAPER_BLOCK = registerBlock("soul_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> FOREST_FESTIVE_WALLPAPER_BLOCK = registerBlock("forest_festive_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> STRIPED_FESTIVE_WALLPAPER_BLOCK = registerBlock("striped_festive_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> SNOWMEN_WALLPAPER_BLOCK = registerBlock("snowmen_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> SNOWFLAKE_WALLPAPER_BLOCK = registerBlock("snowflake_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f)
+                    .sound(SoundType.WOOL)
+            ));
 
     public static final RegistryObject<Block, Block> WHITE_WOOL_AWNING = registerBlock("white_wool_awning",
             () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
