@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 
 public class WoolAwningBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final MapCodec<WoolAwningBlock> CODEC = WoolAwningBlock.simpleCodec(WoolAwningBlock::new);
+    public static final MapCodec<WoolAwningBlock> CODEC = simpleCodec(WoolAwningBlock::new);
 
     public WoolAwningBlock(Properties properties) {
         super(properties);

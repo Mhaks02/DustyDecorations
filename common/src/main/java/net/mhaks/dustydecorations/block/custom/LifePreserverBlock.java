@@ -30,7 +30,7 @@ public class LifePreserverBlock extends HorizontalDirectionalBlock implements Si
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final BooleanProperty UP = BlockStateProperties.UP;
     public static final BooleanProperty DOWN = BlockStateProperties.DOWN;
-    public static final MapCodec<LifePreserverBlock> CODEC = LifePreserverBlock.simpleCodec(LifePreserverBlock::new);
+    public static final MapCodec<LifePreserverBlock> CODEC = simpleCodec(LifePreserverBlock::new);
     
     public LifePreserverBlock(Properties properties) {
         super(properties);

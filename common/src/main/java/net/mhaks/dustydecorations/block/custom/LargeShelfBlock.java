@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class LargeShelfBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final MapCodec<LargeShelfBlock> CODEC = LargeShelfBlock.simpleCodec(LargeShelfBlock::new);
+    public static final MapCodec<LargeShelfBlock> CODEC = simpleCodec(LargeShelfBlock::new);
 
     public LargeShelfBlock(Properties properties) {
         super(properties);

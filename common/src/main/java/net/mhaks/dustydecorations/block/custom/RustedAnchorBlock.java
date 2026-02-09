@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 
 public class RustedAnchorBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final MapCodec<RustedAnchorBlock> CODEC = RustedAnchorBlock.simpleCodec(RustedAnchorBlock::new);
+    public static final MapCodec<RustedAnchorBlock> CODEC = simpleCodec(RustedAnchorBlock::new);
     
     public RustedAnchorBlock(Properties properties) {
         super(properties);

@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.stream.Stream;
 
 public class BarrelBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<BarrelBlock> CODEC = BarrelBlock.simpleCodec(BarrelBlock::new);
+    public static final MapCodec<BarrelBlock> CODEC = simpleCodec(BarrelBlock::new);
 
     public BarrelBlock(Properties properties) {
         super(properties);

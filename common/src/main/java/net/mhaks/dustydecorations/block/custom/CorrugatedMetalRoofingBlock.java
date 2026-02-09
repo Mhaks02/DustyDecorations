@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 
 public class CorrugatedMetalRoofingBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final MapCodec<CorrugatedMetalRoofingBlock> CODEC = CorrugatedMetalRoofingBlock.simpleCodec(CorrugatedMetalRoofingBlock::new);
+    public static final MapCodec<CorrugatedMetalRoofingBlock> CODEC = simpleCodec(CorrugatedMetalRoofingBlock::new);
 
     public CorrugatedMetalRoofingBlock(Properties properties) {
         super(properties);

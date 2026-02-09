@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class DisplayedOarsBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final MapCodec<DisplayedOarsBlock> CODEC = DisplayedOarsBlock.simpleCodec(DisplayedOarsBlock::new);
+    public static final MapCodec<DisplayedOarsBlock> CODEC = simpleCodec(DisplayedOarsBlock::new);
 
     public DisplayedOarsBlock(Properties properties) {
         super(properties);

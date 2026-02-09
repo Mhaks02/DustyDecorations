@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 
 public class EmptyBarrelBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final MapCodec<EmptyBarrelBlock> CODEC = EmptyBarrelBlock.simpleCodec(EmptyBarrelBlock::new);
+    public static final MapCodec<EmptyBarrelBlock> CODEC = simpleCodec(EmptyBarrelBlock::new);
 
     public EmptyBarrelBlock(Properties properties) {
         super(properties);
