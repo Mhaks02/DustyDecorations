@@ -131,6 +131,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         SeaGlassPaneBlockWithFlatItem(ModBlocks.TEAL_SEA_GLASS_PANE, ModBlocks.TEAL_SEA_GLASS);
         SeaGlassPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_GLASS_PANE, ModBlocks.CERULEAN_SEA_GLASS);
         SeaGlassPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_GLASS_PANE, ModBlocks.TAUPE_SEA_GLASS);
+        TransparentBlockWithItem(ModBlocks.HAZEL_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.MOCHA_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.SCARLET_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.HONEY_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.MINT_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.TEAL_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.CERULEAN_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.TAUPE_SEAGLASS);
+
+        seaglassPaneBlockWithFlatItem(ModBlocks.HAZEL_SEAGLASS_PANE, ModBlocks.HAZEL_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.MOCHA_SEAGLASS_PANE, ModBlocks.MOCHA_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.SCARLET_SEAGLASS_PANE, ModBlocks.SCARLET_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.HONEY_SEAGLASS_PANE, ModBlocks.HONEY_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.MINT_SEAGLASS_PANE, ModBlocks.MINT_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.TEAL_SEAGLASS_PANE, ModBlocks.TEAL_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEAGLASS_PANE, ModBlocks.CERULEAN_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.TAUPE_SEAGLASS_PANE, ModBlocks.TAUPE_SEAGLASS);
 
         TransparentBlockWithItem(ModBlocks.HAZEL_SEA_WINDOW);
         TransparentBlockWithItem(ModBlocks.MOCHA_SEA_WINDOW);
@@ -149,6 +166,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         SeaWindowPaneBlockWithFlatItem(ModBlocks.TEAL_SEA_WINDOW_PANE, ModBlocks.TEAL_SEA_WINDOW);
         SeaWindowPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_WINDOW_PANE, ModBlocks.CERULEAN_SEA_WINDOW);
         SeaWindowPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_WINDOW_PANE, ModBlocks.TAUPE_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.HAZEL_SEA_WINDOW_PANE, ModBlocks.HAZEL_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.MOCHA_SEA_WINDOW_PANE, ModBlocks.MOCHA_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.SCARLET_SEA_WINDOW_PANE, ModBlocks.SCARLET_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.HONEY_SEA_WINDOW_PANE, ModBlocks.HONEY_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.MINT_SEA_WINDOW_PANE, ModBlocks.MINT_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.TEAL_SEA_WINDOW_PANE, ModBlocks.TEAL_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_WINDOW_PANE, ModBlocks.CERULEAN_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_WINDOW_PANE, ModBlocks.TAUPE_SEA_WINDOW);
+
+        seaglassLampWithBlockItem(ModBlocks.CREAM_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.HAZEL_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.MOCHA_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.SCARLET_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.HONEY_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.MINT_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.TEAL_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.CERULEAN_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.TAUPE_SEAGLASS_LAMP);
 
         customHorizontalBlockWithItem(ModBlocks.RUSTED_ANCHOR);
         customDirectionalBlockWithItem(ModBlocks.LIFE_PRESERVER);
@@ -657,6 +692,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
             }
         });
         flatBlockItem(ModBlocks.SCATTERED_GOLD_COINS, "/0");
+    }
+
+    private void seaglassLampWithBlockItem(RegistryObject<Block, Block> block) {
+        ModelFile on = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_on"));
+        ModelFile off = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_off"));
+        getVariantBuilder(block.get())
+                .partialState().with(SeaglassLampBlock.LAMP_ON, true).addModels(new ConfiguredModel(on))
+                .partialState().with(SeaglassLampBlock.LAMP_ON, false).addModels(new ConfiguredModel(off));
+        blockItem(block, "_on");
     }
 
 

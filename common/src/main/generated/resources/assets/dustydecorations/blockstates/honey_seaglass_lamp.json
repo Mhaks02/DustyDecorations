@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lamp_on=false": {
+      "model": "dustydecorations:block/honey_seaglass_lamp_off"
+    },
+    "lamp_on=true": {
+      "model": "dustydecorations:block/honey_seaglass_lamp_on"
+    }
+  }
+}

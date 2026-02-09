@@ -50,6 +50,14 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAL_SEA_GLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEA_GLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEA_GLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCARLET_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HONEY_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAL_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEAGLASS.get(), RenderType.translucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEA_GLASS_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEA_GLASS_PANE.get(), RenderType.translucent());
@@ -59,7 +67,16 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAL_SEA_GLASS_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEA_GLASS_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEA_GLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCARLET_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HONEY_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAL_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEAGLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEAGLASS_PANE.get(), RenderType.translucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREAM_SEA_WINDOW.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEA_WINDOW.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEA_WINDOW.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCARLET_SEA_WINDOW.get(), RenderType.translucent());
@@ -69,6 +86,7 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEA_WINDOW.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEA_WINDOW.get(), RenderType.translucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREAM_SEA_WINDOW_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEA_WINDOW_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEA_WINDOW_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCARLET_SEA_WINDOW_PANE.get(), RenderType.translucent());
@@ -77,6 +95,16 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAL_SEA_WINDOW_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEA_WINDOW_PANE.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEA_WINDOW_PANE.get(), RenderType.translucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREAM_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCARLET_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HONEY_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAL_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CERULEAN_SEAGLASS_LAMP.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TAUPE_SEAGLASS_LAMP.get(), RenderType.translucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUSTED_ANCHOR.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIFE_PRESERVER.get(), RenderType.cutout());
