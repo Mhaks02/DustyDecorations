@@ -245,6 +245,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
             blockItem(ModBlocks.SANDSTONE_TILE_SLAB);
         blockWithItem(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK);
 
+        blockWithItem(ModBlocks.BURLAP_BLOCK);
+        stairsBlock((StairBlock) ModBlocks.BURLAP_STAIRS.get(), blockTexture(ModBlocks.BURLAP_BLOCK.get()));
+            blockItem(ModBlocks.BURLAP_STAIRS);
+        slabBlock((SlabBlock) ModBlocks.BURLAP_SLAB.get(), blockTexture(ModBlocks.BURLAP_BLOCK.get()), blockTexture(ModBlocks.BURLAP_BLOCK.get()));
+            blockItem(ModBlocks.BURLAP_SLAB);
+        customBlockWithItem(ModBlocks.BURLAP_CARPET);
+        customHorizontalBlockWithItem(ModBlocks.BURLAP_AWNING);
+        burlapSackWithItem();
+
 
     }
 
@@ -708,6 +717,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .partialState().with(SeaglassLampBlock.LAMP_ON, true).addModels(new ConfiguredModel(on))
                 .partialState().with(SeaglassLampBlock.LAMP_ON, false).addModels(new ConfiguredModel(off));
         blockItem(block, "_on");
+    }
+    private void burlapSackWithItem() {
+        getVariantBuilder(ModBlocks.BURLAP_SACK.get()).forAllStates(blockState -> {
+            switch (blockState.getValue(BurlapSackBlock.STACKED_SACKS)) {
+                case 2: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BURLAP_SACK.getId().getPath() + "_2"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+                }
+                case 3: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BURLAP_SACK.getId().getPath() + "_3"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+                }
+                case 1:
+                default: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BURLAP_SACK.getId().getPath() + "_1"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+                }
+            }
+        });
+        blockItem(ModBlocks.BURLAP_SACK, "_1");
     }
 
 

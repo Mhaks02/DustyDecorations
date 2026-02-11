@@ -230,6 +230,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BIG_NAUTILUS_SHELL.get());
                         output.accept(ModBlocks.BIG_NAUTILUS_SHELL_LANTERN.get());
 
+                        output.accept(ModBlocks.BURLAP_BLOCK.get());
+                        output.accept(ModBlocks.BURLAP_STAIRS.get());
+                        output.accept(ModBlocks.BURLAP_SLAB.get());
+                        output.accept(ModBlocks.BURLAP_CARPET.get());
+                        output.accept(ModBlocks.BURLAP_AWNING.get());
+                        output.accept(ModBlocks.BURLAP_SACK.get());
+
                     }).build());
     
 

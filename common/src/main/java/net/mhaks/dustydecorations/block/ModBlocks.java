@@ -1067,6 +1067,38 @@ public class ModBlocks {
                     .lightLevel(value -> 15)
             ));
 
+    public static final RegistryObject<Block, Block> BURLAP_BLOCK = registerBlock("burlap",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.5f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BURLAP_STAIRS = registerBlock("burlap_stairs",
+            () -> new StairBlock(BURLAP_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.5f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BURLAP_SLAB = registerBlock("burlap_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.5f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BURLAP_CARPET = registerBlock("burlap_carpet",
+            () -> new CarpetBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BURLAP_AWNING = registerBlock("burlap_awning",
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+    //TODO: shift-left click to break one "layer" at a time?
+    public static final RegistryObject<Block, Block> BURLAP_SACK = registerBlock("burlap_sack",
+            () -> new BurlapSackBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+
 
 
 //TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore

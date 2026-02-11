@@ -152,6 +152,10 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FISHING_LURES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SCATTERED_GOLD_COINS.get(), RenderType.cutout());
 
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BURLAP_CARPET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BURLAP_AWNING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BURLAP_SACK.get(), RenderType.cutout());
+
         }
     }
 

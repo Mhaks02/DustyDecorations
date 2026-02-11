@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=east,stacked_sacks=1,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_1",
+      "y": 90
+    },
+    "facing=east,stacked_sacks=1,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_1",
+      "y": 90
+    },
+    "facing=east,stacked_sacks=2,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_2",
+      "y": 90
+    },
+    "facing=east,stacked_sacks=2,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_2",
+      "y": 90
+    },
+    "facing=east,stacked_sacks=3,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_3",
+      "y": 90
+    },
+    "facing=east,stacked_sacks=3,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_3",
+      "y": 90
+    },
+    "facing=north,stacked_sacks=1,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_1"
+    },
+    "facing=north,stacked_sacks=1,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_1"
+    },
+    "facing=north,stacked_sacks=2,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_2"
+    },
+    "facing=north,stacked_sacks=2,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_2"
+    },
+    "facing=north,stacked_sacks=3,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_3"
+    },
+    "facing=north,stacked_sacks=3,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_3"
+    },
+    "facing=south,stacked_sacks=1,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_1",
+      "y": 180
+    },
+    "facing=south,stacked_sacks=1,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_1",
+      "y": 180
+    },
+    "facing=south,stacked_sacks=2,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_2",
+      "y": 180
+    },
+    "facing=south,stacked_sacks=2,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_2",
+      "y": 180
+    },
+    "facing=south,stacked_sacks=3,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_3",
+      "y": 180
+    },
+    "facing=south,stacked_sacks=3,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_3",
+      "y": 180
+    },
+    "facing=west,stacked_sacks=1,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_1",
+      "y": 270
+    },
+    "facing=west,stacked_sacks=1,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_1",
+      "y": 270
+    },
+    "facing=west,stacked_sacks=2,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_2",
+      "y": 270
+    },
+    "facing=west,stacked_sacks=2,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_2",
+      "y": 270
+    },
+    "facing=west,stacked_sacks=3,waterlogged=false": {
+      "model": "dustydecorations:block/burlap_sack_3",
+      "y": 270
+    },
+    "facing=west,stacked_sacks=3,waterlogged=true": {
+      "model": "dustydecorations:block/burlap_sack_3",
+      "y": 270
+    }
+  }
+}
