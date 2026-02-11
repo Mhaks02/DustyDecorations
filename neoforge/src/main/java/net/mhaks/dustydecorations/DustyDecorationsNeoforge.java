@@ -50,7 +50,8 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BANISTER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BAMBOO_BANISTER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRY_BAMBOO_BANISTER.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_BANISTER.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_BANISTER.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WARPED_BANISTER.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_WOOL_AWNING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get(), RenderType.cutout());

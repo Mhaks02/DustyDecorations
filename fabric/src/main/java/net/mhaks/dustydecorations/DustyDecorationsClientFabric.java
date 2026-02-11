@@ -22,6 +22,8 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHERRY_BANISTER.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BAMBOO_BANISTER.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRY_BAMBOO_BANISTER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRIMSON_BANISTER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_BANISTER.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_WOOL_AWNING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get(), RenderType.cutout());

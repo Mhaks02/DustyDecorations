@@ -37,6 +37,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         banisterBlockWithFlatItem(ModBlocks.CHERRY_BANISTER);
         banisterBlockWithFlatItem(ModBlocks.BAMBOO_BANISTER);
         banisterBlockWithFlatItem(ModBlocks.DRY_BAMBOO_BANISTER);
+        banisterBlockWithFlatItem(ModBlocks.CRIMSON_BANISTER);
+        banisterBlockWithFlatItem(ModBlocks.WARPED_BANISTER);
 
         customHorizontalBlockWithItem(ModBlocks.OAK_LARGE_SHELF);
         customHorizontalBlockWithItem(ModBlocks.SPRUCE_LARGE_SHELF);
