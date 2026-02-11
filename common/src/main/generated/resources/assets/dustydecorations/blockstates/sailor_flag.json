@@ -1,0 +1,75 @@
+{
+  "variants": {
+    "axis=x,texture=0": {
+      "model": "dustydecorations:block/sailor_flag"
+    },
+    "axis=x,texture=1": {
+      "model": "dustydecorations:block/sailor_flag_1"
+    },
+    "axis=x,texture=2": {
+      "model": "dustydecorations:block/sailor_flag_2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,texture=3": {
+      "model": "dustydecorations:block/sailor_flag_3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,texture=4": {
+      "model": "dustydecorations:block/sailor_flag_4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,texture=5": {
+      "model": "dustydecorations:block/sailor_flag_5",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,texture=0": {
+      "model": "dustydecorations:block/sailor_flag",
+      "x": 180,
+      "y": 90
+    },
+    "axis=y,texture=1": {
+      "model": "dustydecorations:block/sailor_flag_1",
+      "x": 90
+    },
+    "axis=y,texture=2": {
+      "model": "dustydecorations:block/sailor_flag_2"
+    },
+    "axis=y,texture=3": {
+      "model": "dustydecorations:block/sailor_flag_3"
+    },
+    "axis=y,texture=4": {
+      "model": "dustydecorations:block/sailor_flag_4"
+    },
+    "axis=y,texture=5": {
+      "model": "dustydecorations:block/sailor_flag_5"
+    },
+    "axis=z,texture=0": {
+      "model": "dustydecorations:block/sailor_flag",
+      "x": 90
+    },
+    "axis=z,texture=1": {
+      "model": "dustydecorations:block/sailor_flag_1",
+      "x": 90
+    },
+    "axis=z,texture=2": {
+      "model": "dustydecorations:block/sailor_flag_2",
+      "x": 90
+    },
+    "axis=z,texture=3": {
+      "model": "dustydecorations:block/sailor_flag_3",
+      "x": 90
+    },
+    "axis=z,texture=4": {
+      "model": "dustydecorations:block/sailor_flag_4",
+      "x": 90
+    },
+    "axis=z,texture=5": {
+      "model": "dustydecorations:block/sailor_flag_5",
+      "x": 90
+    }
+  }
+}

@@ -262,6 +262,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockWithItem(ModBlocks.BURLAP_AWNING);
         burlapSackWithItem();
 
+        sailorFlagWithItem();
+        sailorPennantFlag();
 
     }
 
@@ -768,6 +770,78 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(ModBlocks.BURLAP_SACK, "_1");
     }
+    private void sailorFlagWithItem() {
+        ModelFile[] models = new ModelFile[] {
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath())),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_1")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_2")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_3")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_4")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_5"))
+        };
+        getVariantBuilder(ModBlocks.SAILOR_FLAG.get())
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 0).modelForState().modelFile(models[0]).rotationX(180).rotationY(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 0).modelForState().modelFile(models[0]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 0).modelForState().modelFile(models[0]).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 1).modelForState().modelFile(models[1]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 1).modelForState().modelFile(models[1]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 1).modelForState().modelFile(models[1]).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 2).modelForState().modelFile(models[2]).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 2).modelForState().modelFile(models[2]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 2).modelForState().modelFile(models[2]).rotationX(90).rotationY(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 3).modelForState().modelFile(models[3]).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 3).modelForState().modelFile(models[3]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 3).modelForState().modelFile(models[3]).rotationX(90).rotationY(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 4).modelForState().modelFile(models[4]).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 4).modelForState().modelFile(models[4]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 4).modelForState().modelFile(models[4]).rotationX(90).rotationY(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 5).modelForState().modelFile(models[5]).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 5).modelForState().modelFile(models[5]).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 5).modelForState().modelFile(models[5]).rotationX(90).rotationY(90).addModel();
+
+//        Function<BlockState, ModelFile[]> modelFunc = ($ -> models);
+//        return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+        blockItem(ModBlocks.SAILOR_FLAG);
+    }
+    private void sailorPennantFlag() {
+        getVariantBuilder(ModBlocks.SAILOR_PENNANT_FLAG.get()).forAllStates(blockState -> {
+            switch (blockState.getValue(FishingLuresBlock.TEXTURE)) {
+                case 1: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_1"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+                }
+                case 2: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_2"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+                }
+                case 3: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_3"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+                }
+                case 4: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_4"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+                }
+                case 5: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_5"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+                }
+                case 0:
+                default: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath()));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+                }
+            }
+        });
+        blockItem(ModBlocks.SAILOR_PENNANT_FLAG);
+    }
+
 
 
     private void customBlockWithItem(RegistryObject<Block, Block> block) {

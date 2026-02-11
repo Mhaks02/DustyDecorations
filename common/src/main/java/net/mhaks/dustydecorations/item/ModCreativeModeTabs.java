@@ -237,6 +237,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BURLAP_AWNING.get());
                         output.accept(ModBlocks.BURLAP_SACK.get());
 
+                        output.accept(ModBlocks.SAILOR_FLAG.get());
+                        output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
+
                     }).build());
     
 

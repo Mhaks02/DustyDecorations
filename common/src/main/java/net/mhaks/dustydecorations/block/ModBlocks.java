@@ -1099,6 +1099,18 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
 
+    public static final RegistryObject<Block, Block> SAILOR_FLAG = registerBlock("sailor_flag",
+            () -> new SailorFlagBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> SAILOR_PENNANT_FLAG = registerBlock("sailor_pennant_flag",
+            () -> new FishingLuresBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()
+                    .noCollission()
+            ));
 
 
 //TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore
