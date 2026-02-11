@@ -243,7 +243,7 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> STELLAR_WALLPAPER_BLOCK = registerBlock("stellar_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new WallpaperBlock(BlockBehaviour.Properties.of()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)
             ));

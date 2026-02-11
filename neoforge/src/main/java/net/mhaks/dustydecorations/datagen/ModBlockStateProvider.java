@@ -68,6 +68,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallpaperWithItem(ModBlocks.VINE_WALLPAPER_BLOCK);
         blockWithItem(ModBlocks.MONSTER_WALLPAPER_BLOCK);
         blockWithItem(ModBlocks.SAILOR_WALLPAPER_BLOCK);
+        blockWithItem(ModBlocks.COPPER_WALLPAPER_BLOCK);
+        stellarWallpaperWithItem();
+        blockWithItem(ModBlocks.PUMPKIN_WALLPAPER_BLOCK);
+        blockWithItem(ModBlocks.SOUL_WALLPAPER_BLOCK);
+        blockWithItem(ModBlocks.FOREST_FESTIVE_WALLPAPER_BLOCK);
+        blockWithItem(ModBlocks.STRIPED_FESTIVE_WALLPAPER_BLOCK);
+        blockWithItem(ModBlocks.SNOWMEN_WALLPAPER_BLOCK);
+        blockWithItem(ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK);
 
         customHorizontalBlockWithItem(ModBlocks.WHITE_WOOL_AWNING);
         customHorizontalBlockWithItem(ModBlocks.LIGHT_GRAY_WOOL_AWNING);
@@ -334,6 +342,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
             }
         });
         simpleBlockItem(block.get(), models().cubeAll(block.getId().getPath(),  modLoc("block/" + block.getId().getPath() + "/0")));
+    }
+    private void stellarWallpaperWithItem() {
+        getVariantBuilder(ModBlocks.STELLAR_WALLPAPER_BLOCK.get()).forAllStates(blockState -> {
+            switch (blockState.getValue(WallpaperBlock.TEXTURE)) {
+                case 1 -> {
+                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "_1", modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/1"))) };
+                }
+                case 2 -> {
+                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "_2", modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/2"))) };
+                }
+                case 3 -> {
+                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "_3", modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/3"))) };
+                }
+                default -> {
+                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath(), modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/0"))) };
+                }
+            }
+        });
+        simpleBlockItem(ModBlocks.STELLAR_WALLPAPER_BLOCK.get(), models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath(),  modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/0")));
     }
     private void paperLanternWithFlatItem(RegistryObject<Block, Block> block) {
         horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
