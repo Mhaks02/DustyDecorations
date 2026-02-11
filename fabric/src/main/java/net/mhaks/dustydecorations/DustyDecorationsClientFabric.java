@@ -46,8 +46,11 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREAM_SEAGLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAZEL_SEAGLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIQUORICE_SEAGLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCARLET_SEAGLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HONEY_SEAGLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOCHA_SEAGLASS.get(), RenderType.translucent());
