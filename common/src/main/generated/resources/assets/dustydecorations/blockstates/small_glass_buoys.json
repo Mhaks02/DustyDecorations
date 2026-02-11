@@ -1,92 +1,92 @@
 {
   "variants": {
-    "facing=east,model_weight=0,waterlogged=false": {
+    "facing=east,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys",
       "y": 90
     },
-    "facing=east,model_weight=0,waterlogged=true": {
+    "facing=east,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys",
       "y": 90
     },
-    "facing=east,model_weight=1,waterlogged=false": {
+    "facing=east,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_1",
       "y": 90
     },
-    "facing=east,model_weight=1,waterlogged=true": {
+    "facing=east,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_1",
       "y": 90
     },
-    "facing=east,model_weight=2,waterlogged=false": {
+    "facing=east,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_2",
       "y": 90
     },
-    "facing=east,model_weight=2,waterlogged=true": {
+    "facing=east,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_2",
       "y": 90
     },
-    "facing=north,model_weight=0,waterlogged=false": {
+    "facing=north,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys"
     },
-    "facing=north,model_weight=0,waterlogged=true": {
+    "facing=north,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys"
     },
-    "facing=north,model_weight=1,waterlogged=false": {
+    "facing=north,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_1"
     },
-    "facing=north,model_weight=1,waterlogged=true": {
+    "facing=north,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_1"
     },
-    "facing=north,model_weight=2,waterlogged=false": {
+    "facing=north,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_2"
     },
-    "facing=north,model_weight=2,waterlogged=true": {
+    "facing=north,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_2"
     },
-    "facing=south,model_weight=0,waterlogged=false": {
+    "facing=south,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys",
       "y": 180
     },
-    "facing=south,model_weight=0,waterlogged=true": {
+    "facing=south,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys",
       "y": 180
     },
-    "facing=south,model_weight=1,waterlogged=false": {
+    "facing=south,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_1",
       "y": 180
     },
-    "facing=south,model_weight=1,waterlogged=true": {
+    "facing=south,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_1",
       "y": 180
     },
-    "facing=south,model_weight=2,waterlogged=false": {
+    "facing=south,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_2",
       "y": 180
     },
-    "facing=south,model_weight=2,waterlogged=true": {
+    "facing=south,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_2",
       "y": 180
     },
-    "facing=west,model_weight=0,waterlogged=false": {
+    "facing=west,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys",
       "y": 270
     },
-    "facing=west,model_weight=0,waterlogged=true": {
+    "facing=west,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys",
       "y": 270
     },
-    "facing=west,model_weight=1,waterlogged=false": {
+    "facing=west,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_1",
       "y": 270
     },
-    "facing=west,model_weight=1,waterlogged=true": {
+    "facing=west,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_1",
       "y": 270
     },
-    "facing=west,model_weight=2,waterlogged=false": {
+    "facing=west,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/small_glass_buoys_2",
       "y": 270
     },
-    "facing=west,model_weight=2,waterlogged=true": {
+    "facing=west,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/small_glass_buoys_2",
       "y": 270
     }

@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -24,14 +25,14 @@ import org.jetbrains.annotations.Nullable;
 public class FishingLuresBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final EnumProperty<AttachFace> FACE = BlockStateProperties.ATTACH_FACE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty MODEL_WEIGHT = IntegerProperty.create("model_weight", 0, 4);
+    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 5);
     public static final MapCodec<FishingLuresBlock> CODEC = simpleCodec(FishingLuresBlock::new);
 
     public FishingLuresBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(MODEL_WEIGHT, 0));
+                .setValue(TEXTURE, 0));
     }
 
     @Override
@@ -108,13 +109,17 @@ public class FishingLuresBlock extends HorizontalDirectionalBlock implements Sim
 
     @Override
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
-        super.onPlace(state, level, pos, oldState, movedByPiston);
+        if (state.is(ModBlocks.SAILOR_PENNANT_FLAG.get())) {
+            this.registerDefaultState(defaultBlockState()
+                    .setValue(TEXTURE, RandomSource.create().nextInt(0, 6)));
+        }
         this.registerDefaultState(defaultBlockState()
-                .setValue(MODEL_WEIGHT, RandomSource.create().nextInt(0, 5)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 5)));
+        super.onPlace(state, level, pos, oldState, movedByPiston);
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, FACE, WATERLOGGED, MODEL_WEIGHT);
+        builder.add(FACING, FACE, WATERLOGGED, TEXTURE);
     }
 }

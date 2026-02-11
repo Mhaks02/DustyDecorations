@@ -1,47 +1,47 @@
 {
   "variants": {
-    "facing=east,model_weight=0": {
+    "facing=east,texture=0": {
       "model": "dustydecorations:block/book_stack",
       "y": 90
     },
-    "facing=east,model_weight=1": {
+    "facing=east,texture=1": {
       "model": "dustydecorations:block/book_stack_1",
       "y": 90
     },
-    "facing=east,model_weight=2": {
+    "facing=east,texture=2": {
       "model": "dustydecorations:block/book_stack_2",
       "y": 90
     },
-    "facing=north,model_weight=0": {
+    "facing=north,texture=0": {
       "model": "dustydecorations:block/book_stack"
     },
-    "facing=north,model_weight=1": {
+    "facing=north,texture=1": {
       "model": "dustydecorations:block/book_stack_1"
     },
-    "facing=north,model_weight=2": {
+    "facing=north,texture=2": {
       "model": "dustydecorations:block/book_stack_2"
     },
-    "facing=south,model_weight=0": {
+    "facing=south,texture=0": {
       "model": "dustydecorations:block/book_stack",
       "y": 180
     },
-    "facing=south,model_weight=1": {
+    "facing=south,texture=1": {
       "model": "dustydecorations:block/book_stack_1",
       "y": 180
     },
-    "facing=south,model_weight=2": {
+    "facing=south,texture=2": {
       "model": "dustydecorations:block/book_stack_2",
       "y": 180
     },
-    "facing=west,model_weight=0": {
+    "facing=west,texture=0": {
       "model": "dustydecorations:block/book_stack",
       "y": 270
     },
-    "facing=west,model_weight=1": {
+    "facing=west,texture=1": {
       "model": "dustydecorations:block/book_stack_1",
       "y": 270
     },
-    "facing=west,model_weight=2": {
+    "facing=west,texture=2": {
       "model": "dustydecorations:block/book_stack_2",
       "y": 270
     }

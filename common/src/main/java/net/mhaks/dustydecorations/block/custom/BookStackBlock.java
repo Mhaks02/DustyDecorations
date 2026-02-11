@@ -17,7 +17,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class BookStackBlock extends HorizontalDirectionalBlock {
-    public static final IntegerProperty MODEL_WEIGHT = IntegerProperty.create("model_weight", 0, 2);
+    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
     public static final MapCodec<BookStackBlock> CODEC = simpleCodec(BookStackBlock::new);
 
     public BookStackBlock(Properties properties) {
@@ -101,11 +101,11 @@ public class BookStackBlock extends HorizontalDirectionalBlock {
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(MODEL_WEIGHT, RandomSource.create().nextInt(0, 3)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 3)));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, MODEL_WEIGHT);
+        builder.add(FACING, TEXTURE);
     }
 }

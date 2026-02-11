@@ -1,182 +1,182 @@
 {
   "variants": {
-    "facing=east,model_weight=0,waterlogged=false": {
+    "facing=east,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/jars",
       "y": 90
     },
-    "facing=east,model_weight=0,waterlogged=true": {
+    "facing=east,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/jars",
       "y": 90
     },
-    "facing=east,model_weight=1,waterlogged=false": {
+    "facing=east,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/jars_1",
       "y": 90
     },
-    "facing=east,model_weight=1,waterlogged=true": {
+    "facing=east,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/jars_1",
       "y": 90
     },
-    "facing=east,model_weight=2,waterlogged=false": {
+    "facing=east,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/jars_2",
       "y": 90
     },
-    "facing=east,model_weight=2,waterlogged=true": {
+    "facing=east,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/jars_2",
       "y": 90
     },
-    "facing=east,model_weight=3,waterlogged=false": {
+    "facing=east,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/jars_3",
       "y": 90
     },
-    "facing=east,model_weight=3,waterlogged=true": {
+    "facing=east,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/jars_3",
       "y": 90
     },
-    "facing=east,model_weight=4,waterlogged=false": {
+    "facing=east,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/jars_4",
       "y": 90
     },
-    "facing=east,model_weight=4,waterlogged=true": {
+    "facing=east,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/jars_4",
       "y": 90
     },
-    "facing=east,model_weight=5,waterlogged=false": {
+    "facing=east,texture=5,waterlogged=false": {
       "model": "dustydecorations:block/jars_5",
       "y": 90
     },
-    "facing=east,model_weight=5,waterlogged=true": {
+    "facing=east,texture=5,waterlogged=true": {
       "model": "dustydecorations:block/jars_5",
       "y": 90
     },
-    "facing=north,model_weight=0,waterlogged=false": {
+    "facing=north,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/jars"
     },
-    "facing=north,model_weight=0,waterlogged=true": {
+    "facing=north,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/jars"
     },
-    "facing=north,model_weight=1,waterlogged=false": {
+    "facing=north,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/jars_1"
     },
-    "facing=north,model_weight=1,waterlogged=true": {
+    "facing=north,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/jars_1"
     },
-    "facing=north,model_weight=2,waterlogged=false": {
+    "facing=north,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/jars_2"
     },
-    "facing=north,model_weight=2,waterlogged=true": {
+    "facing=north,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/jars_2"
     },
-    "facing=north,model_weight=3,waterlogged=false": {
+    "facing=north,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/jars_3"
     },
-    "facing=north,model_weight=3,waterlogged=true": {
+    "facing=north,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/jars_3"
     },
-    "facing=north,model_weight=4,waterlogged=false": {
+    "facing=north,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/jars_4"
     },
-    "facing=north,model_weight=4,waterlogged=true": {
+    "facing=north,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/jars_4"
     },
-    "facing=north,model_weight=5,waterlogged=false": {
+    "facing=north,texture=5,waterlogged=false": {
       "model": "dustydecorations:block/jars_5"
     },
-    "facing=north,model_weight=5,waterlogged=true": {
+    "facing=north,texture=5,waterlogged=true": {
       "model": "dustydecorations:block/jars_5"
     },
-    "facing=south,model_weight=0,waterlogged=false": {
+    "facing=south,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/jars",
       "y": 180
     },
-    "facing=south,model_weight=0,waterlogged=true": {
+    "facing=south,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/jars",
       "y": 180
     },
-    "facing=south,model_weight=1,waterlogged=false": {
+    "facing=south,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/jars_1",
       "y": 180
     },
-    "facing=south,model_weight=1,waterlogged=true": {
+    "facing=south,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/jars_1",
       "y": 180
     },
-    "facing=south,model_weight=2,waterlogged=false": {
+    "facing=south,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/jars_2",
       "y": 180
     },
-    "facing=south,model_weight=2,waterlogged=true": {
+    "facing=south,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/jars_2",
       "y": 180
     },
-    "facing=south,model_weight=3,waterlogged=false": {
+    "facing=south,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/jars_3",
       "y": 180
     },
-    "facing=south,model_weight=3,waterlogged=true": {
+    "facing=south,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/jars_3",
       "y": 180
     },
-    "facing=south,model_weight=4,waterlogged=false": {
+    "facing=south,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/jars_4",
       "y": 180
     },
-    "facing=south,model_weight=4,waterlogged=true": {
+    "facing=south,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/jars_4",
       "y": 180
     },
-    "facing=south,model_weight=5,waterlogged=false": {
+    "facing=south,texture=5,waterlogged=false": {
       "model": "dustydecorations:block/jars_5",
       "y": 180
     },
-    "facing=south,model_weight=5,waterlogged=true": {
+    "facing=south,texture=5,waterlogged=true": {
       "model": "dustydecorations:block/jars_5",
       "y": 180
     },
-    "facing=west,model_weight=0,waterlogged=false": {
+    "facing=west,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/jars",
       "y": 270
     },
-    "facing=west,model_weight=0,waterlogged=true": {
+    "facing=west,texture=0,waterlogged=true": {
       "model": "dustydecorations:block/jars",
       "y": 270
     },
-    "facing=west,model_weight=1,waterlogged=false": {
+    "facing=west,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/jars_1",
       "y": 270
     },
-    "facing=west,model_weight=1,waterlogged=true": {
+    "facing=west,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/jars_1",
       "y": 270
     },
-    "facing=west,model_weight=2,waterlogged=false": {
+    "facing=west,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/jars_2",
       "y": 270
     },
-    "facing=west,model_weight=2,waterlogged=true": {
+    "facing=west,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/jars_2",
       "y": 270
     },
-    "facing=west,model_weight=3,waterlogged=false": {
+    "facing=west,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/jars_3",
       "y": 270
     },
-    "facing=west,model_weight=3,waterlogged=true": {
+    "facing=west,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/jars_3",
       "y": 270
     },
-    "facing=west,model_weight=4,waterlogged=false": {
+    "facing=west,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/jars_4",
       "y": 270
     },
-    "facing=west,model_weight=4,waterlogged=true": {
+    "facing=west,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/jars_4",
       "y": 270
     },
-    "facing=west,model_weight=5,waterlogged=false": {
+    "facing=west,texture=5,waterlogged=false": {
       "model": "dustydecorations:block/jars_5",
       "y": 270
     },
-    "facing=west,model_weight=5,waterlogged=true": {
+    "facing=west,texture=5,waterlogged=true": {
       "model": "dustydecorations:block/jars_5",
       "y": 270
     }

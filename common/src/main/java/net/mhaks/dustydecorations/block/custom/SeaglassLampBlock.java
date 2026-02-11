@@ -27,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class SeaglassLampBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
     public static BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static BooleanProperty LAMP_ON = BooleanProperty.create("lamp_on");
     public static final MapCodec<SeaglassLampBlock> CODEC = simpleCodec(SeaglassLampBlock::new);
@@ -41,7 +41,7 @@ public class SeaglassLampBlock extends HorizontalDirectionalBlock implements Sim
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
 

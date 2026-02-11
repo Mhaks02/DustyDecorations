@@ -28,14 +28,14 @@ import java.util.stream.Stream;
 
 public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty MODEL_WEIGHT = IntegerProperty.create("model_weight", 0, 2);
+    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
     public static final MapCodec<SmallGlassBuoysBlock> CODEC = simpleCodec(SmallGlassBuoysBlock::new);
 
     public SmallGlassBuoysBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(MODEL_WEIGHT, 0));
+                .setValue(TEXTURE, 0));
     }
 
     @Override
@@ -81,7 +81,7 @@ public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements 
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(MODEL_WEIGHT, RandomSource.create().nextInt(0, 3)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 3)));
     }
 
     @Override
@@ -105,6 +105,6 @@ public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements 
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, MODEL_WEIGHT);
+        builder.add(FACING, WATERLOGGED, TEXTURE);
     }
 }

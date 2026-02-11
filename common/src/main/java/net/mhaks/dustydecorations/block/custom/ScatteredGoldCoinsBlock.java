@@ -25,7 +25,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class ScatteredGoldCoinsBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty MODEL_WEIGHT = IntegerProperty.create("model_weight", 0, 2);
+    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<ScatteredGoldCoinsBlock> CODEC = simpleCodec(ScatteredGoldCoinsBlock::new);
 
@@ -33,7 +33,7 @@ public class ScatteredGoldCoinsBlock extends HorizontalDirectionalBlock implemen
         super(properties);
         registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(MODEL_WEIGHT, 0));
+                .setValue(TEXTURE, 0));
     }
 
     @Override
@@ -78,11 +78,11 @@ public class ScatteredGoldCoinsBlock extends HorizontalDirectionalBlock implemen
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(MODEL_WEIGHT, RandomSource.create().nextInt(0, 3)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 3)));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, MODEL_WEIGHT, WATERLOGGED);
+        builder.add(FACING, TEXTURE, WATERLOGGED);
     }
 }
