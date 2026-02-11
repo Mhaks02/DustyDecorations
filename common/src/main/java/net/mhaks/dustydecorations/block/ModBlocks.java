@@ -1116,6 +1116,262 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> PLAIN_CUSHION_BLOCK = registerBlock("plain_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PLAIN_CUSHION_STAIRS = registerBlock("plain_cushion_stairs",
+            () -> new StairBlock(PLAIN_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PLAIN_CUSHION_SLAB = registerBlock("plain_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> WHITE_CUSHION_BLOCK = registerBlock("white_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> WHITE_CUSHION_STAIRS = registerBlock("white_cushion_stairs",
+            () -> new StairBlock(WHITE_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> WHITE_CUSHION_SLAB = registerBlock("white_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIGHT_GRAY_CUSHION_BLOCK = registerBlock("light_gray_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIGHT_GRAY_CUSHION_STAIRS = registerBlock("light_gray_cushion_stairs",
+            () -> new StairBlock(LIGHT_GRAY_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIGHT_GRAY_CUSHION_SLAB = registerBlock("light_gray_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> GRAY_CUSHION_BLOCK = registerBlock("gray_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> GRAY_CUSHION_STAIRS = registerBlock("gray_cushion_stairs",
+            () -> new StairBlock(GRAY_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> GRAY_CUSHION_SLAB = registerBlock("gray_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BLACK_CUSHION_BLOCK = registerBlock("black_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BLACK_CUSHION_STAIRS = registerBlock("black_cushion_stairs",
+            () -> new StairBlock(BLACK_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BLACK_CUSHION_SLAB = registerBlock("black_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BROWN_CUSHION_BLOCK = registerBlock("brown_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BROWN_CUSHION_STAIRS = registerBlock("brown_cushion_stairs",
+            () -> new StairBlock(BROWN_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BROWN_CUSHION_SLAB = registerBlock("brown_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> RED_CUSHION_BLOCK = registerBlock("red_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> RED_CUSHION_STAIRS = registerBlock("red_cushion_stairs",
+            () -> new StairBlock(RED_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> RED_CUSHION_SLAB = registerBlock("red_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> ORANGE_CUSHION_BLOCK = registerBlock("orange_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> ORANGE_CUSHION_STAIRS = registerBlock("orange_cushion_stairs",
+            () -> new StairBlock(ORANGE_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> ORANGE_CUSHION_SLAB = registerBlock("orange_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> YELLOW_CUSHION_BLOCK = registerBlock("yellow_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> YELLOW_CUSHION_STAIRS = registerBlock("yellow_cushion_stairs",
+            () -> new StairBlock(YELLOW_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> YELLOW_CUSHION_SLAB = registerBlock("yellow_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIME_CUSHION_BLOCK = registerBlock("lime_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIME_CUSHION_STAIRS = registerBlock("lime_cushion_stairs",
+            () -> new StairBlock(LIME_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIME_CUSHION_SLAB = registerBlock("lime_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> GREEN_CUSHION_BLOCK = registerBlock("green_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> GREEN_CUSHION_STAIRS = registerBlock("green_cushion_stairs",
+            () -> new StairBlock(GREEN_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> GREEN_CUSHION_SLAB = registerBlock("green_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> CYAN_CUSHION_BLOCK = registerBlock("cyan_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> CYAN_CUSHION_STAIRS = registerBlock("cyan_cushion_stairs",
+            () -> new StairBlock(CYAN_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> CYAN_CUSHION_SLAB = registerBlock("cyan_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIGHT_BLUE_CUSHION_BLOCK = registerBlock("light_blue_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIGHT_BLUE_CUSHION_STAIRS = registerBlock("light_blue_cushion_stairs",
+            () -> new StairBlock(LIGHT_BLUE_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> LIGHT_BLUE_CUSHION_SLAB = registerBlock("light_blue_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BLUE_CUSHION_BLOCK = registerBlock("blue_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BLUE_CUSHION_STAIRS = registerBlock("blue_cushion_stairs",
+            () -> new StairBlock(BLUE_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> BLUE_CUSHION_SLAB = registerBlock("blue_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PURPLE_CUSHION_BLOCK = registerBlock("purple_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PURPLE_CUSHION_STAIRS = registerBlock("purple_cushion_stairs",
+            () -> new StairBlock(PURPLE_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PURPLE_CUSHION_SLAB = registerBlock("purple_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> MAGENTA_CUSHION_BLOCK = registerBlock("magenta_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> MAGENTA_CUSHION_STAIRS = registerBlock("magenta_cushion_stairs",
+            () -> new StairBlock(MAGENTA_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> MAGENTA_CUSHION_SLAB = registerBlock("magenta_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PINK_CUSHION_BLOCK = registerBlock("pink_cushion",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PINK_CUSHION_STAIRS = registerBlock("pink_cushion_stairs",
+            () -> new StairBlock(PINK_CUSHION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> PINK_CUSHION_SLAB = registerBlock("pink_cushion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.WOOL)
+            ));
+
 
 
 //TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore

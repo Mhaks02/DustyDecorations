@@ -266,6 +266,58 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        blockWithItem(ModBlocks.PLAIN_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.PLAIN_CUSHION_SLAB, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.WHITE_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.WHITE_CUSHION_STAIRS, blockTexture(ModBlocks.WHITE_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.WHITE_CUSHION_SLAB, blockTexture(ModBlocks.WHITE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.WHITE_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS, blockTexture(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_SLAB, blockTexture(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get()), blockTexture(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.GRAY_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.GRAY_CUSHION_STAIRS, blockTexture(ModBlocks.GRAY_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.GRAY_CUSHION_SLAB, blockTexture(ModBlocks.GRAY_CUSHION_BLOCK.get()), blockTexture(ModBlocks.GRAY_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.BLACK_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.BLACK_CUSHION_STAIRS, blockTexture(ModBlocks.BLACK_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.BLACK_CUSHION_SLAB, blockTexture(ModBlocks.BLACK_CUSHION_BLOCK.get()), blockTexture(ModBlocks.BLACK_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.BROWN_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.BROWN_CUSHION_STAIRS, blockTexture(ModBlocks.BROWN_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.BROWN_CUSHION_SLAB, blockTexture(ModBlocks.BROWN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.BROWN_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.RED_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.RED_CUSHION_STAIRS, blockTexture(ModBlocks.RED_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.RED_CUSHION_SLAB, blockTexture(ModBlocks.RED_CUSHION_BLOCK.get()), blockTexture(ModBlocks.RED_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.ORANGE_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.ORANGE_CUSHION_STAIRS, blockTexture(ModBlocks.ORANGE_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.ORANGE_CUSHION_SLAB, blockTexture(ModBlocks.ORANGE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.ORANGE_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.YELLOW_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.YELLOW_CUSHION_STAIRS, blockTexture(ModBlocks.YELLOW_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.YELLOW_CUSHION_SLAB, blockTexture(ModBlocks.YELLOW_CUSHION_BLOCK.get()), blockTexture(ModBlocks.YELLOW_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.LIME_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.LIME_CUSHION_STAIRS, blockTexture(ModBlocks.LIME_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.LIME_CUSHION_SLAB, blockTexture(ModBlocks.LIME_CUSHION_BLOCK.get()), blockTexture(ModBlocks.LIME_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.GREEN_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.GREEN_CUSHION_STAIRS, blockTexture(ModBlocks.GREEN_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.GREEN_CUSHION_SLAB, blockTexture(ModBlocks.GREEN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.GREEN_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.CYAN_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.CYAN_CUSHION_STAIRS, blockTexture(ModBlocks.CYAN_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.CYAN_CUSHION_SLAB, blockTexture(ModBlocks.CYAN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.CYAN_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS, blockTexture(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_SLAB, blockTexture(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.BLUE_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.BLUE_CUSHION_STAIRS, blockTexture(ModBlocks.BLUE_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.BLUE_CUSHION_SLAB, blockTexture(ModBlocks.BLUE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.BLUE_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.PURPLE_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.PURPLE_CUSHION_STAIRS, blockTexture(ModBlocks.PURPLE_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.PURPLE_CUSHION_SLAB, blockTexture(ModBlocks.PURPLE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PURPLE_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.MAGENTA_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.MAGENTA_CUSHION_STAIRS, blockTexture(ModBlocks.MAGENTA_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.MAGENTA_CUSHION_SLAB, blockTexture(ModBlocks.MAGENTA_CUSHION_BLOCK.get()), blockTexture(ModBlocks.MAGENTA_CUSHION_BLOCK.get()));
+        blockWithItem(ModBlocks.PINK_CUSHION_BLOCK);
+        stairsBlockWithItem(ModBlocks.PINK_CUSHION_STAIRS, blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.PINK_CUSHION_SLAB, blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()));
+
     }
 
 
@@ -861,6 +913,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
 
+    private void stairsBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation texture) {
+        stairsBlock((StairBlock) block.get(), texture, texture, texture);
+        blockItem(block);
+    }
+    public void slabBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation doubleslab, ResourceLocation texture) {
+        slabBlock((SlabBlock) block.get(), doubleslab, texture, texture, texture);
+        blockItem(block);
+    }
     private void fenceItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture", modLoc("block/" + baseBlock.getId().getPath()));

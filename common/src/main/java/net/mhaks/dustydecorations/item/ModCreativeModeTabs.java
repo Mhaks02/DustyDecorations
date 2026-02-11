@@ -240,6 +240,58 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAILOR_FLAG.get());
                         output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
 
+                        output.accept(ModBlocks.PLAIN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.PLAIN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.PLAIN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.WHITE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.WHITE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.GRAY_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.GRAY_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.GRAY_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.BLACK_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.BLACK_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.BLACK_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.BROWN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.BROWN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.BROWN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.RED_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.RED_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.RED_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.ORANGE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.ORANGE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.ORANGE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.YELLOW_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.YELLOW_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.YELLOW_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.LIME_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.LIME_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.LIME_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.GREEN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.GREEN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.GREEN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.CYAN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.CYAN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.CYAN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.BLUE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.BLUE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.BLUE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.PURPLE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.PURPLE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.PURPLE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.MAGENTA_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.MAGENTA_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.MAGENTA_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.PINK_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.PINK_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.PINK_CUSHION_SLAB.get());
+
                     }).build());
     
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "dustydecorations:block/yellow_cushion",
+    "side": "dustydecorations:block/yellow_cushion",
+    "top": "dustydecorations:block/yellow_cushion"
+  }
+}
