@@ -26,6 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        customHorizontalBlockWithItem(ModBlocks.DUSTY_DECORATIONS_BARREL);
+
         banisterBlockWithFlatItem(ModBlocks.OAK_BANISTER);
         banisterBlockWithFlatItem(ModBlocks.SPRUCE_BANISTER);
         banisterBlockWithFlatItem(ModBlocks.BIRCH_BANISTER);

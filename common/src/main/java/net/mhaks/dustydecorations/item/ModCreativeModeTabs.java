@@ -15,9 +15,9 @@ import java.util.function.Supplier;
 public class ModCreativeModeTabs {
     public static final RegistrationProvider<CreativeModeTab> CREATIVE_TABS = RegistrationProvider.get(BuiltInRegistries.CREATIVE_MODE_TAB, ModConstants.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> TEST_TAB = CREATIVE_TABS.register("test_tab",
+    public static final Supplier<CreativeModeTab> DUSTY_DECORATIONS_TAB = CREATIVE_TABS.register("dusty_decorations_tab",
             () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
-                    .icon(() -> new ItemStack(Blocks.ACACIA_BUTTON))
+                    .icon(() -> new ItemStack(ModBlocks.DUSTY_DECORATIONS_BARREL.get()))
                     .title(Component.translatable("creativetab.dustydecorations.test_tab"))
                     .displayItems((parameters, output) -> {
 
