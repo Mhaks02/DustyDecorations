@@ -4,8 +4,8 @@
 	"ambientocclusion": false,
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "dustydecorations:block/rusted_corrugated_metal_roofing",
-		"particle": "dustydecorations:block/rusted_corrugated_metal_block"
+		"0": "dustydecorations:block/corrugated_metal_roofing",
+		"particle": "dustydecorations:block/corrugated_metal_block"
 	},
 	"elements": [
 		{

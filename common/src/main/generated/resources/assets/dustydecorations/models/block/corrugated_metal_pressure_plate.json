@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "dustydecorations:block/corrugated_metal_block"
+  }
+}

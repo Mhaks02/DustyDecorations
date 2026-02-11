@@ -97,7 +97,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
         paperLanternWithFlatItem(ModBlocks.PILLAGER_PAPER_LANTERN);
         paperLanternWithFlatItem(ModBlocks.WARDEN_PAPER_LANTERN);
 
+        blockWithItem(ModBlocks.CORRUGATED_METAL_BLOCK);
+        blockWithItem(ModBlocks.CORRUGATED_METAL_GRATE);
+        stairsBlock((StairBlock) ModBlocks.CORRUGATED_METAL_STAIRS.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_STAIRS);
+        slabBlock((SlabBlock) ModBlocks.CORRUGATED_METAL_SLAB.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_SLAB);
+        fenceBlock((FenceBlock) ModBlocks.CORRUGATED_METAL_FENCE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            fenceItem(ModBlocks.CORRUGATED_METAL_FENCE, ModBlocks.CORRUGATED_METAL_BLOCK);
+        fenceGateBlock((FenceGateBlock) ModBlocks.CORRUGATED_METAL_FENCE_GATE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_FENCE_GATE);
+        doorBlock((DoorBlock) ModBlocks.CORRUGATED_METAL_DOOR.get(), modLoc("block/" + ModBlocks.CORRUGATED_METAL_DOOR.getId().getPath() + "_bottom"), modLoc("block/" + ModBlocks.CORRUGATED_METAL_DOOR.getId().getPath() + "_top"));
+            flatItem(ModBlocks.CORRUGATED_METAL_DOOR);
+        trapdoorBlock((TrapDoorBlock) ModBlocks.CORRUGATED_METAL_TRAPDOOR.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()), true);
+            blockItem(ModBlocks.CORRUGATED_METAL_TRAPDOOR, "_bottom");
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            blockItem(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE);
+        buttonBlock((ButtonBlock) ModBlocks.CORRUGATED_METAL_BUTTON.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
+            buttonItem(ModBlocks.CORRUGATED_METAL_BUTTON, ModBlocks.CORRUGATED_METAL_BLOCK);
+        customHorizontalBlockWithItem(ModBlocks.CORRUGATED_METAL_ROOFING);
+
         blockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        blockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE);
         stairsBlock((StairBlock) ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
             blockItem(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS);
         slabBlock((SlabBlock) ModBlocks.RUSTED_CORRUGATED_METAL_SLAB.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
