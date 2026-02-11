@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -321,17 +320,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(block), getPath(block, "_top"), "cutout");
         flatBlockItem(block);
     }
-    private void SeaGlassPaneBlockWithFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
+    private void seaglassPaneBlockWithFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
         paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(textureBlock), getPath(textureBlock), "translucent");
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + textureBlock.getId().getPath());
     }
-    private void SeaWindowPaneBlockWithFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
+    private void seaWindowPaneBlockWithFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
         paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(textureBlock), modLoc("block/" + "sea_window" + "_top"), "translucent");
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + textureBlock.getId().getPath());
     }
     private void wallpaperWithItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(WallpaperBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(WallpaperBlock.TEXTURE)) {
                 case 1 -> {
                     return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(block.getId().getPath() + "_1", modLoc("block/" + block.getId().getPath() + "/1"))) };
                 }
@@ -370,7 +369,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void scatteredPapersWithFlatItem() {
         getVariantBuilder(ModBlocks.SCATTERED_PAPERS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(ScatteredPapersBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(ScatteredPapersBlock.TEXTURE)) {
                 case 1 -> {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_PAPERS.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -397,7 +396,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void glassBuoyWithItem() {
         getVariantBuilder(ModBlocks.GLASS_BUOY.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(GlassBuoyBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(GlassBuoyBlock.TEXTURE)) {
                 case 1 -> {
                     return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GLASS_BUOY.getId().getPath() + "_1"))).build();
                 }
@@ -416,7 +415,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void smallGlassBuoysWithItem() {
         getVariantBuilder(ModBlocks.SMALL_GLASS_BUOYS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(SmallGlassBuoysBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(SmallGlassBuoysBlock.TEXTURE)) {
                 case 1 -> {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_GLASS_BUOYS.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -438,7 +437,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void woodenBuoysWithItem() {
         getVariantBuilder(ModBlocks.WOODEN_BUOYS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(WoodenBuoysBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(WoodenBuoysBlock.TEXTURE)) {
                 case 1 -> {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.WOODEN_BUOYS.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -488,7 +487,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void jarsWithItem() {
         getVariantBuilder(ModBlocks.JARS.get()).forAllStates(blockState -> {
-           switch (blockState.getValue(JarsBlock.MODEL_WEIGHT)) {
+           switch (blockState.getValue(JarsBlock.TEXTURE)) {
                case 1 -> {
                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath() + "_1"));
                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -548,7 +547,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void clutteredSmallShelfWithItem() {
         getVariantBuilder(ModBlocks.CLUTTERED_SMALL_SHELF.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(ClutteredSmallShelfBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(ClutteredSmallShelfBlock.TEXTURE)) {
                 case 1: {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -586,7 +585,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void smallBookshelfWithItem() {
         getVariantBuilder(ModBlocks.SMALL_BOOKSHELF.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(SmallBookshelfBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(SmallBookshelfBlock.TEXTURE)) {
                 case 1: {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_BOOKSHELF.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -609,7 +608,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void booksWithItem() {
         getVariantBuilder(ModBlocks.BOOKS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(BooksBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(BooksBlock.TEXTURE)) {
                 case 1: {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOKS.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -632,7 +631,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void bookStackWithItem() {
         getVariantBuilder(ModBlocks.BOOK_STACK.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(BookStackBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(BookStackBlock.TEXTURE)) {
                 case 1: {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOK_STACK.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -655,7 +654,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void fishingLuresWithFlatItem() {
         getVariantBuilder(ModBlocks.FISHING_LURES.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(FishingLuresBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(FishingLuresBlock.TEXTURE)) {
                 case 1: {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.FISHING_LURES.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -717,7 +716,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void scatteredGoldCoinsWithFlatBlockItem() {
         getVariantBuilder(ModBlocks.SCATTERED_GOLD_COINS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(ScatteredGoldCoinsBlock.MODEL_WEIGHT)) {
+            switch (blockState.getValue(ScatteredGoldCoinsBlock.TEXTURE)) {
                 case 1: {
                     ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_GOLD_COINS.getId().getPath() + "_1"));
                     Function<BlockState, ModelFile> modelFunc = ($ -> model);
@@ -738,7 +737,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         flatBlockItem(ModBlocks.SCATTERED_GOLD_COINS, "/0");
     }
-
     private void seaglassLampWithBlockItem(RegistryObject<Block, Block> block) {
         ModelFile on = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_on"));
         ModelFile off = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_off"));

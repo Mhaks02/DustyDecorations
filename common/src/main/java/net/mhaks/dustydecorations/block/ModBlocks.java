@@ -431,6 +431,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_STAIRS = registerBlock("corrugated_metal_stairs",
             () -> new StairBlock(ModBlocks.CORRUGATED_METAL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
@@ -487,6 +488,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_STAIRS = registerBlock("rusted_corrugated_metal_stairs",
             () -> new StairBlock(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
@@ -1018,6 +1020,7 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+
     //TODO: custom sounds
     public static final RegistryObject<Block, Block> GOLD_COINS_BLOCK = registerBlock("gold_coins_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -1035,6 +1038,7 @@ public class ModBlocks {
                     .strength(.3f)
                     .sound(SoundType.METAL)
             ));
+
     public static final RegistryObject<Block, Block> SANDSTONE_TILE_BLOCK = registerBlock("sandstone_tile",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
@@ -1055,6 +1059,7 @@ public class ModBlocks {
                     .strength(.8f)
                     .sound(SoundType.TUFF)
             ));
+
     public static final RegistryObject<Block, Block> BIG_NAUTILUS_SHELL = registerBlock("big_nautilus_shell",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2.25f)
