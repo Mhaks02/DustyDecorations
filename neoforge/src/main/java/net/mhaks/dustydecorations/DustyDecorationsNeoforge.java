@@ -71,23 +71,8 @@ public class DustyDecorationsNeoforge {
 
             BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
 
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAZEL_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOCHA_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SCARLET_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HONEY_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOCHA_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEAL_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CERULEAN_SEA_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TAUPE_SEA_GLASS.get(), RenderType.translucent());
-
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAZEL_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOCHA_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SCARLET_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HONEY_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOCHA_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEAL_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CERULEAN_SEA_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TAUPE_SEA_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAZEL_SEAGLASS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOCHA_SEAGLASS.get(), RenderType.translucent());

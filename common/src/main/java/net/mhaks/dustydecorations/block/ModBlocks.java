@@ -535,7 +535,17 @@ public class ModBlocks {
             ));
 
     //TODO: propagateSkyLightDown or something
+    public static final RegistryObject<Block, Block> CREAM_SEAGLASS = registerBlock("cream_seaglass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
     public static final RegistryObject<Block, Block> HAZEL_SEAGLASS = registerBlock("hazel_seaglass",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> LIQUORICE_SEAGLASS = registerBlock("liquorice_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
@@ -576,7 +586,17 @@ public class ModBlocks {
                     .noOcclusion()
             ));
 
+    public static final RegistryObject<Block, Block> CREAM_SEAGLASS_PANE = registerBlock("cream_seaglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
     public static final RegistryObject<Block, Block> HAZEL_SEAGLASS_PANE = registerBlock("hazel_seaglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final RegistryObject<Block, Block> LIQUORICE_SEAGLASS_PANE = registerBlock("liquorice_seaglass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .sound(SoundType.GLASS)
@@ -616,6 +636,11 @@ public class ModBlocks {
                     .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW = registerBlock("hazel_sea_window",
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> LIQUORICE_SEA_WINDOW = registerBlock("liquorice_sea_window",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .noOcclusion()
@@ -666,6 +691,11 @@ public class ModBlocks {
                     .strength(0.3f)
                     .sound(SoundType.GLASS)
             ));
+    public static final RegistryObject<Block, Block> LIQUORICE_SEA_WINDOW_PANE = registerBlock("liquorice_sea_window_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+            ));
     public static final RegistryObject<Block, Block> MOCHA_SEA_WINDOW_PANE = registerBlock("mocha_sea_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
@@ -702,6 +732,12 @@ public class ModBlocks {
                     .lightLevel(state -> state.getValue(SeaglassLampBlock.LAMP_ON) ? 13 : 0)
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEAGLASS_LAMP = registerBlock("hazel_seaglass_lamp",
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LAMP_ON) ? 13 : 0)
+            ));
+    public static final RegistryObject<Block, Block> LIQUORICE_SEAGLASS_LAMP = registerBlock("liquorice_seaglass_lamp",
             () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .sound(SoundType.GLASS)

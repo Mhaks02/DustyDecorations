@@ -123,7 +123,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON.get());
                         output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING.get());
 
+                        output.accept(ModBlocks.CREAM_SEAGLASS.get());
                         output.accept(ModBlocks.HAZEL_SEAGLASS.get());
+                        output.accept(ModBlocks.LIQUORICE_SEAGLASS.get());
                         output.accept(ModBlocks.MOCHA_SEAGLASS.get());
                         output.accept(ModBlocks.SCARLET_SEAGLASS.get());
                         output.accept(ModBlocks.HONEY_SEAGLASS.get());
@@ -132,7 +134,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CERULEAN_SEAGLASS.get());
                         output.accept(ModBlocks.TAUPE_SEAGLASS.get());
 
+                        output.accept(ModBlocks.CREAM_SEAGLASS_PANE.get());
                         output.accept(ModBlocks.HAZEL_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.LIQUORICE_SEAGLASS_PANE.get());
                         output.accept(ModBlocks.MOCHA_SEAGLASS_PANE.get());
                         output.accept(ModBlocks.SCARLET_SEAGLASS_PANE.get());
                         output.accept(ModBlocks.HONEY_SEAGLASS_PANE.get());
@@ -143,6 +147,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.CREAM_SEA_WINDOW.get());
                         output.accept(ModBlocks.HAZEL_SEA_WINDOW.get());
+                        output.accept(ModBlocks.LIQUORICE_SEA_WINDOW.get());
                         output.accept(ModBlocks.MOCHA_SEA_WINDOW.get());
                         output.accept(ModBlocks.SCARLET_SEA_WINDOW.get());
                         output.accept(ModBlocks.HONEY_SEA_WINDOW.get());
@@ -153,6 +158,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.CREAM_SEA_WINDOW_PANE.get());
                         output.accept(ModBlocks.HAZEL_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.LIQUORICE_SEA_WINDOW_PANE.get());
                         output.accept(ModBlocks.MOCHA_SEA_WINDOW_PANE.get());
                         output.accept(ModBlocks.SCARLET_SEA_WINDOW_PANE.get());
                         output.accept(ModBlocks.HONEY_SEA_WINDOW_PANE.get());
@@ -163,6 +169,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.CREAM_SEAGLASS_LAMP.get());
                         output.accept(ModBlocks.HAZEL_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.LIQUORICE_SEAGLASS_LAMP.get());
                         output.accept(ModBlocks.MOCHA_SEAGLASS_LAMP.get());
                         output.accept(ModBlocks.SCARLET_SEAGLASS_LAMP.get());
                         output.accept(ModBlocks.HONEY_SEAGLASS_LAMP.get());
