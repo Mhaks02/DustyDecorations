@@ -114,24 +114,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
             buttonItem(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         customHorizontalBlockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING);
 
-        TransparentBlockWithItem(ModBlocks.HAZEL_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.MOCHA_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.SCARLET_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.HONEY_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.MINT_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.TEAL_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.CERULEAN_SEA_GLASS);
-        TransparentBlockWithItem(ModBlocks.TAUPE_SEA_GLASS);
-
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.HAZEL_SEA_GLASS_PANE, ModBlocks.HAZEL_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.MOCHA_SEA_GLASS_PANE, ModBlocks.MOCHA_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.SCARLET_SEA_GLASS_PANE, ModBlocks.SCARLET_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.HONEY_SEA_GLASS_PANE, ModBlocks.HONEY_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.MINT_SEA_GLASS_PANE, ModBlocks.MINT_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.TEAL_SEA_GLASS_PANE, ModBlocks.TEAL_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_GLASS_PANE, ModBlocks.CERULEAN_SEA_GLASS);
-        SeaGlassPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_GLASS_PANE, ModBlocks.TAUPE_SEA_GLASS);
+        TransparentBlockWithItem(ModBlocks.CREAM_SEAGLASS);
         TransparentBlockWithItem(ModBlocks.HAZEL_SEAGLASS);
+        TransparentBlockWithItem(ModBlocks.LIQUORICE_SEAGLASS);
         TransparentBlockWithItem(ModBlocks.MOCHA_SEAGLASS);
         TransparentBlockWithItem(ModBlocks.SCARLET_SEAGLASS);
         TransparentBlockWithItem(ModBlocks.HONEY_SEAGLASS);
@@ -140,7 +125,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         TransparentBlockWithItem(ModBlocks.CERULEAN_SEAGLASS);
         TransparentBlockWithItem(ModBlocks.TAUPE_SEAGLASS);
 
+        seaglassPaneBlockWithFlatItem(ModBlocks.CREAM_SEAGLASS_PANE, ModBlocks.CREAM_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.HAZEL_SEAGLASS_PANE, ModBlocks.HAZEL_SEAGLASS);
+        seaglassPaneBlockWithFlatItem(ModBlocks.LIQUORICE_SEAGLASS_PANE, ModBlocks.LIQUORICE_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.MOCHA_SEAGLASS_PANE, ModBlocks.MOCHA_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.SCARLET_SEAGLASS_PANE, ModBlocks.SCARLET_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.HONEY_SEAGLASS_PANE, ModBlocks.HONEY_SEAGLASS);
@@ -149,7 +136,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         seaglassPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEAGLASS_PANE, ModBlocks.CERULEAN_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.TAUPE_SEAGLASS_PANE, ModBlocks.TAUPE_SEAGLASS);
 
+        TransparentBlockWithItem(ModBlocks.CREAM_SEA_WINDOW);
         TransparentBlockWithItem(ModBlocks.HAZEL_SEA_WINDOW);
+        TransparentBlockWithItem(ModBlocks.LIQUORICE_SEA_WINDOW);
         TransparentBlockWithItem(ModBlocks.MOCHA_SEA_WINDOW);
         TransparentBlockWithItem(ModBlocks.SCARLET_SEA_WINDOW);
         TransparentBlockWithItem(ModBlocks.HONEY_SEA_WINDOW);
@@ -158,15 +147,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         TransparentBlockWithItem(ModBlocks.CERULEAN_SEA_WINDOW);
         TransparentBlockWithItem(ModBlocks.TAUPE_SEA_WINDOW);
 
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.HAZEL_SEA_WINDOW_PANE, ModBlocks.HAZEL_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.MOCHA_SEA_WINDOW_PANE, ModBlocks.MOCHA_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.SCARLET_SEA_WINDOW_PANE, ModBlocks.SCARLET_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.HONEY_SEA_WINDOW_PANE, ModBlocks.HONEY_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.MINT_SEA_WINDOW_PANE, ModBlocks.MINT_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.TEAL_SEA_WINDOW_PANE, ModBlocks.TEAL_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_WINDOW_PANE, ModBlocks.CERULEAN_SEA_WINDOW);
-        SeaWindowPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_WINDOW_PANE, ModBlocks.TAUPE_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.CREAM_SEA_WINDOW_PANE, ModBlocks.CREAM_SEA_WINDOW);
         seaWindowPaneBlockWithFlatItem(ModBlocks.HAZEL_SEA_WINDOW_PANE, ModBlocks.HAZEL_SEA_WINDOW);
+        seaWindowPaneBlockWithFlatItem(ModBlocks.LIQUORICE_SEA_WINDOW_PANE, ModBlocks.LIQUORICE_SEA_WINDOW);
         seaWindowPaneBlockWithFlatItem(ModBlocks.MOCHA_SEA_WINDOW_PANE, ModBlocks.MOCHA_SEA_WINDOW);
         seaWindowPaneBlockWithFlatItem(ModBlocks.SCARLET_SEA_WINDOW_PANE, ModBlocks.SCARLET_SEA_WINDOW);
         seaWindowPaneBlockWithFlatItem(ModBlocks.HONEY_SEA_WINDOW_PANE, ModBlocks.HONEY_SEA_WINDOW);
@@ -177,6 +160,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         seaglassLampWithBlockItem(ModBlocks.CREAM_SEAGLASS_LAMP);
         seaglassLampWithBlockItem(ModBlocks.HAZEL_SEAGLASS_LAMP);
+        seaglassLampWithBlockItem(ModBlocks.LIQUORICE_SEAGLASS_LAMP);
         seaglassLampWithBlockItem(ModBlocks.MOCHA_SEAGLASS_LAMP);
         seaglassLampWithBlockItem(ModBlocks.SCARLET_SEAGLASS_LAMP);
         seaglassLampWithBlockItem(ModBlocks.HONEY_SEAGLASS_LAMP);
