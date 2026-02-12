@@ -1372,6 +1372,47 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
 
+    public static final RegistryObject<Block, Block> SEASTONE_QUOIN = registerBlock("seastone_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_QUOIN = registerBlock("smooth_stone_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> POLISHED_GRANITE_QUOIN = registerBlock("polished_granite_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> POLISHED_DIORITE_QUOIN = registerBlock("polished_diorite_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> POLISHED_ANDESITE_QUOIN = registerBlock("polished_andesite_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> POLISHED_TUFF_QUOIN = registerBlock("polished_tuff_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> PACKED_MUD_QUOIN = registerBlock("packed_mud_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SANDSTONE_QUOIN = registerBlock("sandstone_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> RED_SANDSTONE_QUOIN = registerBlock("red_sandstone_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> POLISHED_BLACKSTONE_QUOIN = registerBlock("polished_blackstone_quoin",
+            () -> new QuoinBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    
 
 
 //TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore

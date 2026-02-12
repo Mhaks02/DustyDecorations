@@ -318,6 +318,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlockWithItem(ModBlocks.PINK_CUSHION_STAIRS, blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()));
         slabBlockWithItem(ModBlocks.PINK_CUSHION_SLAB, blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()));
 
+        customBlockWithItem(ModBlocks.SEASTONE_QUOIN);
+        customBlockWithItem(ModBlocks.SMOOTH_STONE_QUOIN);
+        customBlockWithItem(ModBlocks.POLISHED_GRANITE_QUOIN);
+        customBlockWithItem(ModBlocks.POLISHED_DIORITE_QUOIN);
+        customBlockWithItem(ModBlocks.POLISHED_ANDESITE_QUOIN);
+        customBlockWithItem(ModBlocks.POLISHED_TUFF_QUOIN);
+        customBlockWithItem(ModBlocks.PACKED_MUD_QUOIN);
+        customBlockWithItem(ModBlocks.SANDSTONE_QUOIN);
+        customBlockWithItem(ModBlocks.RED_SANDSTONE_QUOIN);
+        customBlockWithItem(ModBlocks.POLISHED_BLACKSTONE_QUOIN);
+
     }
 
 

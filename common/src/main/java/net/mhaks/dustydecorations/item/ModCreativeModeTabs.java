@@ -292,6 +292,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PINK_CUSHION_STAIRS.get());
                         output.accept(ModBlocks.PINK_CUSHION_SLAB.get());
 
+                        output.accept(ModBlocks.SEASTONE_QUOIN.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_GRANITE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_DIORITE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_ANDESITE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_TUFF_QUOIN.get());
+                        output.accept(ModBlocks.PACKED_MUD_QUOIN.get());
+                        output.accept(ModBlocks.SANDSTONE_QUOIN.get());
+                        output.accept(ModBlocks.RED_SANDSTONE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_BLACKSTONE_QUOIN.get());
+
                     }).build());
     
 
