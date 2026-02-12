@@ -329,6 +329,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customBlockWithItem(ModBlocks.RED_SANDSTONE_QUOIN);
         customBlockWithItem(ModBlocks.POLISHED_BLACKSTONE_QUOIN);
 
+        customHorizontalBlockWithItem(ModBlocks.SEASTONE_MURAL);
+        customHorizontalBlockWithItem(ModBlocks.SMOOTH_STONE_MURAL);
+        customHorizontalBlockWithItem(ModBlocks.GRANITE_MURAL);
+        customHorizontalBlockWithItem(ModBlocks.DIORITE_MURAL);
+        customHorizontalBlockWithItem(ModBlocks.ANDESITE_MURAL);
+
+
     }
 
 

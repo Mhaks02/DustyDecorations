@@ -303,6 +303,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RED_SANDSTONE_QUOIN.get());
                         output.accept(ModBlocks.POLISHED_BLACKSTONE_QUOIN.get());
 
+                        output.accept(ModBlocks.SEASTONE_MURAL.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_MURAL.get());
+                        output.accept(ModBlocks.GRANITE_MURAL.get());
+                        output.accept(ModBlocks.DIORITE_MURAL.get());
+                        output.accept(ModBlocks.ANDESITE_MURAL.get());
+
                     }).build());
     
 

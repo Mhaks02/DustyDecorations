@@ -1413,6 +1413,27 @@ public class ModBlocks {
                     .strength(.8f)
             ));
     
+    public static final RegistryObject<Block, Block> SEASTONE_MURAL = registerBlock("seastone_mural",
+            () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_MURAL = registerBlock("smooth_stone_mural",
+            () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> GRANITE_MURAL = registerBlock("granite_mural",
+            () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> DIORITE_MURAL = registerBlock("diorite_mural",
+            () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> ANDESITE_MURAL = registerBlock("andesite_mural",
+            () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+
 
 
 //TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore
