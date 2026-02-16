@@ -266,6 +266,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        customHorizontalBlockWithItem(ModBlocks.GIANT_ANCHOR);
+        customHorizontalFaceBlockWithItem(ModBlocks.GIANT_CHAIN);
+
+
         blockWithItem(ModBlocks.PLAIN_CUSHION_BLOCK);
         stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
         slabBlockWithItem(ModBlocks.PLAIN_CUSHION_SLAB, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));

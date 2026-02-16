@@ -1116,6 +1116,18 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> GIANT_ANCHOR = registerBlock("giant_anchor",
+            () -> new GiantAnchorBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.METAL)
+            ));
+    //TODO: special blockstate when above anchor?
+    public static final RegistryObject<Block, Block> GIANT_CHAIN = registerBlock("giant_chain",
+            () -> new GiantChainBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.METAL)
+            ));
+
     public static final RegistryObject<Block, Block> SEASTONE_BLOCK = registerBlock("seastone",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)

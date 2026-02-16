@@ -240,6 +240,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAILOR_FLAG.get());
                         output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
 
+                        output.accept(ModBlocks.GIANT_ANCHOR.get());
+                        output.accept(ModBlocks.GIANT_CHAIN.get());
+
                         output.accept(ModBlocks.PLAIN_CUSHION_BLOCK.get());
                         output.accept(ModBlocks.PLAIN_CUSHION_STAIRS.get());
                         output.accept(ModBlocks.PLAIN_CUSHION_SLAB.get());
