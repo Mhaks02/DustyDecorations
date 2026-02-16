@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "dustydecorations:block/seastone_bricks",
+    "side": "dustydecorations:block/seastone_bricks",
+    "top": "dustydecorations:block/seastone_bricks"
+  }
+}

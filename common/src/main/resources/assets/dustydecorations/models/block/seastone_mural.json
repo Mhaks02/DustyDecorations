@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "dustydecorations:block/seastone_mural",
 		"1": "dustydecorations:block/seastone_side",
-		"2": "dustydecorations:block/seastone_top",
+		"2": "dustydecorations:block/seastone_end",
 		"particle": "dustydecorations:block/seastone_mural"
 	},
 	"elements": [

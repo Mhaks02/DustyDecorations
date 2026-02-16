@@ -335,15 +335,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockWithItem(ModBlocks.DIORITE_MURAL);
         customHorizontalBlockWithItem(ModBlocks.ANDESITE_MURAL);
 
+        cubeColumnWithItem(ModBlocks.SEASTONE_BLOCK);
+        stairsBlockWithItem(ModBlocks.SEASTONE_STAIRS, getPath(ModBlocks.SEASTONE_BLOCK, "_side"), getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        slabBlockWithItem(ModBlocks.SEASTONE_SLAB, blockTexture(ModBlocks.SEASTONE_BLOCK.get()), getPath(ModBlocks.SEASTONE_BLOCK, "_side"), getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        wallBlockWithItem(ModBlocks.SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_side");
+        blockWithItem(ModBlocks.SEASTONE_BRICKS);
+        blockWithItem(ModBlocks.CHISELED_SEASTONE_BRICKS);
+        stairsBlockWithItem(ModBlocks.SEASTONE_BRICK_STAIRS, blockTexture(ModBlocks.SEASTONE_BRICKS.get()));
+        slabBlockWithItem(ModBlocks.SEASTONE_BRICK_SLAB, blockTexture(ModBlocks.SEASTONE_BRICKS.get()), blockTexture(ModBlocks.SEASTONE_BRICKS.get()));
+        wallBlockWithItem(ModBlocks.SEASTONE_BRICK_WALL, ModBlocks.SEASTONE_BRICKS);
+        blockWithItem(ModBlocks.SMOOTH_SEASTONE_BLOCK, getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        stairsBlockWithItem(ModBlocks.SMOOTH_SEASTONE_STAIRS, getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        slabBlockWithItem(ModBlocks.SMOOTH_SEASTONE_SLAB, blockTexture(ModBlocks.SEASTONE_BLOCK.get()), getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        wallBlockWithItem(ModBlocks.SMOOTH_SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_end");
+        blockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        stairsBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS, blockTexture(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get()));
+        slabBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB, blockTexture(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get()), blockTexture(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get()));
+        wallBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        blockWithItem(ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        stairsBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_STAIRS, blockTexture(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get()));
+        slabBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_SLAB, blockTexture(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get()), blockTexture(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get()));
+        wallBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_WALL, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        blockWithItem(ModBlocks.SNOWY_STONE_BRICKS);
+        stairsBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_STAIRS, blockTexture(ModBlocks.SNOWY_STONE_BRICKS.get()));
+        slabBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_SLAB, blockTexture(ModBlocks.SNOWY_STONE_BRICKS.get()), blockTexture(ModBlocks.SNOWY_STONE_BRICKS.get()));
+        wallBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_WALL, ModBlocks.SNOWY_STONE_BRICKS);
+        blockWithItem(ModBlocks.SMOOTH_STONE_BRICKS);
+        stairsBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_STAIRS, blockTexture(ModBlocks.SMOOTH_STONE_BRICKS.get()));
+        slabBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_SLAB, blockTexture(ModBlocks.SMOOTH_STONE_BRICKS.get()), blockTexture(ModBlocks.SMOOTH_STONE_BRICKS.get()));
+        wallBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_WALL, ModBlocks.SMOOTH_STONE_BRICKS);
+
 
     }
 
 
 
-    private void blockWithItem(RegistryObject<Block, Block> block) {
-        simpleBlockWithItem(block.get(), cubeAll(block.get()));
-    }
-//  Create blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
+    //  Create blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
     private void customHorizontalBlockWithItem(RegistryObject<Block, Block> block) {
         horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
         blockItem(block);
@@ -384,7 +411,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).modelForState().modelFile(model).rotationX(90).rotationY(90).addModel();
         blockItem(block);
     }
-    private void TransparentBlockWithItem(RegistryObject<Block, Block> block) {
+    private void transparentBlockWithItem(RegistryObject<Block, Block> block) {
         simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(block.get())).renderType("translucent"));
     }
 
@@ -929,16 +956,48 @@ public class ModBlockStateProvider extends BlockStateProvider {
         models().cubeColumn(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_side"), modLoc("block/" + block.getId().getPath() + "_end"));
         blockItem(block);
     }
+    private void cubeColumnWithItem(RegistryObject<Block, Block> block) {
+        ModelFile model = models().cubeColumn(block.getId().getPath(), getPath(block, "_side"), getPath(block, "_end"));
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            return new ConfiguredModel[] { new ConfiguredModel(model) };
+        });
+        blockItem(ModBlocks.SEASTONE_BLOCK);
+    }
 
 
+    private void blockWithItem(RegistryObject<Block, Block> block) {
+        simpleBlockWithItem(block.get(), cubeAll(block.get()));
+    }
+    private void blockWithItem(RegistryObject<Block, Block> block, ResourceLocation texture) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), texture));
+    }
     private void stairsBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation texture) {
         stairsBlock((StairBlock) block.get(), texture, texture, texture);
+        blockItem(block);
+    }
+    private void stairsBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation side, ResourceLocation end) {
+        stairsBlock((StairBlock) block.get(), side, end, end);
         blockItem(block);
     }
     public void slabBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation doubleslab, ResourceLocation texture) {
         slabBlock((SlabBlock) block.get(), doubleslab, texture, texture, texture);
         blockItem(block);
     }
+    public void slabBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation doubleslab, ResourceLocation side, ResourceLocation end) {
+        slabBlock((SlabBlock) block.get(), doubleslab, side, end, end);
+        blockItem(block);
+    }
+    public void wallBlockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
+        wallBlock((WallBlock) block.get(), getPath(baseBlock));
+        models().wallInventory(block.getId().getPath() + "_inventory", getPath(baseBlock));
+        wallItem(block);
+    }
+    public void wallBlockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock, String texture) {
+        wallBlock((WallBlock) block.get(), getPath(baseBlock, texture));
+        models().wallInventory(block.getId().getPath() + "_inventory", getPath(baseBlock, texture));
+        wallItem(block);
+    }
+
     private void fenceItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture", modLoc("block/" + baseBlock.getId().getPath()));
@@ -946,6 +1005,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void buttonItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
                 .texture("texture", modLoc("block/" + baseBlock.getId().getPath()));
+    }
+    private void wallItem(RegistryObject<Block, Block> block) {
+        itemModels().withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_inventory"));
     }
 
     private void blockItem(RegistryObject<Block, Block> block) {

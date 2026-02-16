@@ -309,6 +309,36 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DIORITE_MURAL.get());
                         output.accept(ModBlocks.ANDESITE_MURAL.get());
 
+                        output.accept(ModBlocks.SEASTONE_BLOCK.get());
+                        output.accept(ModBlocks.SEASTONE_STAIRS.get());
+                        output.accept(ModBlocks.SEASTONE_SLAB.get());
+                        output.accept(ModBlocks.SEASTONE_WALL.get());
+                        output.accept(ModBlocks.SEASTONE_BRICKS.get());
+                        output.accept(ModBlocks.CHISELED_SEASTONE_BRICKS.get());
+                        output.accept(ModBlocks.SEASTONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.SEASTONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.SEASTONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_SLAB.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_WALL.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_STAIRS.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_SLAB.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_WALL.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICKS.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICKS.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICK_WALL.get());
+
                     }).build());
     
 

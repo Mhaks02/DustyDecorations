@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "dustydecorations:block/coral_embedded_seastone_bricks"
+  }
+}

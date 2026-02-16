@@ -1116,6 +1116,123 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> SEASTONE_BLOCK = registerBlock("seastone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_STAIRS = registerBlock("seastone_stairs",
+            () -> new StairBlock(SEASTONE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_SLAB = registerBlock("seastone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_WALL = registerBlock("seastone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_BRICKS = registerBlock("seastone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> CHISELED_SEASTONE_BRICKS = registerBlock("chiseled_seastone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_BRICK_STAIRS = registerBlock("seastone_brick_stairs",
+            () -> new StairBlock(SEASTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_BRICK_SLAB = registerBlock("seastone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SEASTONE_BRICK_WALL = registerBlock("seastone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_BLOCK = registerBlock("smooth_seastone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_STAIRS = registerBlock("smooth_seastone_stairs",
+            () -> new StairBlock(SMOOTH_SEASTONE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_SLAB = registerBlock("smooth_seastone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_WALL = registerBlock("smooth_seastone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICKS = registerBlock("coral_embedded_seastone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS = registerBlock("coral_embedded_seastone_brick_stairs",
+            () -> new StairBlock(CORAL_EMBEDDED_SEASTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICK_SLAB = registerBlock("coral_embedded_seastone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICK_WALL = registerBlock("coral_embedded_seastone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_BLOCK = registerBlock("snowy_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_STAIRS = registerBlock("snowy_cobblestone_stairs",
+            () -> new StairBlock(SNOWY_COBBLESTONE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_SLAB = registerBlock("snowy_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_WALL = registerBlock("smooth_seastone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_STONE_BRICKS = registerBlock("snowy_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_STONE_BRICK_STAIRS = registerBlock("snowy_stone_brick_stairs",
+            () -> new StairBlock(SNOWY_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_STONE_BRICK_SLAB = registerBlock("snowy_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SNOWY_STONE_BRICK_WALL = registerBlock("snowy_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICKS = registerBlock("smooth_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_STAIRS = registerBlock("smooth_stone_brick_stairs",
+            () -> new StairBlock(SMOOTH_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_SLAB = registerBlock("smooth_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_WALL = registerBlock("smooth_tone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+            ));
+
     public static final RegistryObject<Block, Block> PLAIN_CUSHION_BLOCK = registerBlock("plain_cushion",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
@@ -1412,7 +1529,7 @@ public class ModBlocks {
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
             ));
-    
+
     public static final RegistryObject<Block, Block> SEASTONE_MURAL = registerBlock("seastone_mural",
             () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)

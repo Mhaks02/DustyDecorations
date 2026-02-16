@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "dustydecorations:block/coral_embedded_seastone_bricks"
+  }
+}
