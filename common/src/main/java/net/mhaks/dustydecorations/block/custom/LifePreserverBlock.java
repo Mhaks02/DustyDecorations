@@ -43,18 +43,15 @@ public class LifePreserverBlock extends HorizontalDirectionalBlock implements Si
         return CODEC;
     }
 
-    private static final VoxelShape SHAPE_N =
-            Block.box(2, 2, 13, 14, 14, 16);
-    private static final VoxelShape SHAPE_S =
-            Block.box(2, 2, 0, 14, 14, 3);
-    private static final VoxelShape SHAPE_E =
-            Block.box(0, 2, 2, 3, 14, 14);
-    private static final VoxelShape SHAPE_W =
-            Block.box(13, 2, 2, 16, 14, 14);
-    private static final VoxelShape SHAPE_UP =
-            Block.box(2, 0, 2, 14, 3, 14);
-    private static final VoxelShape SHAPE_DOWN =
-            Block.box(2, 13, 2, 14, 16, 14);
+    protected static final VoxelShape NEG_SPACE_Z = Block.box(5, 5, 0, 11, 11, 16);
+    protected static final VoxelShape NEG_SPACE_X = Block.box(0, 5, 5, 16, 11, 11);
+    protected static final VoxelShape NEG_SPACE_Y = Block.box(5, 0, 5, 11, 16, 11);
+    private static final VoxelShape SHAPE_N = Shapes.join(Block.box(2, 2, 13, 14, 14, 16), NEG_SPACE_Z, BooleanOp.ONLY_FIRST);
+    private static final VoxelShape SHAPE_S = Shapes.join(Block.box(2, 2, 0, 14, 14, 3), NEG_SPACE_Z, BooleanOp.ONLY_FIRST);
+    private static final VoxelShape SHAPE_E = Shapes.join(Block.box(0, 2, 2, 3, 14, 14), NEG_SPACE_X, BooleanOp.ONLY_FIRST);
+    private static final VoxelShape SHAPE_W = Shapes.join(Block.box(13, 2, 2, 16, 14, 14), NEG_SPACE_X, BooleanOp.ONLY_FIRST);
+    private static final VoxelShape SHAPE_UP = Shapes.join(Block.box(2, 0, 2, 14, 3, 14), NEG_SPACE_Y, BooleanOp.ONLY_FIRST);
+    private static final VoxelShape SHAPE_DOWN = Shapes.join(Block.box(2, 13, 2, 14, 16, 14), NEG_SPACE_Y, BooleanOp.ONLY_FIRST);
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
