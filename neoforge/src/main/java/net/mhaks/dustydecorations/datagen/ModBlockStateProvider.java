@@ -268,6 +268,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customGarlandWithItem(ModBlocks.FALL_GARLAND);
         customGarlandWithItem(ModBlocks.WINTER_GARLAND);
+        customGarlandWithItem(ModBlocks.FAIRY_LIGHTS);
         customHorizontalBlockWithItem(ModBlocks.GIANT_ANCHOR);
         customHorizontalFaceBlockWithItem(ModBlocks.GIANT_CHAIN);
 

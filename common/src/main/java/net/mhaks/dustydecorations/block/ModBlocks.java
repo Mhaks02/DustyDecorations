@@ -1130,6 +1130,14 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> FAIRY_LIGHTS = registerBlock("fairy_lights",
+            () -> new GarlandBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()
+                    .noCollission()
+                    .lightLevel(value -> 6)
+            ));
     public static final RegistryObject<Block, Block> GIANT_ANCHOR = registerBlock("giant_anchor",
             () -> new GiantAnchorBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)

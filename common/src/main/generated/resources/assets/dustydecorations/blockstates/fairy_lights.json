@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=east,texture=0": {
+      "model": "dustydecorations:block/fairy_lights",
+      "y": 90
+    },
+    "facing=east,texture=1": {
+      "model": "dustydecorations:block/fairy_lights_1",
+      "y": 90
+    },
+    "facing=east,texture=2": {
+      "model": "dustydecorations:block/fairy_lights_2",
+      "y": 90
+    },
+    "facing=north,texture=0": {
+      "model": "dustydecorations:block/fairy_lights"
+    },
+    "facing=north,texture=1": {
+      "model": "dustydecorations:block/fairy_lights_1"
+    },
+    "facing=north,texture=2": {
+      "model": "dustydecorations:block/fairy_lights_2"
+    },
+    "facing=south,texture=0": {
+      "model": "dustydecorations:block/fairy_lights",
+      "y": 180
+    },
+    "facing=south,texture=1": {
+      "model": "dustydecorations:block/fairy_lights_1",
+      "y": 180
+    },
+    "facing=south,texture=2": {
+      "model": "dustydecorations:block/fairy_lights_2",
+      "y": 180
+    },
+    "facing=west,texture=0": {
+      "model": "dustydecorations:block/fairy_lights",
+      "y": 270
+    },
+    "facing=west,texture=1": {
+      "model": "dustydecorations:block/fairy_lights_1",
+      "y": 270
+    },
+    "facing=west,texture=2": {
+      "model": "dustydecorations:block/fairy_lights_2",
+      "y": 270
+    }
+  }
+}
