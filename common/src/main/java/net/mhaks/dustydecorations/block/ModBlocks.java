@@ -1116,6 +1116,20 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> FALL_GARLAND = registerBlock("fall_garland",
+            () -> new GarlandBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .noCollission()
+            ));
+    public static final RegistryObject<Block, Block> WINTER_GARLAND = registerBlock("winter_garland",
+            () -> new GarlandBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .noCollission()
+            ));
     public static final RegistryObject<Block, Block> GIANT_ANCHOR = registerBlock("giant_anchor",
             () -> new GiantAnchorBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)

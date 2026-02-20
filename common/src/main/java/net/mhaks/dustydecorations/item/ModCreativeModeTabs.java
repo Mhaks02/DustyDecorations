@@ -240,6 +240,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAILOR_FLAG.get());
                         output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
 
+                        output.accept(ModBlocks.FALL_GARLAND.get());
+                        output.accept(ModBlocks.WINTER_GARLAND.get());
                         output.accept(ModBlocks.GIANT_ANCHOR.get());
                         output.accept(ModBlocks.GIANT_CHAIN.get());
 

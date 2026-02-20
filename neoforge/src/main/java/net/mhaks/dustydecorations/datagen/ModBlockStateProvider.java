@@ -266,9 +266,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        customGarlandWithItem(ModBlocks.FALL_GARLAND);
+        customGarlandWithItem(ModBlocks.WINTER_GARLAND);
         customHorizontalBlockWithItem(ModBlocks.GIANT_ANCHOR);
         customHorizontalFaceBlockWithItem(ModBlocks.GIANT_CHAIN);
-
 
         blockWithItem(ModBlocks.PLAIN_CUSHION_BLOCK);
         stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
@@ -941,6 +942,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
             }
         });
         blockItem(ModBlocks.SAILOR_PENNANT_FLAG);
+    }
+    private void customGarlandWithItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            switch (blockState.getValue(GarlandBlock.TEXTURE)) {
+                case 2: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_2"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+                }
+                case 1: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_1"));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+                }
+                case 0:
+                default: {
+                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath()));
+                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
+                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+                }
+            }
+        });
+        blockItem(block);
     }
 
 
