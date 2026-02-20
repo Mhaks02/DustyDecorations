@@ -146,16 +146,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
             buttonItem(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         customHorizontalBlockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING);
 
-        TransparentBlockWithItem(ModBlocks.CREAM_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.HAZEL_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.LIQUORICE_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.MOCHA_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.SCARLET_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.HONEY_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.MINT_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.TEAL_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.CERULEAN_SEAGLASS);
-        TransparentBlockWithItem(ModBlocks.TAUPE_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.CREAM_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.HAZEL_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.LIQUORICE_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.MOCHA_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.SCARLET_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.HONEY_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.MINT_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.TEAL_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.CERULEAN_SEAGLASS);
+        transparentBlockWithItem(ModBlocks.TAUPE_SEAGLASS);
 
         seaglassPaneBlockWithFlatItem(ModBlocks.CREAM_SEAGLASS_PANE, ModBlocks.CREAM_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.HAZEL_SEAGLASS_PANE, ModBlocks.HAZEL_SEAGLASS);
@@ -168,16 +168,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         seaglassPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEAGLASS_PANE, ModBlocks.CERULEAN_SEAGLASS);
         seaglassPaneBlockWithFlatItem(ModBlocks.TAUPE_SEAGLASS_PANE, ModBlocks.TAUPE_SEAGLASS);
 
-        TransparentBlockWithItem(ModBlocks.CREAM_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.HAZEL_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.LIQUORICE_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.MOCHA_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.SCARLET_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.HONEY_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.MINT_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.TEAL_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.CERULEAN_SEA_WINDOW);
-        TransparentBlockWithItem(ModBlocks.TAUPE_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.CREAM_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.HAZEL_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.LIQUORICE_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.MOCHA_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.SCARLET_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.HONEY_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.MINT_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.TEAL_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.CERULEAN_SEA_WINDOW);
+        transparentBlockWithItem(ModBlocks.TAUPE_SEA_WINDOW);
 
         seaWindowPaneBlockWithFlatItem(ModBlocks.CREAM_SEA_WINDOW_PANE, ModBlocks.CREAM_SEA_WINDOW);
         seaWindowPaneBlockWithFlatItem(ModBlocks.HAZEL_SEA_WINDOW_PANE, ModBlocks.HAZEL_SEA_WINDOW);
