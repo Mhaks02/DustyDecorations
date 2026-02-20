@@ -1130,6 +1130,12 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> WINTER_WREATH = registerBlock("winter_wreath",
+            () -> new WinterWreathBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.GRASS)
+                    .noCollission()
+            ));
     public static final RegistryObject<Block, Block> FAIRY_LIGHTS = registerBlock("fairy_lights",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
