@@ -242,6 +242,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FALL_GARLAND.get());
                         output.accept(ModBlocks.WINTER_GARLAND.get());
                         output.accept(ModBlocks.FAIRY_LIGHTS.get());
+                        output.accept(ModBlocks.HOLIDAY_ORNAMENTS.get());
                         output.accept(ModBlocks.GIANT_ANCHOR.get());
                         output.accept(ModBlocks.GIANT_CHAIN.get());
 

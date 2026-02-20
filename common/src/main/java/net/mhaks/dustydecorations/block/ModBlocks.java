@@ -1138,6 +1138,12 @@ public class ModBlocks {
                     .noCollission()
                     .lightLevel(value -> 6)
             ));
+    public static final RegistryObject<Block, Block> HOLIDAY_ORNAMENTS = registerBlock("holiday_ornaments",
+            () -> new FishingLuresBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOD)
+                    .noCollission()
+            ));
     public static final RegistryObject<Block, Block> GIANT_ANCHOR = registerBlock("giant_anchor",
             () -> new GiantAnchorBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)

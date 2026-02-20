@@ -113,6 +113,10 @@ public class FishingLuresBlock extends HorizontalDirectionalBlock implements Sim
             this.registerDefaultState(defaultBlockState()
                     .setValue(TEXTURE, RandomSource.create().nextInt(0, 6)));
         }
+        if (state.is(ModBlocks.HOLIDAY_ORNAMENTS.get())) {
+            this.registerDefaultState(defaultBlockState()
+                    .setValue(TEXTURE, RandomSource.create().nextInt(0, 8)));
+        }
         this.registerDefaultState(defaultBlockState()
                 .setValue(TEXTURE, RandomSource.create().nextInt(0, 5)));
         super.onPlace(state, level, pos, oldState, movedByPiston);
