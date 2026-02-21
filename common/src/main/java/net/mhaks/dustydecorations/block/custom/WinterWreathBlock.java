@@ -62,7 +62,7 @@ public class WinterWreathBlock extends HorizontalDirectionalBlock {
         Direction direction = state.getValue(FACING);
         BlockPos blockPos = pos.offset(direction.getOpposite().getNormal());
         BlockState blockState = level.getBlockState(blockPos);
-        return blockState.isFaceSturdy(level, blockPos, direction, SupportType.RIGID);
+        return !blockState.getBlockSupportShape(level, pos).getFaceShape(direction).isEmpty();
     }
 
     @Override
