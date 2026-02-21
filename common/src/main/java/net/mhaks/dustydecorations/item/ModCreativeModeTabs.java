@@ -239,6 +239,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAILOR_FLAG.get());
                         output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
 
+                        output.accept(ModBlocks.BEETROOT_SCARECROW.get());
+                        output.accept(ModBlocks.PUMPKIN_SCARECROW.get());
+
                         output.accept(ModBlocks.MINI_SNOWMAN.get());
                         output.accept(ModBlocks.PLUSHIE.get());
                         output.accept(ModBlocks.NUTCRACKER.get());

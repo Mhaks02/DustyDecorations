@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -267,6 +268,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         sailorFlagWithItem();
         sailorPennantFlag();
+
+        scarecrowWithItem(ModBlocks.BEETROOT_SCARECROW);
+        scarecrowWithItem(ModBlocks.PUMPKIN_SCARECROW);
 
         customHorizontalBlockWithItem(ModBlocks.MINI_SNOWMAN);
         plushieWithItem();
@@ -985,6 +989,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(PLUSHIE_NAME[0] + "_", ModBlocks.PLUSHIE);
     }
 
+    private void scarecrowWithItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            ModelFile bottom = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_bottom"));
+            ModelFile top = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_top"));
+            int yRot = (((int) (blockState.getValue(ScarecrowBlock.FACING).toYRot())) + 180) % 360;
+            ModelFile model = blockState.getValue(ScarecrowBlock.HALF) == DoubleBlockHalf.LOWER ? bottom : top ;
+            return ConfiguredModel.builder().modelFile(model).rotationY(yRot).build();
+        });
+        blockItem(block);
+    }
 
 
 

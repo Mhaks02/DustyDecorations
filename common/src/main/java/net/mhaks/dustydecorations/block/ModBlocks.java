@@ -1116,6 +1116,16 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> BEETROOT_SCARECROW = registerBlock("beetroot_scarecrow",
+            () -> new ScarecrowBlock(ScarecrowBlock.Types.BEETROOT, BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.GRASS)
+            ));
+    public static final RegistryObject<Block, Block> PUMPKIN_SCARECROW = registerBlock("pumpkin_scarecrow",
+            () -> new ScarecrowBlock(ScarecrowBlock.Types.PUMPKIN, BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.GRASS)
+            ));
     //TODO: Snowman's shape
     public static final RegistryObject<Block, Block> MINI_SNOWMAN = registerBlock("mini_snowman",
             () -> new MiniSnowmanBlock(BlockBehaviour.Properties.of()
