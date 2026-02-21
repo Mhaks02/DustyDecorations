@@ -266,6 +266,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        customHorizontalBlockWithItem(ModBlocks.NUTCRACKER);
         customGarlandWithItem(ModBlocks.FALL_GARLAND);
         customGarlandWithItem(ModBlocks.WINTER_GARLAND);
         customDirectionalBlockWithItem(ModBlocks.WINTER_WREATH);

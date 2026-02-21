@@ -1116,6 +1116,11 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> NUTCRACKER = registerBlock("nutcracker",
+            () -> new NutcrackerBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOD)
+            ));
     public static final RegistryObject<Block, Block> FALL_GARLAND = registerBlock("fall_garland",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
