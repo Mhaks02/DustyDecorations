@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/nutcracker",
+      "y": 90
+    },
+    "facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/nutcracker",
+      "y": 90
+    },
+    "facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/nutcracker"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/nutcracker"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/nutcracker",
+      "y": 180
+    },
+    "facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/nutcracker",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/nutcracker",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/nutcracker",
+      "y": 270
+    }
+  }
+}

@@ -20,6 +20,8 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
+    public static final String[] PLUSHIE_NAME = { "alex", "ari", "efe", "kai", "makena", "noor", "steve", "sunny", "zuri" };
+
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, ModConstants.MOD_ID, exFileHelper);
     }
@@ -266,6 +268,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        plushieWithItem();
         customHorizontalBlockWithItem(ModBlocks.NUTCRACKER);
         customGarlandWithItem(ModBlocks.FALL_GARLAND);
         customGarlandWithItem(ModBlocks.WINTER_GARLAND);
@@ -971,6 +974,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(block);
     }
+    private void plushieWithItem() {
+        getVariantBuilder(ModBlocks.PLUSHIE.get()).forAllStates(blockState -> {
+            int texture = blockState.getValue(PlushieBlock.TEXTURE);
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + PLUSHIE_NAME[texture] + "_" + ModBlocks.PLUSHIE.getId().getPath()));
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+        });
+        blockItem(PLUSHIE_NAME[0] + "_", ModBlocks.PLUSHIE);
+    }
+
 
 
 
@@ -1048,6 +1061,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void blockItem(RegistryObject<Block, Block> block, String appendix) {
         simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + appendix)));
+    }
+    private void blockItem(String prefix, RegistryObject<Block, Block> block) {
+        simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + prefix + block.getId().getPath())));
     }
     private void flatItem(RegistryObject<Block, Block> block) {
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "item/" + block.getId().getPath());
