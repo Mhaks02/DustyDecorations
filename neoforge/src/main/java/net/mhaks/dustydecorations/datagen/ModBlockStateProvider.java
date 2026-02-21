@@ -268,6 +268,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        customHorizontalBlockWithItem(ModBlocks.MINI_SNOWMAN);
         plushieWithItem();
         customHorizontalBlockWithItem(ModBlocks.NUTCRACKER);
         customGarlandWithItem(ModBlocks.FALL_GARLAND);

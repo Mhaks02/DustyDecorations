@@ -159,6 +159,7 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_FLAG.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_PENNANT_FLAG.get(), RenderType.cutout());
 
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_SNOWMAN.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FALL_GARLAND.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_GARLAND.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_WREATH.get(), RenderType.cutout());

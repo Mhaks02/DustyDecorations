@@ -1116,6 +1116,12 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    //TODO: Snowman's shape
+    public static final RegistryObject<Block, Block> MINI_SNOWMAN = registerBlock("mini_snowman",
+            () -> new MiniSnowmanBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.SNOW)
+            ));
     public static final RegistryObject<Block, Block> PLUSHIE = registerBlock("plushie",
             () -> new PlushieBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
