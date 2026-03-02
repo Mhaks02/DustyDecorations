@@ -10,7 +10,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -29,14 +28,14 @@ import java.util.stream.Stream;
 
 public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
     public static BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static BooleanProperty LAMP_ON = BooleanProperty.create("lamp_on");
+    public static BooleanProperty LIT = BlockStateProperties.LIT;
     public static final MapCodec<SeaglassLampBlock> CODEC = simpleCodec(SeaglassLampBlock::new);
 
     public SeaglassLampBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(LAMP_ON, false)
+                .setValue(LIT, false)
         );
     }
 
@@ -59,7 +58,7 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
-            level.setBlockAndUpdate(pos, state.cycle(LAMP_ON));
+            level.setBlockAndUpdate(pos, state.cycle(LIT));
         }
         return InteractionResult.SUCCESS;
     }
@@ -68,7 +67,7 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
                 .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER))
-                .setValue(LAMP_ON, false);
+                .setValue(LIT, false);
     }
 
     @Override
@@ -86,6 +85,6 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED, LAMP_ON);
+        builder.add(WATERLOGGED, LIT);
     }
 }

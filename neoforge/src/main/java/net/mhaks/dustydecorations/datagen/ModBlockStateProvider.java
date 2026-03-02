@@ -196,16 +196,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         seaWindowPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_WINDOW_PANE, ModBlocks.CERULEAN_SEA_WINDOW);
         seaWindowPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_WINDOW_PANE, ModBlocks.TAUPE_SEA_WINDOW);
 
-        seaglassLampWithBlockItem(ModBlocks.CREAM_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.HAZEL_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.LIQUORICE_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.MOCHA_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.SCARLET_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.HONEY_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.MINT_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.TEAL_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.CERULEAN_SEAGLASS_LAMP);
-        seaglassLampWithBlockItem(ModBlocks.TAUPE_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.CREAM_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.HAZEL_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.LIQUORICE_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.MOCHA_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.SCARLET_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.HONEY_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.MINT_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.TEAL_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.CERULEAN_SEAGLASS_LAMP);
+        seaglassLamp(ModBlocks.TAUPE_SEAGLASS_LAMP);
 
         customHorizontalBlockWithItem(ModBlocks.RUSTED_ANCHOR);
         customDirectionalBlockWithItem(ModBlocks.LIFE_PRESERVER);
@@ -890,12 +890,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         flatBlockItem(ModBlocks.SCATTERED_GOLD_COINS, "/0");
     }
-    private void seaglassLampWithBlockItem(RegistryObject<Block, Block> block) {
+    private void customLampWithBlockItem(RegistryObject<Block, Block> block) {
         ModelFile on = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_on"));
         ModelFile off = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_off"));
         getVariantBuilder(block.get())
-                .partialState().with(SeaglassLampBlock.LAMP_ON, true).addModels(new ConfiguredModel(on))
-                .partialState().with(SeaglassLampBlock.LAMP_ON, false).addModels(new ConfiguredModel(off));
+                .partialState().with(SeaglassLampBlock.LIT, true).addModels(new ConfiguredModel(on))
+                .partialState().with(SeaglassLampBlock.LIT, false).addModels(new ConfiguredModel(off));
+        blockItem(block, "_on");
+    }
+    private void seaglassLamp(RegistryObject<Block, Block> block) {
+        String blockPath = block.getId().getPath();
+        ModelFile on = models().withExistingParent(BLOCK_FOLDER + blockPath + "_on", modLoc(BLOCK_FOLDER + "template_seaglass_lamp_on"))
+                .texture("lamp", modLoc(BLOCK_FOLDER + blockPath));
+        ModelFile off = models().withExistingParent(BLOCK_FOLDER + blockPath + "_off", modLoc(BLOCK_FOLDER + "template_seaglass_lamp_off"))
+                .texture("lamp", modLoc(BLOCK_FOLDER + blockPath));
+        getVariantBuilder(block.get())
+                .partialState().with(SeaglassLampBlock.LIT, true).addModels(new ConfiguredModel(on))
+                .partialState().with(SeaglassLampBlock.LIT, false).addModels(new ConfiguredModel(off));
         blockItem(block, "_on");
     }
     private void burlapSackWithItem() {

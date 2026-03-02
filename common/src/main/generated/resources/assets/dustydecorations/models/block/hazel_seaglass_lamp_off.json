@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_seaglass_lamp_off",
+  "textures": {
+    "lamp": "dustydecorations:block/hazel_seaglass_lamp"
+  }
+}
