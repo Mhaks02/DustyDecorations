@@ -161,55 +161,37 @@ public class ModBlocks {
             ));
 
     //TODO: VoxelShapes can be simplified with a Shapes.join with BooleanOP.ONLY_FIRST I think
-    public static final RegistryObject<Block, Block> APPLE_BARREL = registerBlock("apple_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> SWEET_BERRIES_BARREL = registerBlock("sweet_berries_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> GLOW_BERRIES_BARREL = registerBlock("glow_berries_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> CARROT_BARREL = registerBlock("carrot_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> POTATO_BARREL = registerBlock("potato_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> BEETROOT_BARREL = registerBlock("beetroot_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> SEA_PICKLE_BARREL = registerBlock("sea_pickle_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> COD_BARREL = registerBlock("cod_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
-    public static final RegistryObject<Block, Block> SALMON_BARREL = registerBlock("salmon_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-            ));
     public static final RegistryObject<Block, Block> EMPTY_BARREL = registerBlock("empty_barrel",
             () -> new EmptyBarrelBlock(BlockBehaviour.Properties.of()
                     .strength(2.5f)
                     .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> APPLE_BARREL = registerBlock("apple_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> SWEET_BERRIES_BARREL = registerBlock("sweet_berries_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> GLOW_BERRIES_BARREL = registerBlock("glow_berries_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> CARROT_BARREL = registerBlock("carrot_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> POTATO_BARREL = registerBlock("potato_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> BEETROOT_BARREL = registerBlock("beetroot_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> SEA_PICKLE_BARREL = registerBlock("sea_pickle_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> COD_BARREL = registerBlock("cod_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
+            ));
+    public static final RegistryObject<Block, Block> SALMON_BARREL = registerBlock("salmon_barrel",
+            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(EMPTY_BARREL.get())
             ));
 
     public static final RegistryObject<Block, Block> SUNFLOWER_WALLPAPER_BLOCK = registerBlock("sunflower_wallpaper",
