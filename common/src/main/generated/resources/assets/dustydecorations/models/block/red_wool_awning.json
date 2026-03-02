@@ -1,0 +1,7 @@
+{
+  "parent": "dustydecorations:block/template_wool_awning",
+  "textures": {
+    "awning": "dustydecorations:block/red_wool_awning",
+    "particle": "minecraft:block/red_wool"
+  }
+}

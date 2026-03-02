@@ -284,79 +284,49 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> LIGHT_GRAY_WOOL_AWNING = registerBlock("light_gray_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> GRAY_WOOL_AWNING = registerBlock("gray_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> BLACK_WOOL_AWNING = registerBlock("black_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> BROWN_WOOL_AWNING = registerBlock("brown_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> RED_WOOL_AWNING = registerBlock("red_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> ORANGE_WOOL_AWNING = registerBlock("orange_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> YELLOW_WOOL_AWNING = registerBlock("yellow_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> LIME_WOOL_AWNING = registerBlock("lime_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> GREEN_WOOL_AWNING = registerBlock("green_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> CYAN_WOOL_AWNING = registerBlock("cyan_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> LIGHT_BLUE_WOOL_AWNING = registerBlock("light_blue_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> BLUE_WOOL_AWNING = registerBlock("blue_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> PURPLE_WOOL_AWNING = registerBlock("purple_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> MAGENTA_WOOL_AWNING = registerBlock("magenta_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
     public static final RegistryObject<Block, Block> PINK_WOOL_AWNING = registerBlock("pink_wool_awning",
-            () -> new WoolAwningBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
-                    .sound(SoundType.WOOL)
+            () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
 
     //TODO: lantern sound, strength, instabreak?, etc...

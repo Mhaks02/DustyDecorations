@@ -84,22 +84,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SNOWMEN_WALLPAPER_BLOCK);
         blockWithItem(ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK);
 
-        customHorizontalBlockWithItem(ModBlocks.WHITE_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.LIGHT_GRAY_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.GRAY_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.BLACK_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.BROWN_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.RED_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.ORANGE_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.YELLOW_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.LIME_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.GREEN_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.CYAN_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.LIGHT_BLUE_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.BLUE_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.PURPLE_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.MAGENTA_WOOL_AWNING);
-        customHorizontalBlockWithItem(ModBlocks.PINK_WOOL_AWNING);
+        woolAwnings(ModBlocks.WHITE_WOOL_AWNING);
+        woolAwnings(ModBlocks.LIGHT_GRAY_WOOL_AWNING);
+        woolAwnings(ModBlocks.GRAY_WOOL_AWNING);
+        woolAwnings(ModBlocks.BLACK_WOOL_AWNING);
+        woolAwnings(ModBlocks.BROWN_WOOL_AWNING);
+        woolAwnings(ModBlocks.RED_WOOL_AWNING);
+        woolAwnings(ModBlocks.ORANGE_WOOL_AWNING);
+        woolAwnings(ModBlocks.YELLOW_WOOL_AWNING);
+        woolAwnings(ModBlocks.LIME_WOOL_AWNING);
+        woolAwnings(ModBlocks.GREEN_WOOL_AWNING);
+        woolAwnings(ModBlocks.CYAN_WOOL_AWNING);
+        woolAwnings(ModBlocks.LIGHT_BLUE_WOOL_AWNING);
+        woolAwnings(ModBlocks.BLUE_WOOL_AWNING);
+        woolAwnings(ModBlocks.PURPLE_WOOL_AWNING);
+        woolAwnings(ModBlocks.MAGENTA_WOOL_AWNING);
+        woolAwnings(ModBlocks.PINK_WOOL_AWNING);
 
         paperLanternWithFlatItem(ModBlocks.PAPER_LANTERN);
         paperLanternWithFlatItem(ModBlocks.SAKURA_PAPER_LANTERN);
@@ -1069,6 +1069,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     .build();
         });
         blockItem(block, "_" + ModConstants.MAX_AMOUNT_4);
+    }
+    private void woolAwnings(RegistryObject<Block, Block> awning) {
+        String awningPath = awning.getId().getPath();
+        String wool = awningPath.substring(0, awningPath.length() - 7);
+        ModelFile model = models().withExistingParent(BLOCK_FOLDER + awningPath, modLoc(BLOCK_FOLDER + "template_wool_awning"))
+                .texture("awning", modLoc(BLOCK_FOLDER + awningPath))
+                .texture("particle", mcLoc(BLOCK_FOLDER + wool));
+        horizontalBlock(awning.get(), model);
+        blockItem(awning);
     }
     private void wickerBasketProduce(RegistryObject<Block, Block> basket) {
         String basketPath = basket.getId().getPath();
