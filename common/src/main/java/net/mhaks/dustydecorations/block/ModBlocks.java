@@ -1116,6 +1116,17 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> HANGING_SAUSAGES = registerBlock("hanging_sausages",
+            () -> new HangingSausagesBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.HONEY_BLOCK)
+            ));
+    public static final RegistryObject<Block, Block> WRAPPED_MEAT = registerBlock("wrapped_meat",
+            () -> new WrappedMeatBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.SLIME_BLOCK)
+                    .noOcclusion()
+            ));
     public static final RegistryObject<Block, Block> GOURD = registerBlock("gourd",
             () -> new GourdBlock(BlockBehaviour.Properties.of()
                     .strength(.4f)

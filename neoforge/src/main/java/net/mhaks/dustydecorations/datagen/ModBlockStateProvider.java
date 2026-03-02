@@ -269,8 +269,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
-        scarecrowWithItem(ModBlocks.BEETROOT_SCARECROW);
-        scarecrowWithItem(ModBlocks.PUMPKIN_SCARECROW);
+        customHorizontalBlockWithItem(ModBlocks.HANGING_SAUSAGES);
+        fourStackedHorizontalBlockWithItem(ModBlocks.WRAPPED_MEAT);
         threeStackedHorizontalBlockWithItem(ModBlocks.GOURD);
         customHorizontalBlockWithItem(ModBlocks.HANGING_GOURDS);
         threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);
@@ -1017,6 +1017,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     .build();
         });
         blockItem(block, "_" + ModConstants.MAX_AMOUNT_3);
+    }
+    private void fourStackedHorizontalBlockWithItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            int amount = blockState.getValue(ModConstants.AMOUNT_4);
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_" + amount));
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder()
+                    .modelFile(modelFunc.apply(blockState))
+                    .rotationY(((int) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) % 360)
+                    .build();
+        });
+        blockItem(block, "_" + ModConstants.MAX_AMOUNT_4);
     }
 
 
