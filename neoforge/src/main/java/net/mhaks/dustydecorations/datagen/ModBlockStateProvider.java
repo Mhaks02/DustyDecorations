@@ -271,6 +271,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customHorizontalBlockWithItem(ModBlocks.HANGING_SAUSAGES);
         fourStackedHorizontalBlockWithItem(ModBlocks.WRAPPED_MEAT);
+        customLampWithBlockItem(ModBlocks.COPPER_LIGHT);
+        customLampWithBlockItem(ModBlocks.WAXED_COPPER_LIGHT);
+        customLampWithBlockItem(ModBlocks.SHODDY_COPPER_LIGHT);
+        customLampWithBlockItem(ModBlocks.WAXED_SHODDY_COPPER_LIGHT);
+
         threeStackedHorizontalBlockWithItem(ModBlocks.GOURD);
         customHorizontalBlockWithItem(ModBlocks.HANGING_GOURDS);
         threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);

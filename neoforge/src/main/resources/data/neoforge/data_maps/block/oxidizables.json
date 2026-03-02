@@ -1,0 +1,7 @@
+{
+  "values": {
+    "dustydecorations:copper_light": {
+      "next_oxidation_stage": "dustydecorations:shoddy_copper_light"
+    }
+  }
+}

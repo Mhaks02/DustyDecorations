@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "dustydecorations:block/shoddy_copper_light_off"
+    },
+    "lit=true": {
+      "model": "dustydecorations:block/shoddy_copper_light_on"
+    }
+  }
+}

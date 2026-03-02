@@ -1127,6 +1127,24 @@ public class ModBlocks {
                     .sound(SoundType.SLIME_BLOCK)
                     .noOcclusion()
             ));
+    //TODO: lightLevel
+    public static final RegistryObject<Block, Block> COPPER_LIGHT = registerBlock("copper_light",
+            () -> new WeatheringCopperLightBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> WAXED_COPPER_LIGHT = registerBlock("waxed_copper_light",
+            () -> new CopperLightBlock(BlockBehaviour.Properties.ofFullCopy(COPPER_LIGHT.get())
+            ));
+    public static final RegistryObject<Block, Block> SHODDY_COPPER_LIGHT = registerBlock("shoddy_copper_light",
+            () -> new WeatheringShoddyCopperLightBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> WAXED_SHODDY_COPPER_LIGHT = registerBlock("waxed_shoddy_copper_light",
+            () -> new ShoddyCopperLightBlock(BlockBehaviour.Properties.ofFullCopy(SHODDY_COPPER_LIGHT.get())
+            ));
+
     public static final RegistryObject<Block, Block> GOURD = registerBlock("gourd",
             () -> new GourdBlock(BlockBehaviour.Properties.of()
                     .strength(.4f)

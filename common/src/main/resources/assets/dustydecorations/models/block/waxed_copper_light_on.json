@@ -1,0 +1,7 @@
+{
+	"parent" : "dustydecorations:block/copper_light_on",
+	"textures": {
+		"0": "dustydecorations:block/copper_light",
+		"particle": "dustydecorations:block/copper_light"
+	}
+}

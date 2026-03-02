@@ -241,6 +241,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.HANGING_SAUSAGES.get());
                         output.accept(ModBlocks.WRAPPED_MEAT.get());
+                        output.accept(ModBlocks.COPPER_LIGHT.get());
+                        output.accept(ModBlocks.WAXED_COPPER_LIGHT.get());
+                        output.accept(ModBlocks.SHODDY_COPPER_LIGHT.get());
+                        output.accept(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get());
                         output.accept(ModBlocks.GOURD.get());
                         output.accept(ModBlocks.HANGING_GOURDS.get());
                         output.accept(ModBlocks.CARVED_BEETROOT.get());

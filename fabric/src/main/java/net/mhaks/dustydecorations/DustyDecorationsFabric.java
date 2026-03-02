@@ -1,6 +1,10 @@
 package net.mhaks.dustydecorations;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.registration.RegistryObject;
+import net.minecraft.world.level.block.Block;
 
 public class DustyDecorationsFabric implements ModInitializer {
     
@@ -13,6 +17,10 @@ public class DustyDecorationsFabric implements ModInitializer {
         // Use Fabric to bootstrap the Common mod.
         ModConstants.LOGGER.info("Hello Fabric world!");
         DustyDecorations.init();
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_LIGHT.get(), ModBlocks.SHODDY_COPPER_LIGHT.get());
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_LIGHT.get(), ModBlocks.WAXED_COPPER_LIGHT.get());
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.SHODDY_COPPER_LIGHT.get(), ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get());
 
     }
 }

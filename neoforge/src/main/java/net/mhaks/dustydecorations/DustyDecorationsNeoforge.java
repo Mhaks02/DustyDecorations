@@ -1,7 +1,7 @@
 package net.mhaks.dustydecorations;
 
-import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -161,6 +161,9 @@ public class DustyDecorationsNeoforge {
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_SAUSAGES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WRAPPED_MEAT.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_LIGHT.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_COPPER_LIGHT.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOURD.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_GOURDS.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CARVED_BEETROOT.get(), RenderType.cutout());
