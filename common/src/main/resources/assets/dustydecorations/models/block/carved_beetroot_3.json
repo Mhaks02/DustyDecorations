@@ -1,0 +1,234 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "carved_beetroot_three",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "dustydecorations:block/carved_beetroot",
+		"particle": "dustydecorations:block/carved_beetroot"
+	},
+	"elements": [
+		{
+			"name": "beetroot_body",
+			"from": [4.5, 10, 6],
+			"to": [11.5, 18, 13],
+			"rotation": {"angle": 45, "axis": "x", "origin": [4, 10, 6]},
+			"faces": {
+				"north": {"uv": [4, 8, 7.5, 12], "texture": "#0"},
+				"east": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"south": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"west": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"up": {"uv": [8.5, 0, 12, 3.5], "texture": "#0"},
+				"down": {"uv": [8.5, 4, 12, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beetroot_bottom",
+			"from": [5.5, 8.7, 6],
+			"to": [10.5, 9.7, 11],
+			"rotation": {"angle": 45, "axis": "x", "origin": [6, 9, 6]},
+			"faces": {
+				"north": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"east": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"south": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"west": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"up": {"uv": [9, 4.5, 11.5, 7], "texture": "#0"},
+				"down": {"uv": [0.5, 5, 3, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stem",
+			"from": [7, 13.8, 14],
+			"to": [11, 17.8, 14],
+			"rotation": {"angle": 45, "axis": "x", "origin": [10, 14, 13.5]},
+			"faces": {
+				"north": {"uv": [0.5, 10.5, 2.5, 12.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"south": {"uv": [2.5, 10.5, 0.5, 12.5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"up": {"uv": [7, 9, 9, 9.5], "texture": "#0"},
+				"down": {"uv": [9.5, 11.5, 11.5, 11], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beetroot_body",
+			"from": [1, 1, 5],
+			"to": [8, 9, 12],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [1, 1, 5]},
+			"faces": {
+				"north": {"uv": [4, 4, 7.5, 8], "texture": "#0"},
+				"east": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"south": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"west": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"up": {"uv": [8.5, 0, 12, 3.5], "texture": "#0"},
+				"down": {"uv": [8.5, 4, 12, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beetroot_bottom",
+			"from": [1.75, 0, 6.5],
+			"to": [6.75, 1, 11.5],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [2, 0, 6]},
+			"faces": {
+				"north": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"east": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"south": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"west": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"up": {"uv": [9, 4.5, 11.5, 7], "texture": "#0"},
+				"down": {"uv": [0.5, 5, 3, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stem_1",
+			"from": [1, 9, 9.5],
+			"to": [5, 13, 9.5],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [3, 9, 9.5]},
+			"faces": {
+				"north": {"uv": [2.5, 8, 0.5, 10], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"south": {"uv": [0.5, 8, 2.5, 10], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"up": {"uv": [7, 9, 9, 9.5], "texture": "#0"},
+				"down": {"uv": [9.5, 11.5, 11.5, 11], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stem_0",
+			"from": [3, 9, 7.5],
+			"to": [3, 13, 11.5],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [3, 9, 9.5]},
+			"faces": {
+				"north": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"east": {"uv": [2.5, 10.5, 0.5, 12.5], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"west": {"uv": [0.5, 10.5, 2.5, 12.5], "texture": "#0"},
+				"up": {"uv": [7, 9, 9, 9.5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9.5, 11.5, 11.5, 11], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "beetroot_body",
+			"from": [7.5, 1, 5],
+			"to": [14.5, 9, 12],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [7, 1, 5]},
+			"faces": {
+				"north": {"uv": [0, 0, 3.5, 4], "texture": "#0"},
+				"east": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"south": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"west": {"uv": [4, 0, 7.5, 4], "texture": "#0"},
+				"up": {"uv": [8.5, 0, 12, 3.5], "texture": "#0"},
+				"down": {"uv": [8.5, 4, 12, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beetroot_bottom",
+			"from": [8, 0, 5.5],
+			"to": [13, 1, 10.5],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 4]},
+			"faces": {
+				"north": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"east": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"south": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"west": {"uv": [0.5, 4, 3, 4.5], "texture": "#0"},
+				"up": {"uv": [9, 4.5, 11.5, 7], "texture": "#0"},
+				"down": {"uv": [0.5, 5, 3, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stem_1",
+			"from": [12.7, 9, 5.1],
+			"to": [12.7, 13, 9.1],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [12.7, 11, 7.1]},
+			"faces": {
+				"north": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"east": {"uv": [2.5, 8, 0.5, 10], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"west": {"uv": [0.5, 8, 2.5, 10], "texture": "#0"},
+				"up": {"uv": [7, 9, 9, 9.5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9.5, 11.5, 11.5, 11], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "stem_0",
+			"from": [10.7, 9, 7.1],
+			"to": [14.7, 13, 7.1],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [12.7, 11, 7.1]},
+			"faces": {
+				"north": {"uv": [0.5, 10.5, 2.5, 12.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"south": {"uv": [2.5, 10.5, 0.5, 12.5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4, 2], "texture": "#0"},
+				"up": {"uv": [7, 9, 9, 9.5], "texture": "#0"},
+				"down": {"uv": [9.5, 11.5, 11.5, 11], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 111.5, 0],
+			"translation": [0, 3, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 111.5, 0],
+			"translation": [0, 3, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.35, 0.35, 0.35]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, 14, 0]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -7.5]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, 1.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "carved_beetroot_3",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "beetroot_3",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [0, 1, 2]
+				},
+				{
+					"name": "beetroot_2",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [3, 4, 5, 6]
+				},
+				{
+					"name": "beetroot_1",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [7, 8, 9, 10]
+				}
+			]
+		}
+	]
+}

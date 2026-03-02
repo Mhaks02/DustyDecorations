@@ -271,6 +271,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         scarecrowWithItem(ModBlocks.BEETROOT_SCARECROW);
         scarecrowWithItem(ModBlocks.PUMPKIN_SCARECROW);
+        threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);
+        threeStackedHorizontalBlockWithItem(ModBlocks.BEET_O_LANTERN);
+
 
         customHorizontalBlockWithItem(ModBlocks.MINI_SNOWMAN);
         plushieWithItem();

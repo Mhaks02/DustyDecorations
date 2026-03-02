@@ -1116,6 +1116,17 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> CARVED_BEETROOT = registerBlock("carved_beetroot",
+            () -> new CarvedBeetrootBlock(BlockBehaviour.Properties.of()
+                    .strength(.4f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> BEET_O_LANTERN = registerBlock("beet_o_lantern",
+            () -> new CarvedBeetrootBlock(BlockBehaviour.Properties.of()
+                    .strength(.4f)
+                    .sound(SoundType.WOOD)
+                    .lightLevel(state -> 3 + 4 * state.getValue(CarvedBeetrootBlock.AMOUNT))
+            ));
     public static final RegistryObject<Block, Block> BEETROOT_SCARECROW = registerBlock("beetroot_scarecrow",
             () -> new ScarecrowBlock(ScarecrowBlock.Types.BEETROOT, BlockBehaviour.Properties.of()
                     .strength(.2f)

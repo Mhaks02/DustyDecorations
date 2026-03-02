@@ -12,4 +12,6 @@ public class ModConstants {
     public static ResourceLocation identifierOf(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
+    public static IntegerProperty AMOUNT_3 = IntegerProperty.create("amount", 1, 3);
+    public static final int MAX_AMOUNT_3 = 3;
 }
