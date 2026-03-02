@@ -1116,6 +1116,16 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    public static final RegistryObject<Block, Block> GOURD = registerBlock("gourd",
+            () -> new GourdBlock(BlockBehaviour.Properties.of()
+                    .strength(.4f)
+                    .sound(SoundType.WOOD)
+            ));
+    public static final RegistryObject<Block, Block> HANGING_GOURDS = registerBlock("hanging_gourds",
+            () -> new HangingGourdsBlock(BlockBehaviour.Properties.of()
+                    .strength(.4f)
+                    .sound(SoundType.WOOD)
+            ));
     public static final RegistryObject<Block, Block> CARVED_BEETROOT = registerBlock("carved_beetroot",
             () -> new CarvedBeetrootBlock(BlockBehaviour.Properties.of()
                     .strength(.4f)
