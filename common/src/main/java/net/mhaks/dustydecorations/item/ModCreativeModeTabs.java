@@ -252,6 +252,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WICKER_BLOCK.get());
                         output.accept(ModBlocks.WICKER_STAIRS.get());
                         output.accept(ModBlocks.WICKER_SLAB.get());
+                        output.accept(ModBlocks.WICKER_BASKET.get());
+                        output.accept(ModBlocks.APPLE_WICKER_BASKET.get());
+                        output.accept(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get());
+                        output.accept(ModBlocks.GLOW_BERRIES_WICKER_BASKET.get());
+                        output.accept(ModBlocks.CARROT_WICKER_BASKET.get());
+                        output.accept(ModBlocks.POTATO_WICKER_BASKET.get());
+                        output.accept(ModBlocks.BEETROOT_WICKER_BASKET.get());
+                        output.accept(ModBlocks.PICKLE_WICKER_BASKET.get());
+                        output.accept(ModBlocks.COD_WICKER_BASKET.get());
+                        output.accept(ModBlocks.SALMON_WICKER_BASKET.get());
+                        output.accept(ModBlocks.PINK_PETALS_WICKER_BASKET.get());
+                        output.accept(ModBlocks.LILAC_WICKER_BASKET.get());
+                        output.accept(ModBlocks.ROSE_BUSH_WICKER_BASKET.get());
+                        output.accept(ModBlocks.PEONY_WICKER_BASKET.get());
+
                         output.accept(ModBlocks.GOURD.get());
                         output.accept(ModBlocks.HANGING_GOURDS.get());
                         output.accept(ModBlocks.CARVED_BEETROOT.get());

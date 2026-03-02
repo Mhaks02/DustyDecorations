@@ -21,6 +21,9 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
+    public static final String BLOCK_FOLDER = "block/";
+    public static final String ITEM_FOLDER = "item/";
+    public static final String GENERATED = "item/generated";
     public static final String[] PLUSHIE_NAME = { "alex", "ari", "efe", "kai", "makena", "noor", "steve", "sunny", "zuri" };
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -282,6 +285,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.WICKER_BLOCK);
         stairsBlockWithItem(ModBlocks.WICKER_STAIRS, ModBlocks.WICKER_BLOCK);
         slabBlockWithItem(ModBlocks.WICKER_SLAB, ModBlocks.WICKER_BLOCK);
+        wickerBasketProduce(ModBlocks.WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.APPLE_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.SWEET_BERRIES_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.GLOW_BERRIES_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.CARROT_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.POTATO_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.BEETROOT_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.PICKLE_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.COD_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.SALMON_WICKER_BASKET);
+        wickerBasketFlowers(ModBlocks.PINK_PETALS_WICKER_BASKET);
+        wickerBasketFlowers(ModBlocks.LILAC_WICKER_BASKET);
+        wickerBasketFlowers(ModBlocks.ROSE_BUSH_WICKER_BASKET);
+        wickerBasketFlowers(ModBlocks.PEONY_WICKER_BASKET);
+
         threeStackedHorizontalBlockWithItem(ModBlocks.GOURD);
         customHorizontalBlockWithItem(ModBlocks.HANGING_GOURDS);
         threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);
@@ -1040,6 +1058,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     .build();
         });
         blockItem(block, "_" + ModConstants.MAX_AMOUNT_4);
+    }
+    private void wickerBasketProduce(RegistryObject<Block, Block> basket) {
+        String basketPath = basket.getId().getPath();
+        ModelFile model = models().withExistingParent(BLOCK_FOLDER + basketPath, modLoc(BLOCK_FOLDER + "template_wicker_basket_produce"))
+                .texture("produce", modLoc(BLOCK_FOLDER + basketPath));
+        horizontalBlock(basket.get(), model);
+        blockItem(basket);
+    }
+    private void wickerBasketFlowers(RegistryObject<Block, Block> basket) {
+        String basketPath = basket.getId().getPath();
+        ModelFile model = models().withExistingParent(BLOCK_FOLDER + basketPath, modLoc(BLOCK_FOLDER + "template_wicker_basket_flowers"))
+                .texture("flowers", modLoc(BLOCK_FOLDER + basketPath));
+        horizontalBlock(basket.get(), model);
+        blockItem(basket);
     }
 
 

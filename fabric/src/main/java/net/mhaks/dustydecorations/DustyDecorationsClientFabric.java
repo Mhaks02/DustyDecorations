@@ -144,6 +144,22 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_COPPER_LIGHT.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLOW_BERRIES_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CARROT_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTATO_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BEETROOT_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PICKLE_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COD_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SALMON_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_PETALS_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LILAC_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROSE_BUSH_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PEONY_WICKER_BASKET.get(), RenderType.cutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GOURD.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HANGING_GOURDS.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CARVED_BEETROOT.get(), RenderType.cutout());

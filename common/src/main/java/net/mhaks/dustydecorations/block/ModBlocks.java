@@ -1173,6 +1173,51 @@ public class ModBlocks {
                     .strength(.8f)
                     .sound(SoundType.BAMBOO)
             ));
+    public static final RegistryObject<Block, Block> WICKER_BASKET = registerBlock("wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.of()
+                    .strength(.4f)
+                    .sound(SoundType.BAMBOO)
+            ));
+    public static final RegistryObject<Block, Block> APPLE_WICKER_BASKET = registerBlock("apple_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> SWEET_BERRIES_WICKER_BASKET = registerBlock("sweet_berries_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> GLOW_BERRIES_WICKER_BASKET = registerBlock("glow_berries_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> CARROT_WICKER_BASKET = registerBlock("carrot_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> POTATO_WICKER_BASKET = registerBlock("potato_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> BEETROOT_WICKER_BASKET = registerBlock("beetroot_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> PICKLE_WICKER_BASKET = registerBlock("pickle_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> COD_WICKER_BASKET = registerBlock("cod_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> SALMON_WICKER_BASKET = registerBlock("salmon_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> PINK_PETALS_WICKER_BASKET = registerBlock("pink_petals_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> LILAC_WICKER_BASKET = registerBlock("lilac_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> ROSE_BUSH_WICKER_BASKET = registerBlock("rose_bush_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+    public static final RegistryObject<Block, Block> PEONY_WICKER_BASKET = registerBlock("peony_wicker_basket",
+            () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
+            ));
+
     public static final RegistryObject<Block, Block> GOURD = registerBlock("gourd",
             () -> new GourdBlock(BlockBehaviour.Properties.of()
                     .strength(.4f)

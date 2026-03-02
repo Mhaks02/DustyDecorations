@@ -166,6 +166,21 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
 
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.APPLE_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GLOW_BERRIES_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CARROT_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTATO_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BEETROOT_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PICKLE_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COD_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SALMON_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_PETALS_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LILAC_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROSE_BUSH_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PEONY_WICKER_BASKET.get(), RenderType.cutout());
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOURD.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_GOURDS.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CARVED_BEETROOT.get(), RenderType.cutout());
