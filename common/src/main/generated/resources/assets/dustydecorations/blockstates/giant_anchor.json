@@ -1,33 +1,63 @@
 {
   "variants": {
-    "facing=east,waterlogged=false": {
-      "model": "dustydecorations:block/giant_anchor",
+    "facing=east,half=lower,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_bottom",
       "y": 90
     },
-    "facing=east,waterlogged=true": {
-      "model": "dustydecorations:block/giant_anchor",
+    "facing=east,half=lower,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_bottom",
       "y": 90
     },
-    "facing=north,waterlogged=false": {
-      "model": "dustydecorations:block/giant_anchor"
+    "facing=east,half=upper,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_top",
+      "y": 90
     },
-    "facing=north,waterlogged=true": {
-      "model": "dustydecorations:block/giant_anchor"
+    "facing=east,half=upper,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_top",
+      "y": 90
     },
-    "facing=south,waterlogged=false": {
-      "model": "dustydecorations:block/giant_anchor",
+    "facing=north,half=lower,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_bottom"
+    },
+    "facing=north,half=lower,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_bottom"
+    },
+    "facing=north,half=upper,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_top"
+    },
+    "facing=north,half=upper,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_top"
+    },
+    "facing=south,half=lower,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_bottom",
       "y": 180
     },
-    "facing=south,waterlogged=true": {
-      "model": "dustydecorations:block/giant_anchor",
+    "facing=south,half=lower,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_bottom",
       "y": 180
     },
-    "facing=west,waterlogged=false": {
-      "model": "dustydecorations:block/giant_anchor",
+    "facing=south,half=upper,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_top",
+      "y": 180
+    },
+    "facing=south,half=upper,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_top",
+      "y": 180
+    },
+    "facing=west,half=lower,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_bottom",
       "y": 270
     },
-    "facing=west,waterlogged=true": {
-      "model": "dustydecorations:block/giant_anchor",
+    "facing=west,half=lower,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_bottom",
+      "y": 270
+    },
+    "facing=west,half=upper,waterlogged=false": {
+      "model": "dustydecorations:block/giant_anchor_top",
+      "y": 270
+    },
+    "facing=west,half=upper,waterlogged=true": {
+      "model": "dustydecorations:block/giant_anchor_top",
       "y": 270
     }
   }

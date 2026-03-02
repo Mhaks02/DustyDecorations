@@ -317,8 +317,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customGarlandWithItem(ModBlocks.FAIRY_LIGHTS);
         customHorizontalFaceBlockWithItem(ModBlocks.HOLIDAY_ORNAMENTS);
 
-        customHorizontalBlockWithItem(ModBlocks.GIANT_ANCHOR);
-        customHorizontalFaceBlockWithItem(ModBlocks.GIANT_CHAIN);
+        tallBlockWithItem(ModBlocks.GIANT_ANCHOR);
+        giantChainWithItem();
 
         blockWithItem(ModBlocks.PLAIN_CUSHION_BLOCK);
         stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
@@ -1046,6 +1046,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(block);
     }
+    private void giantChainWithItem() {
+        ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GIANT_CHAIN.getId().getPath()));
+        ModelFile anchor_model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GIANT_CHAIN.getId().getPath() + "_above_anchor"));
+        getVariantBuilder(ModBlocks.GIANT_CHAIN.get()).forAllStates(state -> {
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            Function<BlockState, ModelFile> modelFunc2 = ($ -> anchor_model);
+            return !state.getValue(GiantChainBlock.ABOVE_ANCHOR)
+                ? ConfiguredModel.builder()
+                    .modelFile(modelFunc.apply(state))
+                    .rotationX(state.getValue(BlockStateProperties.ATTACH_FACE).ordinal() * 90)
+                    .rotationY((((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) + (state.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build()
+                : ConfiguredModel.builder()
+                    .modelFile(modelFunc2.apply(state))
+                    .rotationY((((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) + (state.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
+        });
+        blockItem(ModBlocks.GIANT_CHAIN);
+    }
+
     private void threeStackedHorizontalBlockWithItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
             int amount = blockState.getValue(ModConstants.AMOUNT_3);

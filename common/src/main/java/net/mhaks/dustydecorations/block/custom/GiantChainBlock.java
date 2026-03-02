@@ -1,11 +1,12 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -14,24 +15,24 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.stream.Stream;
-
 public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final BooleanProperty ABOVE_ANCHOR = BooleanProperty.create("above_anchor");
     public static final MapCodec<GiantChainBlock> CODEC = simpleCodec(GiantChainBlock::new);
 
     public GiantChainBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+                .setValue(ABOVE_ANCHOR, false));
     }
 
     @Override
@@ -91,7 +92,8 @@ public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock impl
     protected static final VoxelShape HORIZONTAL_NORTH_SOUTH_UPPER_HALF_LOOP = Shapes.or(HORIZONTAL_NORTH_SOUTH_UPPER_FRONT_PART, HORIZONTAL_NORTH_SOUTH_UPPER_BACK_PART);
     protected static final VoxelShape HORIZONTAL_NORTH_SOUTH_SHAPE = Shapes.or(HORIZONTAL_NORTH_SOUTH_CENTRAL_LOOP, HORIZONTAL_NORTH_SOUTH_LOWER_HALF_LOOP, HORIZONTAL_NORTH_SOUTH_UPPER_HALF_LOOP);
 
-    protected VoxelShape getVoxelShape(BlockState state) {
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
         switch ((AttachFace) state.getValue(FACE)) {
             case FLOOR, CEILING:
@@ -110,16 +112,6 @@ public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock impl
     }
 
     @Override
-    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return this.getVoxelShape(state);
-    }
-
-    @Override
-    protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return this.getVoxelShape(state);
-    }
-
-    @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         return true;
     }
@@ -127,22 +119,28 @@ public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock impl
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         for (Direction direction : context.getNearestLookingDirections()) {
+            LevelAccessor level = context.getLevel();
+            BlockPos blockPos = context.getClickedPos();
             BlockState blockstate;
             if (direction.getAxis() == Direction.Axis.Y) {
-                BlockState block = direction == Direction.UP ? context.getLevel().getBlockState(context.getClickedPos().above()) : context.getLevel().getBlockState(context.getClickedPos().below());
+                BlockState block = direction == Direction.UP ? level.getBlockState(blockPos.above()) : level.getBlockState(blockPos.below());
                 blockstate = this.defaultBlockState()
-                        .setValue(FACE, block.is(this) ? block.getValue(FACE) : direction == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
-                        .setValue(FACING, block.is(this) ? block.getValue(FACING) : context.getHorizontalDirection())
-                        .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
+                        .setValue(FACE, (block.is(this) && block.getValue(FACE) != AttachFace.WALL) ? block.getValue(FACE) : direction == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
+                        .setValue(FACING, (block.is(this) && block.getValue(FACE) != AttachFace.WALL) || (direction == Direction.DOWN && block.getBlock() instanceof GiantAnchorBlock)
+                                ? block.getValue(FACING)
+                                : context.getHorizontalDirection().getOpposite())
+                        .setValue(WATERLOGGED, level.getFluidState(blockPos).is(Fluids.WATER))
+                        .setValue(ABOVE_ANCHOR, isAnchorBelow(level, blockPos.below()));
             } else {
-                BlockState block = direction.getAxis() == Direction.Axis.X ? context.getLevel().getBlockState(context.getClickedPos().east()) : context.getLevel().getBlockState(context.getClickedPos().south());
+                BlockState block = direction.getAxis() == Direction.Axis.X ? level.getBlockState(blockPos.east()) : level.getBlockState(blockPos.south());
                 blockstate = this.defaultBlockState()
                         .setValue(FACE, AttachFace.WALL)
-                        .setValue(FACING, block.is(this) ? block.getValue(FACING) : direction.getOpposite())
-                        .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
+                        .setValue(FACING, (block.is(this) && block.getValue(FACE) == AttachFace.WALL) ? block.getValue(FACING) : direction.getOpposite())
+                        .setValue(WATERLOGGED, level.getFluidState(blockPos).is(Fluids.WATER))
+                        .setValue(ABOVE_ANCHOR, false);
             }
 
-            if (blockstate.canSurvive(context.getLevel(), context.getClickedPos())) {
+            if (blockstate.canSurvive(level, blockPos)) {
                 return blockstate;
             }
         }
@@ -155,7 +153,13 @@ public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock impl
         if (state.getValue(WATERLOGGED)) {
             level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
-        return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+        return facing == Direction.DOWN
+            ? state.setValue(ABOVE_ANCHOR, isAnchorBelow(level, facingPos))
+            : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+    }
+
+    protected boolean isAnchorBelow(LevelAccessor level, BlockPos pos) {
+        return level.getBlockState(pos).getBlock() instanceof GiantAnchorBlock && level.getBlockState(pos).getValue(GiantAnchorBlock.HALF) == DoubleBlockHalf.UPPER;
     }
 
     @Override
@@ -164,17 +168,7 @@ public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock impl
     }
 
     @Override
-    protected BlockState rotate(BlockState state, Rotation rotation) {
-        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
-    }
-
-    @Override
-    protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
-    }
-
-    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, FACE, WATERLOGGED);
+        builder.add(FACING, FACE, WATERLOGGED, ABOVE_ANCHOR);
     }
 }
