@@ -1158,6 +1158,21 @@ public class ModBlocks {
             () -> new ShoddyCopperLightBlock(BlockBehaviour.Properties.ofFullCopy(SHODDY_COPPER_LIGHT.get())
             ));
 
+    public static final RegistryObject<Block, Block> WICKER_BLOCK = registerBlock("wicker",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.BAMBOO)
+            ));
+    public static final RegistryObject<Block, Block> WICKER_STAIRS = registerBlock("wicker_stairs",
+            () -> new StairBlock(WICKER_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.BAMBOO)
+            ));
+    public static final RegistryObject<Block, Block> WICKER_SLAB = registerBlock("wicker_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(.8f)
+                    .sound(SoundType.BAMBOO)
+            ));
     public static final RegistryObject<Block, Block> GOURD = registerBlock("gourd",
             () -> new GourdBlock(BlockBehaviour.Properties.of()
                     .strength(.4f)

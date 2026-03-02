@@ -279,6 +279,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLampWithBlockItem(ModBlocks.SHODDY_COPPER_LIGHT);
         customLampWithBlockItem(ModBlocks.WAXED_SHODDY_COPPER_LIGHT);
 
+        blockWithItem(ModBlocks.WICKER_BLOCK);
+        stairsBlockWithItem(ModBlocks.WICKER_STAIRS, ModBlocks.WICKER_BLOCK);
+        slabBlockWithItem(ModBlocks.WICKER_SLAB, ModBlocks.WICKER_BLOCK);
         threeStackedHorizontalBlockWithItem(ModBlocks.GOURD);
         customHorizontalBlockWithItem(ModBlocks.HANGING_GOURDS);
         threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);
@@ -1068,24 +1071,51 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockWithItem(RegistryObject<Block, Block> block) {
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
-    private void blockWithItem(RegistryObject<Block, Block> block, ResourceLocation texture) {
-        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), texture));
+    private void blockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> texture) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(texture.get())));
     }
-    private void stairsBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation texture) {
-        stairsBlock((StairBlock) block.get(), texture, texture, texture);
-        blockItem(block);
+    private void blockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> texture, String textureSuffix) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), getPath(texture, textureSuffix)));
     }
-    private void stairsBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation side, ResourceLocation end) {
-        stairsBlock((StairBlock) block.get(), side, end, end);
-        blockItem(block);
+    private void stairsBlockWithItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> blockTexture) {
+        ResourceLocation texture = blockTexture(blockTexture.get());
+        stairsBlock((StairBlock) stairBlock.get(), texture, texture, texture);
+        blockItem(stairBlock);
     }
-    public void slabBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation doubleslab, ResourceLocation texture) {
-        slabBlock((SlabBlock) block.get(), doubleslab, texture, texture, texture);
-        blockItem(block);
+    private void stairsBlockWithItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> blockTexture, String suffix) {
+        ResourceLocation texture = getPath(blockTexture, suffix);
+        stairsBlock((StairBlock) stairBlock.get(), texture, texture, texture);
+        blockItem(stairBlock);
     }
-    public void slabBlockWithItem(RegistryObject<Block, Block> block, ResourceLocation doubleslab, ResourceLocation side, ResourceLocation end) {
-        slabBlock((SlabBlock) block.get(), doubleslab, side, end, end);
-        blockItem(block);
+    private void stairsBlockWithItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
+        ResourceLocation side = getPath(sideTexture, "_side");
+        ResourceLocation end = getPath(endTexture, "_end");
+        stairsBlock((StairBlock) stairBlock.get(), side, end, end);
+        blockItem(stairBlock);
+    }
+    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture) {
+        ResourceLocation texture = blockTexture(doubleSlabSideEndTexture.get());
+        slabBlock((SlabBlock) slabBlock.get(), texture, texture, texture, texture);
+        blockItem(slabBlock);
+    }
+    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture, String suffix) {
+        ResourceLocation doubleSlab = blockTexture(doubleSlabSideEndTexture.get());
+        ResourceLocation texture = getPath(doubleSlabSideEndTexture, suffix);
+        slabBlock((SlabBlock) slabBlock.get(), doubleSlab, texture, texture, texture);
+        blockItem(slabBlock);
+    }
+    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideEndTexture) {
+        ResourceLocation doubleSlab = blockTexture(doubleSlabTexture.get());
+        ResourceLocation texture = blockTexture(sideEndTexture.get());
+        slabBlock((SlabBlock) slabBlock.get(), doubleSlab, texture, texture, texture);
+        blockItem(slabBlock);
+    }
+    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
+        ResourceLocation doubleSlab = blockTexture(doubleSlabTexture.get());
+        ResourceLocation side = getPath(sideTexture, "_side");
+        ResourceLocation end = getPath(endTexture, "_end");
+        slabBlock((SlabBlock) slabBlock.get(), doubleSlab, side, end, end);
+        blockItem(slabBlock);
     }
     public void wallBlockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
         wallBlock((WallBlock) block.get(), getPath(baseBlock));
