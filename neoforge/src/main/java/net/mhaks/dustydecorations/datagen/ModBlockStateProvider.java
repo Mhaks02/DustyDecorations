@@ -276,6 +276,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);
         threeStackedHorizontalBlockWithItem(ModBlocks.BEET_O_LANTERN);
 
+        tallBlockWithItem(ModBlocks.BEETROOT_SCARECROW);
+        tallBlockWithItem(ModBlocks.PUMPKIN_SCARECROW);
 
         customHorizontalBlockWithItem(ModBlocks.MINI_SNOWMAN);
         plushieWithItem();
@@ -994,12 +996,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(PLUSHIE_NAME[0] + "_", ModBlocks.PLUSHIE);
     }
 
-    private void scarecrowWithItem(RegistryObject<Block, Block> block) {
+    private void tallBlockWithItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
             ModelFile bottom = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_bottom"));
             ModelFile top = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_top"));
-            int yRot = (((int) (blockState.getValue(ScarecrowBlock.FACING).toYRot())) + 180) % 360;
-            ModelFile model = blockState.getValue(ScarecrowBlock.HALF) == DoubleBlockHalf.LOWER ? bottom : top ;
+            int yRot = (((int) (blockState.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot())) + 180) % 360;
+            ModelFile model = blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER ? bottom : top ;
             return ConfiguredModel.builder().modelFile(model).rotationY(yRot).build();
         });
         blockItem(block);

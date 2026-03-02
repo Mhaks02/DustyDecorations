@@ -34,7 +34,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 
 public class ScarecrowBlock extends HorizontalDirectionalBlock {
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     private final ScarecrowBlock.Type type;
     public static final MapCodec<ScarecrowBlock> CODEC = RecordCodecBuilder.mapCodec(
@@ -89,8 +88,8 @@ public class ScarecrowBlock extends HorizontalDirectionalBlock {
             default:
                 return switch (state.getValue(HALF)) {
                     case LOWER -> switch (state.getValue(FACING)) {
-                    case EAST, WEST -> PUMPKIN_X_BOTTOM_UP_AABB;
-                    default -> PUMPKIN_Z_BOTTOM_UP_AABB;
+                        case EAST, WEST -> PUMPKIN_X_BOTTOM_UP_AABB;
+                        default -> PUMPKIN_Z_BOTTOM_UP_AABB;
                     };
                     case UPPER -> switch (state.getValue(FACING)) {
                         case EAST, WEST -> PUMPKIN_X_TOP_BOTTOM_AABB;
@@ -98,6 +97,37 @@ public class ScarecrowBlock extends HorizontalDirectionalBlock {
                     };
                 };
         }
+    }
+
+    @Override
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState blockState = this.defaultBlockState()
+                .setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return context.getClickedPos().getY() < context.getLevel().getMaxBuildHeight() - 1 && context.getLevel().getBlockState(context.getClickedPos().above()).canBeReplaced(context)
+                ? blockState
+                : null;
+    }
+
+    @Override
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+        if (!level.isClientSide) {
+            if (player.isCreative()) {
+                preventDropFromBottomPart(level, pos, state, player);
+            }
+        }
+        return super.playerWillDestroy(level, pos, state, player);
+    }
+
+    @Override
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+        level.setBlock(pos.above(), state.setValue(HALF, DoubleBlockHalf.UPPER), 3);
+    }
+
+    @Override
+    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos blockPos = pos.below();
+        BlockState blockState = level.getBlockState(blockPos);
+        return state.getValue(HALF) == DoubleBlockHalf.LOWER ? canSupportCenter(level, blockPos, Direction.UP) : blockState.is(this);
     }
 
     @Override
@@ -112,37 +142,6 @@ public class ScarecrowBlock extends HorizontalDirectionalBlock {
                     ? facingState.setValue(HALF, doubleBlockHalf)
                     : Blocks.AIR.defaultBlockState();
         }
-    }
-
-    @Override
-    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide) {
-            if (player.isCreative()) {
-                preventDropFromBottomPart(level, pos, state, player);
-            }
-        }
-        return super.playerWillDestroy(level, pos, state, player);
-    }
-
-    @Override
-    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState blockState = this.defaultBlockState()
-                .setValue(FACING, context.getHorizontalDirection().getOpposite());
-        return context.getClickedPos().getY() < context.getLevel().getMaxBuildHeight() - 1 && context.getLevel().getBlockState(context.getClickedPos().above()).canBeReplaced(context)
-                ? blockState
-                : null;
-    }
-
-    @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
-        level.setBlock(pos.above(), state.setValue(HALF, DoubleBlockHalf.UPPER), 3);
-    }
-
-    @Override
-    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        BlockPos blockPos = pos.below();
-        BlockState blockState = level.getBlockState(blockPos);
-        return state.getValue(HALF) == DoubleBlockHalf.LOWER ? canSupportCenter(level, blockPos, Direction.UP) : blockState.is(this);
     }
 
     public static void preventDropFromBottomPart(Level level, BlockPos pos, BlockState state, Player player) {
