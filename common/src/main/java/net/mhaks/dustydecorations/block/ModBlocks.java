@@ -1116,6 +1116,19 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    //TODO: dynamic itemModel depending on amount of items in inventory? (might be a post-1.21.4 feature only)
+    public static final RegistryObject<Block, Block> CERAMIC_POT = registerBlock("ceramic_pot",
+            () -> new CeramicPotBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.DECORATED_POT)
+                    .noOcclusion()
+            ));
+    public static final RegistryObject<Block, Block> GLAZED_CERAMIC_POT = registerBlock("glazed_ceramic_pot",
+            () -> new CeramicPotBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.DECORATED_POT)
+                    .noOcclusion()
+            ));
     public static final RegistryObject<Block, Block> HANGING_SAUSAGES = registerBlock("hanging_sausages",
             () -> new HangingSausagesBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)

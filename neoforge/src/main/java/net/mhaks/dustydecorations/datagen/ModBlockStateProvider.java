@@ -269,6 +269,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         sailorFlagWithItem();
         sailorPennantFlag();
 
+        fourStackedHorizontalBlockWithItem(ModBlocks.CERAMIC_POT);
+        fourStackedHorizontalBlockWithItem(ModBlocks.GLAZED_CERAMIC_POT);
+
         customHorizontalBlockWithItem(ModBlocks.HANGING_SAUSAGES);
         fourStackedHorizontalBlockWithItem(ModBlocks.WRAPPED_MEAT);
         customLampWithBlockItem(ModBlocks.COPPER_LIGHT);

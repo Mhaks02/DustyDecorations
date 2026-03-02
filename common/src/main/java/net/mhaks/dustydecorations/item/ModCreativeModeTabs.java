@@ -239,6 +239,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAILOR_FLAG.get());
                         output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
 
+                        output.accept(ModBlocks.CERAMIC_POT.get());
+                        output.accept(ModBlocks.GLAZED_CERAMIC_POT.get());
+
                         output.accept(ModBlocks.HANGING_SAUSAGES.get());
                         output.accept(ModBlocks.WRAPPED_MEAT.get());
                         output.accept(ModBlocks.COPPER_LIGHT.get());
