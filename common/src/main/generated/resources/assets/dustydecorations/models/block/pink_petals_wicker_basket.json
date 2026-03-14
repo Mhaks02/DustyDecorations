@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_wicker_basket_flowers",
+  "textures": {
+    "flowers": "dustydecorations:block/pink_petals_wicker_basket"
+  }
+}

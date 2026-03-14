@@ -291,7 +291,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.WICKER_BLOCK);
         stairsBlockWithItem(ModBlocks.WICKER_STAIRS, ModBlocks.WICKER_BLOCK);
         slabBlockWithItem(ModBlocks.WICKER_SLAB, ModBlocks.WICKER_BLOCK);
-        wickerBasketProduce(ModBlocks.WICKER_BASKET);
+        customHorizontalBlockWithItem(ModBlocks.WICKER_BASKET);
         wickerBasketProduce(ModBlocks.APPLE_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.SWEET_BERRIES_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.GLOW_BERRIES_WICKER_BASKET);
@@ -320,7 +320,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customGarlandWithItem(ModBlocks.FALL_GARLAND);
         customGarlandWithItem(ModBlocks.WINTER_GARLAND);
         customDirectionalBlockWithItem(ModBlocks.WINTER_WREATH);
-        customGarlandWithItem(ModBlocks.FAIRY_LIGHTS);
+        customHorizontalBlockWithItem(ModBlocks.FAIRY_LIGHTS);
         customHorizontalFaceBlockWithItem(ModBlocks.HOLIDAY_ORNAMENTS);
 
         tallBlockWithItem(ModBlocks.GIANT_ANCHOR);
