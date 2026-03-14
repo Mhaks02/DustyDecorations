@@ -17,11 +17,6 @@ public class PaperLanternBlockEntity extends BlockEntity implements GeoBlockEnti
         super(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), pos, blockState);
     }
 
-    public PaperLanternBlockEntity(BlockEntityType type, BlockPos pos, BlockState blockState) {
-        super(type, pos, blockState);
-    }
-
-
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         controllerRegistrar.add(new AnimationController<>(this, "controller", 0, this::predicate));

@@ -6,6 +6,7 @@ import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
+import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -47,7 +48,7 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
 
-        BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());

@@ -4,6 +4,7 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
+import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.Minecraft;
@@ -78,7 +79,7 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
 
-            BlockEntityRenderers.register(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
