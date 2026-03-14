@@ -2,6 +2,7 @@ package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
+import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -165,6 +166,12 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_COPPER_LIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CAMERA_QUADROPOD.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CAMERA.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOVIE_CAMERA.get(), RenderType.cutout());
+
+            BlockEntityRenderers.register(ModBlockEntityTypes.CAMERA_QUADROPOD_BLOCK_ENTITY.get(), CameraQuadropodBlockRenderer::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.APPLE_WICKER_BASKET.get(), RenderType.cutout());

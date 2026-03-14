@@ -282,6 +282,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLampWithBlockItem(ModBlocks.SHODDY_COPPER_LIGHT);
         customLampWithBlockItem(ModBlocks.WAXED_SHODDY_COPPER_LIGHT);
 
+        cameraQuadropod();
+        customHorizontalBlockWithItem(ModBlocks.CAMERA);
+        customHorizontalBlockWithItem(ModBlocks.MOVIE_CAMERA);
+
         blockWithItem(ModBlocks.WICKER_BLOCK);
         stairsBlockWithItem(ModBlocks.WICKER_STAIRS, ModBlocks.WICKER_BLOCK);
         slabBlockWithItem(ModBlocks.WICKER_SLAB, ModBlocks.WICKER_BLOCK);
@@ -1110,6 +1114,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("flowers", modLoc(BLOCK_FOLDER + basketPath));
         horizontalBlock(basket.get(), model);
         blockItem(basket);
+    }
+    private void cameraQuadropod() {
+
+        getVariantBuilder(ModBlocks.CAMERA_QUADROPOD.get()).forAllStates(blockState -> {
+            String quadropodPath = ModBlocks.CAMERA_QUADROPOD.getId().getPath();
+
+            ModelFile quadropod_bottom = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + quadropodPath));
+            ModelFile quadropod_top = models().withExistingParent(BLOCK_FOLDER + quadropodPath + TOP, mcLoc(BLOCK_FOLDER + "block"))
+                    .texture("particle", modLoc(BLOCK_FOLDER + quadropodPath));
+
+            ModelFile camera_top = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + "camera_on_quadropod"));
+            ModelFile movieCamera_top = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + "movie_camera_on_quadropod"));
+
+            int yRot = ((int) (blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360;
+            ModelFile quadropod = blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER ? quadropod_bottom : quadropod_top;
+            ModelFile camera = blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER ? quadropod_bottom : camera_top;
+            ModelFile movieCamera = blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER ? quadropod_bottom : movieCamera_top;
+            Function<BlockState, ModelFile> quadropodFunc = ($ -> quadropod);
+            Function<BlockState, ModelFile> cameraFunc = ($ -> camera);
+            Function<BlockState, ModelFile> movieCameraFunc = ($ -> movieCamera);
+            return switch (blockState.getValue(ModConstants.ATTACHED_CAMERA)) {
+                case NONE -> ConfiguredModel.builder().modelFile(quadropodFunc.apply(blockState)).rotationY(yRot).build();
+                case CAMERA -> ConfiguredModel.builder().modelFile(cameraFunc.apply(blockState)).rotationY(yRot).build();
+                case MOVIE_CAMERA -> ConfiguredModel.builder().modelFile(movieCameraFunc.apply(blockState)).rotationY(yRot).build();
+            };
+        });
+        blockItem(ModBlocks.CAMERA_QUADROPOD);
     }
 
 

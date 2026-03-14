@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "dustydecorations:block/camera_quadropod"
+  }
+}

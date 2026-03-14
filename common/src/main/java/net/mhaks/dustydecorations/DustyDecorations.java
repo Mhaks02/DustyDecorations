@@ -26,7 +26,7 @@ public class DustyDecorations {
         ModItems.registerModItems();
         ModCreativeModeTabs.registerModCreativeModeTabs();
         ModBlocks.registerModBlocks();
-        ModBlockEntities.registerModBlockEntities();
+        ModBlockEntityTypes.registerModBlockEntities();
         ModSounds.registerModSounds();
 
 

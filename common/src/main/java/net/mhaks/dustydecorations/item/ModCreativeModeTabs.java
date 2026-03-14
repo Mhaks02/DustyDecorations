@@ -249,6 +249,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SHODDY_COPPER_LIGHT.get());
                         output.accept(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get());
 
+                        output.accept(ModBlocks.CAMERA_QUADROPOD.get());
+                        output.accept(ModBlocks.CAMERA.get());
+                        output.accept(ModBlocks.MOVIE_CAMERA.get());
+
                         output.accept(ModBlocks.WICKER_BLOCK.get());
                         output.accept(ModBlocks.WICKER_STAIRS.get());
                         output.accept(ModBlocks.WICKER_SLAB.get());

@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -144,6 +145,12 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_COPPER_LIGHT.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get(), RenderType.translucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMERA_QUADROPOD.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMERA.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOVIE_CAMERA.get(), RenderType.translucent());
+
+        BlockEntityRenderers.register(ModBlockEntityTypes.CAMERA_QUADROPOD_BLOCK_ENTITY.get(), CameraQuadropodBlockRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_WICKER_BASKET.get(), RenderType.cutout());

@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
 import java.util.function.Supplier;
@@ -1108,6 +1109,23 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> WAXED_SHODDY_COPPER_LIGHT = registerBlock("waxed_shoddy_copper_light",
             () -> new ShoddyCopperLightBlock(BlockBehaviour.Properties.ofFullCopy(SHODDY_COPPER_LIGHT.get())
+            ));
+
+    public static final RegistryObject<Block, Block> CAMERA_QUADROPOD = registerBlock("camera_quadropod",
+            () -> new CameraQuadropodBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.COPPER)
+            ));
+    //TODO: use animation? (like the spyglass or something)
+    public static final RegistryObject<Block, Block> CAMERA = registerBlock("camera",
+            () -> new CameraBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.COPPER)
+            ));
+    public static final RegistryObject<Block, Block> MOVIE_CAMERA = registerBlock("movie_camera",
+            () -> new CameraBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.COPPER)
             ));
 
     public static final RegistryObject<Block, Block> WICKER_BLOCK = registerBlock("wicker",
