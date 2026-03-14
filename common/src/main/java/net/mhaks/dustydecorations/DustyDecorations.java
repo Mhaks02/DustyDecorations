@@ -4,6 +4,7 @@ import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.item.ModCreativeModeTabs;
 import net.mhaks.dustydecorations.item.ModItems;
+import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.platform.Services;
 import net.mhaks.dustydecorations.sound.ModSounds;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -27,6 +28,7 @@ public class DustyDecorations {
         ModCreativeModeTabs.registerModCreativeModeTabs();
         ModBlocks.registerModBlocks();
         ModBlockEntityTypes.registerModBlockEntities();
+        ModMenuTypes.registerModMenuTypes();
         ModSounds.registerModSounds();
 
 
@@ -40,5 +42,4 @@ public class DustyDecorations {
             ModConstants.LOGGER.info("Hello to DustyDecorations");
         }
     }
-
 }

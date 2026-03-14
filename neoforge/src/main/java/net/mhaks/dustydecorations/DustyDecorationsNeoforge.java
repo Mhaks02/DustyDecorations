@@ -4,6 +4,8 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
+import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
+import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -15,6 +17,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
 @Mod(ModConstants.MOD_ID)
 public class DustyDecorationsNeoforge {
@@ -28,12 +31,16 @@ public class DustyDecorationsNeoforge {
         ModConstants.LOGGER.info("Hello NeoForge world!");
         DustyDecorations.init();
 
-
     }
 
     @EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void registerScreen(RegisterMenuScreensEvent event) {
+            event.register(ModMenuTypes.VINTAGE_CASH_REGISTER_MENU.get(), VintageCashRegisterScreen::new);
+        }
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
@@ -159,6 +166,8 @@ public class DustyDecorationsNeoforge {
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_FLAG.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_PENNANT_FLAG.get(), RenderType.cutout());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.VINTAGE_CASH_REGISTER.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_SAUSAGES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WRAPPED_MEAT.get(), RenderType.cutout());

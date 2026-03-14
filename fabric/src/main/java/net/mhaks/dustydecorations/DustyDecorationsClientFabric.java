@@ -6,12 +6,16 @@ import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
+import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
+import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
 public class DustyDecorationsClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        MenuScreens.register(ModMenuTypes.VINTAGE_CASH_REGISTER_MENU.get(), VintageCashRegisterScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_BANISTER.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRUCE_BANISTER.get(), RenderType.cutout());
@@ -138,6 +142,8 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAILOR_FLAG.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAILOR_PENNANT_FLAG.get(), RenderType.cutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VINTAGE_CASH_REGISTER.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HANGING_SAUSAGES.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WRAPPED_MEAT.get(), RenderType.cutout());

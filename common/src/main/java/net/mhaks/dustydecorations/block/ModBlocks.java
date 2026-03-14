@@ -1082,6 +1082,11 @@ public class ModBlocks {
                     .sound(SoundType.DECORATED_POT)
                     .noOcclusion()
             ));
+    public static final RegistryObject<Block, Block> VINTAGE_CASH_REGISTER = registerBlock("vintage_cash_register",
+            () -> new VintageCashRegisterBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.COPPER)
+            ));
     public static final RegistryObject<Block, Block> HANGING_SAUSAGES = registerBlock("hanging_sausages",
             () -> new HangingSausagesBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)

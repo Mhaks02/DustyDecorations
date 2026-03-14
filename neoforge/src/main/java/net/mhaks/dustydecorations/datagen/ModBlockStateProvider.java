@@ -275,6 +275,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fourStackedHorizontalBlockWithItem(ModBlocks.CERAMIC_POT);
         fourStackedHorizontalBlockWithItem(ModBlocks.GLAZED_CERAMIC_POT);
 
+        customHorizontalBlockWithItem(ModBlocks.VINTAGE_CASH_REGISTER);
+
         customHorizontalBlockWithItem(ModBlocks.HANGING_SAUSAGES);
         fourStackedHorizontalBlockWithItem(ModBlocks.WRAPPED_MEAT);
         customLampWithBlockItem(ModBlocks.COPPER_LIGHT);
