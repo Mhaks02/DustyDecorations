@@ -29,72 +29,40 @@ public class ModBlocks {
                     .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> SPRUCE_BANISTER = registerBlock("spruce_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> BIRCH_BANISTER = registerBlock("birch_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> JUNGLE_BANISTER = registerBlock("jungle_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> ACACIA_BANISTER = registerBlock("acacia_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> DARK_OAK_BANISTER = registerBlock("dark_oak_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> MANGROVE_BANISTER = registerBlock("mangrove_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> CHERRY_BANISTER = registerBlock("cherry_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> BAMBOO_BANISTER = registerBlock("bamboo_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> DRY_BAMBOO_BANISTER = registerBlock("dry_bamboo_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> CRIMSON_BANISTER = registerBlock("crimson_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
     public static final RegistryObject<Block, Block> WARPED_BANISTER = registerBlock("warped_banister",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(1.0f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
 
+    //TODO: make them resourcepack compatible
     public static final RegistryObject<Block, Block> OAK_LARGE_SHELF = registerBlock("oak_large_shelf",
             () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
                     .strength(2.5f)
@@ -102,67 +70,37 @@ public class ModBlocks {
                     .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> SPRUCE_LARGE_SHELF = registerBlock("spruce_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> BIRCH_LARGE_SHELF = registerBlock("birch_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> JUNGLE_LARGE_SHELF = registerBlock("jungle_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> ACACIA_LARGE_SHELF = registerBlock("acacia_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> DARK_OAK_LARGE_SHELF = registerBlock("dark_oak_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> MANGROVE_LARGE_SHELF = registerBlock("mangrove_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> CHERRY_LARGE_SHELF = registerBlock("cherry_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> BAMBOO_LARGE_SHELF = registerBlock("bamboo_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> CRIMSON_LARGE_SHELF = registerBlock("crimson_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
     public static final RegistryObject<Block, Block> WARPED_LARGE_SHELF = registerBlock("warped_large_shelf",
-            () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
-                    .sound(SoundType.WOOD)
-                    .noOcclusion()
+            () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
 
-    //TODO: VoxelShapes can be simplified with a Shapes.join with BooleanOP.ONLY_FIRST I think
+    //TODO: VoxelShapes can be simplified with a Shapes.or
     public static final RegistryObject<Block, Block> EMPTY_BARREL = registerBlock("empty_barrel",
             () -> new EmptyBarrelBlock(BlockBehaviour.Properties.of()
                     .strength(2.5f)
@@ -202,64 +140,40 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> REGAL_WALLPAPER_BLOCK = registerBlock("regal_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> VINE_WALLPAPER_BLOCK = registerBlock("vine_wallpaper",
-            () -> new WallpaperBlock(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new WallpaperBlock(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> MONSTER_WALLPAPER_BLOCK = registerBlock("monster_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> SAILOR_WALLPAPER_BLOCK = registerBlock("sailor_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> COPPER_WALLPAPER_BLOCK = registerBlock("copper_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> STELLAR_WALLPAPER_BLOCK = registerBlock("stellar_wallpaper",
-            () -> new WallpaperBlock(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new WallpaperBlock(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> PUMPKIN_WALLPAPER_BLOCK = registerBlock("pumpkin_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> SOUL_WALLPAPER_BLOCK = registerBlock("soul_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> FOREST_FESTIVE_WALLPAPER_BLOCK = registerBlock("forest_festive_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> STRIPED_FESTIVE_WALLPAPER_BLOCK = registerBlock("striped_festive_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> SNOWMEN_WALLPAPER_BLOCK = registerBlock("snowmen_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> SNOWFLAKE_WALLPAPER_BLOCK = registerBlock("snowflake_wallpaper",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.8f)
-                    .sound(SoundType.WOOL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
 
     public static final RegistryObject<Block, Block> WHITE_WOOL_AWNING = registerBlock("white_wool_awning",
@@ -322,58 +236,31 @@ public class ModBlocks {
                     .lightLevel(value -> 12)
             ));
     public static final RegistryObject<Block, Block> SAKURA_PAPER_LANTERN = registerBlock("sakura_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> TAIGA_PAPER_LANTERN = registerBlock("taiga_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> ORCHID_PAPER_LANTERN = registerBlock("orchid_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> PANDA_PAPER_LANTERN = registerBlock("panda_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> VILLAGER_PAPER_LANTERN = registerBlock("villager_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> CREEPER_PAPER_LANTERN = registerBlock("creeper_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> CHICKEN_JOCKEY_PAPER_LANTERN = registerBlock("chicken_jockey_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> PILLAGER_PAPER_LANTERN = registerBlock("pillager_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
     public static final RegistryObject<Block, Block> WARDEN_PAPER_LANTERN = registerBlock("warden_paper_lantern",
-            () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .noCollission()
-                    .lightLevel(value -> 12)
+            () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
             ));
 
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_BLOCK = registerBlock("corrugated_metal_block",
@@ -497,49 +384,31 @@ public class ModBlocks {
                     .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEAGLASS = registerBlock("hazel_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> LIQUORICE_SEAGLASS = registerBlock("liquorice_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> MOCHA_SEAGLASS = registerBlock("mocha_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> SCARLET_SEAGLASS = registerBlock("scarlet_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> HONEY_SEAGLASS = registerBlock("honey_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> MINT_SEAGLASS = registerBlock("mint_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> TEAL_SEAGLASS = registerBlock("teal_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> CERULEAN_SEAGLASS = registerBlock("cerulean_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
     public static final RegistryObject<Block, Block> TAUPE_SEAGLASS = registerBlock("taupe_seaglass",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS.get())
             ));
 
     public static final RegistryObject<Block, Block> CREAM_SEAGLASS_PANE = registerBlock("cream_seaglass_pane",
@@ -548,42 +417,31 @@ public class ModBlocks {
                     .sound(SoundType.GLASS)
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEAGLASS_PANE = registerBlock("hazel_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .sound(SoundType.GLASS)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> LIQUORICE_SEAGLASS_PANE = registerBlock("liquorice_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .sound(SoundType.GLASS)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> MOCHA_SEAGLASS_PANE = registerBlock("mocha_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> SCARLET_SEAGLASS_PANE = registerBlock("scarlet_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> HONEY_SEAGLASS_PANE = registerBlock("honey_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> MINT_SEAGLASS_PANE = registerBlock("mint_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> TEAL_SEAGLASS_PANE = registerBlock("teal_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> CERULEAN_SEAGLASS_PANE = registerBlock("cerulean_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
     public static final RegistryObject<Block, Block> TAUPE_SEAGLASS_PANE = registerBlock("taupe_seaglass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_PANE.get())
             ));
 
     public static final RegistryObject<Block, Block> CREAM_SEA_WINDOW = registerBlock("cream_sea_window",
@@ -592,49 +450,31 @@ public class ModBlocks {
                     .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW = registerBlock("hazel_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> LIQUORICE_SEA_WINDOW = registerBlock("liquorice_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> MOCHA_SEA_WINDOW = registerBlock("mocha_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> SCARLET_SEA_WINDOW = registerBlock("scarlet_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> HONEY_SEA_WINDOW = registerBlock("honey_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> MINT_SEA_WINDOW = registerBlock("mint_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> TEAL_SEA_WINDOW = registerBlock("teal_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> CERULEAN_SEA_WINDOW = registerBlock("cerulean_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
     public static final RegistryObject<Block, Block> TAUPE_SEA_WINDOW = registerBlock("taupe_sea_window",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .noOcclusion()
+            () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW.get())
             ));
 
     public static final RegistryObject<Block, Block> CREAM_SEA_WINDOW_PANE = registerBlock("cream_sea_window_pane",
@@ -643,42 +483,31 @@ public class ModBlocks {
                     .sound(SoundType.GLASS)
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEA_WINDOW_PANE = registerBlock("hazel_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .sound(SoundType.GLASS)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> LIQUORICE_SEA_WINDOW_PANE = registerBlock("liquorice_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .sound(SoundType.GLASS)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> MOCHA_SEA_WINDOW_PANE = registerBlock("mocha_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> SCARLET_SEA_WINDOW_PANE = registerBlock("scarlet_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> HONEY_SEA_WINDOW_PANE = registerBlock("honey_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> MINT_SEA_WINDOW_PANE = registerBlock("mint_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> TEAL_SEA_WINDOW_PANE = registerBlock("teal_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> CERULEAN_SEA_WINDOW_PANE = registerBlock("cerulean_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
     public static final RegistryObject<Block, Block> TAUPE_SEA_WINDOW_PANE = registerBlock("taupe_sea_window_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
+            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEA_WINDOW_PANE.get())
             ));
 
     public static final RegistryObject<Block, Block> CREAM_SEAGLASS_LAMP = registerBlock("cream_seaglass_lamp",
@@ -688,51 +517,34 @@ public class ModBlocks {
                     .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
             ));
     public static final RegistryObject<Block, Block> HAZEL_SEAGLASS_LAMP = registerBlock("hazel_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> LIQUORICE_SEAGLASS_LAMP = registerBlock("liquorice_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> MOCHA_SEAGLASS_LAMP = registerBlock("mocha_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> SCARLET_SEAGLASS_LAMP = registerBlock("scarlet_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> HONEY_SEAGLASS_LAMP = registerBlock("honey_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> MINT_SEAGLASS_LAMP = registerBlock("mint_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> TEAL_SEAGLASS_LAMP = registerBlock("teal_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> CERULEAN_SEAGLASS_LAMP = registerBlock("cerulean_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
     public static final RegistryObject<Block, Block> TAUPE_SEAGLASS_LAMP = registerBlock("taupe_seaglass_lamp",
-            () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
-                    .strength(0.3f)
-                    .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+            () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
+            ));
+
+    //TODO: find better names maybe
     public static final RegistryObject<Block, Block> SEAGLASS_SAND = registerBlock("seaglass_sand",
             () -> new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.of()
                     .sound(SoundType.SAND)
@@ -1043,6 +855,7 @@ public class ModBlocks {
                     .lightLevel(value -> 15)
             ));
 
+    //TODO: burlap_block
     public static final RegistryObject<Block, Block> BURLAP_BLOCK = registerBlock("burlap",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.5f)
@@ -1121,6 +934,7 @@ public class ModBlocks {
             () -> new WeatheringCopperLightBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.COPPER)
+                    .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 15 : 0)
             ));
     public static final RegistryObject<Block, Block> WAXED_COPPER_LIGHT = registerBlock("waxed_copper_light",
             () -> new CopperLightBlock(BlockBehaviour.Properties.ofFullCopy(COPPER_LIGHT.get())
@@ -1129,6 +943,7 @@ public class ModBlocks {
             () -> new WeatheringShoddyCopperLightBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.COPPER)
+                    .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 15 : 0)
             ));
     public static final RegistryObject<Block, Block> WAXED_SHODDY_COPPER_LIGHT = registerBlock("waxed_shoddy_copper_light",
             () -> new ShoddyCopperLightBlock(BlockBehaviour.Properties.ofFullCopy(SHODDY_COPPER_LIGHT.get())
@@ -1258,6 +1073,7 @@ public class ModBlocks {
                     .strength(.2f)
                     .sound(SoundType.WOOD)
             ));
+    //TODO: Unify all 2D full-height decorations block into the same BlockClass --> refactor FishingLuresBlock and make it the main for example
     public static final RegistryObject<Block, Block> FALL_GARLAND = registerBlock("fall_garland",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
@@ -1272,6 +1088,7 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
             ));
+    //TODO: canSurvive à revoir
     public static final RegistryObject<Block, Block> WINTER_WREATH = registerBlock("winter_wreath",
             () -> new WinterWreathBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
@@ -1740,8 +1557,14 @@ public class ModBlocks {
             ));
 
 
+//TODO: piston behaviours
+//TODO: check all strengths and hardness
+//TODO: propagateSkyLight
+//TODO: item lore
+//TODO: random Block pos
+//TODO: make all VoxelShapes protected instead of private
+//TODO: Regarder les cullfaces de TOUS les modèles
 
-//TODO: piston behaviours, check all strengths and hardness, propagateSkyLight, item lore
     public static final RegistryObject<Block, Block> DUSTY_DECORATIONS_BARREL = registerBlock("dusty_decorations_barrel",
         () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.APPLE_BARREL.get())));
 
