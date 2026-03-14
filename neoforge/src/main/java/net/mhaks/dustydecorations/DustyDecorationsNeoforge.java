@@ -204,6 +204,8 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BEETROOT_SCARECROW.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PUMPKIN_SCARECROW.get(), RenderType.cutout());
 
+            BlockEntityRenderers.register(ModBlockEntityTypes.SCARECROW_BLOCK_ENTITY.get(), ScarecrowBlockRenderer::new);
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_SNOWMAN.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FALL_GARLAND.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_GARLAND.get(), RenderType.cutout());

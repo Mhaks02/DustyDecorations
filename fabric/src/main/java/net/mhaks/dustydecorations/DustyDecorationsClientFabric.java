@@ -180,6 +180,8 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BEETROOT_SCARECROW.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PUMPKIN_SCARECROW.get(), RenderType.cutout());
 
+        BlockEntityRenderers.register(ModBlockEntityTypes.SCARECROW_BLOCK_ENTITY.get(), ScarecrowBlockRenderer::new);
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MINI_SNOWMAN.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FALL_GARLAND.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WINTER_GARLAND.get(), RenderType.cutout());

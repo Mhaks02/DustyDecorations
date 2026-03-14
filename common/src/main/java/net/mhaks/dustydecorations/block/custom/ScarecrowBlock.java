@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
+import net.mhaks.dustydecorations.block.entity.custom.ScarecrowBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
@@ -15,15 +16,11 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -33,7 +30,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
-public class ScarecrowBlock extends HorizontalDirectionalBlock {
+public class ScarecrowBlock extends BaseEntityBlock {
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     private final ScarecrowBlock.Type type;
     public static final MapCodec<ScarecrowBlock> CODEC = RecordCodecBuilder.mapCodec(
@@ -48,27 +46,27 @@ public class ScarecrowBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
     }
 
     protected static final VoxelShape PUMPKIN_X_BOTTOM_AABB = Block.box(6, 0, 4, 10,16, 12);
     protected static final VoxelShape PUMPKIN_Z_BOTTOM_AABB = Block.box(4, 0, 6, 12, 16, 10);
-    protected static final VoxelShape PUMPKIN_X_TOP_AABB = Shapes.join(Block.box(6, 0, 4, 10, 5, 12), Block.box(4, 5, 4, 12, 16, 12), BooleanOp.OR);
-    protected static final VoxelShape PUMPKIN_Z_TOP_AABB = Shapes.join(Block.box(4, 0, 6, 12, 5, 10), Block.box(4, 5, 4, 12, 16, 12), BooleanOp.OR);
-    protected static final VoxelShape PUMPKIN_X_TOP_BOTTOM_AABB = Shapes.join(PUMPKIN_X_TOP_AABB, PUMPKIN_X_BOTTOM_AABB.move(0, -1, 0), BooleanOp.OR);
-    protected static final VoxelShape PUMPKIN_Z_TOP_BOTTOM_AABB = Shapes.join(PUMPKIN_Z_TOP_AABB, PUMPKIN_Z_BOTTOM_AABB.move(0, -1, 0), BooleanOp.OR);
-    protected static final VoxelShape PUMPKIN_X_BOTTOM_UP_AABB = Shapes.join(PUMPKIN_X_BOTTOM_AABB, PUMPKIN_X_TOP_AABB.move(0, 1, 0), BooleanOp.OR);
-    protected static final VoxelShape PUMPKIN_Z_BOTTOM_UP_AABB = Shapes.join(PUMPKIN_Z_BOTTOM_AABB, PUMPKIN_Z_TOP_AABB.move(0, 1, 0), BooleanOp.OR);
+    protected static final VoxelShape PUMPKIN_X_TOP_AABB = Shapes.or(Block.box(6, 0, 4, 10, 5, 12), Block.box(4, 5, 4, 12, 16, 12));
+    protected static final VoxelShape PUMPKIN_Z_TOP_AABB = Shapes.or(Block.box(4, 0, 6, 12, 5, 10), Block.box(4, 5, 4, 12, 16, 12));
+    protected static final VoxelShape PUMPKIN_X_TOP_BOTTOM_AABB = Shapes.or(PUMPKIN_X_TOP_AABB, PUMPKIN_X_BOTTOM_AABB.move(0, -1, 0));
+    protected static final VoxelShape PUMPKIN_Z_TOP_BOTTOM_AABB = Shapes.or(PUMPKIN_Z_TOP_AABB, PUMPKIN_Z_BOTTOM_AABB.move(0, -1, 0));
+    protected static final VoxelShape PUMPKIN_X_BOTTOM_UP_AABB = Shapes.or(PUMPKIN_X_BOTTOM_AABB, PUMPKIN_X_TOP_AABB.move(0, 1, 0));
+    protected static final VoxelShape PUMPKIN_Z_BOTTOM_UP_AABB = Shapes.or(PUMPKIN_Z_BOTTOM_AABB, PUMPKIN_Z_TOP_AABB.move(0, 1, 0));
 
     protected static final VoxelShape BEETROOT_X_BOTTOM_AABB = Block.box(6, 0, 4, 10,16, 12);
     protected static final VoxelShape BEETROOT_Z_BOTTOM_AABB = Block.box(4, 0, 6, 12, 16, 10);
-    protected static final VoxelShape BEETROOT_X_TOP_AABB = Shapes.join(Block.box(6, 0, 4, 10, 4, 12), Block.box(4, 4, 4, 12, 16, 12), BooleanOp.OR);
-    protected static final VoxelShape BEETROOT_Z_TOP_AABB = Shapes.join(Block.box(4, 0, 6, 12, 4, 10), Block.box(4, 4, 4, 12, 16, 12), BooleanOp.OR);
-    protected static final VoxelShape BEETROOT_X_TOP_BOTTOM_AABB = Shapes.join(BEETROOT_X_TOP_AABB, BEETROOT_X_BOTTOM_AABB.move(0, -1, 0), BooleanOp.OR);
-    protected static final VoxelShape BEETROOT_Z_TOP_BOTTOM_AABB = Shapes.join(BEETROOT_Z_TOP_AABB, BEETROOT_Z_BOTTOM_AABB.move(0, -1, 0), BooleanOp.OR);
-    protected static final VoxelShape BEETROOT_X_BOTTOM_UP_AABB = Shapes.join(BEETROOT_X_BOTTOM_AABB, BEETROOT_X_TOP_AABB.move(0, 1, 0), BooleanOp.OR);
-    protected static final VoxelShape BEETROOT_Z_BOTTOM_UP_AABB = Shapes.join(BEETROOT_Z_BOTTOM_AABB, BEETROOT_Z_TOP_AABB.move(0, 1, 0), BooleanOp.OR);
+    protected static final VoxelShape BEETROOT_X_TOP_AABB = Shapes.or(Block.box(6, 0, 4, 10, 4, 12), Block.box(4, 4, 4, 12, 16, 12));
+    protected static final VoxelShape BEETROOT_Z_TOP_AABB = Shapes.or(Block.box(4, 0, 6, 12, 4, 10), Block.box(4, 4, 4, 12, 16, 12));
+    protected static final VoxelShape BEETROOT_X_TOP_BOTTOM_AABB = Shapes.or(BEETROOT_X_TOP_AABB, BEETROOT_X_BOTTOM_AABB.move(0, -1, 0));
+    protected static final VoxelShape BEETROOT_Z_TOP_BOTTOM_AABB = Shapes.or(BEETROOT_Z_TOP_AABB, BEETROOT_Z_BOTTOM_AABB.move(0, -1, 0));
+    protected static final VoxelShape BEETROOT_X_BOTTOM_UP_AABB = Shapes.or(BEETROOT_X_BOTTOM_AABB, BEETROOT_X_TOP_AABB.move(0, 1, 0));
+    protected static final VoxelShape BEETROOT_Z_BOTTOM_UP_AABB = Shapes.or(BEETROOT_Z_BOTTOM_AABB, BEETROOT_Z_TOP_AABB.move(0, 1, 0));
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
@@ -97,6 +95,11 @@ public class ScarecrowBlock extends HorizontalDirectionalBlock {
                     };
                 };
         }
+    }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState state) {
+        return RenderShape.ENTITYBLOCK_ANIMATED;
     }
 
     @Override
@@ -158,8 +161,23 @@ public class ScarecrowBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
+    protected BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+    }
+
+    @Override
+    protected BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, HALF);
+    }
+
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new ScarecrowBlockEntity(pos, state);
     }
 
     public ScarecrowBlock.Type getType() {
