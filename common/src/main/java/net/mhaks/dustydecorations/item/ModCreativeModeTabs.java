@@ -17,7 +17,7 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> DUSTY_DECORATIONS_TAB = CREATIVE_TABS.register("dusty_decorations_tab",
             () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
                     .icon(() -> new ItemStack(ModBlocks.DUSTY_DECORATIONS_BARREL.get()))
-                    .title(Component.translatable("creativetab.dustydecorations.test_tab"))
+                    .title(Component.translatable("creativetab.dustydecorations.dusty_decorations_tab"))
                     .displayItems((parameters, output) -> {
 
                         output.accept(ModBlocks.OAK_BANISTER.get());
