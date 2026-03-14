@@ -24,6 +24,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
     public static final String BLOCK_FOLDER = "block/";
     public static final String ITEM_FOLDER = "item/";
     public static final String GENERATED = "item/generated";
+    public static final String TOP = "_top";
+    public static final String BOTTOM = "_bottom";
+    public static final String END = "_end";
+    public static final String SIDE = "_side";
+    public static final String UPPER = "_upper";
+    public static final String LOWER = "_lower";
     public static final String[] PLUSHIE_NAME = { "alex", "ari", "efe", "kai", "makena", "noor", "steve", "sunny", "zuri" };
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -329,60 +335,62 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockWithItem(ModBlocks.FAIRY_LIGHTS);
         customHorizontalFaceBlockWithItem(ModBlocks.HOLIDAY_ORNAMENTS);
 
+//        customHorizontalBlockWithItem(ModBlocks.GIANT_ANCHOR);
         tallBlockWithItem(ModBlocks.GIANT_ANCHOR);
+//        customHorizontalFaceBlockWithItem(ModBlocks.GIANT_CHAIN);
         giantChainWithItem();
 
         blockWithItem(ModBlocks.PLAIN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.PLAIN_CUSHION_SLAB, blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PLAIN_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, ModBlocks.PLAIN_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.PLAIN_CUSHION_SLAB, ModBlocks.PLAIN_CUSHION_BLOCK);
         blockWithItem(ModBlocks.WHITE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.WHITE_CUSHION_STAIRS, blockTexture(ModBlocks.WHITE_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.WHITE_CUSHION_SLAB, blockTexture(ModBlocks.WHITE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.WHITE_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.WHITE_CUSHION_STAIRS, ModBlocks.WHITE_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.WHITE_CUSHION_SLAB, ModBlocks.WHITE_CUSHION_BLOCK);
         blockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS, blockTexture(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_SLAB, blockTexture(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get()), blockTexture(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS, ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_SLAB, ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
         blockWithItem(ModBlocks.GRAY_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.GRAY_CUSHION_STAIRS, blockTexture(ModBlocks.GRAY_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.GRAY_CUSHION_SLAB, blockTexture(ModBlocks.GRAY_CUSHION_BLOCK.get()), blockTexture(ModBlocks.GRAY_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.GRAY_CUSHION_STAIRS, ModBlocks.GRAY_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.GRAY_CUSHION_SLAB, ModBlocks.GRAY_CUSHION_BLOCK);
         blockWithItem(ModBlocks.BLACK_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.BLACK_CUSHION_STAIRS, blockTexture(ModBlocks.BLACK_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.BLACK_CUSHION_SLAB, blockTexture(ModBlocks.BLACK_CUSHION_BLOCK.get()), blockTexture(ModBlocks.BLACK_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.BLACK_CUSHION_STAIRS, ModBlocks.BLACK_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.BLACK_CUSHION_SLAB, ModBlocks.BLACK_CUSHION_BLOCK);
         blockWithItem(ModBlocks.BROWN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.BROWN_CUSHION_STAIRS, blockTexture(ModBlocks.BROWN_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.BROWN_CUSHION_SLAB, blockTexture(ModBlocks.BROWN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.BROWN_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.BROWN_CUSHION_STAIRS, ModBlocks.BROWN_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.BROWN_CUSHION_SLAB, ModBlocks.BROWN_CUSHION_BLOCK);
         blockWithItem(ModBlocks.RED_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.RED_CUSHION_STAIRS, blockTexture(ModBlocks.RED_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.RED_CUSHION_SLAB, blockTexture(ModBlocks.RED_CUSHION_BLOCK.get()), blockTexture(ModBlocks.RED_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.RED_CUSHION_STAIRS, ModBlocks.RED_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.RED_CUSHION_SLAB, ModBlocks.RED_CUSHION_BLOCK);
         blockWithItem(ModBlocks.ORANGE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.ORANGE_CUSHION_STAIRS, blockTexture(ModBlocks.ORANGE_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.ORANGE_CUSHION_SLAB, blockTexture(ModBlocks.ORANGE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.ORANGE_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.ORANGE_CUSHION_STAIRS, ModBlocks.ORANGE_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.ORANGE_CUSHION_SLAB, ModBlocks.ORANGE_CUSHION_BLOCK);
         blockWithItem(ModBlocks.YELLOW_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.YELLOW_CUSHION_STAIRS, blockTexture(ModBlocks.YELLOW_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.YELLOW_CUSHION_SLAB, blockTexture(ModBlocks.YELLOW_CUSHION_BLOCK.get()), blockTexture(ModBlocks.YELLOW_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.YELLOW_CUSHION_STAIRS, ModBlocks.YELLOW_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.YELLOW_CUSHION_SLAB, ModBlocks.YELLOW_CUSHION_BLOCK);
         blockWithItem(ModBlocks.LIME_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.LIME_CUSHION_STAIRS, blockTexture(ModBlocks.LIME_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.LIME_CUSHION_SLAB, blockTexture(ModBlocks.LIME_CUSHION_BLOCK.get()), blockTexture(ModBlocks.LIME_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.LIME_CUSHION_STAIRS, ModBlocks.LIME_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.LIME_CUSHION_SLAB, ModBlocks.LIME_CUSHION_BLOCK);
         blockWithItem(ModBlocks.GREEN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.GREEN_CUSHION_STAIRS, blockTexture(ModBlocks.GREEN_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.GREEN_CUSHION_SLAB, blockTexture(ModBlocks.GREEN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.GREEN_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.GREEN_CUSHION_STAIRS, ModBlocks.GREEN_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.GREEN_CUSHION_SLAB, ModBlocks.GREEN_CUSHION_BLOCK);
         blockWithItem(ModBlocks.CYAN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.CYAN_CUSHION_STAIRS, blockTexture(ModBlocks.CYAN_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.CYAN_CUSHION_SLAB, blockTexture(ModBlocks.CYAN_CUSHION_BLOCK.get()), blockTexture(ModBlocks.CYAN_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.CYAN_CUSHION_STAIRS, ModBlocks.CYAN_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.CYAN_CUSHION_SLAB, ModBlocks.CYAN_CUSHION_BLOCK);
         blockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS, blockTexture(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_SLAB, blockTexture(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS, ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_SLAB, ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
         blockWithItem(ModBlocks.BLUE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.BLUE_CUSHION_STAIRS, blockTexture(ModBlocks.BLUE_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.BLUE_CUSHION_SLAB, blockTexture(ModBlocks.BLUE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.BLUE_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.BLUE_CUSHION_STAIRS, ModBlocks.BLUE_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.BLUE_CUSHION_SLAB, ModBlocks.BLUE_CUSHION_BLOCK);
         blockWithItem(ModBlocks.PURPLE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.PURPLE_CUSHION_STAIRS, blockTexture(ModBlocks.PURPLE_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.PURPLE_CUSHION_SLAB, blockTexture(ModBlocks.PURPLE_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PURPLE_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.PURPLE_CUSHION_STAIRS, ModBlocks.PURPLE_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.PURPLE_CUSHION_SLAB, ModBlocks.PURPLE_CUSHION_BLOCK);
         blockWithItem(ModBlocks.MAGENTA_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.MAGENTA_CUSHION_STAIRS, blockTexture(ModBlocks.MAGENTA_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.MAGENTA_CUSHION_SLAB, blockTexture(ModBlocks.MAGENTA_CUSHION_BLOCK.get()), blockTexture(ModBlocks.MAGENTA_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.MAGENTA_CUSHION_STAIRS, ModBlocks.MAGENTA_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.MAGENTA_CUSHION_SLAB, ModBlocks.MAGENTA_CUSHION_BLOCK);
         blockWithItem(ModBlocks.PINK_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.PINK_CUSHION_STAIRS, blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.PINK_CUSHION_SLAB, blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()), blockTexture(ModBlocks.PINK_CUSHION_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.PINK_CUSHION_STAIRS, ModBlocks.PINK_CUSHION_BLOCK);
+        slabBlockWithItem(ModBlocks.PINK_CUSHION_SLAB, ModBlocks.PINK_CUSHION_BLOCK);
 
         customBlockWithItem(ModBlocks.SEASTONE_QUOIN);
         customBlockWithItem(ModBlocks.SMOOTH_STONE_QUOIN);
@@ -402,38 +410,36 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockWithItem(ModBlocks.ANDESITE_MURAL);
 
         cubeColumnWithItem(ModBlocks.SEASTONE_BLOCK);
-        stairsBlockWithItem(ModBlocks.SEASTONE_STAIRS, getPath(ModBlocks.SEASTONE_BLOCK, "_side"), getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
-        slabBlockWithItem(ModBlocks.SEASTONE_SLAB, blockTexture(ModBlocks.SEASTONE_BLOCK.get()), getPath(ModBlocks.SEASTONE_BLOCK, "_side"), getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        stairsBlockWithItem(ModBlocks.SEASTONE_STAIRS, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK);
+        slabBlockWithItem(ModBlocks.SEASTONE_SLAB, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK);
         wallBlockWithItem(ModBlocks.SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_side");
         blockWithItem(ModBlocks.SEASTONE_BRICKS);
         blockWithItem(ModBlocks.CHISELED_SEASTONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.SEASTONE_BRICK_STAIRS, blockTexture(ModBlocks.SEASTONE_BRICKS.get()));
-        slabBlockWithItem(ModBlocks.SEASTONE_BRICK_SLAB, blockTexture(ModBlocks.SEASTONE_BRICKS.get()), blockTexture(ModBlocks.SEASTONE_BRICKS.get()));
+        stairsBlockWithItem(ModBlocks.SEASTONE_BRICK_STAIRS, ModBlocks.SEASTONE_BRICKS);
+        slabBlockWithItem(ModBlocks.SEASTONE_BRICK_SLAB, ModBlocks.SEASTONE_BRICKS);
         wallBlockWithItem(ModBlocks.SEASTONE_BRICK_WALL, ModBlocks.SEASTONE_BRICKS);
-        blockWithItem(ModBlocks.SMOOTH_SEASTONE_BLOCK, getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
-        stairsBlockWithItem(ModBlocks.SMOOTH_SEASTONE_STAIRS, getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
-        slabBlockWithItem(ModBlocks.SMOOTH_SEASTONE_SLAB, blockTexture(ModBlocks.SEASTONE_BLOCK.get()), getPath(ModBlocks.SEASTONE_BLOCK, "_end"));
+        blockWithItem(ModBlocks.SMOOTH_SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK, "_end");
+        stairsBlockWithItem(ModBlocks.SMOOTH_SEASTONE_STAIRS, ModBlocks.SEASTONE_BLOCK, "_end");
+        slabBlockWithItem(ModBlocks.SMOOTH_SEASTONE_SLAB, ModBlocks.SEASTONE_BLOCK, "_end");
         wallBlockWithItem(ModBlocks.SMOOTH_SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_end");
         blockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS, blockTexture(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get()));
-        slabBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB, blockTexture(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get()), blockTexture(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get()));
+        stairsBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        slabBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
         wallBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
         blockWithItem(ModBlocks.SNOWY_COBBLESTONE_BLOCK);
-        stairsBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_STAIRS, blockTexture(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get()));
-        slabBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_SLAB, blockTexture(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get()), blockTexture(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get()));
+        stairsBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_STAIRS, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        slabBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_SLAB, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
         wallBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_WALL, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
         blockWithItem(ModBlocks.SNOWY_STONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_STAIRS, blockTexture(ModBlocks.SNOWY_STONE_BRICKS.get()));
-        slabBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_SLAB, blockTexture(ModBlocks.SNOWY_STONE_BRICKS.get()), blockTexture(ModBlocks.SNOWY_STONE_BRICKS.get()));
+        stairsBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_STAIRS, ModBlocks.SNOWY_STONE_BRICKS);
+        slabBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_SLAB, ModBlocks.SNOWY_STONE_BRICKS);
         wallBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_WALL, ModBlocks.SNOWY_STONE_BRICKS);
         blockWithItem(ModBlocks.SMOOTH_STONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_STAIRS, blockTexture(ModBlocks.SMOOTH_STONE_BRICKS.get()));
-        slabBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_SLAB, blockTexture(ModBlocks.SMOOTH_STONE_BRICKS.get()), blockTexture(ModBlocks.SMOOTH_STONE_BRICKS.get()));
+        stairsBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_STAIRS, ModBlocks.SMOOTH_STONE_BRICKS);
+        slabBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_SLAB, ModBlocks.SMOOTH_STONE_BRICKS);
         wallBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_WALL, ModBlocks.SMOOTH_STONE_BRICKS);
 
-
     }
-
 
 
     //  Create blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
@@ -1063,14 +1069,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ModelFile anchor_model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GIANT_CHAIN.getId().getPath() + "_above_anchor"));
         getVariantBuilder(ModBlocks.GIANT_CHAIN.get()).forAllStates(state -> {
             Function<BlockState, ModelFile> modelFunc = ($ -> model);
-            Function<BlockState, ModelFile> modelFunc2 = ($ -> anchor_model);
+            Function<BlockState, ModelFile> anchorModelFunc = ($ -> anchor_model);
             return !state.getValue(GiantChainBlock.ABOVE_ANCHOR)
                 ? ConfiguredModel.builder()
                     .modelFile(modelFunc.apply(state))
                     .rotationX(state.getValue(BlockStateProperties.ATTACH_FACE).ordinal() * 90)
                     .rotationY((((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) + (state.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build()
                 : ConfiguredModel.builder()
-                    .modelFile(modelFunc2.apply(state))
+                    .modelFile(anchorModelFunc.apply(state))
                     .rotationY((((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) + (state.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
         });
         blockItem(ModBlocks.GIANT_CHAIN);
