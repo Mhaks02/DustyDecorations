@@ -1,7 +1,7 @@
 package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.minecraft.client.Minecraft;

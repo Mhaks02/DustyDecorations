@@ -1,9 +1,8 @@
 package net.mhaks.dustydecorations.block.entity.custom;
 
-import net.mhaks.dustydecorations.block.entity.ModBlockEntities;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -15,7 +14,7 @@ public class PaperLanternBlockEntity extends BlockEntity implements GeoBlockEnti
     private final AnimatableInstanceCache CACHE = GeckoLibUtil.createInstanceCache(this);
 
     public PaperLanternBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlockEntities.PAPER_LANTERN_BLOCK_ENTITY.get(), pos, blockState);
+        super(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), pos, blockState);
     }
 
     public PaperLanternBlockEntity(BlockEntityType type, BlockPos pos, BlockState blockState) {
