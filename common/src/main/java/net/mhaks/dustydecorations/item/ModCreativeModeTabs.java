@@ -177,6 +177,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CERULEAN_SEAGLASS_LAMP.get());
                         output.accept(ModBlocks.TAUPE_SEAGLASS_LAMP.get());
 
+                        output.accept(ModBlocks.SEAGLASS_SAND.get());
+                        output.accept(ModBlocks.SEAGLASS_GRAVEL.get());
+
                         output.accept(ModBlocks.RUSTED_ANCHOR.get());
                         output.accept(ModBlocks.LIFE_PRESERVER.get());
                         output.accept(ModBlocks.DISPLAYED_OARS.get());
@@ -219,6 +222,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BIG_SHARK_JAW.get());
                         output.accept(ModBlocks.MEGALODON_TOOTH.get());
                         output.accept(ModBlocks.FISHING_LURES.get());
+                        output.accept(ModBlocks.STONE_FISH_FOSSIL.get());
+                        output.accept(ModBlocks.DEEPSLATE_FISH_FOSSIL.get());
+
                         output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
                         output.accept(ModBlocks.GOLD_COINS.get());
                         output.accept(ModBlocks.SCATTERED_GOLD_COINS.get());

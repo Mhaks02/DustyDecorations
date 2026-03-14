@@ -207,6 +207,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         seaglassLamp(ModBlocks.CERULEAN_SEAGLASS_LAMP);
         seaglassLamp(ModBlocks.TAUPE_SEAGLASS_LAMP);
 
+        blockWithItem(ModBlocks.SEAGLASS_SAND);
+        blockWithItem(ModBlocks.SEAGLASS_GRAVEL);
+
         customHorizontalBlockWithItem(ModBlocks.RUSTED_ANCHOR);
         customDirectionalBlockWithItem(ModBlocks.LIFE_PRESERVER);
         customHorizontalBlockWithFlatItem(ModBlocks.DISPLAYED_OARS);
@@ -249,6 +252,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalFaceBlockWithFlatItem(ModBlocks.BIG_SHARK_JAW);
         customHorizontalFaceBlockWithFlatBlockItem(ModBlocks.MEGALODON_TOOTH);
         fishingLuresWithFlatItem();
+        blockWithItem(ModBlocks.STONE_FISH_FOSSIL);
+        blockWithItem(ModBlocks.DEEPSLATE_FISH_FOSSIL);
+
         goldCoinsBlockWithItem();
         goldCoinsLayerWithFlatItem();
         scatteredGoldCoinsWithFlatBlockItem();

@@ -8,6 +8,7 @@ import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -732,6 +733,13 @@ public class ModBlocks {
             () -> new SeaglassLampBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
                     .lightLevel(state -> state.getValue(SeaglassLampBlock.LIT) ? 13 : 0)
+    public static final RegistryObject<Block, Block> SEAGLASS_SAND = registerBlock("seaglass_sand",
+            () -> new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.of()
+                    .sound(SoundType.SAND)
+            ));
+    public static final RegistryObject<Block, Block> SEAGLASS_GRAVEL = registerBlock("seaglass_gravel",
+            () -> new ColoredFallingBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.of()
+                    .sound(SoundType.GRAVEL)
             ));
 
     //TODO: la hitbox est pas dingue tbh
@@ -972,6 +980,16 @@ public class ModBlocks {
                     .sound(SoundType.BONE_BLOCK)
                     .noOcclusion()
                     .noCollission()
+            ));
+
+    //TODO: find better names maybe
+    public static final RegistryObject<Block, Block> STONE_FISH_FOSSIL = registerBlock("stone_fish_fossil",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .sound(SoundType.STONE)
+            ));
+    public static final RegistryObject<Block, Block> DEEPSLATE_FISH_FOSSIL = registerBlock("deepslate_fish_fossil",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .sound(SoundType.DEEPSLATE)
             ));
 
     //TODO: custom sounds
