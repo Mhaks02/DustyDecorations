@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dustydecorations:block/cold_nautilus_wind_chime",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dustydecorations:block/cold_nautilus_wind_chime"
+    },
+    "facing=south": {
+      "model": "dustydecorations:block/cold_nautilus_wind_chime",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dustydecorations:block/cold_nautilus_wind_chime",
+      "y": 270
+    }
+  }
+}

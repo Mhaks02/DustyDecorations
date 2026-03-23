@@ -854,6 +854,11 @@ public class ModBlocks {
                     .sound(SoundType.BONE_BLOCK)
                     .lightLevel(value -> 15)
             ));
+    public static final RegistryObject<Block, Block> COLD_NAUTILUS_WIND_CHIME = registerBlock("cold_nautilus_wind_chime",
+            () -> new NautilusWindChimeBlock(BlockBehaviour.Properties.of()
+                    .strength(1.25f)
+                    .sound(SoundType.SMALL_AMETHYST_BUD)
+            ));
 
     //TODO: burlap_block
     public static final RegistryObject<Block, Block> BURLAP_BLOCK = registerBlock("burlap",
