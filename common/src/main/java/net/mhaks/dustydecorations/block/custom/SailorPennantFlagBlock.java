@@ -9,40 +9,40 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class FishingLuresBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+public class SailorPennantFlagBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_4;
-    public static final MapCodec<FishingLuresBlock> CODEC = simpleCodec(FishingLuresBlock::new);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_5;
+    public static final MapCodec<SailorPennantFlagBlock> CODEC = simpleCodec(SailorPennantFlagBlock::new);
 
-    public FishingLuresBlock(Properties properties) {
+    public SailorPennantFlagBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
                 .setValue(TEXTURE, 0)
-                .setValue(FACING, Direction.NORTH)
-                .setValue(FACE, AttachFace.WALL));
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
-    protected MapCodec<? extends FaceAttachedHorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
-    private static final VoxelShape FLOOR_AABB =
-            Block.box(0, 0, 0, 16, 1, 16);
+//    private static final VoxelShape FLOOR_AABB =
+//            Block.box(0, 0, 0, 16, 1, 16);
     private static final VoxelShape WALL_NORTH_AABB =
             Block.box(0, 0, 15, 16, 16, 16);
     private static final VoxelShape WALL_SOUTH_AABB =
@@ -54,45 +54,19 @@ public class FishingLuresBlock extends FaceAttachedHorizontalDirectionalBlock im
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        switch (state.getValue(FACE)) {
-            case FLOOR:
-                return FLOOR_AABB;
-            case WALL:
-            default:
-                return switch (state.getValue(FACING)) {
-                    case SOUTH -> WALL_SOUTH_AABB;
-                    case EAST -> WALL_EAST_AABB;
-                    case WEST -> WALL_WEST_AABB;
-                    default -> WALL_NORTH_AABB;
-                };
-        }
+        return switch (state.getValue(FACING)) {
+            case SOUTH -> WALL_SOUTH_AABB;
+            case EAST -> WALL_EAST_AABB;
+            case WEST -> WALL_WEST_AABB;
+            default -> WALL_NORTH_AABB;
+        };
     }
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        for (Direction direction : context.getNearestLookingDirections()) {
-            BlockState blockstate;
-            if (direction.getAxis() == Direction.Axis.Y) {
-                blockstate = this.defaultBlockState()
-                        .setValue(FACE, direction == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
-                        .setValue(FACING, context.getHorizontalDirection().getOpposite())
-                        .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
-            } else {
-                blockstate = this.defaultBlockState()
-                        .setValue(FACE, AttachFace.WALL)
-                        .setValue(FACING, direction.getOpposite())
-                        .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
-            }
-            if (blockstate.canSurvive(context.getLevel(), context.getClickedPos())) {
-                return blockstate;
-            }
-        }
-        return null;
-    }
-
-    @Override
-    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        return state.getValue(FACE) != AttachFace.CEILING;
+        return this.defaultBlockState()
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
     }
 
     @Override
@@ -112,11 +86,11 @@ public class FishingLuresBlock extends FaceAttachedHorizontalDirectionalBlock im
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(TEXTURE, RandomSource.create().nextInt(0, 5)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 6)));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, FACE, WATERLOGGED, TEXTURE);
+        builder.add(FACING, WATERLOGGED, TEXTURE);
     }
 }

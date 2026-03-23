@@ -903,7 +903,7 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> SAILOR_PENNANT_FLAG = registerBlock("sailor_pennant_flag",
-            () -> new FishingLuresBlock(BlockBehaviour.Properties.of()
+            () -> new SailorPennantFlagBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.WOOD)
                     .noOcclusion()
@@ -1124,7 +1124,7 @@ public class ModBlocks {
                     .lightLevel(value -> 6)
             ));
     public static final RegistryObject<Block, Block> HOLIDAY_ORNAMENTS = registerBlock("holiday_ornaments",
-            () -> new FishingLuresBlock(BlockBehaviour.Properties.of()
+            () -> new HolidaysOrnamentsBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.WOOD)
                     .noCollission()

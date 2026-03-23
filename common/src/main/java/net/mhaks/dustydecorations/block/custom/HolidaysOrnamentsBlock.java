@@ -15,19 +15,22 @@ import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.AttachFace;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class FishingLuresBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+public class HolidaysOrnamentsBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_4;
-    public static final MapCodec<FishingLuresBlock> CODEC = simpleCodec(FishingLuresBlock::new);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_7;
+    public static final MapCodec<HolidaysOrnamentsBlock> CODEC = simpleCodec(HolidaysOrnamentsBlock::new);
 
-    public FishingLuresBlock(Properties properties) {
+    public HolidaysOrnamentsBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
@@ -112,7 +115,7 @@ public class FishingLuresBlock extends FaceAttachedHorizontalDirectionalBlock im
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(TEXTURE, RandomSource.create().nextInt(0, 5)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 8)));
     }
 
     @Override

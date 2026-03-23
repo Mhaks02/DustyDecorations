@@ -60,6 +60,16 @@
       "x": 180,
       "y": 270
     },
+    "face=ceiling,facing=east,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180,
+      "y": 270
+    },
+    "face=ceiling,facing=east,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180,
+      "y": 270
+    },
     "face=ceiling,facing=north,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 180,
@@ -120,6 +130,16 @@
       "x": 180,
       "y": 180
     },
+    "face=ceiling,facing=north,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180,
+      "y": 180
+    },
+    "face=ceiling,facing=north,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180,
+      "y": 180
+    },
     "face=ceiling,facing=south,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 180
@@ -165,6 +185,14 @@
       "x": 180
     },
     "face=ceiling,facing=south,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180
+    },
+    "face=ceiling,facing=south,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180
+    },
+    "face=ceiling,facing=south,texture=6,waterlogged=true": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 180
     },
@@ -228,6 +256,16 @@
       "x": 180,
       "y": 90
     },
+    "face=ceiling,facing=west,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180,
+      "y": 90
+    },
+    "face=ceiling,facing=west,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 180,
+      "y": 90
+    },
     "face=floor,facing=east,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments",
       "y": 90
@@ -276,6 +314,14 @@
       "model": "dustydecorations:block/holiday_ornaments",
       "y": 90
     },
+    "face=floor,facing=east,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "y": 90
+    },
+    "face=floor,facing=east,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "y": 90
+    },
     "face=floor,facing=north,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments"
     },
@@ -310,6 +356,12 @@
       "model": "dustydecorations:block/holiday_ornaments"
     },
     "face=floor,facing=north,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments"
+    },
+    "face=floor,facing=north,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments"
+    },
+    "face=floor,facing=north,texture=6,waterlogged=true": {
       "model": "dustydecorations:block/holiday_ornaments"
     },
     "face=floor,facing=south,texture=0,waterlogged=false": {
@@ -360,6 +412,14 @@
       "model": "dustydecorations:block/holiday_ornaments",
       "y": 180
     },
+    "face=floor,facing=south,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "y": 180
+    },
+    "face=floor,facing=south,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "y": 180
+    },
     "face=floor,facing=west,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments",
       "y": 270
@@ -405,6 +465,14 @@
       "y": 270
     },
     "face=floor,facing=west,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "y": 270
+    },
+    "face=floor,facing=west,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "y": 270
+    },
+    "face=floor,facing=west,texture=6,waterlogged=true": {
       "model": "dustydecorations:block/holiday_ornaments",
       "y": 270
     },
@@ -468,6 +536,16 @@
       "x": 90,
       "y": 90
     },
+    "face=wall,facing=east,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90,
+      "y": 90
+    },
+    "face=wall,facing=east,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90,
+      "y": 90
+    },
     "face=wall,facing=north,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 90
@@ -513,6 +591,14 @@
       "x": 90
     },
     "face=wall,facing=north,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90
+    },
+    "face=wall,facing=north,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90
+    },
+    "face=wall,facing=north,texture=6,waterlogged=true": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 90
     },
@@ -576,6 +662,16 @@
       "x": 90,
       "y": 180
     },
+    "face=wall,facing=south,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90,
+      "y": 180
+    },
+    "face=wall,facing=south,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90,
+      "y": 180
+    },
     "face=wall,facing=west,texture=0,waterlogged=false": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 90,
@@ -632,6 +728,16 @@
       "y": 270
     },
     "face=wall,facing=west,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90,
+      "y": 270
+    },
+    "face=wall,facing=west,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/holiday_ornaments",
+      "x": 90,
+      "y": 270
+    },
+    "face=wall,facing=west,texture=6,waterlogged=true": {
       "model": "dustydecorations:block/holiday_ornaments",
       "x": 90,
       "y": 270

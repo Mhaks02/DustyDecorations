@@ -1,639 +1,153 @@
 {
   "variants": {
-    "face=ceiling,facing=east,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=north,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=south,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180
-    },
-    "face=ceiling,facing=west,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180,
+    "facing=east,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0",
       "y": 90
     },
-    "face=ceiling,facing=west,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 180,
+    "facing=east,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0",
       "y": 90
     },
-    "face=ceiling,facing=west,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 180,
-      "y": 90
-    },
-    "face=floor,facing=east,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "y": 90
-    },
-    "face=floor,facing=east,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "y": 90
-    },
-    "face=floor,facing=east,texture=1,waterlogged=false": {
+    "facing=east,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_1",
       "y": 90
     },
-    "face=floor,facing=east,texture=1,waterlogged=true": {
+    "facing=east,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_1",
       "y": 90
     },
-    "face=floor,facing=east,texture=2,waterlogged=false": {
+    "facing=east,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_2",
       "y": 90
     },
-    "face=floor,facing=east,texture=2,waterlogged=true": {
+    "facing=east,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_2",
       "y": 90
     },
-    "face=floor,facing=east,texture=3,waterlogged=false": {
+    "facing=east,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_3",
       "y": 90
     },
-    "face=floor,facing=east,texture=3,waterlogged=true": {
+    "facing=east,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_3",
       "y": 90
     },
-    "face=floor,facing=east,texture=4,waterlogged=false": {
+    "facing=east,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_4",
       "y": 90
     },
-    "face=floor,facing=east,texture=4,waterlogged=true": {
+    "facing=east,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_4",
       "y": 90
     },
-    "face=floor,facing=east,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "y": 90
+    "facing=north,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0"
     },
-    "face=floor,facing=east,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "y": 90
+    "facing=north,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0"
     },
-    "face=floor,facing=north,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag"
-    },
-    "face=floor,facing=north,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag"
-    },
-    "face=floor,facing=north,texture=1,waterlogged=false": {
+    "facing=north,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_1"
     },
-    "face=floor,facing=north,texture=1,waterlogged=true": {
+    "facing=north,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_1"
     },
-    "face=floor,facing=north,texture=2,waterlogged=false": {
+    "facing=north,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_2"
     },
-    "face=floor,facing=north,texture=2,waterlogged=true": {
+    "facing=north,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_2"
     },
-    "face=floor,facing=north,texture=3,waterlogged=false": {
+    "facing=north,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_3"
     },
-    "face=floor,facing=north,texture=3,waterlogged=true": {
+    "facing=north,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_3"
     },
-    "face=floor,facing=north,texture=4,waterlogged=false": {
+    "facing=north,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_4"
     },
-    "face=floor,facing=north,texture=4,waterlogged=true": {
+    "facing=north,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_4"
     },
-    "face=floor,facing=north,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5"
-    },
-    "face=floor,facing=north,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5"
-    },
-    "face=floor,facing=south,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
+    "facing=south,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0",
       "y": 180
     },
-    "face=floor,facing=south,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
+    "facing=south,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0",
       "y": 180
     },
-    "face=floor,facing=south,texture=1,waterlogged=false": {
+    "facing=south,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_1",
       "y": 180
     },
-    "face=floor,facing=south,texture=1,waterlogged=true": {
+    "facing=south,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_1",
       "y": 180
     },
-    "face=floor,facing=south,texture=2,waterlogged=false": {
+    "facing=south,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_2",
       "y": 180
     },
-    "face=floor,facing=south,texture=2,waterlogged=true": {
+    "facing=south,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_2",
       "y": 180
     },
-    "face=floor,facing=south,texture=3,waterlogged=false": {
+    "facing=south,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_3",
       "y": 180
     },
-    "face=floor,facing=south,texture=3,waterlogged=true": {
+    "facing=south,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_3",
       "y": 180
     },
-    "face=floor,facing=south,texture=4,waterlogged=false": {
+    "facing=south,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_4",
       "y": 180
     },
-    "face=floor,facing=south,texture=4,waterlogged=true": {
+    "facing=south,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_4",
       "y": 180
     },
-    "face=floor,facing=south,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "y": 180
-    },
-    "face=floor,facing=south,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "y": 180
-    },
-    "face=floor,facing=west,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
+    "facing=west,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0",
       "y": 270
     },
-    "face=floor,facing=west,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
+    "facing=west,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/sailor_pennant_flag_0",
       "y": 270
     },
-    "face=floor,facing=west,texture=1,waterlogged=false": {
+    "facing=west,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_1",
       "y": 270
     },
-    "face=floor,facing=west,texture=1,waterlogged=true": {
+    "facing=west,texture=1,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_1",
       "y": 270
     },
-    "face=floor,facing=west,texture=2,waterlogged=false": {
+    "facing=west,texture=2,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_2",
       "y": 270
     },
-    "face=floor,facing=west,texture=2,waterlogged=true": {
+    "facing=west,texture=2,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_2",
       "y": 270
     },
-    "face=floor,facing=west,texture=3,waterlogged=false": {
+    "facing=west,texture=3,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_3",
       "y": 270
     },
-    "face=floor,facing=west,texture=3,waterlogged=true": {
+    "facing=west,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_3",
       "y": 270
     },
-    "face=floor,facing=west,texture=4,waterlogged=false": {
+    "facing=west,texture=4,waterlogged=false": {
       "model": "dustydecorations:block/sailor_pennant_flag_4",
       "y": 270
     },
-    "face=floor,facing=west,texture=4,waterlogged=true": {
+    "facing=west,texture=4,waterlogged=true": {
       "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "y": 270
-    },
-    "face=floor,facing=west,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "y": 270
-    },
-    "face=floor,facing=west,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "y": 270
-    },
-    "face=wall,facing=east,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=north,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90
-    },
-    "face=wall,facing=south,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=west,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=1,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=1,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_1",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=2,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=2,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_2",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=3,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=3,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_3",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_4",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/sailor_pennant_flag_5",
-      "x": 90,
       "y": 270
     }
   }

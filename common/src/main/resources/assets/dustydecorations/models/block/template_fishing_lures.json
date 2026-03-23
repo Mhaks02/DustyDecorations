@@ -4,8 +4,8 @@
 	"ambientocclusion": false,
 	"render_type": "minecraft:cutout",
 	"textures": {
-		"particle": "dustydecorations:block/fishing_lures/3",
-		"smallsharkjaws": "dustydecorations:block/fishing_lures/3"
+		"0": "#0",
+		"particle": "#0"
 	},
 	"elements": [
 		{
@@ -15,8 +15,8 @@
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "x", "origin": [8, 0, 8]},
 			"faces": {
-				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#smallsharkjaws"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#smallsharkjaws"}
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
 			}
 		}
 	],

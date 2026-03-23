@@ -1,12 +1,12 @@
 {
   "variants": {
     "face=ceiling,facing=east,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180,
       "y": 270
     },
     "face=ceiling,facing=east,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180,
       "y": 270
     },
@@ -40,33 +40,13 @@
       "x": 180,
       "y": 270
     },
-    "face=ceiling,facing=east,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180,
-      "y": 270
-    },
-    "face=ceiling,facing=east,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180,
-      "y": 270
-    },
     "face=ceiling,facing=north,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180,
       "y": 180
     },
     "face=ceiling,facing=north,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180,
       "y": 180
     },
@@ -100,32 +80,12 @@
       "x": 180,
       "y": 180
     },
-    "face=ceiling,facing=north,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180,
-      "y": 180
-    },
-    "face=ceiling,facing=north,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180,
-      "y": 180
-    },
     "face=ceiling,facing=south,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180
     },
     "face=ceiling,facing=south,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180
     },
     "face=ceiling,facing=south,texture=1,waterlogged=false": {
@@ -152,29 +112,13 @@
       "model": "dustydecorations:block/fishing_lures_3",
       "x": 180
     },
-    "face=ceiling,facing=south,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180
-    },
-    "face=ceiling,facing=south,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180
-    },
     "face=ceiling,facing=west,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180,
       "y": 90
     },
     "face=ceiling,facing=west,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 180,
       "y": 90
     },
@@ -208,32 +152,12 @@
       "x": 180,
       "y": 90
     },
-    "face=ceiling,facing=west,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180,
-      "y": 90
-    },
-    "face=ceiling,facing=west,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 180,
-      "y": 90
-    },
     "face=floor,facing=east,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "y": 90
     },
     "face=floor,facing=east,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "y": 90
     },
     "face=floor,facing=east,texture=1,waterlogged=false": {
@@ -260,27 +184,11 @@
       "model": "dustydecorations:block/fishing_lures_3",
       "y": 90
     },
-    "face=floor,facing=east,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "y": 90
-    },
-    "face=floor,facing=east,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "y": 90
-    },
-    "face=floor,facing=east,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "y": 90
-    },
-    "face=floor,facing=east,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "y": 90
-    },
     "face=floor,facing=north,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures"
+      "model": "dustydecorations:block/fishing_lures_0"
     },
     "face=floor,facing=north,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures"
+      "model": "dustydecorations:block/fishing_lures_0"
     },
     "face=floor,facing=north,texture=1,waterlogged=false": {
       "model": "dustydecorations:block/fishing_lures_1"
@@ -300,24 +208,12 @@
     "face=floor,facing=north,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/fishing_lures_3"
     },
-    "face=floor,facing=north,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4"
-    },
-    "face=floor,facing=north,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4"
-    },
-    "face=floor,facing=north,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures"
-    },
-    "face=floor,facing=north,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures"
-    },
     "face=floor,facing=south,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "y": 180
     },
     "face=floor,facing=south,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "y": 180
     },
     "face=floor,facing=south,texture=1,waterlogged=false": {
@@ -344,28 +240,12 @@
       "model": "dustydecorations:block/fishing_lures_3",
       "y": 180
     },
-    "face=floor,facing=south,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "y": 180
-    },
-    "face=floor,facing=south,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "y": 180
-    },
-    "face=floor,facing=south,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "y": 180
-    },
-    "face=floor,facing=south,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "y": 180
-    },
     "face=floor,facing=west,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "y": 270
     },
     "face=floor,facing=west,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "y": 270
     },
     "face=floor,facing=west,texture=1,waterlogged=false": {
@@ -392,29 +272,13 @@
       "model": "dustydecorations:block/fishing_lures_3",
       "y": 270
     },
-    "face=floor,facing=west,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "y": 270
-    },
-    "face=floor,facing=west,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "y": 270
-    },
-    "face=floor,facing=west,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "y": 270
-    },
-    "face=floor,facing=west,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "y": 270
-    },
     "face=wall,facing=east,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90,
       "y": 90
     },
     "face=wall,facing=east,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90,
       "y": 90
     },
@@ -448,32 +312,12 @@
       "x": 90,
       "y": 90
     },
-    "face=wall,facing=east,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90,
-      "y": 90
-    },
-    "face=wall,facing=east,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90,
-      "y": 90
-    },
     "face=wall,facing=north,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90
     },
     "face=wall,facing=north,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90
     },
     "face=wall,facing=north,texture=1,waterlogged=false": {
@@ -500,29 +344,13 @@
       "model": "dustydecorations:block/fishing_lures_3",
       "x": 90
     },
-    "face=wall,facing=north,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90
-    },
-    "face=wall,facing=north,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90
-    },
     "face=wall,facing=south,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90,
       "y": 180
     },
     "face=wall,facing=south,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90,
       "y": 180
     },
@@ -556,33 +384,13 @@
       "x": 90,
       "y": 180
     },
-    "face=wall,facing=south,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90,
-      "y": 180
-    },
-    "face=wall,facing=south,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90,
-      "y": 180
-    },
     "face=wall,facing=west,texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90,
       "y": 270
     },
     "face=wall,facing=west,texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
+      "model": "dustydecorations:block/fishing_lures_0",
       "x": 90,
       "y": 270
     },
@@ -613,26 +421,6 @@
     },
     "face=wall,facing=west,texture=3,waterlogged=true": {
       "model": "dustydecorations:block/fishing_lures_3",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=4,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=4,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures_4",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=5,waterlogged=false": {
-      "model": "dustydecorations:block/fishing_lures",
-      "x": 90,
-      "y": 270
-    },
-    "face=wall,facing=west,texture=5,waterlogged=true": {
-      "model": "dustydecorations:block/fishing_lures",
       "x": 90,
       "y": 270
     }
