@@ -795,11 +795,12 @@ public class ModBlocks {
             ));
 
     //TODO: find better names maybe
-    public static final RegistryObject<Block, Block> STONE_FISH_FOSSIL = registerBlock("stone_fish_fossil",
+    //TODO: sus sand
+    public static final RegistryObject<Block, Block> STONE_MARINE_FOSSIL = registerBlock("stone_marine_fossil",
             () -> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.STONE)
             ));
-    public static final RegistryObject<Block, Block> DEEPSLATE_FISH_FOSSIL = registerBlock("deepslate_fish_fossil",
+    public static final RegistryObject<Block, Block> DEEPSLATE_MARINE_FOSSIL = registerBlock("deepslate_marine_fossil",
             () -> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.DEEPSLATE)
             ));

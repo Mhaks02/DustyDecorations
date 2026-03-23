@@ -222,8 +222,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BIG_SHARK_JAW.get());
                         output.accept(ModBlocks.MEGALODON_TOOTH.get());
                         output.accept(ModBlocks.FISHING_LURES.get());
-                        output.accept(ModBlocks.STONE_FISH_FOSSIL.get());
-                        output.accept(ModBlocks.DEEPSLATE_FISH_FOSSIL.get());
+                        output.accept(ModBlocks.STONE_MARINE_FOSSIL.get());
+                        output.accept(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get());
 
                         output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
                         output.accept(ModBlocks.GOLD_COINS.get());
