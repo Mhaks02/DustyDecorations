@@ -854,6 +854,11 @@ public class ModBlocks {
                     .sound(SoundType.BONE_BLOCK)
                     .lightLevel(value -> 15)
             ));
+    public static final RegistryObject<Block, Block> SMALL_NAUTILUS_SHELL = registerBlock("small_nautilus_shell",
+            () -> new SmallNautilusShellBlock(BlockBehaviour.Properties.of()
+                    .strength(1.25f)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
     public static final RegistryObject<Block, Block> COLD_NAUTILUS_WIND_CHIME = registerBlock("cold_nautilus_wind_chime",
             () -> new NautilusWindChimeBlock(BlockBehaviour.Properties.of()
                     .strength(1.25f)
