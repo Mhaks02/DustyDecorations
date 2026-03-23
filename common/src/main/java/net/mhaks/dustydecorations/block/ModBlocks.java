@@ -865,8 +865,7 @@ public class ModBlocks {
                     .sound(SoundType.SMALL_AMETHYST_BUD)
             ));
 
-    //TODO: burlap_block
-    public static final RegistryObject<Block, Block> BURLAP_BLOCK = registerBlock("burlap",
+    public static final RegistryObject<Block, Block> BURLAP_BLOCK = registerBlock("burlap_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.5f)
                     .sound(SoundType.WOOL)

@@ -399,6 +399,25 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMOOTH_STONE_BRICK_SLAB.get());
                         output.accept(ModBlocks.SMOOTH_STONE_BRICK_WALL.get());
 
+
+
+                        output.accept(ModItems.CREAM_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.HAZEL_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.LIQUORICE_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.MOCHA_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.SCARLET_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.HONEY_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.TEAL_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.MINT_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.TAUPE_SEAGLASS_FRAGMENTS.get());
+
+                        output.accept(ModItems.BURLAP.get());
+                        output.accept(ModItems.RAW_BRATWURST.get());
+                        output.accept(ModItems.SMOKED_BRATWURST.get());
+                        output.accept(ModItems.BRATWURST_HOT_DOG.get());
+                        output.accept(ModItems.NAUTILUS_GOLEM_SPAWN_EGG.get());
+
                     }).build());
     
 

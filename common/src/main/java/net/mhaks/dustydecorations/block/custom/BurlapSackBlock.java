@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -21,15 +22,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class BurlapSackBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty STACKED_SACKS = IntegerProperty.create("stacked_sacks", 1, 3);
+    public static final IntegerProperty STACKED_SACKS = ModConstants.AMOUNT_3;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<BurlapSackBlock> CODEC = simpleCodec(BurlapSackBlock::new);
 
     public BurlapSackBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(STACKED_SACKS, 1)
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -70,25 +72,25 @@ public class BurlapSackBlock extends HorizontalDirectionalBlock implements Simpl
         switch (state.getValue(STACKED_SACKS)) {
             case 2:
                 return switch (state.getValue(FACING)) {
-                    case NORTH -> SHAPE_TWO_NORTH;
+                    case SOUTH -> SHAPE_TWO_SOUTH;
                     case EAST -> SHAPE_TWO_EAST;
                     case WEST -> SHAPE_TWO_WEST;
-                    default -> SHAPE_TWO_SOUTH;
+                    default -> SHAPE_TWO_NORTH;
                 };
             case 3:
                 return switch (state.getValue(FACING)) {
-                    case NORTH -> SHAPE_THREE_NORTH;
+                    case SOUTH -> SHAPE_THREE_SOUTH;
                     case EAST -> SHAPE_THREE_EAST;
                     case WEST -> SHAPE_THREE_WEST;
-                    default -> SHAPE_THREE_SOUTH;
+                    default -> SHAPE_THREE_NORTH;
                 };
             case 1:
             default:
                 return switch (state.getValue(FACING)) {
-                    case NORTH -> SHAPE_ONE_NORTH;
+                    case SOUTH -> SHAPE_ONE_SOUTH;
                     case EAST -> SHAPE_ONE_EAST;
                     case WEST -> SHAPE_ONE_WEST;
-                    default -> SHAPE_ONE_SOUTH;
+                    default -> SHAPE_ONE_NORTH;
                 };
         }
     }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dustydecorations:item/burlap"
+    "layer0": "dustydecorations:item/taupe_seaglass_fragments"
   }
 }

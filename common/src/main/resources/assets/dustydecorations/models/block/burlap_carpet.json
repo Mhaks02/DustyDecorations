@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "dustydecorations:block/burlap",
+		"0": "dustydecorations:block/burlap_block",
 		"1": "dustydecorations:block/burlap_carpet_sides",
-		"particle": "dustydecorations:block/burlap"
+		"particle": "dustydecorations:block/burlap_block"
 	},
 	"elements": [
 		{
