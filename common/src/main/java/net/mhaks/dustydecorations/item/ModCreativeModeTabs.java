@@ -226,7 +226,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get());
 
                         output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
-                        output.accept(ModBlocks.GOLD_COINS.get());
+                        output.accept(ModBlocks.GOLD_COINS_LAYER.get());
                         output.accept(ModBlocks.SCATTERED_GOLD_COINS.get());
                         output.accept(ModBlocks.SANDSTONE_TILE_BLOCK.get());
                         output.accept(ModBlocks.SANDSTONE_TILE_STAIRS.get());
@@ -254,6 +254,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.HANGING_SAUSAGES.get());
                         output.accept(ModBlocks.WRAPPED_MEAT.get());
+                        output.accept(ModBlocks.COWHIDE_RUG.get());
+                        output.accept(ModBlocks.MOOSHROOM_COWHIDE_RUG.get());
+
                         output.accept(ModBlocks.COPPER_LIGHT.get());
                         output.accept(ModBlocks.WAXED_COPPER_LIGHT.get());
                         output.accept(ModBlocks.SHODDY_COPPER_LIGHT.get());
