@@ -38,7 +38,8 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(HALF, DoubleBlockHalf.LOWER));
+                .setValue(HALF, DoubleBlockHalf.LOWER)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -61,15 +62,10 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        Direction.Axis facingAxis = state.getValue(FACING).getAxis();
         return switch (state.getValue(HALF)) {
-            case LOWER -> switch (state.getValue(FACING)) {
-                case EAST, WEST -> X_AXIS_LOWER_AABB;
-                default -> Z_AXIS_LOWER_AABB;
-            };
-            case UPPER -> switch (state.getValue(FACING)) {
-                case EAST, WEST -> X_AXIS_UPPER_AABB;
-                default -> Z_AXIS_UPPER_AABB;
-            };
+            case LOWER -> facingAxis == Direction.Axis.X ? X_AXIS_LOWER_AABB : Z_AXIS_LOWER_AABB;
+            case UPPER -> facingAxis == Direction.Axis.X ? X_AXIS_UPPER_AABB : Z_AXIS_UPPER_AABB;
         };
     }
 

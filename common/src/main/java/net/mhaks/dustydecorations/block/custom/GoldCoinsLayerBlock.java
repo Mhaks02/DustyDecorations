@@ -30,7 +30,7 @@ public class GoldCoinsLayerBlock extends Block implements SimpleWaterloggedBlock
     //TODO: particles on place and on walk + auto-place gold coins on empty right click if in hotbar
     public GoldCoinsLayerBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
                 .setValue(LAYERS, 1));
     }

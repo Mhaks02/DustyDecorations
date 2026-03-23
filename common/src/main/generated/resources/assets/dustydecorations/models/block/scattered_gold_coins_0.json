@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_scattered_gold_coins",
+  "textures": {
+    "0": "dustydecorations:block/scattered_gold_coins/0"
+  }
+}

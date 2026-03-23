@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,11 +25,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class GarlandBlock extends HorizontalDirectionalBlock {
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_3;
     public static final MapCodec<GarlandBlock> CODEC = simpleCodec(GarlandBlock::new);
 
     public GarlandBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -47,17 +50,12 @@ public class GarlandBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        switch (state.getValue(FACING)) {
-            case NORTH:
-                return WALL_NORTH_AABB;
-            case EAST:
-                return WALL_EAST_AABB;
-            case WEST:
-                return WALL_WEST_AABB;
-            case SOUTH:
-            default:
-                return WALL_SOUTH_AABB;
-        }
+        return switch (state.getValue(FACING)) {
+            case SOUTH -> WALL_SOUTH_AABB;
+            case EAST -> WALL_EAST_AABB;
+            case WEST -> WALL_WEST_AABB;
+            default -> WALL_NORTH_AABB;
+        };
     }
 
     @Override

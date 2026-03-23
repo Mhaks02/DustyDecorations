@@ -42,7 +42,8 @@ public class ScarecrowBlock extends BaseEntityBlock {
         super(properties);
         this.type = type;
         this.registerDefaultState(defaultBlockState()
-                .setValue(HALF, DoubleBlockHalf.LOWER));
+                .setValue(HALF, DoubleBlockHalf.LOWER)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -73,27 +74,15 @@ public class ScarecrowBlock extends BaseEntityBlock {
         switch (this.getType()) {
             case Types.BEETROOT:
                 return switch (state.getValue(HALF)) {
-                    case LOWER -> switch (state.getValue(FACING)) {
-                        case EAST, WEST -> BEETROOT_X_BOTTOM_UP_AABB;
-                        default -> BEETROOT_Z_BOTTOM_UP_AABB;
+                    case LOWER -> state.getValue(FACING).getAxis() == Direction.Axis.X ? BEETROOT_X_BOTTOM_UP_AABB : BEETROOT_Z_BOTTOM_UP_AABB;
+                    case UPPER -> state.getValue(FACING).getAxis() == Direction.Axis.X ? BEETROOT_X_TOP_BOTTOM_AABB : BEETROOT_Z_TOP_BOTTOM_AABB;
                     };
-                    case UPPER -> switch (state.getValue(FACING)) {
-                        case EAST, WEST -> BEETROOT_X_TOP_BOTTOM_AABB;
-                        default -> BEETROOT_Z_TOP_BOTTOM_AABB;
-                    };
-                };
             case Types.PUMPKIN:
             default:
                 return switch (state.getValue(HALF)) {
-                    case LOWER -> switch (state.getValue(FACING)) {
-                        case EAST, WEST -> PUMPKIN_X_BOTTOM_UP_AABB;
-                        default -> PUMPKIN_Z_BOTTOM_UP_AABB;
+                    case LOWER -> state.getValue(FACING).getAxis() == Direction.Axis.X ? PUMPKIN_X_BOTTOM_UP_AABB : PUMPKIN_Z_BOTTOM_UP_AABB;
+                    case UPPER -> state.getValue(FACING).getAxis() == Direction.Axis.X ? PUMPKIN_X_TOP_BOTTOM_AABB : PUMPKIN_Z_TOP_BOTTOM_AABB;
                     };
-                    case UPPER -> switch (state.getValue(FACING)) {
-                        case EAST, WEST -> PUMPKIN_X_TOP_BOTTOM_AABB;
-                        default -> PUMPKIN_Z_TOP_BOTTOM_AABB;
-                    };
-                };
         }
     }
 

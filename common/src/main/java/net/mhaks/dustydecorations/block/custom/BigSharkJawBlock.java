@@ -8,6 +8,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -22,19 +23,20 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class BigSharkJawBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final EnumProperty<AttachFace> FACE = BlockStateProperties.ATTACH_FACE;
+public class BigSharkJawBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<BigSharkJawBlock> CODEC = simpleCodec(BigSharkJawBlock::new);
 
     public BigSharkJawBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.WALL));
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends FaceAttachedHorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
@@ -62,10 +64,10 @@ public class BigSharkJawBlock extends HorizontalDirectionalBlock implements Simp
             case WALL:
             default:
                 return switch (state.getValue(FACING)) {
-                    case NORTH, UP, DOWN -> WALL_NORTH_AABB;
+                    case SOUTH -> WALL_SOUTH_AABB;
                     case EAST -> WALL_EAST_AABB;
                     case WEST -> WALL_WEST_AABB;
-                    default -> WALL_SOUTH_AABB;
+                    default -> WALL_NORTH_AABB;
                 };
         }
     }
@@ -76,13 +78,13 @@ public class BigSharkJawBlock extends HorizontalDirectionalBlock implements Simp
             BlockState blockstate;
             if (direction.getAxis() == Direction.Axis.Y) {
                 blockstate = this.defaultBlockState()
-                        .setValue(FACE, AttachFace.FLOOR)
+                        .setValue(FACE, direction == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
                         .setValue(FACING, context.getHorizontalDirection().getOpposite())
                         .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
             } else {
                 blockstate = this.defaultBlockState()
                         .setValue(FACE, AttachFace.WALL)
-                        .setValue(FACING, context.getClickedFace())
+                        .setValue(FACING, direction.getOpposite())
                         .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
             }
             if (blockstate.canSurvive(context.getLevel(), context.getClickedPos())) {

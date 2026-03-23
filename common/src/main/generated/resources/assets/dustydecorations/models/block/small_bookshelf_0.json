@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_small_bookshelf",
+  "textures": {
+    "0": "dustydecorations:block/small_bookshelf/0"
+  }
+}

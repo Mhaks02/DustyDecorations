@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -21,15 +22,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class PotsAndPansBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty STACKED_POTS = IntegerProperty.create("stacked_pots", 1, 4);
+    public static final IntegerProperty STACKED_POTS = ModConstants.AMOUNT_4;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<BigCookingPotBlock> CODEC = simpleCodec(BigCookingPotBlock::new);
 
     public PotsAndPansBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(STACKED_POTS, 1));
+                .setValue(STACKED_POTS, 1)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

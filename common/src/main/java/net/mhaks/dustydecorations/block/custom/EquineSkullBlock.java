@@ -8,6 +8,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,19 +24,20 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class EquineSkullBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final EnumProperty<AttachFace> FACE = BlockStateProperties.ATTACH_FACE;
+public class EquineSkullBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<EquineSkullBlock> CODEC = simpleCodec(EquineSkullBlock::new);
 
     public EquineSkullBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.WALL));
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends FaceAttachedHorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
@@ -61,44 +63,36 @@ public class EquineSkullBlock extends HorizontalDirectionalBlock implements Simp
 //                    Block.box(3, 11, 6, 7, 13, 10));
 
     private static final VoxelShape FLOOR_NORTH_AABB =
-            Shapes.or(
-                    Block.box(5, 0, 7, 11, 5, 14),
+            Shapes.or(Block.box(5, 0, 7, 11, 5, 14),
                     Block.box(6, 0, 0, 10, 5, 7),
                     Block.box(6, 3, 3, 10, 5, 7));
     private static final VoxelShape FLOOR_SOUTH_AABB =
-            Shapes.or(
-                    Block.box(5, 0, 2, 11, 5, 9),
+            Shapes.or(Block.box(5, 0, 2, 11, 5, 9),
                     Block.box(6, 0, 9, 10, 5, 16),
                     Block.box(6, 3, 9, 10, 5, 13));
     private static final VoxelShape FLOOR_EAST_AABB =
-            Shapes.or(
-                    Block.box(2, 0, 5, 9, 5, 11),
+            Shapes.or(Block.box(2, 0, 5, 9, 5, 11),
                     Block.box(9, 0, 6, 16, 5, 10),
                     Block.box(9, 3, 6, 13, 5, 10));
     private static final VoxelShape FLOOR_WEST_AABB =
-            Shapes.or(
-                    Block.box(7, 0, 5, 14, 5, 11),
+            Shapes.or(Block.box(7, 0, 5, 14, 5, 11),
                     Block.box(0, 0, 6, 7, 5, 10),
                     Block.box(3, 3, 6, 7, 5, 10));
 
     private static final VoxelShape WALL_NORTH_AABB =
-            Shapes.or(
-                    Block.box(5, 7, 11, 11, 14, 16),
+            Shapes.or(Block.box(5, 7, 11, 11, 14, 16),
                     Block.box(6, 0, 11, 10, 7, 16),
                     Block.box(6, 3, 11, 10, 7, 13));
     private static final VoxelShape WALL_SOUTH_AABB =
-            Shapes.or(
-                    Block.box(5, 7, 0, 11, 14, 5),
+            Shapes.or(Block.box(5, 7, 0, 11, 14, 5),
                     Block.box(6, 0, 0, 10, 7, 5),
                     Block.box(6, 3, 3, 10, 7, 5));
     private static final VoxelShape WALL_EAST_AABB =
-            Shapes.or(
-                    Block.box(0, 7, 5, 5, 14, 11),
+            Shapes.or(Block.box(0, 7, 5, 5, 14, 11),
                     Block.box(0, 0, 6, 5, 7, 10),
                     Block.box(3, 3, 6, 5, 7, 10));
     private static final VoxelShape WALL_WEST_AABB =
-            Shapes.or(
-                    Block.box(11, 7, 5, 16, 14, 11),
+            Shapes.or(Block.box(11, 7, 5, 16, 14, 11),
                     Block.box(11, 0, 6, 16, 7, 10),
                     Block.box(11, 3, 6, 13, 7, 10));
 
@@ -107,18 +101,18 @@ public class EquineSkullBlock extends HorizontalDirectionalBlock implements Simp
         switch (state.getValue(FACE)) {
             case WALL:
                 return switch (state.getValue(FACING)) {
-                    case NORTH, UP, DOWN -> WALL_NORTH_AABB;
+                    case SOUTH -> WALL_SOUTH_AABB;
                     case EAST -> WALL_EAST_AABB;
                     case WEST -> WALL_WEST_AABB;
-                    default -> WALL_SOUTH_AABB;
+                    default -> WALL_NORTH_AABB;
                 };
             case FLOOR:
             default:
                 return switch (state.getValue(FACING)) {
-                    case NORTH, UP, DOWN -> FLOOR_NORTH_AABB;
+                    case SOUTH -> FLOOR_SOUTH_AABB;
                     case EAST -> FLOOR_EAST_AABB;
                     case WEST -> FLOOR_WEST_AABB;
-                    default -> FLOOR_SOUTH_AABB;
+                    default -> FLOOR_NORTH_AABB;
                 };
         }
     }
@@ -129,13 +123,13 @@ public class EquineSkullBlock extends HorizontalDirectionalBlock implements Simp
             BlockState blockstate;
             if (direction.getAxis() == Direction.Axis.Y) {
                 blockstate = this.defaultBlockState()
-                        .setValue(FACE, AttachFace.FLOOR)
+                        .setValue(FACE, direction == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
                         .setValue(FACING, context.getHorizontalDirection().getOpposite())
                         .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
             } else {
                 blockstate = this.defaultBlockState()
                         .setValue(FACE, AttachFace.WALL)
-                        .setValue(FACING, context.getClickedFace())
+                        .setValue(FACING, direction.getOpposite())
                         .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
             }
             if (blockstate.canSurvive(context.getLevel(), context.getClickedPos())) {

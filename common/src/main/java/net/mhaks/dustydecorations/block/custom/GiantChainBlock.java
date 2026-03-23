@@ -32,7 +32,9 @@ public class GiantChainBlock extends FaceAttachedHorizontalDirectionalBlock impl
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(ABOVE_ANCHOR, false));
+                .setValue(ABOVE_ANCHOR, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.FLOOR));
     }
 
     @Override

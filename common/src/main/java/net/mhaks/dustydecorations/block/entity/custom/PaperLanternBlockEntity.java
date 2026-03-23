@@ -19,12 +19,8 @@ public class PaperLanternBlockEntity extends BlockEntity implements GeoBlockEnti
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(new AnimationController<>(this, "controller", 0, this::predicate));
-    }
-
-    private PlayState predicate(AnimationState<PaperLanternBlockEntity> paperLanternBlockEntityAnimationState) {
-        paperLanternBlockEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
-        return PlayState.CONTINUE;
+        controllerRegistrar.add(new AnimationController<>(this, "controller", 0,
+                state -> state.setAndContinue(RawAnimation.begin().thenPlay("idle"))));
     }
 
     @Override

@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_jars",
+  "textures": {
+    "0": "dustydecorations:block/jars/2"
+  }
+}

@@ -1,5 +1,6 @@
 {
   "parent": "dustydecorations:block/template_seaglass_lamp_on",
+  "render_type": "minecraft:translucent",
   "textures": {
     "lamp": "dustydecorations:block/cerulean_seaglass_lamp"
   }

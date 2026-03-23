@@ -27,7 +27,8 @@ public class HangingSausagesBlock extends HorizontalDirectionalBlock implements 
     public HangingSausagesBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     protected static final VoxelShape SHAPE_Z = Block.box(0, 0, 4.5, 16, 16, 11.5);

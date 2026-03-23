@@ -24,8 +24,10 @@ public class WedgedKnifeBlock extends FaceAttachedHorizontalDirectionalBlock imp
     
     public WedgedKnifeBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.FLOOR));
     }
 
     @Override

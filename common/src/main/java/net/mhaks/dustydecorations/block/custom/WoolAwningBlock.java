@@ -29,8 +29,9 @@ public class WoolAwningBlock extends HorizontalDirectionalBlock implements Simpl
 
     public WoolAwningBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -69,8 +70,8 @@ public class WoolAwningBlock extends HorizontalDirectionalBlock implements Simpl
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -79,7 +80,7 @@ public class WoolAwningBlock extends HorizontalDirectionalBlock implements Simpl
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

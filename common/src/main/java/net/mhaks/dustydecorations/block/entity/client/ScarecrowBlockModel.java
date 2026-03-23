@@ -16,13 +16,13 @@ public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
         ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) animatable.getBlockState().getBlock()).getType();
         if (scarecrow$type == ScarecrowBlock.Types.BEETROOT) {
             return animatable.getBlockState().getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
-                    ? ModConstants.identifierOf("geo/beetroot_scarecrow_top.geo.json")
-                    : ModConstants.identifierOf("geo/beetroot_scarecrow_bottom.geo.json");
+                    ? ModConstants.identifierOf("geo/block/beetroot_scarecrow_top.geo.json")
+                    : ModConstants.identifierOf("geo/block/beetroot_scarecrow_bottom.geo.json");
         }
         if (scarecrow$type == ScarecrowBlock.Types.PUMPKIN) {
             return animatable.getBlockState().getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
-                    ? ModConstants.identifierOf("geo/pumpkin_scarecrow_top.geo.json")
-                    : ModConstants.identifierOf("geo/pumpkin_scarecrow_bottom.geo.json");
+                    ? ModConstants.identifierOf("geo/block/pumpkin_scarecrow_top.geo.json")
+                    : ModConstants.identifierOf("geo/block/pumpkin_scarecrow_bottom.geo.json");
         }
         return null;
     }
@@ -37,7 +37,7 @@ public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
     public ResourceLocation getAnimationResource(ScarecrowBlockEntity animatable) {
         ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) animatable.getBlockState().getBlock()).getType();
         return scarecrow$type == ScarecrowBlock.Types.BEETROOT
-                ? ModConstants.identifierOf("animations/beetroot_scarecrow.animation.json")
-                : ModConstants.identifierOf("animations/pumpkin_scarecrow.animation.json");
+                ? ModConstants.identifierOf("animations/block/beetroot_scarecrow.animation.json")
+                : ModConstants.identifierOf("animations/block/pumpkin_scarecrow.animation.json");
     }
 }

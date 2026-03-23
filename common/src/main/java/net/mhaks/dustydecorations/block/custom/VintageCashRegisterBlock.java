@@ -5,6 +5,7 @@ import net.mhaks.dustydecorations.block.entity.custom.VintageCashRegisterBlockEn
 import net.mhaks.dustydecorations.gui.menu.custom.VintageCashRegisterMenu;
 import net.mhaks.dustydecorations.platform.Services;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
@@ -32,6 +33,8 @@ public class VintageCashRegisterBlock extends BaseEntityBlock {
 
     public VintageCashRegisterBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     protected static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 6, 14);

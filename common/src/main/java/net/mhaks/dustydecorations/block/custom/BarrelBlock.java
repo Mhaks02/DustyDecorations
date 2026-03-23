@@ -28,6 +28,8 @@ public class BarrelBlock extends HorizontalDirectionalBlock {
 
     public BarrelBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -35,43 +37,43 @@ public class BarrelBlock extends HorizontalDirectionalBlock {
         return CODEC;
     }
 
-    private static final VoxelShape SHAPE_N = Stream.of(
+    private static final VoxelShape SHAPE_N = Shapes.or(
             Block.box(0, 0, 0, 16, 14, 16),
             Block.box(0, 14, 0, 2, 16, 16),
             Block.box(14, 14, 0, 16, 16, 16),
             Block.box(2, 14, 14, 14, 16, 16),
             Block.box(2, 14, 0, 14, 16, 2)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
 
-    private static final VoxelShape SHAPE_S = Stream.of(
+    private static final VoxelShape SHAPE_S = Shapes.or(
             Block.box(0, 0, 0, 16, 14, 16),
             Block.box(14, 14, 0, 16, 16, 16),
             Block.box(0, 14, 0, 2, 16, 16),
             Block.box(2, 14, 0, 14, 16, 2),
             Block.box(2, 14, 14, 14, 16, 16)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
 
-    private static final VoxelShape SHAPE_E = Stream.of(
+    private static final VoxelShape SHAPE_E = Shapes.or(
             Block.box(0, 0, 0, 16, 14, 16),
             Block.box(0, 14, 0, 16, 16, 2),
             Block.box(0, 14, 14, 16, 16, 16),
             Block.box(0, 14, 2, 2, 16, 14),
             Block.box(14, 14, 2, 16, 16, 14)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
 
-    private static final VoxelShape SHAPE_W = Stream.of(
+    private static final VoxelShape SHAPE_W = Shapes.or(
             Block.box(0, 0, 0, 16, 14, 16),
             Block.box(0, 14, 14, 16, 16, 16),
             Block.box(0, 14, 0, 16, 16, 2),
             Block.box(14, 14, 2, 16, 16, 14),
             Block.box(0, 14, 2, 2, 16, 14)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -80,7 +82,7 @@ public class BarrelBlock extends HorizontalDirectionalBlock {
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

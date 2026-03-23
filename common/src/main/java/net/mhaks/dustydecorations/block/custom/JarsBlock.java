@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -23,15 +24,15 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class JarsBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 5);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_6;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<JarsBlock> CODEC = simpleCodec(JarsBlock::new);
 
     public JarsBlock(Properties properties) {
         super(properties);
-        defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(TEXTURE, 0);
+                .setValue(TEXTURE, 0));
     }
 
     @Override

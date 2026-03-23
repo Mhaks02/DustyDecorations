@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -27,15 +28,16 @@ import org.jetbrains.annotations.Nullable;
 import java.util.stream.Stream;
 
 public class BooksBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_3;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<BooksBlock> CODEC = simpleCodec(BooksBlock::new);
 
     public BooksBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(TEXTURE, 0));
+                .setValue(TEXTURE, 0)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -75,8 +77,8 @@ public class BooksBlock extends HorizontalDirectionalBlock implements SimpleWate
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_NORTH;
+            case SOUTH -> {
+                return SHAPE_SOUTH;
             }
             case EAST -> {
                 return SHAPE_EAST;
@@ -85,7 +87,7 @@ public class BooksBlock extends HorizontalDirectionalBlock implements SimpleWate
                 return SHAPE_WEST;
             }
             default -> {
-                return SHAPE_SOUTH;
+                return SHAPE_NORTH;
             }
         }
     }

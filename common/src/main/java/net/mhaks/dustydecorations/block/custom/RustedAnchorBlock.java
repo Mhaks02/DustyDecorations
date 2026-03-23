@@ -29,8 +29,9 @@ public class RustedAnchorBlock extends HorizontalDirectionalBlock implements Sim
     
     public RustedAnchorBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -38,46 +39,19 @@ public class RustedAnchorBlock extends HorizontalDirectionalBlock implements Sim
         return CODEC;
     }
 
-    private static final VoxelShape SHAPE_N = Stream.of(
-            Block.box(1, 0, 2, 15, 6, 8),
-            Block.box(1, 8, 10, 15, 14, 16),
-            Block.box(1, 4, 6, 15, 10, 12)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-
-    private static final VoxelShape SHAPE_S = Stream.of(
-            Block.box(1, 0, 8, 15, 6, 14),
-            Block.box(1, 8, 0, 15, 14, 6),
-            Block.box(1, 4, 4, 15, 10, 10)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-
-    private static final VoxelShape SHAPE_E = Stream.of(
-            Block.box(8, 0, 1, 14, 6, 15),
-            Block.box(0, 8, 1, 6, 14, 15),
-            Block.box(4, 4, 1, 10, 10, 15)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-
-    private static final VoxelShape SHAPE_W = Stream.of(
-            Block.box(2, 0, 1, 8, 6, 15),
-            Block.box(10, 8, 1, 16, 14, 15),
-            Block.box(6, 4, 1, 12, 10, 15)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_N = Block.box(1, 0, 1, 15, 13, 16);
+    private static final VoxelShape SHAPE_S = Block.box(1, 0, 0, 15, 13, 15);
+    private static final VoxelShape SHAPE_E = Block.box(0, 0, 1, 15, 13, 15);
+    private static final VoxelShape SHAPE_W = Block.box(1, 0, 1, 16, 13, 15);
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
-            }
-            case EAST -> {
-                return SHAPE_E;
-            }
-            case WEST -> {
-                return SHAPE_W;
-            }
-            default -> {
-                return SHAPE_S;
-            }
-        }
+        return switch (state.getValue(FACING)) {
+            case SOUTH -> SHAPE_S;
+            case EAST -> SHAPE_E;
+            case WEST -> SHAPE_W;
+            default -> SHAPE_N;
+        };
     }
 
     @Override

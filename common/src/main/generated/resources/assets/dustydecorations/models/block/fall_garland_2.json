@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_fall_garland",
+  "textures": {
+    "0": "dustydecorations:block/fall_garland/2"
+  }
+}

@@ -25,6 +25,9 @@ public class HangingGourdsBlock extends HorizontalDirectionalBlock implements Si
 
     public HangingGourdsBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH)
+                .setValue(WATERLOGGED, false));
     }
 
     @Override
@@ -32,15 +35,12 @@ public class HangingGourdsBlock extends HorizontalDirectionalBlock implements Si
         return CODEC;
     }
 
-    protected static final VoxelShape SHAPE_NORTH_SOUTH = Block.box(0, 0, 4, 16, 16, 12);
-    protected static final VoxelShape SHAPE_EAST_WEST = Block.box(4, 0, 0, 12, 16, 16);
+    protected static final VoxelShape SHAPE_Z_AXIS = Block.box(0, 0, 4, 16, 16, 12);
+    protected static final VoxelShape SHAPE_X_AXIS = Block.box(4, 0, 0, 12, 16, 16);
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return switch (state.getValue(FACING)) {
-            case EAST, WEST -> SHAPE_EAST_WEST;
-            default -> SHAPE_NORTH_SOUTH;
-        };
+        return state.getValue(FACING).getAxis() == Direction.Axis.X ? SHAPE_X_AXIS : SHAPE_Z_AXIS;
     }
 
     @Override

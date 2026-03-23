@@ -24,7 +24,7 @@ public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
     private ItemStack contents;
 
     public VintageCashRegisterBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlockEntityTypes.CASH_REGISTER_BLOCK_ENTITY.get(), pos, blockState);
+        super(ModBlockEntityTypes.VINTAGE_CASH_REGISTER_BLOCK_ENTITY.get(), pos, blockState);
     }
 
     @Override

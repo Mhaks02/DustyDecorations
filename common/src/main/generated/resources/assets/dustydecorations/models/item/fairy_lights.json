@@ -1,3 +1,6 @@
 {
-  "parent": "dustydecorations:block/fairy_lights"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dustydecorations:item/fairy_lights"
+  }
 }

@@ -32,7 +32,8 @@ public class GourdBlock extends HorizontalDirectionalBlock implements SimpleWate
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(AMOUNT, 1));
+                .setValue(AMOUNT, 1)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

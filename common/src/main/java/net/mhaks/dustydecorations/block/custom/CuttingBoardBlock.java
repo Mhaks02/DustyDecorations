@@ -25,8 +25,9 @@ public class CuttingBoardBlock extends HorizontalDirectionalBlock implements Sim
 
     public CuttingBoardBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -42,9 +43,6 @@ public class CuttingBoardBlock extends HorizontalDirectionalBlock implements Sim
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return Z_AABB;
-            }
             case EAST, WEST -> {
                 return X_AABB;
             }

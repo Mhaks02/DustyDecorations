@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_wooden_buoys",
+  "textures": {
+    "0": "dustydecorations:block/wooden_buoys/2"
+  }
+}

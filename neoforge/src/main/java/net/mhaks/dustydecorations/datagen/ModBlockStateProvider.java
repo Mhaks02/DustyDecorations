@@ -21,16 +21,29 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-    public static final String BLOCK_FOLDER = "block/";
-    public static final String ITEM_FOLDER = "item/";
-    public static final String GENERATED = "item/generated";
-    public static final String TOP = "_top";
-    public static final String BOTTOM = "_bottom";
-    public static final String END = "_end";
-    public static final String SIDE = "_side";
-    public static final String UPPER = "_upper";
-    public static final String LOWER = "_lower";
-    public static final String[] PLUSHIE_NAME = { "alex", "ari", "efe", "kai", "makena", "noor", "steve", "sunny", "zuri" };
+    private static final String BLOCK_FOLDER = "block/";
+    private static final String ITEM_FOLDER = "item/";
+    private static final ResourceLocation GENERATED = ResourceLocation.tryParse("item/generated");
+
+    private static final ResourceLocation CUTOUT = ResourceLocation.tryParse("cutout");
+    private static final ResourceLocation TRANSLUCENT = ResourceLocation.tryParse("translucent");
+
+    private static final String FLAT = "flat";
+    private static final String TOP = "_top";
+    private static final String BOTTOM = "_bottom";
+    private static final String END = "_end";
+    private static final String FRONT = "_front";
+    private static final String BACK = "_back";
+    private static final String LEFT = "_left";
+    private static final String RIGHT = "_right";
+    private static final String SIDE = "_side";
+    private static final String UPPER = "_upper";
+    private static final String LOWER = "_lower";
+    private static final String ON = "_on";
+    private static final String OFF = "_off";
+
+    private static final String[] PLUSHIE_NAME = { "alex", "ari", "efe", "kai", "makena", "noor", "steve", "sunny", "zuri" };
+
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, ModConstants.MOD_ID, exFileHelper);
@@ -38,169 +51,154 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        customHorizontalBlockWithItem(ModBlocks.DUSTY_DECORATIONS_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.DUSTY_DECORATIONS_BARREL);
 
-        banisterBlockWithFlatItem(ModBlocks.OAK_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.SPRUCE_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.BIRCH_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.JUNGLE_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.ACACIA_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.DARK_OAK_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.MANGROVE_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.CHERRY_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.BAMBOO_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.DRY_BAMBOO_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.CRIMSON_BANISTER);
-        banisterBlockWithFlatItem(ModBlocks.WARPED_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.OAK_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.SPRUCE_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.BIRCH_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.JUNGLE_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.ACACIA_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.DARK_OAK_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.MANGROVE_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.CHERRY_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.BAMBOO_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.DRY_BAMBOO_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.CRIMSON_BANISTER);
+        banisterBlockAndFlatItem(ModBlocks.WARPED_BANISTER);
 
-        customHorizontalBlockWithItem(ModBlocks.OAK_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.SPRUCE_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.BIRCH_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.JUNGLE_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.ACACIA_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.DARK_OAK_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.MANGROVE_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.CHERRY_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.BAMBOO_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.CRIMSON_LARGE_SHELF);
-        customHorizontalBlockWithItem(ModBlocks.WARPED_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.OAK_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.SPRUCE_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.BIRCH_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.JUNGLE_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.ACACIA_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.DARK_OAK_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.MANGROVE_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.CHERRY_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.BAMBOO_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.CRIMSON_LARGE_SHELF);
+        largeShelfBlockAndItem(ModBlocks.WARPED_LARGE_SHELF);
 
-        customHorizontalBlockWithItem(ModBlocks.APPLE_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.SWEET_BERRIES_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.GLOW_BERRIES_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.CARROT_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.POTATO_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.BEETROOT_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.SEA_PICKLE_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.COD_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.SALMON_BARREL);
-        customHorizontalBlockWithItem(ModBlocks.EMPTY_BARREL);
+        //TODO: template model?
+        customHorizontalBlockAndItem(ModBlocks.APPLE_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.SWEET_BERRIES_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.GLOW_BERRIES_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.CARROT_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.POTATO_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.BEETROOT_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.SEA_PICKLE_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.COD_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.SALMON_BARREL);
+        customHorizontalBlockAndItem(ModBlocks.EMPTY_BARREL);
 
-        wallpaperWithItem(ModBlocks.SUNFLOWER_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.REGAL_WALLPAPER_BLOCK);
-        wallpaperWithItem(ModBlocks.VINE_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.MONSTER_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.SAILOR_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.COPPER_WALLPAPER_BLOCK);
-        stellarWallpaperWithItem();
-        blockWithItem(ModBlocks.PUMPKIN_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.SOUL_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.FOREST_FESTIVE_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.STRIPED_FESTIVE_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.SNOWMEN_WALLPAPER_BLOCK);
-        blockWithItem(ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK);
+        threeTexturesBlockAndItem(ModBlocks.SUNFLOWER_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.REGAL_WALLPAPER_BLOCK);
+        threeTexturesBlockAndItem(ModBlocks.VINE_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.MONSTER_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.SAILOR_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.COPPER_WALLPAPER_BLOCK);
+        fourTexturesBlockAndItem(ModBlocks.STELLAR_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.PUMPKIN_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.SOUL_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.FOREST_FESTIVE_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.STRIPED_FESTIVE_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.SNOWMEN_WALLPAPER_BLOCK);
+        blockAndItem(ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK);
 
-        woolAwnings(ModBlocks.WHITE_WOOL_AWNING);
-        woolAwnings(ModBlocks.LIGHT_GRAY_WOOL_AWNING);
-        woolAwnings(ModBlocks.GRAY_WOOL_AWNING);
-        woolAwnings(ModBlocks.BLACK_WOOL_AWNING);
-        woolAwnings(ModBlocks.BROWN_WOOL_AWNING);
-        woolAwnings(ModBlocks.RED_WOOL_AWNING);
-        woolAwnings(ModBlocks.ORANGE_WOOL_AWNING);
-        woolAwnings(ModBlocks.YELLOW_WOOL_AWNING);
-        woolAwnings(ModBlocks.LIME_WOOL_AWNING);
-        woolAwnings(ModBlocks.GREEN_WOOL_AWNING);
-        woolAwnings(ModBlocks.CYAN_WOOL_AWNING);
-        woolAwnings(ModBlocks.LIGHT_BLUE_WOOL_AWNING);
-        woolAwnings(ModBlocks.BLUE_WOOL_AWNING);
-        woolAwnings(ModBlocks.PURPLE_WOOL_AWNING);
-        woolAwnings(ModBlocks.MAGENTA_WOOL_AWNING);
-        woolAwnings(ModBlocks.PINK_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.WHITE_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.LIGHT_GRAY_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.GRAY_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.BLACK_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.BROWN_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.RED_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.ORANGE_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.YELLOW_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.LIME_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.GREEN_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.CYAN_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.LIGHT_BLUE_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.BLUE_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.PURPLE_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.MAGENTA_WOOL_AWNING);
+        woolAwningAndItem(ModBlocks.PINK_WOOL_AWNING);
 
-        paperLanternWithFlatItem(ModBlocks.PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.SAKURA_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.TAIGA_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.ORCHID_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.PANDA_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.VILLAGER_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.CREEPER_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.PILLAGER_PAPER_LANTERN);
-        paperLanternWithFlatItem(ModBlocks.WARDEN_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.SAKURA_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.TAIGA_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.ORCHID_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.PANDA_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.VILLAGER_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.CREEPER_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.PILLAGER_PAPER_LANTERN);
+        paperLanternAndFlatItem(ModBlocks.WARDEN_PAPER_LANTERN);
 
-        blockWithItem(ModBlocks.CORRUGATED_METAL_BLOCK);
-        blockWithItem(ModBlocks.CORRUGATED_METAL_GRATE);
-        stairsBlock((StairBlock) ModBlocks.CORRUGATED_METAL_STAIRS.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.CORRUGATED_METAL_STAIRS);
-        slabBlock((SlabBlock) ModBlocks.CORRUGATED_METAL_SLAB.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.CORRUGATED_METAL_SLAB);
-        fenceBlock((FenceBlock) ModBlocks.CORRUGATED_METAL_FENCE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
-            fenceItem(ModBlocks.CORRUGATED_METAL_FENCE, ModBlocks.CORRUGATED_METAL_BLOCK);
-        fenceGateBlock((FenceGateBlock) ModBlocks.CORRUGATED_METAL_FENCE_GATE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.CORRUGATED_METAL_FENCE_GATE);
-        doorBlock((DoorBlock) ModBlocks.CORRUGATED_METAL_DOOR.get(), modLoc("block/" + ModBlocks.CORRUGATED_METAL_DOOR.getId().getPath() + "_bottom"), modLoc("block/" + ModBlocks.CORRUGATED_METAL_DOOR.getId().getPath() + "_top"));
-            flatItem(ModBlocks.CORRUGATED_METAL_DOOR);
-        trapdoorBlock((TrapDoorBlock) ModBlocks.CORRUGATED_METAL_TRAPDOOR.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()), true);
-            blockItem(ModBlocks.CORRUGATED_METAL_TRAPDOOR, "_bottom");
-        pressurePlateBlock((PressurePlateBlock) ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE);
-        buttonBlock((ButtonBlock) ModBlocks.CORRUGATED_METAL_BUTTON.get(), blockTexture(ModBlocks.CORRUGATED_METAL_BLOCK.get()));
-            buttonItem(ModBlocks.CORRUGATED_METAL_BUTTON, ModBlocks.CORRUGATED_METAL_BLOCK);
-        customHorizontalBlockWithItem(ModBlocks.CORRUGATED_METAL_ROOFING);
+        blockAndItem(ModBlocks.CORRUGATED_METAL_BLOCK);
+        cutoutBlockAndItem(ModBlocks.CORRUGATED_METAL_GRATE);
+        stairsBlockAndItem(ModBlocks.CORRUGATED_METAL_STAIRS, ModBlocks.CORRUGATED_METAL_BLOCK);
+        slabBlockAndItem(ModBlocks.CORRUGATED_METAL_SLAB, ModBlocks.CORRUGATED_METAL_BLOCK);
+        fenceBlockAndItem(ModBlocks.CORRUGATED_METAL_FENCE, ModBlocks.CORRUGATED_METAL_BLOCK);
+        fenceGateBlockAndItem(ModBlocks.CORRUGATED_METAL_FENCE_GATE, ModBlocks.CORRUGATED_METAL_BLOCK);
+        doorBlockAndItem(ModBlocks.CORRUGATED_METAL_DOOR);
+        trapdoorBlockAndItem(ModBlocks.CORRUGATED_METAL_TRAPDOOR, ModBlocks.CORRUGATED_METAL_BLOCK);
+        pressurePlateAndItem(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.CORRUGATED_METAL_BLOCK);
+        buttonBlockAndItem(ModBlocks.CORRUGATED_METAL_BUTTON, ModBlocks.CORRUGATED_METAL_BLOCK);
+        customHorizontalBlockAndItem(ModBlocks.CORRUGATED_METAL_ROOFING);
 
-        blockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
-        blockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE);
-        stairsBlock((StairBlock) ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS);
-        slabBlock((SlabBlock) ModBlocks.RUSTED_CORRUGATED_METAL_SLAB.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB);
-        fenceBlock((FenceBlock) ModBlocks.RUSTED_CORRUGATED_METAL_FENCE.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
-            fenceItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
-        fenceGateBlock((FenceGateBlock) ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE);
-        doorBlock((DoorBlock) ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.get(), modLoc("block/" + ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.getId().getPath() + "_bottom"), modLoc("block/" + ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.getId().getPath() + "_top"));
-            flatItem(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR);
-        trapdoorBlock((TrapDoorBlock) ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()), true);
-            blockItem(ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR, "_bottom");
-        pressurePlateBlock((PressurePlateBlock) ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
-            blockItem(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE);
-        buttonBlock((ButtonBlock) ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON.get(), blockTexture(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get()));
-            buttonItem(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
-        customHorizontalBlockWithItem(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING);
+        blockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        cutoutBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE);
+        stairsBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        slabBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        fenceBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        fenceGateBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        doorBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR);
+        trapdoorBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        pressurePlateAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        buttonBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        customHorizontalBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING);
 
-        transparentBlockWithItem(ModBlocks.CREAM_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.HAZEL_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.LIQUORICE_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.MOCHA_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.SCARLET_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.HONEY_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.MINT_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.TEAL_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.CERULEAN_SEAGLASS);
-        transparentBlockWithItem(ModBlocks.TAUPE_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.CREAM_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.HAZEL_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.LIQUORICE_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.MOCHA_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.SCARLET_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.HONEY_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.MINT_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.TEAL_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.CERULEAN_SEAGLASS);
+        translucentBlockAndItem(ModBlocks.TAUPE_SEAGLASS);
 
-        seaglassPaneBlockWithFlatItem(ModBlocks.CREAM_SEAGLASS_PANE, ModBlocks.CREAM_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.HAZEL_SEAGLASS_PANE, ModBlocks.HAZEL_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.LIQUORICE_SEAGLASS_PANE, ModBlocks.LIQUORICE_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.MOCHA_SEAGLASS_PANE, ModBlocks.MOCHA_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.SCARLET_SEAGLASS_PANE, ModBlocks.SCARLET_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.HONEY_SEAGLASS_PANE, ModBlocks.HONEY_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.MINT_SEAGLASS_PANE, ModBlocks.MINT_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.TEAL_SEAGLASS_PANE, ModBlocks.TEAL_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEAGLASS_PANE, ModBlocks.CERULEAN_SEAGLASS);
-        seaglassPaneBlockWithFlatItem(ModBlocks.TAUPE_SEAGLASS_PANE, ModBlocks.TAUPE_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.CREAM_SEAGLASS_PANE, ModBlocks.CREAM_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.HAZEL_SEAGLASS_PANE, ModBlocks.HAZEL_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.LIQUORICE_SEAGLASS_PANE, ModBlocks.LIQUORICE_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.MOCHA_SEAGLASS_PANE, ModBlocks.MOCHA_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.SCARLET_SEAGLASS_PANE, ModBlocks.SCARLET_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.HONEY_SEAGLASS_PANE, ModBlocks.HONEY_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.MINT_SEAGLASS_PANE, ModBlocks.MINT_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.TEAL_SEAGLASS_PANE, ModBlocks.TEAL_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.CERULEAN_SEAGLASS_PANE, ModBlocks.CERULEAN_SEAGLASS);
+        glassPaneBlockAndFlatItem(ModBlocks.TAUPE_SEAGLASS_PANE, ModBlocks.TAUPE_SEAGLASS);
 
-        transparentBlockWithItem(ModBlocks.CREAM_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.HAZEL_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.LIQUORICE_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.MOCHA_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.SCARLET_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.HONEY_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.MINT_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.TEAL_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.CERULEAN_SEA_WINDOW);
-        transparentBlockWithItem(ModBlocks.TAUPE_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.CREAM_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.HAZEL_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.LIQUORICE_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.MOCHA_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.SCARLET_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.HONEY_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.MINT_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.TEAL_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.CERULEAN_SEA_WINDOW);
+        translucentBlockAndItem(ModBlocks.TAUPE_SEA_WINDOW);
 
-        seaWindowPaneBlockWithFlatItem(ModBlocks.CREAM_SEA_WINDOW_PANE, ModBlocks.CREAM_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.HAZEL_SEA_WINDOW_PANE, ModBlocks.HAZEL_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.LIQUORICE_SEA_WINDOW_PANE, ModBlocks.LIQUORICE_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.MOCHA_SEA_WINDOW_PANE, ModBlocks.MOCHA_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.SCARLET_SEA_WINDOW_PANE, ModBlocks.SCARLET_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.HONEY_SEA_WINDOW_PANE, ModBlocks.HONEY_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.MINT_SEA_WINDOW_PANE, ModBlocks.MINT_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.TEAL_SEA_WINDOW_PANE, ModBlocks.TEAL_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.CERULEAN_SEA_WINDOW_PANE, ModBlocks.CERULEAN_SEA_WINDOW);
-        seaWindowPaneBlockWithFlatItem(ModBlocks.TAUPE_SEA_WINDOW_PANE, ModBlocks.TAUPE_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.CREAM_SEA_WINDOW_PANE, ModBlocks.CREAM_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.HAZEL_SEA_WINDOW_PANE, ModBlocks.HAZEL_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.LIQUORICE_SEA_WINDOW_PANE, ModBlocks.LIQUORICE_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.MOCHA_SEA_WINDOW_PANE, ModBlocks.MOCHA_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.SCARLET_SEA_WINDOW_PANE, ModBlocks.SCARLET_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.HONEY_SEA_WINDOW_PANE, ModBlocks.HONEY_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.MINT_SEA_WINDOW_PANE, ModBlocks.MINT_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.TEAL_SEA_WINDOW_PANE, ModBlocks.TEAL_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.CERULEAN_SEA_WINDOW_PANE, ModBlocks.CERULEAN_SEA_WINDOW);
+        seaWindowPaneBlockAndFlatItem(ModBlocks.TAUPE_SEA_WINDOW_PANE, ModBlocks.TAUPE_SEA_WINDOW);
 
         seaglassLamp(ModBlocks.CREAM_SEAGLASS_LAMP);
         seaglassLamp(ModBlocks.HAZEL_SEAGLASS_LAMP);
@@ -213,97 +211,103 @@ public class ModBlockStateProvider extends BlockStateProvider {
         seaglassLamp(ModBlocks.CERULEAN_SEAGLASS_LAMP);
         seaglassLamp(ModBlocks.TAUPE_SEAGLASS_LAMP);
 
-        blockWithItem(ModBlocks.SEAGLASS_SAND);
-        blockWithItem(ModBlocks.SEAGLASS_GRAVEL);
+        blockAndItem(ModBlocks.SEAGLASS_SAND);
+        blockAndItem(ModBlocks.SEAGLASS_GRAVEL);
 
-        customHorizontalBlockWithItem(ModBlocks.RUSTED_ANCHOR);
-        customDirectionalBlockWithItem(ModBlocks.LIFE_PRESERVER);
-        customHorizontalBlockWithFlatItem(ModBlocks.DISPLAYED_OARS);
-        customHorizontalFaceBlockWithFlatBlockItem(ModBlocks.TREASURE_MAP);
-        scatteredPapersWithFlatItem();
+        customHorizontalBlockAndItem(ModBlocks.RUSTED_ANCHOR);
+        customDirectionalBlockAndItem(ModBlocks.LIFE_PRESERVER);
+        customHorizontalBlockAndFlatItem(ModBlocks.DISPLAYED_OARS);
+        customHorizontalFaceBlockAndFlatBlockItem(ModBlocks.TREASURE_MAP);
+        scatteredPapersAndFlatItem();
+        //TODO
         flatItem(ModBlocks.POSTERS);
-        customHorizontalBlockWithItem(ModBlocks.PAPER_STACK);
-        glassBuoyWithItem();
-        smallGlassBuoysWithItem();
-        woodenBuoysWithItem();
-        customAxisBlockWithItem(ModBlocks.ROPE);
-        customHorizontalBlockWithItem(ModBlocks.COILED_ROPE);
-        customHorizontalBlockWithItem(ModBlocks.HANGING_COD);
-        customHorizontalBlockWithItem(ModBlocks.HANGING_SALMON);
-        customHorizontalBlockWithItem(ModBlocks.HANGING_KNIVES);
-        customHorizontalFaceBlockWithItem(ModBlocks.WEDGED_KNIFE);
-        customHorizontalFaceBlockWithItem(ModBlocks.WEDGED_CLEAVER);
-        customHorizontalBlockWithItem(ModBlocks.CUTTING_BOARD);
-        customHorizontalBlockWithItem(ModBlocks.KNIFE_AND_CUTTING_BOARD);
+        customHorizontalBlockAndItem(ModBlocks.PAPER_STACK);
+        fourTexturesCustomBlockAndItem(ModBlocks.GLASS_BUOY);
+        threeTexturesCustomHorizontalBlockAndItem(ModBlocks.SMALL_GLASS_BUOYS);
+        threeTexturesCustomHorizontalBlockAndItem(ModBlocks.WOODEN_BUOYS);
+        customAxisBlockAndItem(ModBlocks.ROPE);
+        customHorizontalBlockAndItem(ModBlocks.COILED_ROPE);
+        customHorizontalBlockAndItem(ModBlocks.HANGING_COD);
+        customHorizontalBlockAndItem(ModBlocks.HANGING_SALMON);
+        customHorizontalBlockAndItem(ModBlocks.HANGING_KNIVES);
+        customHorizontalFaceBlockAndItem(ModBlocks.WEDGED_KNIFE);
+        customHorizontalFaceBlockAndItem(ModBlocks.WEDGED_CLEAVER);
+        customHorizontalBlockAndItem(ModBlocks.CUTTING_BOARD);
+        customHorizontalBlockAndItem(ModBlocks.KNIFE_AND_CUTTING_BOARD);
+        //TODO
         blockItem(ModBlocks.IRON_FRYING_PAN);
         blockItem(ModBlocks.COPPER_FRYING_PAN);
-        customHorizontalBlockWithItem(ModBlocks.BIG_COOKING_POT);
-        potsAndPansWithFlatItem();
-        customBlock(ModBlocks.DECORATIVE_BOWL);
-        jarsWithItem();
-        honeyJarWithFlatItem();
-        customHorizontalBlockWithFlatItem(ModBlocks.INK_AND_QUILL);
-        clutteredSmallShelfWithItem();
-        customHorizontalBlockWithItem(ModBlocks.EMPTY_SMALL_SHELF);
-        smallBookshelfWithItem();
-        booksWithItem();
-        bookStackWithItem();
-        customHorizontalBlockWithItem(ModBlocks.GLOBE);
-        customHorizontalBlockWithItem(ModBlocks.VINTAGE_GLOBE);
-        customHorizontalFaceBlockWithFlatItem(ModBlocks.BOVINE_SKULL);
-        customHorizontalFaceBlockWithFlatItem(ModBlocks.EQUINE_SKULL);
-        customHorizontalFaceBlockWithFlatItem(ModBlocks.CANINE_SKULL);
-        customHorizontalFaceBlockWithFlatItem(ModBlocks.FISH_BONES);
-        customHorizontalFaceBlockWithFlatBlockItem(ModBlocks.SMALL_SHARK_JAW);
-        customHorizontalFaceBlockWithFlatItem(ModBlocks.BIG_SHARK_JAW);
-        customHorizontalFaceBlockWithFlatBlockItem(ModBlocks.MEGALODON_TOOTH);
-        fishingLuresWithFlatItem();
-        blockWithItem(ModBlocks.STONE_FISH_FOSSIL);
-        blockWithItem(ModBlocks.DEEPSLATE_FISH_FOSSIL);
+        customHorizontalBlockAndItem(ModBlocks.BIG_COOKING_POT);
+        fourStackedHorizontalBlockAndItem(ModBlocks.POTS_AND_PANS);
+        customBlockNoItem(ModBlocks.DECORATIVE_BOWL);
+        sixTexturesCustomHorizontalBlockAndItem(ModBlocks.JARS);
+        threeStackedHorizontalBlockAndFlatItem(ModBlocks.HONEY_JAR);
+        customHorizontalBlockAndFlatItem(ModBlocks.INK_AND_QUILL);
+        sixTexturesCustomHorizontalBlockAndItem(ModBlocks.CLUTTERED_SMALL_SHELF);
+        customHorizontalBlockAndItem(ModBlocks.EMPTY_SMALL_SHELF);
+        threeTexturesCustomHorizontalBlockAndItem(ModBlocks.SMALL_BOOKSHELF);
+        threeTexturesCustomHorizontalBlockAndItem(ModBlocks.BOOKS);
+        threeTexturesCustomHorizontalBlockAndItem(ModBlocks.BOOK_STACK);
+        customHorizontalBlockAndItem(ModBlocks.GLOBE);
+        customHorizontalBlockAndItem(ModBlocks.VINTAGE_GLOBE);
+        customHorizontalFaceBlockAndFlatItem(ModBlocks.BOVINE_SKULL);
+        customHorizontalFaceBlockAndFlatItem(ModBlocks.EQUINE_SKULL);
+        customHorizontalFaceBlockAndFlatItem(ModBlocks.CANINE_SKULL);
+        customHorizontalFaceBlockAndFlatItem(ModBlocks.FISH_BONES);
+        customHorizontalFaceBlockAndFlatBlockItem(ModBlocks.SMALL_SHARK_JAW);
+        customHorizontalFaceBlockAndFlatItem(ModBlocks.BIG_SHARK_JAW);
+        customHorizontalFaceBlockAndFlatBlockItem(ModBlocks.MEGALODON_TOOTH);
+        fourTexturesCustomHorizontalFaceBlockAndFlatBlockItem(ModBlocks.FISHING_LURES);
+        blockAndItem(ModBlocks.STONE_MARINE_FOSSIL);
+        blockAndItem(ModBlocks.DEEPSLATE_MARINE_FOSSIL);
 
-        goldCoinsBlockWithItem();
-        goldCoinsLayerWithFlatItem();
-        scatteredGoldCoinsWithFlatBlockItem();
+        cubeColumnAndItem(ModBlocks.GOLD_COINS_BLOCK, ModBlocks.GOLD_COINS_LAYER);
+        goldCoinsLayerAndFlatItem();
+        threeTexturesCustomHorizontalBlockAndFlatBlockItem(ModBlocks.SCATTERED_GOLD_COINS);
 
-        blockWithItem(ModBlocks.SANDSTONE_TILE_BLOCK);
-        stairsBlock((StairBlock) ModBlocks.SANDSTONE_TILE_STAIRS.get(), blockTexture(ModBlocks.SANDSTONE_TILE_BLOCK.get()));
-            blockItem(ModBlocks.SANDSTONE_TILE_STAIRS);
-        slabBlock((SlabBlock) ModBlocks.SANDSTONE_TILE_SLAB.get(), blockTexture(ModBlocks.SANDSTONE_TILE_BLOCK.get()), blockTexture(ModBlocks.SANDSTONE_TILE_BLOCK.get()));
-            blockItem(ModBlocks.SANDSTONE_TILE_SLAB);
-        blockWithItem(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK);
+        blockAndItem(ModBlocks.SANDSTONE_TILE_BLOCK);
+        stairsBlockAndItem(ModBlocks.SANDSTONE_TILE_STAIRS, ModBlocks.SANDSTONE_TILE_BLOCK);
+        slabBlockAndItem(ModBlocks.SANDSTONE_TILE_SLAB, ModBlocks.SANDSTONE_TILE_BLOCK);
+        blockAndItem(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK);
 
-        blockWithItem(ModBlocks.BURLAP_BLOCK);
-        stairsBlock((StairBlock) ModBlocks.BURLAP_STAIRS.get(), blockTexture(ModBlocks.BURLAP_BLOCK.get()));
-            blockItem(ModBlocks.BURLAP_STAIRS);
-        slabBlock((SlabBlock) ModBlocks.BURLAP_SLAB.get(), blockTexture(ModBlocks.BURLAP_BLOCK.get()), blockTexture(ModBlocks.BURLAP_BLOCK.get()));
-            blockItem(ModBlocks.BURLAP_SLAB);
-        customBlockWithItem(ModBlocks.BURLAP_CARPET);
-        customHorizontalBlockWithItem(ModBlocks.BURLAP_AWNING);
-        burlapSackWithItem();
+        nautilusShell(ModBlocks.BIG_NAUTILUS_SHELL);
+        nautilusShell(ModBlocks.BIG_NAUTILUS_LANTERN);
+        customHorizontalBlockAndItem(ModBlocks.SMALL_NAUTILUS_SHELL);
+        customHorizontalBlockAndFlatItem(ModBlocks.COLD_NAUTILUS_WIND_CHIME);
+
+        blockAndItem(ModBlocks.BURLAP_BLOCK);
+        stairsBlockAndItem(ModBlocks.BURLAP_STAIRS, ModBlocks.BURLAP_BLOCK);
+        slabBlockAndItem(ModBlocks.BURLAP_SLAB, ModBlocks.BURLAP_BLOCK);
+        customSimpleBlockAndItem(ModBlocks.BURLAP_CARPET);
+        customHorizontalBlockAndItem(ModBlocks.BURLAP_AWNING);
+        threeStackedHorizontalBlockAndItem(ModBlocks.BURLAP_SACK);
 
         sailorFlagWithItem();
-        sailorPennantFlag();
+        fiveTexturesCustomHorizontalBlockAndFlatBlockItem(ModBlocks.SAILOR_PENNANT_FLAG);
 
-        fourStackedHorizontalBlockWithItem(ModBlocks.CERAMIC_POT);
-        fourStackedHorizontalBlockWithItem(ModBlocks.GLAZED_CERAMIC_POT);
+        fourStackedHorizontalBlockAndItem(ModBlocks.CERAMIC_POT);
+        fourStackedHorizontalBlockAndItem(ModBlocks.GLAZED_CERAMIC_POT);
 
-        customHorizontalBlockWithItem(ModBlocks.VINTAGE_CASH_REGISTER);
+        customHorizontalBlockAndItem(ModBlocks.VINTAGE_CASH_REGISTER);
 
-        customHorizontalBlockWithItem(ModBlocks.HANGING_SAUSAGES);
-        fourStackedHorizontalBlockWithItem(ModBlocks.WRAPPED_MEAT);
-        customLampWithBlockItem(ModBlocks.COPPER_LIGHT);
-        customLampWithBlockItem(ModBlocks.WAXED_COPPER_LIGHT);
-        customLampWithBlockItem(ModBlocks.SHODDY_COPPER_LIGHT);
-        customLampWithBlockItem(ModBlocks.WAXED_SHODDY_COPPER_LIGHT);
+        customHorizontalBlockAndItem(ModBlocks.HANGING_SAUSAGES);
+        fourStackedHorizontalBlockAndItem(ModBlocks.WRAPPED_MEAT);
+        threeTexturesCustomHorizontalBlockAndFlatItem(ModBlocks.COWHIDE_RUG);
+        twoTexturesCustomHorizontalBlockAndFlatItem(ModBlocks.MOOSHROOM_COWHIDE_RUG);
 
-        cameraQuadropod();
-        customHorizontalBlockWithItem(ModBlocks.CAMERA);
-        customHorizontalBlockWithItem(ModBlocks.MOVIE_CAMERA);
+        customLampAndBlockItem(ModBlocks.COPPER_LIGHT);
+        customLampAndBlockItem(ModBlocks.WAXED_COPPER_LIGHT);
+        customLampAndBlockItem(ModBlocks.SHODDY_COPPER_LIGHT);
+        customLampAndBlockItem(ModBlocks.WAXED_SHODDY_COPPER_LIGHT);
 
-        blockWithItem(ModBlocks.WICKER_BLOCK);
-        stairsBlockWithItem(ModBlocks.WICKER_STAIRS, ModBlocks.WICKER_BLOCK);
-        slabBlockWithItem(ModBlocks.WICKER_SLAB, ModBlocks.WICKER_BLOCK);
-        customHorizontalBlockWithItem(ModBlocks.WICKER_BASKET);
+        cameraQuadropodAndItem();
+        customHorizontalBlockAndItem(ModBlocks.CAMERA);
+        customHorizontalBlockAndItem(ModBlocks.MOVIE_CAMERA);
+
+        blockAndItem(ModBlocks.WICKER_BLOCK);
+        stairsBlockAndItem(ModBlocks.WICKER_STAIRS, ModBlocks.WICKER_BLOCK);
+        slabBlockAndItem(ModBlocks.WICKER_SLAB, ModBlocks.WICKER_BLOCK);
+        customHorizontalBlockAndItem(ModBlocks.WICKER_BASKET);
         wickerBasketProduce(ModBlocks.APPLE_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.SWEET_BERRIES_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.GLOW_BERRIES_WICKER_BASKET);
@@ -318,563 +322,316 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wickerBasketFlowers(ModBlocks.ROSE_BUSH_WICKER_BASKET);
         wickerBasketFlowers(ModBlocks.PEONY_WICKER_BASKET);
 
-        threeStackedHorizontalBlockWithItem(ModBlocks.GOURD);
-        customHorizontalBlockWithItem(ModBlocks.HANGING_GOURDS);
-        threeStackedHorizontalBlockWithItem(ModBlocks.CARVED_BEETROOT);
-        threeStackedHorizontalBlockWithItem(ModBlocks.BEET_O_LANTERN);
+        threeStackedHorizontalBlockAndItem(ModBlocks.GOURD);
+        customHorizontalBlockAndItem(ModBlocks.HANGING_GOURDS);
+        threeStackedHorizontalBlockAndItem(ModBlocks.CARVED_BEETROOT);
+        threeStackedHorizontalBlockAndItem(ModBlocks.BEET_O_LANTERN);
 
-        tallBlockWithItem(ModBlocks.BEETROOT_SCARECROW);
-        tallBlockWithItem(ModBlocks.PUMPKIN_SCARECROW);
+        customHorizontalTallBlockAndItem(ModBlocks.BEETROOT_SCARECROW);
+        customHorizontalTallBlockAndItem(ModBlocks.PUMPKIN_SCARECROW);
 
-        customHorizontalBlockWithItem(ModBlocks.MINI_SNOWMAN);
-        plushieWithItem();
-        customHorizontalBlockWithItem(ModBlocks.NUTCRACKER);
-        customGarlandWithItem(ModBlocks.FALL_GARLAND);
-        customGarlandWithItem(ModBlocks.WINTER_GARLAND);
-        customDirectionalBlockWithItem(ModBlocks.WINTER_WREATH);
-        customHorizontalBlockWithItem(ModBlocks.FAIRY_LIGHTS);
-        customHorizontalFaceBlockWithItem(ModBlocks.HOLIDAY_ORNAMENTS);
+        customHorizontalBlockAndItem(ModBlocks.MINI_SNOWMAN);
+        plushiesAndItem();
+        customHorizontalBlockAndItem(ModBlocks.NUTCRACKER);
+        threeTexturesCustomHorizontalBlockAndFlatItem(ModBlocks.FALL_GARLAND);
+        threeTexturesCustomHorizontalBlockAndFlatItem(ModBlocks.WINTER_GARLAND);
+        customDirectionalBlockAndFlatItem(ModBlocks.WINTER_WREATH);
+        customHorizontalBlockAndFlatItem(ModBlocks.FAIRY_LIGHTS);
+        customHorizontalFaceBlockAndItem(ModBlocks.HOLIDAY_ORNAMENTS);
 
-//        customHorizontalBlockWithItem(ModBlocks.GIANT_ANCHOR);
-        tallBlockWithItem(ModBlocks.GIANT_ANCHOR);
-//        customHorizontalFaceBlockWithItem(ModBlocks.GIANT_CHAIN);
-        giantChainWithItem();
+        customHorizontalTallBlockAndItem(ModBlocks.GIANT_ANCHOR);
+        giantChainAndItem();
 
-        blockWithItem(ModBlocks.PLAIN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.PLAIN_CUSHION_STAIRS, ModBlocks.PLAIN_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.PLAIN_CUSHION_SLAB, ModBlocks.PLAIN_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.WHITE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.WHITE_CUSHION_STAIRS, ModBlocks.WHITE_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.WHITE_CUSHION_SLAB, ModBlocks.WHITE_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS, ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.LIGHT_GRAY_CUSHION_SLAB, ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.GRAY_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.GRAY_CUSHION_STAIRS, ModBlocks.GRAY_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.GRAY_CUSHION_SLAB, ModBlocks.GRAY_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.BLACK_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.BLACK_CUSHION_STAIRS, ModBlocks.BLACK_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.BLACK_CUSHION_SLAB, ModBlocks.BLACK_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.BROWN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.BROWN_CUSHION_STAIRS, ModBlocks.BROWN_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.BROWN_CUSHION_SLAB, ModBlocks.BROWN_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.RED_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.RED_CUSHION_STAIRS, ModBlocks.RED_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.RED_CUSHION_SLAB, ModBlocks.RED_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.ORANGE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.ORANGE_CUSHION_STAIRS, ModBlocks.ORANGE_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.ORANGE_CUSHION_SLAB, ModBlocks.ORANGE_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.YELLOW_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.YELLOW_CUSHION_STAIRS, ModBlocks.YELLOW_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.YELLOW_CUSHION_SLAB, ModBlocks.YELLOW_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.LIME_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.LIME_CUSHION_STAIRS, ModBlocks.LIME_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.LIME_CUSHION_SLAB, ModBlocks.LIME_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.GREEN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.GREEN_CUSHION_STAIRS, ModBlocks.GREEN_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.GREEN_CUSHION_SLAB, ModBlocks.GREEN_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.CYAN_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.CYAN_CUSHION_STAIRS, ModBlocks.CYAN_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.CYAN_CUSHION_SLAB, ModBlocks.CYAN_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS, ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.LIGHT_BLUE_CUSHION_SLAB, ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.BLUE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.BLUE_CUSHION_STAIRS, ModBlocks.BLUE_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.BLUE_CUSHION_SLAB, ModBlocks.BLUE_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.PURPLE_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.PURPLE_CUSHION_STAIRS, ModBlocks.PURPLE_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.PURPLE_CUSHION_SLAB, ModBlocks.PURPLE_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.MAGENTA_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.MAGENTA_CUSHION_STAIRS, ModBlocks.MAGENTA_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.MAGENTA_CUSHION_SLAB, ModBlocks.MAGENTA_CUSHION_BLOCK);
-        blockWithItem(ModBlocks.PINK_CUSHION_BLOCK);
-        stairsBlockWithItem(ModBlocks.PINK_CUSHION_STAIRS, ModBlocks.PINK_CUSHION_BLOCK);
-        slabBlockWithItem(ModBlocks.PINK_CUSHION_SLAB, ModBlocks.PINK_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.PLAIN_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.PLAIN_CUSHION_STAIRS, ModBlocks.PLAIN_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.PLAIN_CUSHION_SLAB, ModBlocks.PLAIN_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.WHITE_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.WHITE_CUSHION_STAIRS, ModBlocks.WHITE_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.WHITE_CUSHION_SLAB, ModBlocks.WHITE_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS, ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.LIGHT_GRAY_CUSHION_SLAB, ModBlocks.LIGHT_GRAY_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.GRAY_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.GRAY_CUSHION_STAIRS, ModBlocks.GRAY_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.GRAY_CUSHION_SLAB, ModBlocks.GRAY_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.BLACK_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.BLACK_CUSHION_STAIRS, ModBlocks.BLACK_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.BLACK_CUSHION_SLAB, ModBlocks.BLACK_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.BROWN_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.BROWN_CUSHION_STAIRS, ModBlocks.BROWN_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.BROWN_CUSHION_SLAB, ModBlocks.BROWN_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.RED_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.RED_CUSHION_STAIRS, ModBlocks.RED_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.RED_CUSHION_SLAB, ModBlocks.RED_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.ORANGE_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.ORANGE_CUSHION_STAIRS, ModBlocks.ORANGE_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.ORANGE_CUSHION_SLAB, ModBlocks.ORANGE_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.YELLOW_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.YELLOW_CUSHION_STAIRS, ModBlocks.YELLOW_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.YELLOW_CUSHION_SLAB, ModBlocks.YELLOW_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.LIME_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.LIME_CUSHION_STAIRS, ModBlocks.LIME_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.LIME_CUSHION_SLAB, ModBlocks.LIME_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.GREEN_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.GREEN_CUSHION_STAIRS, ModBlocks.GREEN_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.GREEN_CUSHION_SLAB, ModBlocks.GREEN_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.CYAN_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.CYAN_CUSHION_STAIRS, ModBlocks.CYAN_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.CYAN_CUSHION_SLAB, ModBlocks.CYAN_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS, ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.LIGHT_BLUE_CUSHION_SLAB, ModBlocks.LIGHT_BLUE_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.BLUE_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.BLUE_CUSHION_STAIRS, ModBlocks.BLUE_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.BLUE_CUSHION_SLAB, ModBlocks.BLUE_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.PURPLE_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.PURPLE_CUSHION_STAIRS, ModBlocks.PURPLE_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.PURPLE_CUSHION_SLAB, ModBlocks.PURPLE_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.MAGENTA_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.MAGENTA_CUSHION_STAIRS, ModBlocks.MAGENTA_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.MAGENTA_CUSHION_SLAB, ModBlocks.MAGENTA_CUSHION_BLOCK);
+        blockAndItem(ModBlocks.PINK_CUSHION_BLOCK);
+        stairsBlockAndItem(ModBlocks.PINK_CUSHION_STAIRS, ModBlocks.PINK_CUSHION_BLOCK);
+        slabBlockAndItem(ModBlocks.PINK_CUSHION_SLAB, ModBlocks.PINK_CUSHION_BLOCK);
 
-        customBlockWithItem(ModBlocks.SEASTONE_QUOIN);
-        customBlockWithItem(ModBlocks.SMOOTH_STONE_QUOIN);
-        customBlockWithItem(ModBlocks.POLISHED_GRANITE_QUOIN);
-        customBlockWithItem(ModBlocks.POLISHED_DIORITE_QUOIN);
-        customBlockWithItem(ModBlocks.POLISHED_ANDESITE_QUOIN);
-        customBlockWithItem(ModBlocks.POLISHED_TUFF_QUOIN);
-        customBlockWithItem(ModBlocks.PACKED_MUD_QUOIN);
-        customBlockWithItem(ModBlocks.SANDSTONE_QUOIN);
-        customBlockWithItem(ModBlocks.RED_SANDSTONE_QUOIN);
-        customBlockWithItem(ModBlocks.POLISHED_BLACKSTONE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.SEASTONE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.SMOOTH_STONE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.POLISHED_GRANITE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.POLISHED_DIORITE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.POLISHED_ANDESITE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.POLISHED_TUFF_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.PACKED_MUD_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.SANDSTONE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.RED_SANDSTONE_QUOIN);
+        customSimpleBlockAndItem(ModBlocks.POLISHED_BLACKSTONE_QUOIN);
 
-        customHorizontalBlockWithItem(ModBlocks.SEASTONE_MURAL);
-        customHorizontalBlockWithItem(ModBlocks.SMOOTH_STONE_MURAL);
-        customHorizontalBlockWithItem(ModBlocks.GRANITE_MURAL);
-        customHorizontalBlockWithItem(ModBlocks.DIORITE_MURAL);
-        customHorizontalBlockWithItem(ModBlocks.ANDESITE_MURAL);
+        customHorizontalBlockAndItem(ModBlocks.SEASTONE_MURAL);
+        customHorizontalBlockAndItem(ModBlocks.SMOOTH_STONE_MURAL);
+        customHorizontalBlockAndItem(ModBlocks.GRANITE_MURAL);
+        customHorizontalBlockAndItem(ModBlocks.DIORITE_MURAL);
+        customHorizontalBlockAndItem(ModBlocks.ANDESITE_MURAL);
 
-        cubeColumnWithItem(ModBlocks.SEASTONE_BLOCK);
-        stairsBlockWithItem(ModBlocks.SEASTONE_STAIRS, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK);
-        slabBlockWithItem(ModBlocks.SEASTONE_SLAB, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK);
-        wallBlockWithItem(ModBlocks.SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_side");
-        blockWithItem(ModBlocks.SEASTONE_BRICKS);
-        blockWithItem(ModBlocks.CHISELED_SEASTONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.SEASTONE_BRICK_STAIRS, ModBlocks.SEASTONE_BRICKS);
-        slabBlockWithItem(ModBlocks.SEASTONE_BRICK_SLAB, ModBlocks.SEASTONE_BRICKS);
-        wallBlockWithItem(ModBlocks.SEASTONE_BRICK_WALL, ModBlocks.SEASTONE_BRICKS);
-        blockWithItem(ModBlocks.SMOOTH_SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK, "_end");
-        stairsBlockWithItem(ModBlocks.SMOOTH_SEASTONE_STAIRS, ModBlocks.SEASTONE_BLOCK, "_end");
-        slabBlockWithItem(ModBlocks.SMOOTH_SEASTONE_SLAB, ModBlocks.SEASTONE_BLOCK, "_end");
-        wallBlockWithItem(ModBlocks.SMOOTH_SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_end");
-        blockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
-        slabBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
-        wallBlockWithItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
-        blockWithItem(ModBlocks.SNOWY_COBBLESTONE_BLOCK);
-        stairsBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_STAIRS, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
-        slabBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_SLAB, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
-        wallBlockWithItem(ModBlocks.SNOWY_COBBLESTONE_WALL, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
-        blockWithItem(ModBlocks.SNOWY_STONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_STAIRS, ModBlocks.SNOWY_STONE_BRICKS);
-        slabBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_SLAB, ModBlocks.SNOWY_STONE_BRICKS);
-        wallBlockWithItem(ModBlocks.SNOWY_STONE_BRICK_WALL, ModBlocks.SNOWY_STONE_BRICKS);
-        blockWithItem(ModBlocks.SMOOTH_STONE_BRICKS);
-        stairsBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_STAIRS, ModBlocks.SMOOTH_STONE_BRICKS);
-        slabBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_SLAB, ModBlocks.SMOOTH_STONE_BRICKS);
-        wallBlockWithItem(ModBlocks.SMOOTH_STONE_BRICK_WALL, ModBlocks.SMOOTH_STONE_BRICKS);
+        cubeColumnAndItem(ModBlocks.SEASTONE_BLOCK);
+        stairsBlockAndItem(ModBlocks.SEASTONE_STAIRS, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK);
+        slabBlockAndItem(ModBlocks.SEASTONE_SLAB, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK);
+        wallBlockAndItem(ModBlocks.SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_side");
+        blockAndItem(ModBlocks.SEASTONE_BRICKS);
+        blockAndItem(ModBlocks.CHISELED_SEASTONE_BRICKS);
+        stairsBlockAndItem(ModBlocks.SEASTONE_BRICK_STAIRS, ModBlocks.SEASTONE_BRICKS);
+        slabBlockAndItem(ModBlocks.SEASTONE_BRICK_SLAB, ModBlocks.SEASTONE_BRICKS);
+        wallBlockAndItem(ModBlocks.SEASTONE_BRICK_WALL, ModBlocks.SEASTONE_BRICKS);
+        blockAndItem(ModBlocks.SMOOTH_SEASTONE_BLOCK, ModBlocks.SEASTONE_BLOCK, "_end");
+        stairsBlockAndItem(ModBlocks.SMOOTH_SEASTONE_STAIRS, ModBlocks.SEASTONE_BLOCK, "_end");
+        slabBlockAndItem(ModBlocks.SMOOTH_SEASTONE_SLAB, ModBlocks.SEASTONE_BLOCK, "_end");
+        wallBlockAndItem(ModBlocks.SMOOTH_SEASTONE_WALL, ModBlocks.SEASTONE_BLOCK, "_end");
+        blockAndItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        stairsBlockAndItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        slabBlockAndItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        wallBlockAndItem(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS);
+        blockAndItem(ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        stairsBlockAndItem(ModBlocks.SNOWY_COBBLESTONE_STAIRS, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        slabBlockAndItem(ModBlocks.SNOWY_COBBLESTONE_SLAB, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        wallBlockAndItem(ModBlocks.SNOWY_COBBLESTONE_WALL, ModBlocks.SNOWY_COBBLESTONE_BLOCK);
+        blockAndItem(ModBlocks.SNOWY_STONE_BRICKS);
+        stairsBlockAndItem(ModBlocks.SNOWY_STONE_BRICK_STAIRS, ModBlocks.SNOWY_STONE_BRICKS);
+        slabBlockAndItem(ModBlocks.SNOWY_STONE_BRICK_SLAB, ModBlocks.SNOWY_STONE_BRICKS);
+        wallBlockAndItem(ModBlocks.SNOWY_STONE_BRICK_WALL, ModBlocks.SNOWY_STONE_BRICKS);
+        blockAndItem(ModBlocks.SMOOTH_STONE_BRICKS);
+        stairsBlockAndItem(ModBlocks.SMOOTH_STONE_BRICK_STAIRS, ModBlocks.SMOOTH_STONE_BRICKS);
+        slabBlockAndItem(ModBlocks.SMOOTH_STONE_BRICK_SLAB, ModBlocks.SMOOTH_STONE_BRICKS);
+        wallBlockAndItem(ModBlocks.SMOOTH_STONE_BRICK_WALL, ModBlocks.SMOOTH_STONE_BRICKS);
 
     }
 
 
-    //  Create blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
-    private void customHorizontalBlockWithItem(RegistryObject<Block, Block> block) {
-        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    //Create blockstates file and item model file for block with pre-made custom block model (e.g., Blockbench model)
+    private void customHorizontalBlockAndItem(RegistryObject<Block, Block> block) {
+        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
         blockItem(block);
     }
-    private void customHorizontalBlockWithFlatItem(RegistryObject<Block, Block> block) {
-        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    private void customHorizontalBlockAndFlatItem(RegistryObject<Block, Block> block) {
+        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
         flatItem(block);
     }
-    private void customHorizontalBlockWithFlatBlockItem(RegistryObject<Block, Block> block) {
-        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
-        flatBlockItem(block);
-    }
-    private void customHorizontalFaceBlockWithItem(RegistryObject<Block, Block> block) {
-        horizontalFaceBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    private void customHorizontalFaceBlockAndItem(RegistryObject<Block, Block> block) {
+        horizontalFaceBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
         blockItem(block);
     }
-    private void customHorizontalFaceBlockWithFlatBlockItem(RegistryObject<Block, Block> block) {
-        horizontalFaceBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    private void customHorizontalFaceBlockAndFlatBlockItem(RegistryObject<Block, Block> block) {
+        horizontalFaceBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
         flatBlockItem(block);
     }
-    private void customHorizontalFaceBlockWithFlatItem(RegistryObject<Block, Block> block) {
-        horizontalFaceBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    private void customHorizontalFaceBlockAndFlatItem(RegistryObject<Block, Block> block) {
+        horizontalFaceBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
         flatItem(block);
     }
-    private void customDirectionalBlockWithItem(RegistryObject<Block, Block> block) {
-        directionalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    private void customDirectionalBlockAndItem(RegistryObject<Block, Block> block) {
+        directionalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
         blockItem(block);
     }
-    private void customDirectionalBlockWithFlatItem(RegistryObject<Block, Block> block) {
-        directionalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath());
+    private void customDirectionalBlockAndFlatItem(RegistryObject<Block, Block> block) {
+        directionalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
+        flatItem(block);
     }
-    private void customAxisBlockWithItem(RegistryObject<Block, Block> block) {
-        ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath()));
+    private void customAxisBlockAndItem(RegistryObject<Block, Block> block) {
+        ModelFile model = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath()));
         getVariantBuilder(block.get())
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).modelForState().modelFile(model).addModel()
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).modelForState().modelFile(model).rotationX(90).addModel()
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).modelForState().modelFile(model).rotationX(90).rotationY(90).addModel();
         blockItem(block);
     }
-    private void transparentBlockWithItem(RegistryObject<Block, Block> block) {
-        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(block.get())).renderType("translucent"));
+    private void translucentBlockAndItem(RegistryObject<Block, Block> block) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(block.get())).renderType(TRANSLUCENT));
+    }
+    private void cutoutBlockAndItem(RegistryObject<Block, Block> block) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(block.get())).renderType(CUTOUT));
     }
 
-    private void banisterBlockWithFlatItem(RegistryObject<Block, Block> block) {
-        paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(block), getPath(block, "_top"), "cutout");
-        flatBlockItem(block);
-    }
-    private void seaglassPaneBlockWithFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
-        paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(textureBlock), getPath(textureBlock), "translucent");
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + textureBlock.getId().getPath());
-    }
-    private void seaWindowPaneBlockWithFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
-        paneBlockWithRenderType((IronBarsBlock) block.get(), getPath(textureBlock), modLoc("block/" + "sea_window" + "_top"), "translucent");
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + textureBlock.getId().getPath());
-    }
-    private void wallpaperWithItem(RegistryObject<Block, Block> block) {
+
+    private void twoTexturesCustomHorizontalBlockAndFlatItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(WallpaperBlock.TEXTURE)) {
-                case 1 -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(block.getId().getPath() + "_1", modLoc("block/" + block.getId().getPath() + "/1"))) };
-                }
-                case 2 -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(block.getId().getPath() + "_2", modLoc("block/" + block.getId().getPath() + "/2"))) };
-                }
-                default -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "/0"))) };
-                }
-            }
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_2);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        simpleBlockItem(block.get(), models().cubeAll(block.getId().getPath(),  modLoc("block/" + block.getId().getPath() + "/0")));
-    }
-    private void stellarWallpaperWithItem() {
-        getVariantBuilder(ModBlocks.STELLAR_WALLPAPER_BLOCK.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(WallpaperBlock.TEXTURE)) {
-                case 1 -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "_1", modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/1"))) };
-                }
-                case 2 -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "_2", modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/2"))) };
-                }
-                case 3 -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "_3", modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/3"))) };
-                }
-                default -> {
-                    return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath(), modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/0"))) };
-                }
-            }
-        });
-        simpleBlockItem(ModBlocks.STELLAR_WALLPAPER_BLOCK.get(), models().cubeAll(ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath(),  modLoc("block/" + ModBlocks.STELLAR_WALLPAPER_BLOCK.getId().getPath() + "/0")));
-    }
-    private void paperLanternWithFlatItem(RegistryObject<Block, Block> block) {
-        horizontalBlock(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
         flatItem(block);
     }
-    private void scatteredPapersWithFlatItem() {
-        getVariantBuilder(ModBlocks.SCATTERED_PAPERS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(ScatteredPapersBlock.TEXTURE)) {
-                case 1 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_PAPERS.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_PAPERS.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 3 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_PAPERS.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                default -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_PAPERS.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+
+    private void threeTexturesBlockAndItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_3);
+            return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(blockPath + "_" + i, modLoc(BLOCK_FOLDER + blockPath + "/" + i))) };
         });
-        flatItem(ModBlocks.SCATTERED_PAPERS);
+        blockItem(block, "_0");
     }
-    private void glassBuoyWithItem() {
-        getVariantBuilder(ModBlocks.GLASS_BUOY.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(GlassBuoyBlock.TEXTURE)) {
-                case 1 -> {
-                    return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GLASS_BUOY.getId().getPath() + "_1"))).build();
-                }
-                case 2 -> {
-                    return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GLASS_BUOY.getId().getPath() + "_2"))).build();
-                }
-                case 3 -> {
-                    return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GLASS_BUOY.getId().getPath() + "_3"))).build();
-                }
-                default -> {
-                    return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GLASS_BUOY.getId().getPath()))).build();
-                }
-            }
+    private void threeTexturesCustomHorizontalBlockAndItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_3);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        blockItem(ModBlocks.GLASS_BUOY);
+        blockItem(block, "_0");
     }
-    private void smallGlassBuoysWithItem() {
-        getVariantBuilder(ModBlocks.SMALL_GLASS_BUOYS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(SmallGlassBuoysBlock.TEXTURE)) {
-                case 1 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_GLASS_BUOYS.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_GLASS_BUOYS.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                default -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_GLASS_BUOYS.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+    private void threeTexturesCustomHorizontalBlockAndFlatItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_3);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        blockItem(ModBlocks.SMALL_GLASS_BUOYS);
+        flatItem(block);
     }
-    private void woodenBuoysWithItem() {
-        getVariantBuilder(ModBlocks.WOODEN_BUOYS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(WoodenBuoysBlock.TEXTURE)) {
-                case 1 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.WOODEN_BUOYS.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2 -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.WOODEN_BUOYS.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                default -> {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.WOODEN_BUOYS.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+    private void threeTexturesCustomHorizontalBlockAndFlatBlockItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_3);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        blockItem(ModBlocks.WOODEN_BUOYS);
+        flatBlockItem(block, "/0");
     }
-    private void potsAndPansWithFlatItem() {
-        getVariantBuilder(ModBlocks.POTS_AND_PANS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(PotsAndPansBlock.STACKED_POTS)) {
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.POTS_AND_PANS.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 3: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.POTS_AND_PANS.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 4: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.POTS_AND_PANS.getId().getPath() + "_4"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 1:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.POTS_AND_PANS.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+
+    private void fourTexturesBlockAndItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_4);
+            return new ConfiguredModel[] { new ConfiguredModel(models().cubeAll(blockPath + "_" + i, modLoc(BLOCK_FOLDER + blockPath + "/" + i))) };
         });
-        flatItem(ModBlocks.POTS_AND_PANS);
+        blockItem(block, "_0");
     }
-    private void jarsWithItem() {
-        getVariantBuilder(ModBlocks.JARS.get()).forAllStates(blockState -> {
-           switch (blockState.getValue(JarsBlock.TEXTURE)) {
-               case 1 -> {
-                   ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath() + "_1"));
-                   Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                   return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-               }
-               case 2 -> {
-                   ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath() + "_2"));
-                   Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                   return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-               }
-               case 3 -> {
-                   ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath() + "_3"));
-                   Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                   return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-               }
-               case 4 -> {
-                   ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath() + "_4"));
-                   Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                   return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-               }
-               case 5 -> {
-                   ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath() + "_5"));
-                   Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                   return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-               }
-               default -> {
-                   ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.JARS.getId().getPath()));
-                   Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                   return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-               }
-           }
+    private void fourTexturesCustomBlockAndItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_4);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc("template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).build();
         });
-        blockItem(ModBlocks.JARS);
+        blockItem(block, "_0");
     }
-    private void honeyJarWithFlatItem() {
-        getVariantBuilder(ModBlocks.HONEY_JAR.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(HoneyJarBlock.HONEY_JARS)) {
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.HONEY_JAR.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 3: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.HONEY_JAR.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 1:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.HONEY_JAR.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+    private void fourTexturesCustomHorizontalFaceBlockAndFlatBlockItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_4);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc("template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90)
+                    .rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
         });
-        flatItem(ModBlocks.HONEY_JAR);
+        flatBlockItem(block, "/0");
     }
-    private void clutteredSmallShelfWithItem() {
-        getVariantBuilder(ModBlocks.CLUTTERED_SMALL_SHELF.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(ClutteredSmallShelfBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 3: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 4: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath() + "_4"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 5: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath() + "_5"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.CLUTTERED_SMALL_SHELF.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+
+    private void fiveTexturesCustomHorizontalBlockAndFlatBlockItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_5);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        blockItem(ModBlocks.CLUTTERED_SMALL_SHELF);
+        flatBlockItem(block, "/0");
     }
-    private void smallBookshelfWithItem() {
-        getVariantBuilder(ModBlocks.SMALL_BOOKSHELF.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(SmallBookshelfBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_BOOKSHELF.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_BOOKSHELF.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SMALL_BOOKSHELF.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+
+    private void sixTexturesCustomHorizontalBlockAndItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_6);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        blockItem(ModBlocks.SMALL_BOOKSHELF);
+        blockItem(block, "_0");
     }
-    private void booksWithItem() {
-        getVariantBuilder(ModBlocks.BOOKS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(BooksBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOKS.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOKS.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOKS.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
-        });
-        blockItem(ModBlocks.BOOKS);
+
+    private void banisterBlockAndFlatItem(RegistryObject<Block, Block> banister) {
+        paneBlockWithRenderType((IronBarsBlock) banister.get(), getBlockPath(banister), getBlockPath(banister, TOP), CUTOUT);
+        flatBlockItem(banister);
     }
-    private void bookStackWithItem() {
-        getVariantBuilder(ModBlocks.BOOK_STACK.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(BookStackBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOK_STACK.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOK_STACK.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BOOK_STACK.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
-        });
-        blockItem(ModBlocks.BOOK_STACK);
+    private void largeShelfBlockAndItem(RegistryObject<Block, Block> shelf) {
+        String blockPath = shelf.getId().getPath();
+        String plankType = blockPath.substring(0, blockPath.length() - 11) + "planks";
+        ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath, modLoc(BLOCK_FOLDER + "template_large_shelf"))
+                .texture("planks", mcLoc(BLOCK_FOLDER + plankType));
+        Function<BlockState, ModelFile> modelFunc = ($ -> model);
+        getVariantBuilder(shelf.get()).forAllStates(blockState -> ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build());
+        blockItem(shelf);
     }
-    private void fishingLuresWithFlatItem() {
-        getVariantBuilder(ModBlocks.FISHING_LURES.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(FishingLuresBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.FISHING_LURES.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.FISHING_LURES.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 3: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.FISHING_LURES.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 4: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.FISHING_LURES.getId().getPath() + "_4"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.FISHING_LURES.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-            }
-        });
-        flatBlockItem(ModBlocks.FISHING_LURES, "/0");
+    private void glassPaneBlockAndFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
+        paneBlockWithRenderType((IronBarsBlock) block.get(), getBlockPath(textureBlock), getBlockPath(textureBlock), TRANSLUCENT);
+        itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", BLOCK_FOLDER + textureBlock.getId().getPath());
     }
-    private void goldCoinsBlockWithItem() {
-        simpleBlockWithItem(ModBlocks.GOLD_COINS_BLOCK.get(),
-                models().withExistingParent(ModBlocks.GOLD_COINS_BLOCK.getId().getPath(), mcLoc("block/cube_column"))
-                        .texture("side", modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_side"))
-                        .texture("end", modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_end"))
-                        .texture("particle", modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_end")));
+    private void seaWindowPaneBlockAndFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
+        paneBlockWithRenderType((IronBarsBlock) block.get(), getBlockPath(textureBlock), modLoc(BLOCK_FOLDER + "sea_window" + TOP), TRANSLUCENT);
+        itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", BLOCK_FOLDER + textureBlock.getId().getPath());
     }
-    private void goldCoinsLayerWithFlatItem() {
+    private void goldCoinsLayerAndFlatItem() {
         ModelFile[] model = new ModelFile[] {
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_2")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_4")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_6")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_8")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_10")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_12")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS.getId().getPath() + "_14")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_2")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_4")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_6")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_8")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_10")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_12")),
+                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_LAYER.getId().getPath() + "_14")),
                 new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GOLD_COINS_BLOCK.getId().getPath())),
         };
-        getVariantBuilder(ModBlocks.GOLD_COINS.get())
+        getVariantBuilder(ModBlocks.GOLD_COINS_LAYER.get())
                 .partialState().with(GoldCoinsLayerBlock.LAYERS, 1).modelForState().modelFile(model[0]).addModel()
                 .partialState().with(GoldCoinsLayerBlock.LAYERS, 2).modelForState().modelFile(model[1]).addModel()
                 .partialState().with(GoldCoinsLayerBlock.LAYERS, 3).modelForState().modelFile(model[2]).addModel()
@@ -883,178 +640,68 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .partialState().with(GoldCoinsLayerBlock.LAYERS, 6).modelForState().modelFile(model[5]).addModel()
                 .partialState().with(GoldCoinsLayerBlock.LAYERS, 7).modelForState().modelFile(model[6]).addModel()
                 .partialState().with(GoldCoinsLayerBlock.LAYERS, 8).modelForState().modelFile(model[7]).addModel();
-        flatItem(ModBlocks.GOLD_COINS);
+        flatItem(ModBlocks.GOLD_COINS_LAYER);
     }
-    private void scatteredGoldCoinsWithFlatBlockItem() {
-        getVariantBuilder(ModBlocks.SCATTERED_GOLD_COINS.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(ScatteredGoldCoinsBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_GOLD_COINS.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_GOLD_COINS.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SCATTERED_GOLD_COINS.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
-        });
-        flatBlockItem(ModBlocks.SCATTERED_GOLD_COINS, "/0");
-    }
-    private void customLampWithBlockItem(RegistryObject<Block, Block> block) {
-        ModelFile on = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_on"));
-        ModelFile off = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_off"));
+    private void customLampAndBlockItem(RegistryObject<Block, Block> block) {
+        ModelFile on = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath() + ON));
+        ModelFile off = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath() + OFF));
         getVariantBuilder(block.get())
-                .partialState().with(SeaglassLampBlock.LIT, true).addModels(new ConfiguredModel(on))
-                .partialState().with(SeaglassLampBlock.LIT, false).addModels(new ConfiguredModel(off));
-        blockItem(block, "_on");
+                .partialState().with(BlockStateProperties.LIT, true).addModels(new ConfiguredModel(on))
+                .partialState().with(BlockStateProperties.LIT, false).addModels(new ConfiguredModel(off));
+        blockItem(block, ON);
     }
-    private void seaglassLamp(RegistryObject<Block, Block> block) {
-        String blockPath = block.getId().getPath();
-        ModelFile on = models().withExistingParent(BLOCK_FOLDER + blockPath + "_on", modLoc(BLOCK_FOLDER + "template_seaglass_lamp_on"))
-                .texture("lamp", modLoc(BLOCK_FOLDER + blockPath));
-        ModelFile off = models().withExistingParent(BLOCK_FOLDER + blockPath + "_off", modLoc(BLOCK_FOLDER + "template_seaglass_lamp_off"))
-                .texture("lamp", modLoc(BLOCK_FOLDER + blockPath));
-        getVariantBuilder(block.get())
-                .partialState().with(SeaglassLampBlock.LIT, true).addModels(new ConfiguredModel(on))
-                .partialState().with(SeaglassLampBlock.LIT, false).addModels(new ConfiguredModel(off));
-        blockItem(block, "_on");
+    private void seaglassLamp(RegistryObject<Block, Block> seaglassLamp) {
+        String seaglassLampPath = seaglassLamp.getId().getPath();
+        ModelFile on = models().withExistingParent(BLOCK_FOLDER + seaglassLampPath + ON, modLoc(BLOCK_FOLDER + "template_seaglass_lamp_on"))
+                .texture("lamp", modLoc(BLOCK_FOLDER + seaglassLampPath))
+                .renderType(TRANSLUCENT);
+        ModelFile off = models().withExistingParent(BLOCK_FOLDER + seaglassLampPath + OFF, modLoc(BLOCK_FOLDER + "template_seaglass_lamp_off"))
+                .texture("lamp", modLoc(BLOCK_FOLDER + seaglassLampPath))
+                .renderType(TRANSLUCENT);
+
+        getVariantBuilder(seaglassLamp.get())
+                .partialState().with(BlockStateProperties.LIT, true).addModels(new ConfiguredModel(on))
+                .partialState().with(BlockStateProperties.LIT, false).addModels(new ConfiguredModel(off));
+        blockItem(seaglassLamp, ON);
     }
-    private void burlapSackWithItem() {
-        getVariantBuilder(ModBlocks.BURLAP_SACK.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(BurlapSackBlock.STACKED_SACKS)) {
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BURLAP_SACK.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 3: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BURLAP_SACK.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 1:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.BURLAP_SACK.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
+    private void scatteredPapersAndFlatItem() {
+        String blockPath = ModBlocks.SCATTERED_PAPERS.getId().getPath();
+        getVariantBuilder(ModBlocks.SCATTERED_PAPERS.get()).forAllStates(blockState -> {
+            int i = blockState.getValue(ModConstants.TEXTURE_4);
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + blockPath + "_" + i));
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
-        blockItem(ModBlocks.BURLAP_SACK, "_1");
+        flatItem(ModBlocks.SCATTERED_PAPERS);
     }
     private void sailorFlagWithItem() {
-        ModelFile[] models = new ModelFile[] {
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath())),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_1")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_2")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_3")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_4")),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_FLAG.getId().getPath() + "_5"))
-        };
-        getVariantBuilder(ModBlocks.SAILOR_FLAG.get())
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 0).modelForState().modelFile(models[0]).rotationX(180).rotationY(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 0).modelForState().modelFile(models[0]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 0).modelForState().modelFile(models[0]).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 1).modelForState().modelFile(models[1]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 1).modelForState().modelFile(models[1]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 1).modelForState().modelFile(models[1]).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 2).modelForState().modelFile(models[2]).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 2).modelForState().modelFile(models[2]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 2).modelForState().modelFile(models[2]).rotationX(90).rotationY(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 3).modelForState().modelFile(models[3]).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 3).modelForState().modelFile(models[3]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 3).modelForState().modelFile(models[3]).rotationX(90).rotationY(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 4).modelForState().modelFile(models[4]).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 4).modelForState().modelFile(models[4]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 4).modelForState().modelFile(models[4]).rotationX(90).rotationY(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y).with(SailorFlagBlock.TEXTURE, 5).modelForState().modelFile(models[5]).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z).with(SailorFlagBlock.TEXTURE, 5).modelForState().modelFile(models[5]).rotationX(90).addModel()
-                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X).with(SailorFlagBlock.TEXTURE, 5).modelForState().modelFile(models[5]).rotationX(90).rotationY(90).addModel();
-
-//        Function<BlockState, ModelFile[]> modelFunc = ($ -> models);
-//        return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-        blockItem(ModBlocks.SAILOR_FLAG);
-    }
-    private void sailorPennantFlag() {
-        getVariantBuilder(ModBlocks.SAILOR_PENNANT_FLAG.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(FishingLuresBlock.TEXTURE)) {
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 3: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_3"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 4: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_4"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 5: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath() + "_5"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.SAILOR_PENNANT_FLAG.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile((ModelFile)modelFunc.apply(blockState)).rotationX(((AttachFace)blockState.getValue(BlockStateProperties.ATTACH_FACE)).ordinal() * 90).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180 + (blockState.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
-                }
-            }
+        String blockPath = ModBlocks.SAILOR_FLAG.getId().getPath();
+        getVariantBuilder(ModBlocks.SAILOR_FLAG.get()).forAllStates(blockState -> {
+            int i = blockState.getValue(ModConstants.TEXTURE_5);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            int yRot = ((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360;
+            return switch(blockState.getValue(RotatedPillarBlock.AXIS)) {
+                case Y -> ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(yRot).build();
+                case Z -> ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationX(90).build();
+                case X -> ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationX(90).rotationY(90).build();
+            };
         });
-        blockItem(ModBlocks.SAILOR_PENNANT_FLAG);
+        blockItem(ModBlocks.SAILOR_FLAG, "_0");
     }
-    private void customGarlandWithItem(RegistryObject<Block, Block> block) {
-        getVariantBuilder(block.get()).forAllStates(blockState -> {
-            switch (blockState.getValue(GarlandBlock.TEXTURE)) {
-                case 2: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_2"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 1: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_1"));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-                case 0:
-                default: {
-                    ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath()));
-                    Function<BlockState, ModelFile> modelFunc = ($ -> model);
-                    return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
-                }
-            }
-        });
-        blockItem(block);
-    }
-    private void plushieWithItem() {
+    private void plushiesAndItem() {
         getVariantBuilder(ModBlocks.PLUSHIE.get()).forAllStates(blockState -> {
-            int texture = blockState.getValue(PlushieBlock.TEXTURE);
-            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + PLUSHIE_NAME[texture] + "_" + ModBlocks.PLUSHIE.getId().getPath()));
+            int i = blockState.getValue(ModConstants.TEXTURE_9);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + PLUSHIE_NAME[i] + "_plushie", modLoc(BLOCK_FOLDER + "template_plushie"))
+                    .texture("0", BLOCK_FOLDER + "plushie/" + PLUSHIE_NAME[i]);
             Function<BlockState, ModelFile> modelFunc = ($ -> model);
             return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int) ((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
         blockItem(PLUSHIE_NAME[0] + "_", ModBlocks.PLUSHIE);
     }
-
-    private void tallBlockWithItem(RegistryObject<Block, Block> block) {
+    //
+    private void customHorizontalTallBlockAndItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
             ModelFile bottom = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_bottom"));
             ModelFile top = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_top"));
@@ -1064,28 +711,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(block);
     }
-    private void giantChainWithItem() {
-        ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GIANT_CHAIN.getId().getPath()));
-        ModelFile anchor_model = new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.GIANT_CHAIN.getId().getPath() + "_above_anchor"));
+    private void giantChainAndItem() {
+        String giantChainPath = ModBlocks.GIANT_CHAIN.getId().getPath();
+        ModelFile model = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + giantChainPath));
+        ModelFile anchor_model = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + giantChainPath + "_above_anchor"));
         getVariantBuilder(ModBlocks.GIANT_CHAIN.get()).forAllStates(state -> {
             Function<BlockState, ModelFile> modelFunc = ($ -> model);
             Function<BlockState, ModelFile> anchorModelFunc = ($ -> anchor_model);
             return !state.getValue(GiantChainBlock.ABOVE_ANCHOR)
-                ? ConfiguredModel.builder()
+                    ? ConfiguredModel.builder()
                     .modelFile(modelFunc.apply(state))
                     .rotationX(state.getValue(BlockStateProperties.ATTACH_FACE).ordinal() * 90)
                     .rotationY((((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) + (state.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build()
-                : ConfiguredModel.builder()
+                    : ConfiguredModel.builder()
                     .modelFile(anchorModelFunc.apply(state))
                     .rotationY((((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) + (state.getValue(BlockStateProperties.ATTACH_FACE) == AttachFace.CEILING ? 180 : 0)) % 360).build();
         });
         blockItem(ModBlocks.GIANT_CHAIN);
     }
 
-    private void threeStackedHorizontalBlockWithItem(RegistryObject<Block, Block> block) {
+    private void threeStackedHorizontalBlockAndItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
             int amount = blockState.getValue(ModConstants.AMOUNT_3);
-            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_" + amount));
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + blockPath + "_" + amount));
             Function<BlockState, ModelFile> modelFunc = ($ -> model);
             return ConfiguredModel.builder()
                     .modelFile(modelFunc.apply(blockState))
@@ -1094,10 +743,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(block, "_" + ModConstants.MAX_AMOUNT_3);
     }
-    private void fourStackedHorizontalBlockWithItem(RegistryObject<Block, Block> block) {
+    private void threeStackedHorizontalBlockAndFlatItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            String blockPath = block.getId().getPath();
+            int amount = blockState.getValue(ModConstants.AMOUNT_3);
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + blockPath + "_" + amount));
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder()
+                    .modelFile(modelFunc.apply(blockState))
+                    .rotationY(((int) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) % 360)
+                    .build();
+        });
+        flatItem(block);
+    }
+    private void fourStackedHorizontalBlockAndItem(RegistryObject<Block, Block> block) {
         getVariantBuilder(block.get()).forAllStates(blockState -> {
             int amount = blockState.getValue(ModConstants.AMOUNT_4);
-            ModelFile model = new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + "_" + amount));
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath() + "_" + amount));
             Function<BlockState, ModelFile> modelFunc = ($ -> model);
             return ConfiguredModel.builder()
                     .modelFile(modelFunc.apply(blockState))
@@ -1106,14 +768,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(block, "_" + ModConstants.MAX_AMOUNT_4);
     }
-    private void woolAwnings(RegistryObject<Block, Block> awning) {
+    private void fourStackedHorizontalBlockAndFlatItem(RegistryObject<Block, Block> block) {
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            int amount = blockState.getValue(ModConstants.AMOUNT_4);
+            ModelFile model = new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath() + "_" + amount));
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder()
+                    .modelFile(modelFunc.apply(blockState))
+                    .rotationY(((int) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) % 360)
+                    .build();
+        });
+        flatItem(block);
+    }
+    private void woolAwningAndItem(RegistryObject<Block, Block> awning) {
         String awningPath = awning.getId().getPath();
         String wool = awningPath.substring(0, awningPath.length() - 7);
         ModelFile model = models().withExistingParent(BLOCK_FOLDER + awningPath, modLoc(BLOCK_FOLDER + "template_wool_awning"))
                 .texture("awning", modLoc(BLOCK_FOLDER + awningPath))
-                .texture("particle", mcLoc(BLOCK_FOLDER + wool));
+                .texture("particle", mcLoc(BLOCK_FOLDER + wool))
+                .renderType(CUTOUT);
         horizontalBlock(awning.get(), model);
         blockItem(awning);
+    }
+    private void paperLanternAndFlatItem(RegistryObject<Block, Block> paperLantern) {
+//        String lanternPath = paperLantern.getId().getPath();
+        horizontalBlock(paperLantern.get(), models().getExistingFile(getBlockPath(paperLantern)));
+        flatItem(paperLantern);
     }
     private void wickerBasketProduce(RegistryObject<Block, Block> basket) {
         String basketPath = basket.getId().getPath();
@@ -1129,8 +809,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(basket.get(), model);
         blockItem(basket);
     }
-    private void cameraQuadropod() {
-
+    private void cameraQuadropodAndItem() {
         getVariantBuilder(ModBlocks.CAMERA_QUADROPOD.get()).forAllStates(blockState -> {
             String quadropodPath = ModBlocks.CAMERA_QUADROPOD.getId().getPath();
 
@@ -1156,103 +835,155 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         blockItem(ModBlocks.CAMERA_QUADROPOD);
     }
+    private void nautilusShell(RegistryObject<Block, Block> block) {
+        String nautilusPath = ModBlocks.BIG_NAUTILUS_SHELL.getId().getPath();
+        ModelFile model = models().withExistingParent(BLOCK_FOLDER + block.getId().getPath(), mcLoc("cube"))
+                .texture("down", modLoc(BLOCK_FOLDER + nautilusPath + BOTTOM))
+                .texture("up", BLOCK_FOLDER + nautilusPath + TOP)
+                .texture("north", block.get() == ModBlocks.BIG_NAUTILUS_SHELL.get() ? BLOCK_FOLDER + nautilusPath + FRONT : BLOCK_FOLDER + nautilusPath + "_lantern")
+                .texture("south", BLOCK_FOLDER + nautilusPath + TOP)
+                .texture("east", BLOCK_FOLDER + nautilusPath + RIGHT)
+                .texture("west", BLOCK_FOLDER + nautilusPath + LEFT)
+                .texture("particle", BLOCK_FOLDER + nautilusPath + RIGHT);
+        horizontalBlock(block.get(), model);
+        blockItem(block);
+    }
 
 
 
-    private void customBlockWithItem(RegistryObject<Block, Block> block) {
+    private void customSimpleBlockAndItem(RegistryObject<Block, Block> block) {
         simpleBlockWithItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
         blockItem(block);
     }
-    private void customBlockWithItem(RegistryObject<Block, Block> block, String appendix) {
+    private void customSimpleBlockAndItem(RegistryObject<Block, Block> block, String appendix) {
         simpleBlockWithItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + appendix)));
         blockItem(block, appendix);
     }
-    private void customBlock(RegistryObject<Block, Block> block) {
-        simpleBlockWithItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath())));
+    private void customBlockNoItem(RegistryObject<Block, Block> block) {
+        simpleBlockWithItem(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + block.getId().getPath())));
     }
-    private void axisBlockWithItem(RegistryObject<Block, Block> block) {
-        models().cubeColumn(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_side"), modLoc("block/" + block.getId().getPath() + "_end"));
+    //    private void axisBlockWithItem(RegistryObject<Block, Block> block) {
+//        models().cubeColumn(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_side"), modLoc("block/" + block.getId().getPath() + "_end"));
+//        blockItem(block);
+//    }
+    private void cubeColumnAndItem(RegistryObject<Block, Block> block) {
+        ModelFile model = models().cubeColumn(block.getId().getPath(), getBlockPath(block, "_side"), getBlockPath(block, "_end"));
+        getVariantBuilder(block.get()).forAllStates(blockState -> new ConfiguredModel[] { new ConfiguredModel(model) });
         blockItem(block);
     }
-    private void cubeColumnWithItem(RegistryObject<Block, Block> block) {
-        ModelFile model = models().cubeColumn(block.getId().getPath(), getPath(block, "_side"), getPath(block, "_end"));
-        getVariantBuilder(block.get()).forAllStates(blockState -> {
-            return new ConfiguredModel[] { new ConfiguredModel(model) };
-        });
-        blockItem(ModBlocks.SEASTONE_BLOCK);
+    private void cubeColumnAndItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> sideEndTexture) {
+        ModelFile model = models().cubeColumn(block.getId().getPath(), getBlockPath(sideEndTexture, "_side"), getBlockPath(sideEndTexture, "_end"));
+        getVariantBuilder(block.get()).forAllStates(blockState -> new ConfiguredModel[] { new ConfiguredModel(model) });
+        blockItem(block);
     }
 
 
-    private void blockWithItem(RegistryObject<Block, Block> block) {
+    private void blockAndItem(RegistryObject<Block, Block> block) {
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
-    private void blockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> texture) {
-        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(texture.get())));
+    private void blockAndItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), blockTexture(blockTexture.get())));
     }
-    private void blockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> texture, String textureSuffix) {
-        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), getPath(texture, textureSuffix)));
+    private void blockAndItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture, String textureSuffix) {
+        simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), getBlockPath(blockTexture, textureSuffix)));
     }
-    private void stairsBlockWithItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> blockTexture) {
-        ResourceLocation texture = blockTexture(blockTexture.get());
+    private void stairsBlockAndItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> allSidesTexture) {
+        ResourceLocation texture = blockTexture(allSidesTexture.get());
         stairsBlock((StairBlock) stairBlock.get(), texture, texture, texture);
         blockItem(stairBlock);
     }
-    private void stairsBlockWithItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> blockTexture, String suffix) {
-        ResourceLocation texture = getPath(blockTexture, suffix);
+    private void stairsBlockAndItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> allSidesTexture, String suffix) {
+        ResourceLocation texture = getBlockPath(allSidesTexture, suffix);
         stairsBlock((StairBlock) stairBlock.get(), texture, texture, texture);
         blockItem(stairBlock);
     }
-    private void stairsBlockWithItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
-        ResourceLocation side = getPath(sideTexture, "_side");
-        ResourceLocation end = getPath(endTexture, "_end");
+    private void stairsBlockAndItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
+        ResourceLocation side = getBlockPath(sideTexture, SIDE);
+        ResourceLocation end = getBlockPath(endTexture, END);
         stairsBlock((StairBlock) stairBlock.get(), side, end, end);
         blockItem(stairBlock);
     }
-    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture) {
+    private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture) {
         ResourceLocation texture = blockTexture(doubleSlabSideEndTexture.get());
         slabBlock((SlabBlock) slabBlock.get(), texture, texture, texture, texture);
         blockItem(slabBlock);
     }
-    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture, String suffix) {
+    private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture, String suffix) {
         ResourceLocation doubleSlab = blockTexture(doubleSlabSideEndTexture.get());
-        ResourceLocation texture = getPath(doubleSlabSideEndTexture, suffix);
+        ResourceLocation texture = getBlockPath(doubleSlabSideEndTexture, suffix);
         slabBlock((SlabBlock) slabBlock.get(), doubleSlab, texture, texture, texture);
         blockItem(slabBlock);
     }
-    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideEndTexture) {
+    private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideEndTexture) {
         ResourceLocation doubleSlab = blockTexture(doubleSlabTexture.get());
         ResourceLocation texture = blockTexture(sideEndTexture.get());
         slabBlock((SlabBlock) slabBlock.get(), doubleSlab, texture, texture, texture);
         blockItem(slabBlock);
     }
-    public void slabBlockWithItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
+    private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
         ResourceLocation doubleSlab = blockTexture(doubleSlabTexture.get());
-        ResourceLocation side = getPath(sideTexture, "_side");
-        ResourceLocation end = getPath(endTexture, "_end");
+        ResourceLocation side = getBlockPath(sideTexture, SIDE);
+        ResourceLocation end = getBlockPath(endTexture, END);
         slabBlock((SlabBlock) slabBlock.get(), doubleSlab, side, end, end);
         blockItem(slabBlock);
     }
-    public void wallBlockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
-        wallBlock((WallBlock) block.get(), getPath(baseBlock));
-        models().wallInventory(block.getId().getPath() + "_inventory", getPath(baseBlock));
-        wallItem(block);
+    private void wallBlockAndItem(RegistryObject<Block, Block> wallBlock, RegistryObject<Block, Block> blockTexture) {
+        wallBlock((WallBlock) wallBlock.get(), getBlockPath(blockTexture));
+//        wallInventory(wallBlock, blockTexture);
+        wallItem(wallBlock);
     }
-    public void wallBlockWithItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock, String texture) {
-        wallBlock((WallBlock) block.get(), getPath(baseBlock, texture));
-        models().wallInventory(block.getId().getPath() + "_inventory", getPath(baseBlock, texture));
-        wallItem(block);
+    private void wallBlockAndItem(RegistryObject<Block, Block> wallBlock, RegistryObject<Block, Block> blockTexture, String texture) {
+        wallBlock((WallBlock) wallBlock.get(), getBlockPath(blockTexture, texture));
+//        wallInventory(wallBlock, blockTexture, texture);
+        wallItem(wallBlock);
+    }
+    private void fenceBlockAndItem(RegistryObject<Block, Block> fenceBlock, RegistryObject<Block, Block> blockTexture) {
+        String fencePath = fenceBlock.getId().getPath();
+        fenceBlock((FenceBlock) fenceBlock.get(), getBlockPath(blockTexture));
+        itemModels().withExistingParent(fencePath, mcLoc(BLOCK_FOLDER + "fence_inventory"))
+                .texture("texture", getBlockPath(blockTexture));
+    }
+    private void fenceGateBlockAndItem(RegistryObject<Block, Block> fenceGateBlock, RegistryObject<Block, Block> blockTexture) {
+        fenceGateBlock((FenceGateBlock) fenceGateBlock.get(), getBlockPath(blockTexture));
+        blockItem(fenceGateBlock);
+    }
+    private void doorBlockAndItem(RegistryObject<Block, Block> doorBlock) {
+        String doorPath = doorBlock.getId().getPath();
+        doorBlock((DoorBlock) doorBlock.get(), modLoc(BLOCK_FOLDER + doorPath + BOTTOM), modLoc(BLOCK_FOLDER + doorPath + TOP));
+        flatItem(doorBlock);
+    }
+    private void trapdoorBlockAndItem(RegistryObject<Block, Block> trapdoorBlock, RegistryObject<Block, Block> blockTexture) {
+        trapdoorBlock((TrapDoorBlock) trapdoorBlock.get(), getBlockPath(blockTexture), true);
+        blockItem(trapdoorBlock, BOTTOM);
+    }
+    private void pressurePlateAndItem(RegistryObject<Block, Block> pressurePlateBlock, RegistryObject<Block, Block> blockTexture) {
+        pressurePlateBlock((PressurePlateBlock) pressurePlateBlock.get(), getBlockPath(blockTexture));
+        blockItem(pressurePlateBlock);
+    }
+    private void buttonBlockAndItem(RegistryObject<Block, Block> buttonBlock, RegistryObject<Block, Block> blockTexture) {
+        buttonBlock((ButtonBlock) buttonBlock.get(), getBlockPath(blockTexture));
+        itemModels().withExistingParent(buttonBlock.getId().getPath(), mcLoc(BLOCK_FOLDER + "button_inventory"))
+                .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
     }
 
-    private void fenceItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture", modLoc("block/" + baseBlock.getId().getPath()));
+    private void fenceItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc(BLOCK_FOLDER + "fence_inventory"))
+                .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
     }
-    private void buttonItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> baseBlock) {
+    private void buttonItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
         itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
-                .texture("texture", modLoc("block/" + baseBlock.getId().getPath()));
+                .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
     }
     private void wallItem(RegistryObject<Block, Block> block) {
-        itemModels().withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_inventory"));
+        String blockPath = block.getId().getPath();
+//        itemModels().withExistingParent(blockPath, modLoc(BLOCK_FOLDER + blockPath + "_inventory"));
+        itemModels().withExistingParent(blockPath, mcLoc(BLOCK_FOLDER + "wall_inventory"));
+    }
+    private void wallInventory(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
+        models().wallInventory(block.getId().getPath() + "_inventory", getBlockPath(blockTexture));
+    }
+    private void wallInventory(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture, String texture) {
+        models().wallInventory(block.getId().getPath() + "_inventory", getBlockPath(blockTexture, texture));
     }
 
     private void blockItem(RegistryObject<Block, Block> block) {
@@ -1262,23 +993,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + block.getId().getPath() + appendix)));
     }
     private void blockItem(String prefix, RegistryObject<Block, Block> block) {
-        simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + prefix + block.getId().getPath())));
+        simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile(modLoc(BLOCK_FOLDER + prefix + block.getId().getPath())));
     }
+
     private void flatItem(RegistryObject<Block, Block> block) {
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "item/" + block.getId().getPath());
+        itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", ITEM_FOLDER + block.getId().getPath());
     }
+
     private void flatBlockItem(RegistryObject<Block, Block> block) {
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath());
+        itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", BLOCK_FOLDER + block.getId().getPath());
     }
     private void flatBlockItem(RegistryObject<Block, Block> block, String appendix) {
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", "block/" + block.getId().getPath() + appendix);
+        itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", BLOCK_FOLDER + block.getId().getPath() + appendix);
     }
 
 
-    private ResourceLocation getPath(RegistryObject<Block, Block> block) {
+    private ResourceLocation getBlockPath(RegistryObject<Block, Block> block) {
         return ModelLocationUtils.getModelLocation(block.get());
     }
-    private ResourceLocation getPath(RegistryObject<Block, Block> block, String suffix) {
+    private ResourceLocation getBlockPath(RegistryObject<Block, Block> block, String suffix) {
         return ModelLocationUtils.getModelLocation(block.get(), suffix);
     }
 

@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -20,13 +21,14 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class ScatteredPapersBlock extends HorizontalDirectionalBlock {
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 3);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_4;
     public static final MapCodec<ScatteredPapersBlock> CODEC = simpleCodec(ScatteredPapersBlock::new);
 
     public ScatteredPapersBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(TEXTURE, 0));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(TEXTURE, 0)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -63,7 +65,7 @@ public class ScatteredPapersBlock extends HorizontalDirectionalBlock {
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(TEXTURE, RandomSource.create().nextInt(0, 4)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 5)));
     }
 
     @Override

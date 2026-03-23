@@ -1,5 +1,6 @@
 {
   "parent": "dustydecorations:block/template_wool_awning",
+  "render_type": "minecraft:cutout",
   "textures": {
     "awning": "dustydecorations:block/lime_wool_awning",
     "particle": "minecraft:block/lime_wool"

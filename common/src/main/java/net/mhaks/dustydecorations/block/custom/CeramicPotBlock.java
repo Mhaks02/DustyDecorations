@@ -54,10 +54,10 @@ public class CeramicPotBlock extends HorizontalDirectionalBlock implements Simpl
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return switch (state.getValue(AMOUNT)) {
             case 2 -> switch (state.getValue(FACING)) {
-                case NORTH -> SHAPE_TWO_NORTH;
+                case SOUTH -> SHAPE_TWO_SOUTH;
                 case EAST -> SHAPE_TWO_EAST;
                 case WEST -> SHAPE_TWO_WEST;
-                default -> SHAPE_TWO_SOUTH;
+                default -> SHAPE_TWO_NORTH;
             };
             case 3, 4 -> SHAPE_THREE_FOUR;
             default -> SHAPE_ONE;

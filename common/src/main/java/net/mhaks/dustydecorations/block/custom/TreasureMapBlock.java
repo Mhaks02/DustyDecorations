@@ -17,6 +17,9 @@ public class TreasureMapBlock extends FaceAttachedHorizontalDirectionalBlock {
 
     public TreasureMapBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.WALL));
     }
 
     @Override

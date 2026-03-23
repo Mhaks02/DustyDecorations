@@ -33,7 +33,7 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
 
     public SeaglassLampBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
                 .setValue(LIT, false)
         );
@@ -48,7 +48,6 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
             Block.box(5, 0, 5, 11, 7, 11),
             Block.box(1.5, 7, 1.5, 14.5, 14, 14.5)
     ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
@@ -76,6 +75,11 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
             level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
         return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+    }
+
+    @Override
+    protected boolean propagatesSkylightDown(BlockState state, BlockGetter level, BlockPos pos) {
+        return !state.getValue(WATERLOGGED);
     }
 
     @Override

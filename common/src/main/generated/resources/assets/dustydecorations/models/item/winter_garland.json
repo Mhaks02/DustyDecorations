@@ -1,3 +1,6 @@
 {
-  "parent": "dustydecorations:block/winter_garland"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dustydecorations:item/winter_garland"
+  }
 }

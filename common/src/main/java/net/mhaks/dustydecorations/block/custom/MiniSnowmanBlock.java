@@ -21,6 +21,8 @@ public class MiniSnowmanBlock extends HorizontalDirectionalBlock {
 
     public MiniSnowmanBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

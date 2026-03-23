@@ -42,7 +42,8 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
         this.registerDefaultState(defaultBlockState()
                 .setValue(CAMERA, ModConstants.AttachedCamera.NONE)
                 .setValue(HALF, DoubleBlockHalf.LOWER)
-                .setValue(LIT, false));
+                .setValue(LIT, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     protected static final VoxelShape QUADROPOD_BOTTOM = Block.box(3, 0, 3, 13, 16, 13);

@@ -42,10 +42,10 @@ public class CarvedBeetrootBlock extends GourdBlock{
                 default -> SHAPE_THREE_NORTH_SOUTH;
             };
             default -> switch (state.getValue(FACING)) {
-                case NORTH -> SHAPE_ONE_NORTH;
+                case SOUTH -> SHAPE_ONE_SOUTH;
                 case EAST -> SHAPE_ONE_EAST;
                 case WEST -> SHAPE_ONE_WEST;
-                default -> SHAPE_ONE_SOUTH;
+                default -> SHAPE_ONE_NORTH;
             };
         };
     }

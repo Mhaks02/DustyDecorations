@@ -8,6 +8,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -22,19 +23,20 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class SmallSharkJawBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final EnumProperty<AttachFace> FACE = BlockStateProperties.ATTACH_FACE;
+public class SmallSharkJawBlock extends FaceAttachedHorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<SmallSharkJawBlock> CODEC = simpleCodec(SmallSharkJawBlock::new);
 
     public SmallSharkJawBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.FLOOR));
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends FaceAttachedHorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
@@ -54,10 +56,10 @@ public class SmallSharkJawBlock extends HorizontalDirectionalBlock implements Si
         switch (state.getValue(FACE)) {
             case WALL:
                 return switch (state.getValue(FACING)) {
-                    case NORTH, UP, DOWN -> WALL_NORTH_AABB;
+                    case SOUTH -> WALL_SOUTH_AABB;
                     case EAST -> WALL_EAST_AABB;
                     case WEST -> WALL_WEST_AABB;
-                    default -> WALL_SOUTH_AABB;
+                    default -> WALL_NORTH_AABB;
                 };
             case FLOOR:
             default:
@@ -71,13 +73,13 @@ public class SmallSharkJawBlock extends HorizontalDirectionalBlock implements Si
             BlockState blockstate;
             if (direction.getAxis() == Direction.Axis.Y) {
                 blockstate = this.defaultBlockState()
-                        .setValue(FACE, AttachFace.FLOOR)
+                        .setValue(FACE, direction == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
                         .setValue(FACING, context.getHorizontalDirection().getOpposite())
                         .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
             } else {
                 blockstate = this.defaultBlockState()
                         .setValue(FACE, AttachFace.WALL)
-                        .setValue(FACING, context.getClickedFace())
+                        .setValue(FACING, direction.getOpposite())
                         .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
             }
             if (blockstate.canSurvive(context.getLevel(), context.getClickedPos())) {

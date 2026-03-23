@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -24,14 +25,15 @@ import org.jetbrains.annotations.Nullable;
 
 public class WoodenBuoysBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_3;
     public static final MapCodec<WoodenBuoysBlock> CODEC = simpleCodec(WoodenBuoysBlock::new);
 
     public WoodenBuoysBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(TEXTURE, 0));
+                .setValue(TEXTURE, 0)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -54,8 +56,8 @@ public class WoodenBuoysBlock extends HorizontalDirectionalBlock implements Simp
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -64,7 +66,7 @@ public class WoodenBuoysBlock extends HorizontalDirectionalBlock implements Simp
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }    }
 

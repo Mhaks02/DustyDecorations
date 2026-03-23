@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_glass_buoy",
+  "textures": {
+    "0": "dustydecorations:block/glass_buoy/1"
+  }
+}

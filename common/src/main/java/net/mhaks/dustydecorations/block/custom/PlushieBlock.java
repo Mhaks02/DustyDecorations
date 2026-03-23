@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -25,7 +26,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class PlushieBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 8);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_9;
     public static final MapCodec<PlushieBlock> CODEC = simpleCodec(PlushieBlock::new);
 
 
@@ -33,7 +34,8 @@ public class PlushieBlock extends HorizontalDirectionalBlock implements SimpleWa
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(TEXTURE, 0));
+                .setValue(TEXTURE, 0)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

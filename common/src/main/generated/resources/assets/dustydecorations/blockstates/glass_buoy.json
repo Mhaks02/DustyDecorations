@@ -1,10 +1,10 @@
 {
   "variants": {
     "texture=0,waterlogged=false": {
-      "model": "dustydecorations:block/glass_buoy"
+      "model": "dustydecorations:block/glass_buoy_0"
     },
     "texture=0,waterlogged=true": {
-      "model": "dustydecorations:block/glass_buoy"
+      "model": "dustydecorations:block/glass_buoy_0"
     },
     "texture=1,waterlogged=false": {
       "model": "dustydecorations:block/glass_buoy_1"

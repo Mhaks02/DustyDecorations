@@ -26,6 +26,9 @@ public class GlobeBlock extends HorizontalDirectionalBlock implements SimpleWate
 
     public GlobeBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -34,34 +37,30 @@ public class GlobeBlock extends HorizontalDirectionalBlock implements SimpleWate
     }
 
     private static final VoxelShape SHAPE_N =
-            Shapes.or(
-                    Block.box(5, 5, 4, 13, 13, 12),
+            Shapes.or(Block.box(5, 5, 4, 13, 13, 12),
                     Block.box(7, 1, 7, 9, 4, 9),
                     Block.box(5, 0, 5, 11, 1, 11));
 
     private static final VoxelShape SHAPE_S =
-            Shapes.or(
-                    Block.box(3, 5, 4, 11, 13, 12),
+            Shapes.or(Block.box(3, 5, 4, 11, 13, 12),
                     Block.box(7, 1, 7, 9, 4, 9),
                     Block.box(5, 0, 5, 11, 1, 11));
 
     private static final VoxelShape SHAPE_E =
-            Shapes.or(
-                    Block.box(4, 5, 5, 12, 13, 13),
+            Shapes.or(Block.box(4, 5, 5, 12, 13, 13),
                     Block.box(7, 1, 7, 9, 4, 9),
                     Block.box(5, 0, 5, 11, 1, 11));
 
     private static final VoxelShape SHAPE_W =
-            Shapes.or(
-                    Block.box(4, 5, 3, 12, 13, 11),
+            Shapes.or(Block.box(4, 5, 3, 12, 13, 11),
                     Block.box(7, 1, 7, 9, 4, 9),
                     Block.box(5, 0, 5, 11, 1, 11));
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -70,7 +69,7 @@ public class GlobeBlock extends HorizontalDirectionalBlock implements SimpleWate
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

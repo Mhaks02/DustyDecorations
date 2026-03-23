@@ -26,8 +26,9 @@ public class VerticalSlabBlock extends HorizontalDirectionalBlock implements Sim
 
     public VerticalSlabBlock(Properties properties) {
         super(properties);
-        this.defaultBlockState()
-                .setValue(WATERLOGGED, false);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -48,8 +49,8 @@ public class VerticalSlabBlock extends HorizontalDirectionalBlock implements Sim
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -58,7 +59,7 @@ public class VerticalSlabBlock extends HorizontalDirectionalBlock implements Sim
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

@@ -8,6 +8,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,21 +26,19 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class LifePreserverBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+public class LifePreserverBlock extends DirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
-    public static final BooleanProperty UP = BlockStateProperties.UP;
-    public static final BooleanProperty DOWN = BlockStateProperties.DOWN;
     public static final MapCodec<LifePreserverBlock> CODEC = simpleCodec(LifePreserverBlock::new);
     
     public LifePreserverBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.UP));
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<? extends DirectionalBlock> codec() {
         return CODEC;
     }
 
@@ -59,20 +58,20 @@ public class LifePreserverBlock extends HorizontalDirectionalBlock implements Si
             case NORTH -> {
                 return SHAPE_N;
             }
+            case SOUTH -> {
+                return SHAPE_S;
+            }
             case EAST -> {
                 return SHAPE_E;
             }
             case WEST -> {
                 return SHAPE_W;
             }
-            case UP -> {
-                return SHAPE_UP;
-            }
             case DOWN -> {
                 return SHAPE_DOWN;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_UP;
             }
         }
     }
@@ -101,6 +100,6 @@ public class LifePreserverBlock extends HorizontalDirectionalBlock implements Si
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, UP, DOWN, WATERLOGGED);
+        builder.add(FACING, WATERLOGGED);
     }
 }

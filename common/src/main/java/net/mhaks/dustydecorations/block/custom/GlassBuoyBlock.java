@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -23,12 +24,12 @@ import org.jetbrains.annotations.Nullable;
 
 public class GlassBuoyBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 3);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_4;
     public static final MapCodec<GlassBuoyBlock> CODEC = simpleCodec(GlassBuoyBlock::new);
 
     public GlassBuoyBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
                 .setValue(TEXTURE, 0));
     }

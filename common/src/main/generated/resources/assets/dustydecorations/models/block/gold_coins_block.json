@@ -2,7 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "dustydecorations:block/gold_coins_end",
-    "particle": "dustydecorations:block/gold_coins_end",
     "side": "dustydecorations:block/gold_coins_side"
   }
 }

@@ -25,8 +25,9 @@ public class EmptySmallShelfBlock extends HorizontalDirectionalBlock implements 
 
     public EmptySmallShelfBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -46,8 +47,8 @@ public class EmptySmallShelfBlock extends HorizontalDirectionalBlock implements 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_NORTH;
+            case SOUTH -> {
+                return SHAPE_SOUTH;
             }
             case EAST -> {
                 return SHAPE_EAST;
@@ -56,7 +57,7 @@ public class EmptySmallShelfBlock extends HorizontalDirectionalBlock implements 
                 return SHAPE_WEST;
             }
             default -> {
-                return SHAPE_SOUTH;
+                return SHAPE_NORTH;
             }
         }
     }

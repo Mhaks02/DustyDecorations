@@ -29,8 +29,9 @@ public class CorrugatedMetalRoofingBlock extends HorizontalDirectionalBlock impl
 
     public CorrugatedMetalRoofingBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -38,39 +39,39 @@ public class CorrugatedMetalRoofingBlock extends HorizontalDirectionalBlock impl
         return CODEC;
     }
 
-    private static final VoxelShape SHAPE_N = Stream.of(
+    private static final VoxelShape SHAPE_N = Shapes.or(
             Block.box(0, 12, 12, 16, 16, 16),
             Block.box(0, 10, 8, 16, 14, 12),
             Block.box(0, 8, 4, 16, 12, 8),
             Block.box(0, 6, 0, 16, 10, 4)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
     
-    private static final VoxelShape SHAPE_S = Stream.of(
+    private static final VoxelShape SHAPE_S = Shapes.or(
             Block.box(0, 12, 0, 16, 16, 4),
             Block.box(0, 10, 4, 16, 14, 8),
             Block.box(0, 8, 8, 16, 12, 12),
             Block.box(0, 6, 12, 16, 10, 16)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
     
-    private static final VoxelShape SHAPE_E = Stream.of(
+    private static final VoxelShape SHAPE_E = Shapes.or(
             Block.box(0, 12, 0, 4, 16, 16),
             Block.box(4, 10, 0, 8, 14, 16),
             Block.box(8, 8, 0, 12, 12, 16),
             Block.box(12, 6, 0, 16, 10, 16)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
     
-    private static final VoxelShape SHAPE_W = Stream.of(
+    private static final VoxelShape SHAPE_W = Shapes.or(
             Block.box(12, 12, 0, 16, 16, 16),
             Block.box(8, 10, 0, 12, 14, 16),
             Block.box(4, 8, 0, 8, 12, 16),
             Block.box(0, 6, 0, 4, 10, 16)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -79,7 +80,7 @@ public class CorrugatedMetalRoofingBlock extends HorizontalDirectionalBlock impl
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

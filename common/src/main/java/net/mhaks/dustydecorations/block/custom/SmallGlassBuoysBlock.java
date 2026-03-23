@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -28,14 +29,15 @@ import java.util.stream.Stream;
 
 public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty TEXTURE = IntegerProperty.create("texture", 0, 2);
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_3;
     public static final MapCodec<SmallGlassBuoysBlock> CODEC = simpleCodec(SmallGlassBuoysBlock::new);
 
     public SmallGlassBuoysBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(TEXTURE, 0));
+                .setValue(TEXTURE, 0)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -43,28 +45,28 @@ public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements 
         return CODEC;
     }
 
-    private static final VoxelShape SHAPE_N = Stream.of(
+    private static final VoxelShape SHAPE_N = Shapes.or(
             Block.box(0, 0, 2, 16, 8, 14),
             Block.box(3, 8, 5, 12, 16, 14)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-    private static final VoxelShape SHAPE_S = Stream.of(
+    );
+    private static final VoxelShape SHAPE_S = Shapes.or(
             Block.box(0, 0, 2, 16, 8, 14),
             Block.box(4, 8, 2, 13, 16, 11)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-    private static final VoxelShape SHAPE_E = Stream.of(
+    );
+    private static final VoxelShape SHAPE_E = Shapes.or(
             Block.box(2, 0, 0, 14, 8, 16),
             Block.box(2, 8, 3, 11, 16, 12)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
-    private static final VoxelShape SHAPE_W = Stream.of(
+    );
+    private static final VoxelShape SHAPE_W = Shapes.or(
             Block.box(2, 0, 0, 14, 8, 16),
             Block.box(5, 8, 4, 14, 16, 13)
-    ).reduce((voxelShape, voxelShape2) -> Shapes.join(voxelShape, voxelShape2, BooleanOp.OR)).get();
+    );
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -73,7 +75,7 @@ public class SmallGlassBuoysBlock extends HorizontalDirectionalBlock implements 
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }    }
 

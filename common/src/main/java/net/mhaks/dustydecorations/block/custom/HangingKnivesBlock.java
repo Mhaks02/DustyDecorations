@@ -22,6 +22,8 @@ public class HangingKnivesBlock extends HorizontalDirectionalBlock {
 
     public HangingKnivesBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -44,8 +46,8 @@ public class HangingKnivesBlock extends HorizontalDirectionalBlock {
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -54,7 +56,7 @@ public class HangingKnivesBlock extends HorizontalDirectionalBlock {
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

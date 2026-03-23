@@ -25,11 +25,11 @@ public class DecorativeBowlBlock extends Block implements SimpleWaterloggedBlock
 
     public DecorativeBowlBlock(Properties properties) {
         super(properties);
-        defaultBlockState()
-                .setValue(WATERLOGGED, false);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false));
     }
 
-    //TODO: change shape to more detailed one
+    //TODO: change shape to more detailed one?
     private static final VoxelShape SHAPE =
             Block.box(2, 0, 2, 14, 4, 14);
 

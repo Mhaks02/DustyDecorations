@@ -9,7 +9,7 @@ public class PaperLanternBlockModel extends GeoModel<PaperLanternBlockEntity> {
 
     @Override
     public ResourceLocation getModelResource(PaperLanternBlockEntity animatable) {
-        return ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "geo/paper_lantern.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "geo/block/paper_lantern.geo.json");
     }
 
     @Override
@@ -20,7 +20,7 @@ public class PaperLanternBlockModel extends GeoModel<PaperLanternBlockEntity> {
 
     @Override
     public ResourceLocation getAnimationResource(PaperLanternBlockEntity animatable) {
-        return ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "animations/paper_lantern.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "animations/block/paper_lantern.animation.json");
     }
 
 }

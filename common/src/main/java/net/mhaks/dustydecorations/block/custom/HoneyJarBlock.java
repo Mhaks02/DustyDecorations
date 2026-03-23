@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -21,15 +22,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class HoneyJarBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty HONEY_JARS = IntegerProperty.create("honey_jars", 1, 3);
+    public static final IntegerProperty HONEY_JARS = ModConstants.AMOUNT_3;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<HoneyJarBlock> CODEC = simpleCodec(HoneyJarBlock::new);
 
     public HoneyJarBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(HONEY_JARS, 1));
+                .setValue(HONEY_JARS, 1)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

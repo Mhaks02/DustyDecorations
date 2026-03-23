@@ -18,6 +18,8 @@ public class CameraBlock extends HorizontalDirectionalBlock {
 
     public CameraBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     protected static final VoxelShape CAMERA_X_AXIS = Block.box(3, 0, 4, 13, 8, 12);

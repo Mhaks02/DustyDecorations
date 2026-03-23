@@ -25,8 +25,9 @@ public class DisplayedOarsBlock extends HorizontalDirectionalBlock implements Si
 
     public DisplayedOarsBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -34,16 +35,16 @@ public class DisplayedOarsBlock extends HorizontalDirectionalBlock implements Si
         return CODEC;
     }
 
-    private static final VoxelShape SHAPE_N = Block.box(0, 0, 12, 16, 16, 16);
-    private static final VoxelShape SHAPE_S = Block.box(0, 0, 0, 16, 16, 4);
-    private static final VoxelShape SHAPE_E = Block.box(0, 0, 0, 4, 16, 16);
-    private static final VoxelShape SHAPE_W = Block.box(12, 0, 0, 16, 16, 16);
+    private static final VoxelShape SHAPE_N = Block.box(0, 0, 12.5, 16, 16, 16);
+    private static final VoxelShape SHAPE_S = Block.box(0, 0, 0, 16, 16, 3.5);
+    private static final VoxelShape SHAPE_E = Block.box(0, 0, 0, 3.5, 16, 16);
+    private static final VoxelShape SHAPE_W = Block.box(12.5, 0, 0, 16, 16, 16);
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_N;
+            case SOUTH -> {
+                return SHAPE_S;
             }
             case EAST -> {
                 return SHAPE_E;
@@ -52,7 +53,7 @@ public class DisplayedOarsBlock extends HorizontalDirectionalBlock implements Si
                 return SHAPE_W;
             }
             default -> {
-                return SHAPE_S;
+                return SHAPE_N;
             }
         }
     }

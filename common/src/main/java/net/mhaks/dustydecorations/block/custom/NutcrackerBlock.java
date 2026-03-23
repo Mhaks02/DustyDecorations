@@ -26,6 +26,8 @@ public class NutcrackerBlock extends HorizontalDirectionalBlock implements Simpl
 
     public NutcrackerBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

@@ -24,8 +24,10 @@ public class FryingPanBlock extends HorizontalDirectionalBlock implements Simple
 
     public FryingPanBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(FACE, AttachFace.FLOOR));
     }
 
     @Override
@@ -51,10 +53,10 @@ public class FryingPanBlock extends HorizontalDirectionalBlock implements Simple
         switch (state.getValue(FACE)) {
             case WALL:
                 return switch (state.getValue(FACING)) {
-                    case NORTH, UP, DOWN -> SHAPE_WALL_NORTH;
+                    case SOUTH, UP, DOWN -> SHAPE_WALL_SOUTH;
                     case EAST -> SHAPE_WALL_EAST;
                     case WEST -> SHAPE_WALL_WEST;
-                    default -> SHAPE_WALL_SOUTH;
+                    default -> SHAPE_WALL_NORTH;
                 };
             case FLOOR:
             default:

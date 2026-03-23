@@ -1,7 +1,7 @@
 {
   "variants": {
     "facing=east,texture=0": {
-      "model": "dustydecorations:block/scattered_papers",
+      "model": "dustydecorations:block/scattered_papers_0",
       "y": 90
     },
     "facing=east,texture=1": {
@@ -17,7 +17,7 @@
       "y": 90
     },
     "facing=north,texture=0": {
-      "model": "dustydecorations:block/scattered_papers"
+      "model": "dustydecorations:block/scattered_papers_0"
     },
     "facing=north,texture=1": {
       "model": "dustydecorations:block/scattered_papers_1"
@@ -29,7 +29,7 @@
       "model": "dustydecorations:block/scattered_papers_3"
     },
     "facing=south,texture=0": {
-      "model": "dustydecorations:block/scattered_papers",
+      "model": "dustydecorations:block/scattered_papers_0",
       "y": 180
     },
     "facing=south,texture=1": {
@@ -45,7 +45,7 @@
       "y": 180
     },
     "facing=west,texture=0": {
-      "model": "dustydecorations:block/scattered_papers",
+      "model": "dustydecorations:block/scattered_papers_0",
       "y": 270
     },
     "facing=west,texture=1": {

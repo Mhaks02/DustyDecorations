@@ -2,6 +2,7 @@ package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -17,6 +18,8 @@ public class HangingFishBlock extends HorizontalDirectionalBlock {
 
     public HangingFishBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -33,9 +36,6 @@ public class HangingFishBlock extends HorizontalDirectionalBlock {
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         switch (state.getValue(FACING)) {
-            case NORTH -> {
-                return SHAPE_Z;
-            }
             case EAST, WEST -> {
                 return SHAPE_X;
             }

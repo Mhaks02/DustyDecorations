@@ -25,8 +25,9 @@ public class LargeShelfBlock extends HorizontalDirectionalBlock implements Simpl
 
     public LargeShelfBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override

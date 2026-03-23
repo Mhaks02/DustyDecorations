@@ -62,7 +62,6 @@ public class ModBlocks {
             () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(OAK_BANISTER.get())
             ));
 
-    //TODO: make them resourcepack compatible
     public static final RegistryObject<Block, Block> OAK_LARGE_SHELF = registerBlock("oak_large_shelf",
             () -> new LargeShelfBlock(BlockBehaviour.Properties.of()
                     .strength(2.5f)
@@ -100,7 +99,6 @@ public class ModBlocks {
             () -> new LargeShelfBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LARGE_SHELF.get())
             ));
 
-    //TODO: VoxelShapes can be simplified with a Shapes.or
     public static final RegistryObject<Block, Block> EMPTY_BARREL = registerBlock("empty_barrel",
             () -> new EmptyBarrelBlock(BlockBehaviour.Properties.of()
                     .strength(2.5f)
@@ -228,7 +226,6 @@ public class ModBlocks {
             ));
 
     //TODO: lantern sound, strength, instabreak?, etc...
-    // TODO: CHANGE ANIMATION TO NEW ONE
     public static final RegistryObject<Block, Block> PAPER_LANTERN = registerBlock("paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
@@ -290,17 +287,17 @@ public class ModBlocks {
                     .sound(SoundType.COPPER)
             )); //TODO: fence tags
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE_GATE = registerBlock("corrugated_metal_fence_gate",
-            () -> new RustedCorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+            () -> new CorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_DOOR = registerBlock("corrugated_metal_door",
-            () -> new RustedCorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+            () -> new CorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_TRAPDOOR = registerBlock("corrugated_metal_trapdoor",
-            () -> new RustedCorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+            () -> new CorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
             ));
@@ -347,17 +344,17 @@ public class ModBlocks {
                     .sound(SoundType.COPPER)
             )); //TODO: fence tags
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_FENCE_GATE = registerBlock("rusted_corrugated_metal_fence_gate",
-            () -> new RustedCorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+            () -> new CorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_DOOR = registerBlock("rusted_corrugated_metal_door",
-            () -> new RustedCorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+            () -> new CorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_TRAPDOOR = registerBlock("rusted_corrugated_metal_trapdoor",
-            () -> new RustedCorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
+            () -> new CorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
             ));
@@ -377,7 +374,6 @@ public class ModBlocks {
                     .sound(SoundType.COPPER)
             ));
 
-    //TODO: propagateSkyLightDown or something
     public static final RegistryObject<Block, Block> CREAM_SEAGLASS = registerBlock("cream_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
@@ -545,6 +541,7 @@ public class ModBlocks {
             ));
 
     //TODO: find better names maybe
+    //TODO: brushing
     public static final RegistryObject<Block, Block> SEAGLASS_SAND = registerBlock("seaglass_sand",
             () -> new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.of()
                     .sound(SoundType.SAND)
@@ -554,7 +551,7 @@ public class ModBlocks {
                     .sound(SoundType.GRAVEL)
             ));
 
-    //TODO: la hitbox est pas dingue tbh
+    //TODO: copper chain connect blockstate
     public static final RegistryObject<Block, Block> RUSTED_ANCHOR = registerBlock("rusted_anchor",
             () -> new RustedAnchorBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
@@ -565,7 +562,6 @@ public class ModBlocks {
                     .strength(.6f)
                     .sound(SoundType.WOOL)
             ));
-    //TODO: 3.5 pixels thickness au lieu de 4
     public static final RegistryObject<Block, Block> DISPLAYED_OARS = registerBlock("displayed_oars",
             () -> new DisplayedOarsBlock(BlockBehaviour.Properties.of()
                     .strength(1.5f)
@@ -587,7 +583,6 @@ public class ModBlocks {
                     .sound(SoundType.WOOL)
                     .noCollission()
             ));
-    //TODO: determine if it's better to randomise the textures or to be able to choose by breaking and placing
     public static final RegistryObject<Block, Block> POSTERS = registerBlock("posters",
             () -> new PostersBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
@@ -665,7 +660,7 @@ public class ModBlocks {
                     .strength(1.5f)
                     .sound(SoundType.WOOD)
             ));
-    //TODO: particles have wood texture i need to change that
+    //TODO: particles have wood texture i need to change that back
     public static final RegistryObject<Block, Block> IRON_FRYING_PAN = registerBlock("iron_frying_pan",
             () -> new FryingPanBlock(BlockBehaviour.Properties.of()
                     .strength(2f)
@@ -681,7 +676,6 @@ public class ModBlocks {
                     .strength(2f)
                     .sound(SoundType.METAL)
             ));
-    //TODO: different voxelshapes for each blockstate
     public static final RegistryObject<Block, Block> POTS_AND_PANS = registerBlock("pots_and_pans",
             () -> new PotsAndPansBlock(BlockBehaviour.Properties.of()
                     .strength(2f)
@@ -692,7 +686,6 @@ public class ModBlocks {
                     .strength(1.5f)
                     .sound(SoundType.WOOD)
             ));
-    //TODO: different voxelshapes for each blockstate
     public static final RegistryObject<Block, Block> JARS = registerBlock("jars",
             () -> new JarsBlock(BlockBehaviour.Properties.of()
                     .strength(.3f)
@@ -811,7 +804,7 @@ public class ModBlocks {
                     .strength(6f)
                     .sound(SoundType.METAL)
             ));
-    public static final RegistryObject<Block, Block> GOLD_COINS = registerBlock("gold_coins",
+    public static final RegistryObject<Block, Block> GOLD_COINS_LAYER = registerBlock("gold_coins",
             () -> new GoldCoinsLayerBlock(BlockBehaviour.Properties.of()
                     .strength(.6f)
                     .sound(SoundType.METAL)
@@ -939,7 +932,6 @@ public class ModBlocks {
                     .sound(SoundType.SLIME_BLOCK)
                     .noOcclusion()
             ));
-    //TODO: lightLevel
     public static final RegistryObject<Block, Block> COWHIDE_RUG = registerBlock("cowhide_rug",
             () -> new CowhideRugBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
@@ -1135,7 +1127,6 @@ public class ModBlocks {
                     .strength(.8f)
                     .sound(SoundType.METAL)
             ));
-    //TODO: special blockstate when above anchor?
     public static final RegistryObject<Block, Block> GIANT_CHAIN = registerBlock("giant_chain",
             () -> new GiantChainBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
@@ -1584,7 +1575,7 @@ public class ModBlocks {
 //TODO: item lore
 //TODO: random Block pos
 //TODO: make all VoxelShapes protected instead of private
-//TODO: Regarder les cullfaces de TOUS les modèles
+//TODO: Check les cullfaces de TOUS les modèles
 
     public static final RegistryObject<Block, Block> DUSTY_DECORATIONS_BARREL = registerBlock("dusty_decorations_barrel",
         () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.APPLE_BARREL.get())));
