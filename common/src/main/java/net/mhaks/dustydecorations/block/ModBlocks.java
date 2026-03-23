@@ -844,12 +844,12 @@ public class ModBlocks {
             ));
 
     public static final RegistryObject<Block, Block> BIG_NAUTILUS_SHELL = registerBlock("big_nautilus_shell",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new BigNautilusShellBlock(BlockBehaviour.Properties.of()
                     .strength(2.25f)
                     .sound(SoundType.BONE_BLOCK)
             ));
-    public static final RegistryObject<Block, Block> BIG_NAUTILUS_SHELL_LANTERN = registerBlock("big_nautilus_shell_lantern",
-            () -> new Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block, Block> BIG_NAUTILUS_LANTERN = registerBlock("big_nautilus_lantern",
+            () -> new BigNautilusLanternBlock(BlockBehaviour.Properties.of()
                     .strength(2.25f)
                     .sound(SoundType.BONE_BLOCK)
                     .lightLevel(value -> 15)

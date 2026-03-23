@@ -25,8 +25,9 @@ public class BigCookingPotBlock extends HorizontalDirectionalBlock implements Si
 
     public BigCookingPotBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(WATERLOGGED, false));
+        this.registerDefaultState(defaultBlockState()
+                .setValue(WATERLOGGED, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -34,7 +35,6 @@ public class BigCookingPotBlock extends HorizontalDirectionalBlock implements Si
         return CODEC;
     }
 
-    //TODO: full model shape?
     private static final VoxelShape SHAPE =
             Block.box(2, 0, 2, 14, 8, 14);
 

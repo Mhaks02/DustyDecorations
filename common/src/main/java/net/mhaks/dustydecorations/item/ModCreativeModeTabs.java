@@ -233,7 +233,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_TILE_SLAB.get());
                         output.accept(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK.get());
                         output.accept(ModBlocks.BIG_NAUTILUS_SHELL.get());
-                        output.accept(ModBlocks.BIG_NAUTILUS_SHELL_LANTERN.get());
+                        output.accept(ModBlocks.BIG_NAUTILUS_LANTERN.get());
                         output.accept(ModBlocks.COLD_NAUTILUS_WIND_CHIME.get());
 
                         output.accept(ModBlocks.BURLAP_BLOCK.get());

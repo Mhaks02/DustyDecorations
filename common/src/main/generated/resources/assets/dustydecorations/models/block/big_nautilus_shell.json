@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "dustydecorations:block/big_nautilus_shell_bottom",
+    "east": "dustydecorations:block/big_nautilus_shell_right",
+    "north": "dustydecorations:block/big_nautilus_shell_front",
+    "particle": "dustydecorations:block/big_nautilus_shell_right",
+    "south": "dustydecorations:block/big_nautilus_shell_top",
+    "up": "dustydecorations:block/big_nautilus_shell_top",
+    "west": "dustydecorations:block/big_nautilus_shell_left"
+  }
+}
