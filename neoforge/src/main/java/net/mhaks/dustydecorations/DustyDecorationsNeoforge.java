@@ -186,6 +186,9 @@ public class DustyDecorationsNeoforge {
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HANGING_SAUSAGES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WRAPPED_MEAT.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COWHIDE_RUG.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOOSHROOM_COWHIDE_RUG.get(), RenderType.cutout());
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_LIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_COPPER_LIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SHODDY_COPPER_LIGHT.get(), RenderType.translucent());

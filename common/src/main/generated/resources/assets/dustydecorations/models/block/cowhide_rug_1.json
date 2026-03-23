@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_cowhide_rug",
+  "textures": {
+    "0": "dustydecorations:block/cowhide_rug/1"
+  }
+}

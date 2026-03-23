@@ -930,6 +930,17 @@ public class ModBlocks {
                     .noOcclusion()
             ));
     //TODO: lightLevel
+    public static final RegistryObject<Block, Block> COWHIDE_RUG = registerBlock("cowhide_rug",
+            () -> new CowhideRugBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+    public static final RegistryObject<Block, Block> MOOSHROOM_COWHIDE_RUG = registerBlock("mooshroom_cowhide_rug",
+            () -> new MooshroomCowhideRugBlock(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.WOOL)
+            ));
+
     public static final RegistryObject<Block, Block> COPPER_LIGHT = registerBlock("copper_light",
             () -> new WeatheringCopperLightBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of()
                     .strength(.2f)
