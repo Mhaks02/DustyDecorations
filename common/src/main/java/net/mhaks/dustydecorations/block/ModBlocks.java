@@ -155,7 +155,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> STELLAR_WALLPAPER_BLOCK = registerBlock("stellar_wallpaper",
-            () -> new WallpaperBlock(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
+            () -> new StellarWallpaperBlock(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())
             ));
     public static final RegistryObject<Block, Block> PUMPKIN_WALLPAPER_BLOCK = registerBlock("pumpkin_wallpaper",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(SUNFLOWER_WALLPAPER_BLOCK.get())

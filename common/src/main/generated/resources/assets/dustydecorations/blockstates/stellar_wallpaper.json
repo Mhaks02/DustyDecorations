@@ -1,7 +1,7 @@
 {
   "variants": {
     "texture=0": {
-      "model": "dustydecorations:block/stellar_wallpaper"
+      "model": "dustydecorations:block/stellar_wallpaper_0"
     },
     "texture=1": {
       "model": "dustydecorations:block/stellar_wallpaper_1"
