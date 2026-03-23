@@ -2,10 +2,7 @@ package net.mhaks.dustydecorations.block.entity;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.block.entity.custom.CameraQuadropodBlockEntity;
-import net.mhaks.dustydecorations.block.entity.custom.PaperLanternBlockEntity;
-import net.mhaks.dustydecorations.block.entity.custom.ScarecrowBlockEntity;
-import net.mhaks.dustydecorations.block.entity.custom.VintageCashRegisterBlockEntity;
+import net.mhaks.dustydecorations.block.entity.custom.*;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -45,11 +42,18 @@ public class ModBlockEntityTypes {
                             ModBlocks.PUMPKIN_SCARECROW.get()
                     ).build(null));
 
-    public static final RegistryObject<BlockEntityType<?>, BlockEntityType<VintageCashRegisterBlockEntity>> CASH_REGISTER_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("cash_register",
+    public static final RegistryObject<BlockEntityType<?>, BlockEntityType<VintageCashRegisterBlockEntity>> VINTAGE_CASH_REGISTER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("vintage_cash_register_block_entity",
                     () -> BlockEntityType.Builder.of(
                             VintageCashRegisterBlockEntity::new,
                             ModBlocks.VINTAGE_CASH_REGISTER.get()
+                    ).build(null));
+
+    public static final RegistryObject<BlockEntityType<?>, BlockEntityType<NautilusWindChimeBlockEntity>> NAUTILUS_WIND_CHIME_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("nautilus_wind_chime_block_entity",
+                    () -> BlockEntityType.Builder.of(
+                            NautilusWindChimeBlockEntity::new,
+                            ModBlocks.COLD_NAUTILUS_WIND_CHIME.get()
                     ).build(null));
 
 
