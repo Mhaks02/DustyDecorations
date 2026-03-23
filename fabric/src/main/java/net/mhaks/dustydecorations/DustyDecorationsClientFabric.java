@@ -2,11 +2,15 @@ package net.mhaks.dustydecorations;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
+import net.mhaks.dustydecorations.block.entity.client.NautilusWindChimeBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
+import net.mhaks.dustydecorations.client.DustyDecorationsClient;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -16,6 +20,9 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 public class DustyDecorationsClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        DustyDecorationsClient.registerRenderers(EntityRendererRegistry::register, BlockEntityRenderers::register);
+
         MenuScreens.register(ModMenuTypes.VINTAGE_CASH_REGISTER_MENU.get(), VintageCashRegisterScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_BANISTER.get(), RenderType.cutout());
@@ -47,8 +54,6 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PURPLE_WOOL_AWNING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
-
-        BlockEntityRenderers.register(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
@@ -157,8 +162,6 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMERA.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOVIE_CAMERA.get(), RenderType.translucent());
 
-        BlockEntityRenderers.register(ModBlockEntityTypes.CAMERA_QUADROPOD_BLOCK_ENTITY.get(), CameraQuadropodBlockRenderer::new);
-
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get(), RenderType.cutout());
@@ -180,8 +183,6 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BEET_O_LANTERN.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BEETROOT_SCARECROW.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PUMPKIN_SCARECROW.get(), RenderType.cutout());
-
-        BlockEntityRenderers.register(ModBlockEntityTypes.SCARECROW_BLOCK_ENTITY.get(), ScarecrowBlockRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MINI_SNOWMAN.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FALL_GARLAND.get(), RenderType.cutout());

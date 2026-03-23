@@ -3,14 +3,21 @@ package net.mhaks.dustydecorations;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
+import net.mhaks.dustydecorations.block.entity.client.NautilusWindChimeBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
+import net.mhaks.dustydecorations.client.DustyDecorationsClient;
+import net.mhaks.dustydecorations.entity.ModEntityTypes;
+import net.mhaks.dustydecorations.entity.client.NautilusGolemRenderer;
+import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.animal.AbstractGolem;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,6 +26,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 
 @Mod(ModConstants.MOD_ID)
 public class DustyDecorationsNeoforge {
@@ -38,6 +46,11 @@ public class DustyDecorationsNeoforge {
     public static class ClientModEvents {
 
         @SubscribeEvent
+        public static void registerAttributes(EntityAttributeCreationEvent event) {
+            event.put(ModEntityTypes.NAUTILUS_GOLEM.get(), NautilusGolemEntity.createAttributes().build());
+        }
+
+        @SubscribeEvent
         public static void registerScreen(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.VINTAGE_CASH_REGISTER_MENU.get(), VintageCashRegisterScreen::new);
         }
@@ -48,6 +61,9 @@ public class DustyDecorationsNeoforge {
             // Some client setup code
             ModConstants.LOGGER.info("HELLO FROM CLIENT SETUP");
             ModConstants.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            DustyDecorationsClient.registerRenderers(EntityRenderers::register, BlockEntityRenderers::register);
+
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_BANISTER.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_BANISTER.get(), RenderType.cutout());
@@ -78,8 +94,6 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_WOOL_AWNING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_WOOL_AWNING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_WOOL_AWNING.get(), RenderType.cutout());
-
-            BlockEntityRenderers.register(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
@@ -181,8 +195,6 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CAMERA.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOVIE_CAMERA.get(), RenderType.cutout());
 
-            BlockEntityRenderers.register(ModBlockEntityTypes.CAMERA_QUADROPOD_BLOCK_ENTITY.get(), CameraQuadropodBlockRenderer::new);
-
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.APPLE_WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get(), RenderType.cutout());
@@ -204,8 +216,6 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BEET_O_LANTERN.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BEETROOT_SCARECROW.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PUMPKIN_SCARECROW.get(), RenderType.cutout());
-
-            BlockEntityRenderers.register(ModBlockEntityTypes.SCARECROW_BLOCK_ENTITY.get(), ScarecrowBlockRenderer::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_SNOWMAN.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FALL_GARLAND.get(), RenderType.cutout());
