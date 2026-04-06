@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "minecraft:acacia_fence"
+    }
+  },
+  "pattern": [
+    "TTT",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:acacia_banister"
+  }
+}
