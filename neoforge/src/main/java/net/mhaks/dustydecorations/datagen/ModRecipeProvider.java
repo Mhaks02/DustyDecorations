@@ -28,8 +28,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ACACIA_BANISTER.get())
                 .pattern("TTT")
-                .pattern(" T ")
+                .pattern(" H ")
                 .define('T', Blocks.ACACIA_FENCE)
+                .define('H', Blocks.LADDER)
                 .unlockedBy("has_item", has(ItemTags.LOGS))
                 .save(recipeOutput);
 

@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "H": {
+      "item": "minecraft:ladder"
+    },
     "T": {
       "item": "minecraft:acacia_fence"
     }
   },
   "pattern": [
     "TTT",
-    " T "
+    " H "
   ],
   "result": {
     "count": 1,
