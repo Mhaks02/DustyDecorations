@@ -1,14 +1,8 @@
 package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
-import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
-import net.mhaks.dustydecorations.block.entity.client.NautilusWindChimeBlockRenderer;
-import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
-import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
 import net.mhaks.dustydecorations.client.DustyDecorationsClient;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
-import net.mhaks.dustydecorations.entity.client.NautilusGolemRenderer;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
@@ -17,7 +11,6 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.entity.animal.AbstractGolem;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -205,7 +198,7 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CARROT_WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTATO_WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BEETROOT_WICKER_BASKET.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PICKLE_WICKER_BASKET.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SEA_PICKLE_WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COD_WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SALMON_WICKER_BASKET.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_PETALS_WICKER_BASKET.get(), RenderType.cutout());

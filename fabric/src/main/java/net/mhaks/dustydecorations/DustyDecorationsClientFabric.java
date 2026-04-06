@@ -2,14 +2,8 @@ package net.mhaks.dustydecorations;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
-import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
-import net.mhaks.dustydecorations.block.entity.client.NautilusWindChimeBlockRenderer;
-import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
-import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
 import net.mhaks.dustydecorations.client.DustyDecorationsClient;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
@@ -172,7 +166,7 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CARROT_WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTATO_WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BEETROOT_WICKER_BASKET.get(), RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PICKLE_WICKER_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SEA_PICKLE_WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COD_WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SALMON_WICKER_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_PETALS_WICKER_BASKET.get(), RenderType.cutout());

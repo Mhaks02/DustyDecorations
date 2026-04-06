@@ -276,7 +276,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CARROT_WICKER_BASKET.get());
                         output.accept(ModBlocks.POTATO_WICKER_BASKET.get());
                         output.accept(ModBlocks.BEETROOT_WICKER_BASKET.get());
-                        output.accept(ModBlocks.PICKLE_WICKER_BASKET.get());
+                        output.accept(ModBlocks.SEA_PICKLE_WICKER_BASKET.get());
                         output.accept(ModBlocks.COD_WICKER_BASKET.get());
                         output.accept(ModBlocks.SALMON_WICKER_BASKET.get());
                         output.accept(ModBlocks.PINK_PETALS_WICKER_BASKET.get());

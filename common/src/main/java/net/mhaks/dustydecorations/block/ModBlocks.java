@@ -1017,7 +1017,7 @@ public class ModBlocks {
     public static final RegistryObject<Block, Block> BEETROOT_WICKER_BASKET = registerBlock("beetroot_wicker_basket",
             () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
             ));
-    public static final RegistryObject<Block, Block> PICKLE_WICKER_BASKET = registerBlock("pickle_wicker_basket",
+    public static final RegistryObject<Block, Block> SEA_PICKLE_WICKER_BASKET = registerBlock("sea_pickle_wicker_basket",
             () -> new WickerBasketBlock(BlockBehaviour.Properties.ofFullCopy(WICKER_BASKET.get())
             ));
     public static final RegistryObject<Block, Block> COD_WICKER_BASKET = registerBlock("cod_wicker_basket",

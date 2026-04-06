@@ -313,7 +313,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wickerBasketProduce(ModBlocks.CARROT_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.POTATO_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.BEETROOT_WICKER_BASKET);
-        wickerBasketProduce(ModBlocks.PICKLE_WICKER_BASKET);
+        wickerBasketProduce(ModBlocks.SEA_PICKLE_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.COD_WICKER_BASKET);
         wickerBasketProduce(ModBlocks.SALMON_WICKER_BASKET);
         wickerBasketFlowers(ModBlocks.PINK_PETALS_WICKER_BASKET);
