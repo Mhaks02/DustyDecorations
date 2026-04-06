@@ -24,7 +24,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class ClutteredSmallShelfBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_6;
+    public static final IntegerProperty MODEL = ModConstants.MODEL_6;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final MapCodec<ClutteredSmallShelfBlock> CODEC = simpleCodec(ClutteredSmallShelfBlock::new);
 
@@ -32,7 +32,7 @@ public class ClutteredSmallShelfBlock extends HorizontalDirectionalBlock impleme
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(TEXTURE, 0)
+                .setValue(MODEL, 0)
                 .setValue(FACING, Direction.NORTH));
     }
 
@@ -92,11 +92,11 @@ public class ClutteredSmallShelfBlock extends HorizontalDirectionalBlock impleme
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         this.registerDefaultState(defaultBlockState()
-                .setValue(TEXTURE, RandomSource.create().nextInt(0, 6)));
+                .setValue(MODEL, RandomSource.create().nextInt(0, 6)));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, TEXTURE);
+        builder.add(FACING, WATERLOGGED, MODEL);
     }
 }

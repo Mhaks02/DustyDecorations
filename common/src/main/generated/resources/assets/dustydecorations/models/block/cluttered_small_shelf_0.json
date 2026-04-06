@@ -1,6 +1,0 @@
-{
-  "parent": "dustydecorations:block/template_cluttered_small_shelf",
-  "textures": {
-    "0": "dustydecorations:block/cluttered_small_shelf/0"
-  }
-}

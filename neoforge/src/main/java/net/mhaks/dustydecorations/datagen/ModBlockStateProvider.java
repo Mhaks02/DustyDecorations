@@ -2,7 +2,6 @@ package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.block.custom.*;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -240,10 +239,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockAndItem(ModBlocks.BIG_COOKING_POT);
         fourStackedHorizontalBlockAndItem(ModBlocks.POTS_AND_PANS);
         customBlockNoItem(ModBlocks.DECORATIVE_BOWL);
-        sixTexturesCustomHorizontalBlockAndItem(ModBlocks.JARS);
+        sixModelsCustomHorizontalBlockAndItem(ModBlocks.JARS);
         threeStackedHorizontalBlockAndFlatItem(ModBlocks.HONEY_JAR);
         customHorizontalBlockAndFlatItem(ModBlocks.INK_AND_QUILL);
-        sixTexturesCustomHorizontalBlockAndItem(ModBlocks.CLUTTERED_SMALL_SHELF);
+        sixModelsCustomHorizontalBlockAndItem(ModBlocks.CLUTTERED_SMALL_SHELF);
         customHorizontalBlockAndItem(ModBlocks.EMPTY_SMALL_SHELF);
         threeTexturesCustomHorizontalBlockAndItem(ModBlocks.SMALL_BOOKSHELF);
         threeTexturesCustomHorizontalBlockAndItem(ModBlocks.BOOKS);
@@ -593,6 +592,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
             int i = blockState.getValue(ModConstants.TEXTURE_6);
             ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
                     .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+        });
+        blockItem(block, "_0");
+    }
+
+    private void sixModelsCustomHorizontalBlockAndItem(RegistryObject<Block, Block> block) {
+        String blockPath = block.getId().getPath();
+        getVariantBuilder(block.get()).forAllStates(blockState -> {
+            int i = blockState.getValue(ModConstants.MODEL_6);
+            ModelFile model = models().getExistingFile(modLoc(BLOCK_FOLDER + blockPath + "_" + i));
             Function<BlockState, ModelFile> modelFunc = ($ -> model);
             return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });

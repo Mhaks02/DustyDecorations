@@ -1,16 +1,15 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-	"ambientocclusion": false,
 	"render_type": "minecraft:cutout",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "#0",
-		"particle": "#0"
+		"0": "dustydecorations:block/jars/3",
+		"particle": "dustydecorations:block/jars/3"
 	},
 	"elements": [
 		{
-			"name": "jar_1",
+			"name": "jar_0",
 			"from": [7, 0, 6],
 			"to": [15, 10, 14],
 			"faces": {
@@ -23,7 +22,7 @@
 			}
 		},
 		{
-			"name": "jar_2",
+			"name": "jar_1",
 			"from": [1, 0, 4],
 			"to": [7, 8, 10],
 			"faces": {
@@ -36,7 +35,7 @@
 			}
 		},
 		{
-			"name": "jar_3",
+			"name": "jar_2",
 			"from": [7, 0, 2],
 			"to": [11, 12, 6],
 			"faces": {
@@ -62,10 +61,12 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 45, 0],
+			"translation": [0, 1, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, -135, 0],
+			"rotation": [0, 45, 0],
+			"translation": [0, 1, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"ground": {
@@ -76,6 +77,9 @@
 			"rotation": [30, -135, 0],
 			"scale": [0.625, 0.625, 0.625]
 		},
+		"head": {
+			"translation": [0, 14.75, 0]
+		},
 		"fixed": {
 			"scale": [0.5, 0.5, 0.5]
 		}
@@ -84,6 +88,7 @@
 		{
 			"name": "jars",
 			"origin": [8, 8, 8],
+			"scope": 0,
 			"color": 0,
 			"children": [0, 1, 2]
 		}
