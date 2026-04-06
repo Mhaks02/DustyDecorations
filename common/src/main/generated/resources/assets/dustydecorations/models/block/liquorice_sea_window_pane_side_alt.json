@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "render_type": "minecraft:translucent",
   "textures": {
-    "edge": "dustydecorations:block/sea_window_top",
+    "edge": "dustydecorations:block/liquorice_sea_window",
     "pane": "dustydecorations:block/liquorice_sea_window"
   }
 }

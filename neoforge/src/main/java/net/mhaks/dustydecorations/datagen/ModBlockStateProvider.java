@@ -2,6 +2,8 @@ package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.custom.GiantChainBlock;
+import net.mhaks.dustydecorations.block.custom.GoldCoinsLayerBlock;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -281,7 +283,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockAndItem(ModBlocks.BURLAP_AWNING);
         threeStackedHorizontalBlockAndItem(ModBlocks.BURLAP_SACK);
 
-        sailorFlagWithItem();
+        sailorFlagAndItem();
         fiveTexturesCustomHorizontalBlockAndFlatBlockItem(ModBlocks.SAILOR_PENNANT_FLAG);
 
         fourStackedHorizontalBlockAndItem(ModBlocks.CERAMIC_POT);
@@ -627,7 +629,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", BLOCK_FOLDER + textureBlock.getId().getPath());
     }
     private void seaWindowPaneBlockAndFlatItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> textureBlock) {
-        paneBlockWithRenderType((IronBarsBlock) block.get(), getBlockPath(textureBlock), modLoc(BLOCK_FOLDER + "sea_window" + TOP), TRANSLUCENT);
+        paneBlockWithRenderType((IronBarsBlock) block.get(), getBlockPath(textureBlock), getBlockPath(textureBlock), TRANSLUCENT);
         itemModels().withExistingParent(block.getId().getPath(), GENERATED).texture("layer0", BLOCK_FOLDER + textureBlock.getId().getPath());
     }
     private void goldCoinsLayerAndFlatItem() {
@@ -684,7 +686,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         flatItem(ModBlocks.SCATTERED_PAPERS);
     }
-    private void sailorFlagWithItem() {
+    private void sailorFlagAndItem() {
         String blockPath = ModBlocks.SAILOR_FLAG.getId().getPath();
         getVariantBuilder(ModBlocks.SAILOR_FLAG.get()).forAllStates(blockState -> {
             int i = blockState.getValue(ModConstants.TEXTURE_5);
