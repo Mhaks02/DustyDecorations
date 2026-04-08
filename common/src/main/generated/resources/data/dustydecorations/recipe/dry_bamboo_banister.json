@@ -4,7 +4,7 @@
   "group": "banisters",
   "key": {
     "F": {
-      "item": "minecraft:acacia_fence"
+      "item": "minecraft:bamboo_fence"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 6,
-    "id": "dustydecorations:acacia_banister"
+    "id": "dustydecorations:dry_bamboo_banister"
   }
 }

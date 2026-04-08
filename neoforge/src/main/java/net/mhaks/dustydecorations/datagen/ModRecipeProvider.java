@@ -26,12 +26,78 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ACACIA_BANISTER.get())
-                .pattern("TTT")
-                .pattern(" H ")
-                .define('T', Blocks.ACACIA_FENCE)
-                .define('H', Blocks.LADDER)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.OAK_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.OAK_FENCE)
                 .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SPRUCE_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.SPRUCE_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BIRCH_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.BIRCH_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.JUNGLE_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.JUNGLE_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ACACIA_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.ACACIA_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DARK_OAK_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.DARK_OAK_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MANGROVE_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.MANGROVE_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CHERRY_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.CHERRY_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BAMBOO_BANISTER.get(), 3)
+                .pattern("BFB")
+                .define('B', Items.BAMBOO_BLOCK)
+                .define('F', Blocks.BAMBOO_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRY_BAMBOO_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.BAMBOO_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CRIMSON_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.CRIMSON_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WARPED_BANISTER.get(), 6)
+                .pattern("FFF")
+                .define('F', Blocks.WARPED_FENCE)
+                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .group("banisters")
                 .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
