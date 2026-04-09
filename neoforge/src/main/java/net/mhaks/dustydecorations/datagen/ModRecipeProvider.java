@@ -54,7 +54,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         largeShelf(recipeOutput, ModBlocks.CRIMSON_LARGE_SHELF.get(), Blocks.CRIMSON_PLANKS);
         largeShelf(recipeOutput, ModBlocks.WARPED_LARGE_SHELF.get(), Blocks.WARPED_PLANKS);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.EMPTY_BARREL.get())
+                .requires(Blocks.BARREL)
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_wooden_slabs", has(ItemTags.WOODEN_SLABS))
                 .save(recipeOutput);
+        barrel(recipeOutput, ModBlocks.APPLE_BARREL.get(), Items.APPLE);
+        barrel(recipeOutput, ModBlocks.SWEET_BERRIES_BARREL.get(), Items.SWEET_BERRIES);
+        barrel(recipeOutput, ModBlocks.GLOW_BERRIES_BARREL.get(), Items.GLOW_BERRIES);
+        barrel(recipeOutput, ModBlocks.CARROT_BARREL.get(), Items.CARROT);
+        barrel(recipeOutput, ModBlocks.POTATO_BARREL.get(), Items.POTATO);
+        barrel(recipeOutput, ModBlocks.BEETROOT_BARREL.get(), Items.BEETROOT);
+        barrel(recipeOutput, ModBlocks.SEA_PICKLE_BARREL.get(), Items.SEA_PICKLE);
+        barrel(recipeOutput, ModBlocks.COD_BARREL.get(), Items.COD);
+        barrel(recipeOutput, ModBlocks.SALMON_BARREL.get(), Items.SALMON);
+
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -113,6 +128,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModBlocks.EMPTY_SMALL_SHELF.get())
                 .unlockedBy("has_planks", has(planks))
                 .group("large_shelves")
+                .save(recipeOutput);
+    }
+
+    protected static void barrel(RecipeOutput recipeOutput, ItemLike barrel, ItemLike ingredient) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, barrel)
+                .requires(ingredient)
+                .requires(Ingredient.of(Blocks.BARREL, ModBlocks.EMPTY_BARREL.get()))
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_wooden_slabs", has(ItemTags.WOODEN_SLABS))
+                .unlockedBy("has_apple", has(ingredient))
+                .group("barrels")
                 .save(recipeOutput);
     }
 

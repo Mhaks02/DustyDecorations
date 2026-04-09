@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "barrels",
+  "ingredients": [
+    {
+      "item": "minecraft:glow_berries"
+    },
+    [
+      {
+        "item": "minecraft:barrel"
+      },
+      {
+        "item": "dustydecorations:empty_barrel"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:glow_berries_barrel"
+  }
+}
