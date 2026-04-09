@@ -42,6 +42,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         banister(recipeOutput, ModBlocks.CRIMSON_BANISTER.get(), Blocks.CRIMSON_FENCE, Blocks.CRIMSON_PLANKS);
         banister(recipeOutput, ModBlocks.WARPED_BANISTER.get(), Blocks.WARPED_FENCE, Blocks.WARPED_PLANKS);
 
+        largeShelf(recipeOutput, ModBlocks.OAK_LARGE_SHELF.get(), Blocks.OAK_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.SPRUCE_LARGE_SHELF.get(), Blocks.SPRUCE_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.BIRCH_LARGE_SHELF.get(), Blocks.BIRCH_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.JUNGLE_LARGE_SHELF.get(), Blocks.JUNGLE_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.ACACIA_LARGE_SHELF.get(), Blocks.ACACIA_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.DARK_OAK_LARGE_SHELF.get(), Blocks.DARK_OAK_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.MANGROVE_LARGE_SHELF.get(), Blocks.MANGROVE_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.CHERRY_LARGE_SHELF.get(), Blocks.CHERRY_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.BAMBOO_LARGE_SHELF.get(), Blocks.BAMBOO_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.CRIMSON_LARGE_SHELF.get(), Blocks.CRIMSON_PLANKS);
+        largeShelf(recipeOutput, ModBlocks.WARPED_LARGE_SHELF.get(), Blocks.WARPED_PLANKS);
+
                 .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
@@ -90,6 +102,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', fence)
                 .unlockedBy("has_planks", has(hasPlanks))
                 .group("banisters")
+                .save(recipeOutput);
+    }
+
+    protected static void largeShelf(RecipeOutput recipeOutput, ItemLike largeShelf, ItemLike planks) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, largeShelf, 3)
+                .pattern("PPP")
+                .pattern("S  ")
+                .define('P', planks)
+                .define('S', ModBlocks.EMPTY_SMALL_SHELF.get())
+                .unlockedBy("has_planks", has(planks))
+                .group("large_shelves")
                 .save(recipeOutput);
     }
 

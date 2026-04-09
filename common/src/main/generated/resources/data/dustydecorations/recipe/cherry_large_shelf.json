@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "large_shelves",
+  "key": {
+    "P": {
+      "item": "minecraft:cherry_planks"
+    },
+    "S": {
+      "item": "dustydecorations:empty_small_shelf"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "S  "
+  ],
+  "result": {
+    "count": 3,
+    "id": "dustydecorations:cherry_large_shelf"
+  }
+}
