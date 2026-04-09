@@ -5,14 +5,11 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -26,78 +23,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.OAK_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.OAK_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SPRUCE_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.SPRUCE_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BIRCH_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.BIRCH_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.JUNGLE_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.JUNGLE_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ACACIA_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.ACACIA_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DARK_OAK_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.DARK_OAK_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MANGROVE_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.MANGROVE_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CHERRY_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.CHERRY_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
+        banister(recipeOutput, ModBlocks.OAK_BANISTER.get(), Blocks.OAK_FENCE, Blocks.OAK_PLANKS);
+        banister(recipeOutput, ModBlocks.SPRUCE_BANISTER.get(), Blocks.SPRUCE_FENCE, Blocks.SPRUCE_PLANKS);
+        banister(recipeOutput, ModBlocks.BIRCH_BANISTER.get(), Blocks.BIRCH_FENCE, Blocks.BIRCH_PLANKS);
+        banister(recipeOutput, ModBlocks.JUNGLE_BANISTER.get(), Blocks.JUNGLE_FENCE, Blocks.JUNGLE_PLANKS);
+        banister(recipeOutput, ModBlocks.ACACIA_BANISTER.get(), Blocks.ACACIA_FENCE, Blocks.ACACIA_PLANKS);
+        banister(recipeOutput, ModBlocks.DARK_OAK_BANISTER.get(), Blocks.DARK_OAK_FENCE, Blocks.DARK_OAK_PLANKS);
+        banister(recipeOutput, ModBlocks.MANGROVE_BANISTER.get(), Blocks.MANGROVE_FENCE, Blocks.MANGROVE_PLANKS);
+        banister(recipeOutput, ModBlocks.CHERRY_BANISTER.get(), Blocks.CHERRY_FENCE, Blocks.CHERRY_PLANKS);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BAMBOO_BANISTER.get(), 3)
                 .pattern("BFB")
                 .define('B', Items.BAMBOO_BLOCK)
                 .define('F', Blocks.BAMBOO_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
+                .unlockedBy("has_planks", has(Blocks.BAMBOO_PLANKS))
                 .group("banisters")
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRY_BAMBOO_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.BAMBOO_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CRIMSON_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.CRIMSON_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WARPED_BANISTER.get(), 6)
-                .pattern("FFF")
-                .define('F', Blocks.WARPED_FENCE)
-                .unlockedBy("has_item", has(ItemTags.LOGS))
-                .group("banisters")
+        banister(recipeOutput, ModBlocks.DRY_BAMBOO_BANISTER.get(), Blocks.BAMBOO_FENCE, Blocks.BAMBOO_PLANKS);
+        banister(recipeOutput, ModBlocks.CRIMSON_BANISTER.get(), Blocks.CRIMSON_FENCE, Blocks.CRIMSON_PLANKS);
+        banister(recipeOutput, ModBlocks.WARPED_BANISTER.get(), Blocks.WARPED_FENCE, Blocks.WARPED_PLANKS);
+
                 .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
@@ -138,6 +82,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, ModConstants.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, banister, 6)
+                .pattern("FFF")
+                .define('F', fence)
+                .unlockedBy("has_planks", has(hasPlanks))
+                .group("banisters")
+                .save(recipeOutput);
     }
 
 }
