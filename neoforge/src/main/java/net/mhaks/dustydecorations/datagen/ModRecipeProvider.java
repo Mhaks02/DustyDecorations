@@ -254,6 +254,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Tags.Items.ROPES)
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .save(recipeOutput);
+        hangingFish(recipeOutput, ModBlocks.HANGING_COD.get(), Items.COD);
+        hangingFish(recipeOutput, ModBlocks.HANGING_SALMON.get(), Items.SALMON);
 
 
 
@@ -422,6 +424,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
+    protected static void hangingFish(RecipeOutput recipeOutput, ItemLike hangingFish, ItemLike fish) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, hangingFish)
+                .pattern("~~~")
+                .pattern("###")
+                .define('~', Tags.Items.ROPES)
+                .define('#', fish)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy(getHasName(fish), has(fish))
                 .save(recipeOutput);
     }
 
