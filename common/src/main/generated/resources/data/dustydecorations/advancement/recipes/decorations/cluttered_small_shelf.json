@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_empty_small_shelf": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:empty_small_shelf"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_jars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:jars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:cluttered_small_shelf"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_jars",
+      "has_empty_small_shelf"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:cluttered_small_shelf"
+    ]
+  }
+}
