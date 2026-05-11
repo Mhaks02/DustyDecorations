@@ -381,6 +381,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.BOOK)
                 .unlockedBy("has_book", has(Items.BOOK))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GLOBE.get())
+                .pattern(" @")
+                .pattern("^#")
+                .pattern(" ^")
+                .define('@', Items.MAP)
+                .define('^', Items.COPPER_INGOT)
+                .define('#', Blocks.BLUE_WOOL)
+                .unlockedBy("has_map", has(Items.MAP))
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_blue_wool", has(Blocks.BLUE_WOOL))
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
