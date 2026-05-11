@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:blue_wool"
+    },
+    "@": {
+      "item": "minecraft:bone_meal"
+    },
+    "~": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "~@",
+    "~#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:sailor_wallpaper"
+  }
+}

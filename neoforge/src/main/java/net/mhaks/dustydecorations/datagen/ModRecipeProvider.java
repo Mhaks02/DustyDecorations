@@ -68,6 +68,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         barrel(recipeOutput, ModBlocks.SEA_PICKLE_BARREL.get(), Items.SEA_PICKLE);
         barrel(recipeOutput, ModBlocks.COD_BARREL.get(), Items.COD);
         barrel(recipeOutput, ModBlocks.SALMON_BARREL.get(), Items.SALMON);
+        wallpaper(recipeOutput, ModBlocks.SUNFLOWER_WALLPAPER_BLOCK.get(), Blocks.WHITE_WOOL, Items.SUNFLOWER);
+        wallpaper(recipeOutput, ModBlocks.REGAL_WALLPAPER_BLOCK.get(), Blocks.RED_WOOL, Items.GOLD_NUGGET);
+        wallpaper(recipeOutput, ModBlocks.VINE_WALLPAPER_BLOCK.get(), Blocks.LIME_WOOL, Blocks.VINE);
+        wallpaper(recipeOutput, ModBlocks.MONSTER_WALLPAPER_BLOCK.get(), Blocks.GREEN_WOOL, Items.ROTTEN_FLESH);
+        wallpaper(recipeOutput, ModBlocks.SAILOR_WALLPAPER_BLOCK.get(), Blocks.BLUE_WOOL, Items.BONE_MEAL);   //iron_nugget instead?
+        wallpaper(recipeOutput, ModBlocks.COPPER_WALLPAPER_BLOCK.get(), Blocks.CYAN_WOOL, Items.COPPER_INGOT);
+        wallpaper(recipeOutput, ModBlocks.STELLAR_WALLPAPER_BLOCK.get(), Blocks.BLACK_WOOL, Items.GLOWSTONE_DUST);
+        wallpaper(recipeOutput, ModBlocks.PUMPKIN_WALLPAPER_BLOCK.get(), Blocks.ORANGE_WOOL, Items.PUMPKIN_SEEDS);
+        wallpaper(recipeOutput, ModBlocks.SOUL_WALLPAPER_BLOCK.get(), Blocks.PURPLE_WOOL, Blocks.SOUL_SAND);
+        wallpaper(recipeOutput, ModBlocks.FOREST_FESTIVE_WALLPAPER_BLOCK.get(), Ingredient.of(Blocks.WHITE_WOOL, Blocks.GREEN_WOOL, Blocks.RED_WOOL), Ingredient.of(ItemTags.SAPLINGS));
+        wallpaper(recipeOutput, ModBlocks.STRIPED_FESTIVE_WALLPAPER_BLOCK.get(), Ingredient.of(Blocks.WHITE_WOOL, Blocks.GREEN_WOOL, Blocks.RED_WOOL), Items.SUGAR);
+        wallpaper(recipeOutput, ModBlocks.SNOWMEN_WALLPAPER_BLOCK.get(), Blocks.LIGHT_BLUE_WOOL, Ingredient.of(Blocks.PUMPKIN, Blocks.JACK_O_LANTERN));
+        wallpaper(recipeOutput, ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK.get(), Blocks.LIGHT_BLUE_WOOL, Items.SNOWBALL);
+
 
 
 

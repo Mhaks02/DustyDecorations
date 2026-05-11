@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:green_wool"
+    },
+    "@": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "~": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "~@",
+    "~#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:monster_wallpaper"
+  }
+}

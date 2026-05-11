@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:lime_wool"
+    },
+    "@": {
+      "item": "minecraft:vine"
+    },
+    "~": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "~@",
+    "~#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:vine_wallpaper"
+  }
+}
