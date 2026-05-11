@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_oak_log"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "I##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:cutting_board"
+  }
+}
