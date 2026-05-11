@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "seaglass_lamps",
+  "key": {
+    "#": {
+      "item": "dustydecorations:mint_seaglass"
+    },
+    "@": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "I": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:mint_seaglass_lamp"
+  }
+}

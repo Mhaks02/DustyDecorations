@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_liquorice_seaglass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:liquorice_seaglass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_redstone_lamp": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:redstone_lamp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:liquorice_seaglass_lamp"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_liquorice_seaglass",
+      "has_redstone_lamp"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:liquorice_seaglass_lamp"
+    ]
+  }
+}
