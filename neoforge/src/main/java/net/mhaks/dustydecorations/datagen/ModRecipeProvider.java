@@ -136,10 +136,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     protected static void largeShelf(RecipeOutput recipeOutput, ItemLike largeShelf, ItemLike planks) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, largeShelf, 3)
-                .pattern("PPP")
-                .pattern("S  ")
-                .define('P', planks)
-                .define('S', ModBlocks.EMPTY_SMALL_SHELF.get())
+                .pattern("###")
+                .pattern("@  ")
+                .define('#', planks)
+                .define('@', ModBlocks.EMPTY_SMALL_SHELF.get())
                 .unlockedBy("has_planks", has(planks))
                 .group("large_shelves")
                 .save(recipeOutput);
