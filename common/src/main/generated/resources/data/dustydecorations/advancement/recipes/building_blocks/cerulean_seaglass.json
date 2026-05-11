@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cerulean_seaglass_fragments": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:cerulean_seaglass_fragments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:cerulean_seaglass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cerulean_seaglass_fragments"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:cerulean_seaglass"
+    ]
+  }
+}

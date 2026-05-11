@@ -119,6 +119,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         paperLantern(recipeOutput, ModBlocks.PILLAGER_PAPER_LANTERN.get(), Items.ARROW);    //iron_axe?
         paperLantern(recipeOutput, ModBlocks.WARDEN_PAPER_LANTERN.get(), Items.ECHO_SHARD);
 
+        //Might change that one to be the same as Seaglass Windows but without the plank.
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HAZEL_SEAGLASS.get(), ModItems.HAZEL_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIQUORICE_SEAGLASS.get(), ModItems.LIQUORICE_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOCHA_SEAGLASS.get(), ModItems.MOCHA_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCARLET_SEAGLASS.get(), ModItems.SCARLET_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HONEY_SEAGLASS.get(), ModItems.HONEY_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MINT_SEAGLASS.get(), ModItems.MINT_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TEAL_SEAGLASS.get(), ModItems.TEAL_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERULEAN_SEAGLASS.get(), ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get(), "seaglass");
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TAUPE_SEAGLASS.get(), ModItems.TAUPE_SEAGLASS_FRAGMENTS.get(), "seaglass");
+
 
 
 
@@ -160,6 +172,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, ModConstants.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void twoByTwoPacker(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike result, ItemLike ingredient, @Nullable String group) {
+        twoByTwoPacker(recipeOutput, recipeCategory, result, 1, ingredient, group);
+    }
+    protected static void twoByTwoPacker(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike result, int count, ItemLike ingredient, @Nullable String group) {
+        ShapedRecipeBuilder.shaped(recipeCategory, result, count)   //1 instead?
+                .pattern("##")
+                .pattern("##")
+                .define('#', ingredient)
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+                .group(group)
+                .save(recipeOutput);
     }
 
     protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
