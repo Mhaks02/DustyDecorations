@@ -157,6 +157,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
+    protected static void wallpaper(RecipeOutput recipeOutput, ItemLike wallpaper, ItemLike wool, ItemLike ingredient) {
+        wallpaper(recipeOutput, wallpaper, Ingredient.of(wool), Ingredient.of(ingredient));
+    }
+    protected static void wallpaper(RecipeOutput recipeOutput, ItemLike wallpaper, Ingredient wool, ItemLike ingredient) {
+        wallpaper(recipeOutput, wallpaper, wool, Ingredient.of(ingredient));
+    }
+    protected static void wallpaper(RecipeOutput recipeOutput, ItemLike wallpaper, ItemLike wool, Ingredient ingredient) {
+        wallpaper(recipeOutput, wallpaper, Ingredient.of(wool), ingredient);
+    }
+    protected static void wallpaper(RecipeOutput recipeOutput, ItemLike wallpaper, Ingredient wool, Ingredient ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, wallpaper, 8)
+                .pattern("~@")
+                .pattern("~#")
+                .define('~', Items.PAPER)
+                .define('#', wool)
+                .define('@', ingredient)
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .save(recipeOutput);
+    }
+
                 .save(recipeOutput);
     }
 
