@@ -321,6 +321,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.IRON_FRYING_PAN.get()), has(ModBlocks.IRON_FRYING_PAN.get()))
                 .unlockedBy(getHasName(ModBlocks.COPPER_FRYING_PAN.get()), has(ModBlocks.COPPER_FRYING_PAN.get()))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.JARS.get(), 8)
+                .pattern("@@")
+                .pattern("##")
+                .define('@', Tags.Items.GLASS_BLOCKS_CHEAP)
+                .define('#', ItemTags.TERRACOTTA)
+                .unlockedBy("has_terracotta", has(ItemTags.TERRACOTTA))
+                .unlockedBy("has_glass", has(Tags.Items.GLASS_BLOCKS_CHEAP))
+                .save(recipeOutput);
+
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
