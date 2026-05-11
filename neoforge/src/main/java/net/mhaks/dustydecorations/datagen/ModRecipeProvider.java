@@ -296,6 +296,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_stick", has(Items.STICK))
                 .unlockedBy("has_stripped_oak_log", has(Blocks.STRIPPED_OAK_LOG))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.KNIFE_AND_CUTTING_BOARD.get())
+                .requires(ModBlocks.CUTTING_BOARD.get())
+                .requires(Ingredient.of(ModBlocks.WEDGED_KNIFE.get(), ModBlocks.WEDGED_CLEAVER.get()))
+                .unlockedBy("has_cutting_board", has(ModBlocks.CUTTING_BOARD.get()))
+                .unlockedBy("has_wedged_knife", has(ModBlocks.WEDGED_KNIFE.get()))
+                .unlockedBy("has_wedged_cleaver", has(ModBlocks.WEDGED_CLEAVER.get()))
+                .save(recipeOutput);
 
 
 
