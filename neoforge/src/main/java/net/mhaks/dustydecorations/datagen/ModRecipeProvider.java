@@ -313,6 +313,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
                 .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.POTS_AND_PANS.get(), 4)
+                .requires(ModBlocks.BIG_COOKING_POT.get())
+                .requires(ModBlocks.IRON_FRYING_PAN.get())
+                .requires(ModBlocks.COPPER_FRYING_PAN.get())
+                .unlockedBy(getHasName(ModBlocks.BIG_COOKING_POT.get()), has(ModBlocks.BIG_COOKING_POT.get()))
+                .unlockedBy(getHasName(ModBlocks.IRON_FRYING_PAN.get()), has(ModBlocks.IRON_FRYING_PAN.get()))
+                .unlockedBy(getHasName(ModBlocks.COPPER_FRYING_PAN.get()), has(ModBlocks.COPPER_FRYING_PAN.get()))
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
