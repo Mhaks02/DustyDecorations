@@ -164,6 +164,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         threeByTwoPacker(recipeOutput, ModBlocks.CERULEAN_SEA_WINDOW_PANE.get(), ModBlocks.CERULEAN_SEA_WINDOW.get(), "sea_window_panes");
         threeByTwoPacker(recipeOutput, ModBlocks.TAUPE_SEA_WINDOW_PANE.get(), ModBlocks.TAUPE_SEA_WINDOW.get(), "sea_window_panes");
 
+        seaglassLamp(recipeOutput, ModBlocks.CREAM_SEAGLASS_LAMP.get(), ModBlocks.CREAM_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.HAZEL_SEAGLASS_LAMP.get(), ModBlocks.HAZEL_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.LIQUORICE_SEAGLASS_LAMP.get(), ModBlocks.LIQUORICE_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.MOCHA_SEAGLASS_LAMP.get(), ModBlocks.MOCHA_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.SCARLET_SEAGLASS_LAMP.get(), ModBlocks.SCARLET_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.HONEY_SEAGLASS_LAMP.get(), ModBlocks.HONEY_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.MINT_SEAGLASS_LAMP.get(), ModBlocks.MINT_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.TEAL_SEAGLASS_LAMP.get(), ModBlocks.TEAL_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.CERULEAN_SEAGLASS_LAMP.get(), ModBlocks.CERULEAN_SEAGLASS.get());
+        seaglassLamp(recipeOutput, ModBlocks.TAUPE_SEAGLASS_LAMP.get(), ModBlocks.TAUPE_SEAGLASS.get());
+
 
 
 
@@ -315,6 +326,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('@', ItemTags.PLANKS)
                 .unlockedBy(getHasName(fragment), has(fragment))
                 .group("sea_windows")
+                .save(recipeOutput);
+    }
+
+    protected static void seaglassLamp(RecipeOutput recipeOutput, ItemLike seaglassLamp, ItemLike seaglass) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, seaglassLamp)
+                .pattern(" # ")
+                .pattern("#@#")
+                .pattern(" I ")
+                .define('#', seaglass)
+                .define('@', Blocks.REDSTONE_LAMP)
+                .define('I', Items.COPPER_INGOT)
+                .unlockedBy(getHasName(seaglass), has(seaglass))
+                .unlockedBy("has_redstone_lamp", has(Blocks.REDSTONE_LAMP))
+                .group("seaglass_lamps")
                 .save(recipeOutput);
     }
 
