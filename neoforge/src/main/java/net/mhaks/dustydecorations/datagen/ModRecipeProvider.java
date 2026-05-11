@@ -330,6 +330,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_glass", has(Tags.Items.GLASS_BLOCKS_CHEAP))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.INK_AND_QUILL.get())
+                .pattern("F ")
+                .pattern("BI")
+                .pattern("# ")
+                .define('F', Items.FEATHER)
+                .define('B', Items.GLASS_BOTTLE)
+                .define('I', Items.INK_SAC)
+                .define('#', Items.COPPER_INGOT)        //  should be nugget from 1.21.9 and on
+                .unlockedBy("has_feather", has(Items.FEATHER))
+                .unlockedBy("has_glass_bottle", has(Items.GLASS_BOTTLE))
+                .unlockedBy("has_ink_sac", has(Items.INK_SAC))
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))    //  idem
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
