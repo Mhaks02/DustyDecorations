@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "@": {
+      "tag": "minecraft:wool"
+    },
+    "^": {
+      "item": "minecraft:iron_nugget"
+    },
+    "~": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "~#^",
+    " @ "
+  ],
+  "result": {
+    "count": 4,
+    "id": "dustydecorations:fishing_lures"
+  }
+}

@@ -403,6 +403,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
                 .unlockedBy("has_brown_wool", has(Blocks.BROWN_WOOL))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.FISHING_LURES.get(), 4)
+                .pattern("~#^")
+                .pattern(" @ ")
+                .define('~', Items.STRING)
+                .define('^', Items.IRON_NUGGET)
+                .define('#', Blocks.TRIPWIRE_HOOK)
+                .define('@', ItemTags.WOOL)
+                .unlockedBy("has_string", has(Items.STRING))
+                .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+                .unlockedBy("has_tripwire_hook", has(Blocks.TRIPWIRE_HOOK))
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
