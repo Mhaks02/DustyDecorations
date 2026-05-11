@@ -196,6 +196,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .unlockedBy("has_rope", has(Tags.Items.ROPES))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DISPLAYED_OARS.get())
+                .pattern("@ @")
+                .pattern("~I~")
+                .pattern("I I")
+                .define('@', Items.WOODEN_SHOVEL)
+                .define('~', Tags.Items.ROPES)
+                .define('I', Items.STICK)
+                .unlockedBy("has_shovel", has(ItemTags.SHOVELS))
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(recipeOutput);
 
 
 
