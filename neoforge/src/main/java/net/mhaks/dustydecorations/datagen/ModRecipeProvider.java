@@ -374,6 +374,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.BOOK)
                 .unlockedBy("has_book", has(Items.BOOK))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BOOK_STACK.get())
+                .pattern("#")
+                .pattern("#")
+                .pattern("#")
+                .define('#', Items.BOOK)
+                .unlockedBy("has_book", has(Items.BOOK))
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
