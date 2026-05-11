@@ -59,9 +59,17 @@ public class ModItems {
             () -> new Item(new Item.Properties()
             ));
 
+    public static final RegistryObject<Item, Item> CORRUGATED_METAL_INGOT = registerItem("corrugated_metal_ingot",
+            () -> new Item(new Item.Properties()
+            ));
+    public static final RegistryObject<Item, Item> CORRUGATED_METAL_NUGGET = registerItem("corrugated_metal_nugget",
+            () -> new Item(new Item.Properties()
+            ));
+
     public static final RegistryObject<Item, Item> BURLAP = registerItem("burlap",
             () -> new Item(new Item.Properties()
             ));
+
     public static final RegistryObject<Item, Item> RAW_BRATWURST = registerItem("raw_bratwurst_sausage",
             () -> new Item(new Item.Properties()
             ));
