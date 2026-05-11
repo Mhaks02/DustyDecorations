@@ -2,16 +2,20 @@ package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -175,6 +179,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         seaglassLamp(recipeOutput, ModBlocks.CERULEAN_SEAGLASS_LAMP.get(), ModBlocks.CERULEAN_SEAGLASS.get());
         seaglassLamp(recipeOutput, ModBlocks.TAUPE_SEAGLASS_LAMP.get(), ModBlocks.TAUPE_SEAGLASS.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.RUSTED_ANCHOR.get())
+                .pattern(" I ")
+                .pattern(" # ")
+                .pattern("###")
+                .define('#', ModItems.CORRUGATED_METAL_INGOT.get())
+                .define('I', Blocks.CHAIN)
+                .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
+                .save(recipeOutput);
 
 
 

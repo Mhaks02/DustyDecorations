@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "dustydecorations:corrugated_metal_ingot"
+    },
+    "I": {
+      "item": "minecraft:chain"
+    }
+  },
+  "pattern": [
+    " I ",
+    " # ",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:rusted_anchor"
+  }
+}
