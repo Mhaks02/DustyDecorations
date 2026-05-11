@@ -187,6 +187,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', Blocks.CHAIN)
                 .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIFE_PRESERVER.get())
+                .pattern("~#~")
+                .pattern("# #")
+                .pattern("~#~")
+                .define('#', ItemTags.WOOL)
+                .define('~', Tags.Items.ROPES)
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .unlockedBy("has_rope", has(Tags.Items.ROPES))
+                .save(recipeOutput);
 
 
 
