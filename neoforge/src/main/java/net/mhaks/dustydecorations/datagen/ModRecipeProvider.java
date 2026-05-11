@@ -82,6 +82,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wallpaper(recipeOutput, ModBlocks.SNOWMEN_WALLPAPER_BLOCK.get(), Blocks.LIGHT_BLUE_WOOL, Ingredient.of(Blocks.PUMPKIN, Blocks.JACK_O_LANTERN));
         wallpaper(recipeOutput, ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK.get(), Blocks.LIGHT_BLUE_WOOL, Items.SNOWBALL);
 
+        woolAwning(recipeOutput, ModBlocks.WHITE_WOOL_AWNING.get(), Blocks.WHITE_CARPET);
+        woolAwning(recipeOutput, ModBlocks.LIGHT_GRAY_WOOL_AWNING.get(), Blocks.LIGHT_GRAY_CARPET);
+        woolAwning(recipeOutput, ModBlocks.GRAY_WOOL_AWNING.get(), Blocks.GRAY_CARPET);
+        woolAwning(recipeOutput, ModBlocks.BLACK_WOOL_AWNING.get(), Blocks.BLACK_CARPET);
+        woolAwning(recipeOutput, ModBlocks.BROWN_WOOL_AWNING.get(), Blocks.BROWN_CARPET);
+        woolAwning(recipeOutput, ModBlocks.RED_WOOL_AWNING.get(), Blocks.RED_CARPET);
+        woolAwning(recipeOutput, ModBlocks.ORANGE_WOOL_AWNING.get(), Blocks.ORANGE_CARPET);
+        woolAwning(recipeOutput, ModBlocks.YELLOW_WOOL_AWNING.get(), Blocks.YELLOW_CARPET);
+        woolAwning(recipeOutput, ModBlocks.LIME_WOOL_AWNING.get(), Blocks.LIME_CARPET);
+        woolAwning(recipeOutput, ModBlocks.GREEN_WOOL_AWNING.get(), Blocks.GREEN_CARPET);
+        woolAwning(recipeOutput, ModBlocks.CYAN_WOOL_AWNING.get(), Blocks.CYAN_CARPET);
+        woolAwning(recipeOutput, ModBlocks.LIGHT_BLUE_WOOL_AWNING.get(), Blocks.LIGHT_BLUE_CARPET);
+        woolAwning(recipeOutput, ModBlocks.BLUE_WOOL_AWNING.get(), Blocks.BLUE_CARPET);
+        woolAwning(recipeOutput, ModBlocks.PURPLE_WOOL_AWNING.get(), Blocks.PURPLE_CARPET);
+        woolAwning(recipeOutput, ModBlocks.MAGENTA_WOOL_AWNING.get(), Blocks.MAGENTA_CARPET);
+        woolAwning(recipeOutput, ModBlocks.PINK_WOOL_AWNING.get(), Blocks.PINK_CARPET);
+        //TODO: Universal dyeing?
+
 
 
 
@@ -175,6 +193,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('@', ingredient)
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .unlockedBy("has_paper", has(Items.PAPER))
+                .save(recipeOutput);
+    }
+
+    protected static void woolAwning(RecipeOutput recipeOutput, ItemLike awning, ItemLike carpet) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, awning)
+                .pattern("## ")
+                .pattern(" @#")
+                .define('#', carpet)
+                .define('@', Items.STICK)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .group("wool_awnings")
                 .save(recipeOutput);
     }
 
