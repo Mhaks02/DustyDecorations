@@ -217,6 +217,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.PAPER, 3)
                 .unlockedBy("has_paper", has(Items.PAPER))
                 .save(recipeOutput);
+        twoByTwoPacker(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.POSTERS.get(), 4, Items.PAPER, null);
 
 
 
