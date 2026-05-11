@@ -207,6 +207,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy("has_stick", has(Items.STICK))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TREASURE_MAP.get())
+                .requires(Ingredient.of(Items.MAP, Items.FILLED_MAP))
+                .requires(Items.RED_DYE)
+                .unlockedBy("has_map", has(Items.MAP))
+                .unlockedBy("has_red_dye", has(Items.RED_DYE))
+                .save(recipeOutput);
 
 
 
