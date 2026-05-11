@@ -218,6 +218,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_paper", has(Items.PAPER))
                 .save(recipeOutput);
         twoByTwoPacker(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.POSTERS.get(), 4, Items.PAPER, null);
+        nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, Items.PAPER, RecipeCategory.DECORATIONS, ModBlocks.PAPER_STACK.get(),
+                getSimpleRecipeName(ModBlocks.PAPER_STACK.get()), null, getConversionRecipeName(Items.PAPER, ModBlocks.PAPER_STACK.get()), null); //3 instead of 1 obtained?
 
 
 
