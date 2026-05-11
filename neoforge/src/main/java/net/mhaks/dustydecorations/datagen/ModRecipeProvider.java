@@ -149,10 +149,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, barrel)
                 .requires(ingredient)
                 .requires(Ingredient.of(Blocks.BARREL, ModBlocks.EMPTY_BARREL.get()))
+                // has_barrel instead?
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
                 .unlockedBy("has_wooden_slabs", has(ItemTags.WOODEN_SLABS))
-                .unlockedBy("has_apple", has(ingredient))
-                .group("barrels")
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+//                .group("barrels")
+                .save(recipeOutput);
+    }
+
                 .save(recipeOutput);
     }
 
