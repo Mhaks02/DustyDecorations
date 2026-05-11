@@ -361,6 +361,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_jars", has(ModBlocks.JARS.get()))
                 .unlockedBy("has_empty_small_shelf", has(ModBlocks.EMPTY_SMALL_SHELF.get()))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SMALL_BOOKSHELF.get())
+                .pattern("#")
+                .pattern("~")
+                .define('#', Items.BOOK)
+                .define('~', ModBlocks.EMPTY_SMALL_SHELF.get())
+                .unlockedBy("has_book", has(Items.BOOK))
+                .unlockedBy("has_empty_small_shelf", has(ModBlocks.EMPTY_SMALL_SHELF.get()))
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
