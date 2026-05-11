@@ -343,6 +343,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ink_sac", has(Items.INK_SAC))
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))    //  idem
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.EMPTY_SMALL_SHELF.get(), 6)
+                .pattern("###")
+                .pattern("/~/")
+                .define('#', ItemTags.PLANKS)
+                .define('/', Items.STICK)
+                .define('~', Items.IRON_NUGGET)
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+                .save(recipeOutput);
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
