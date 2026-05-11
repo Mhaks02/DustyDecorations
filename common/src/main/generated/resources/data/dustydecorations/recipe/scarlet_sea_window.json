@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sea_windows",
+  "key": {
+    "#": {
+      "item": "dustydecorations:scarlet_seaglass_fragments"
+    },
+    "@": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "result": {
+    "count": 4,
+    "id": "dustydecorations:scarlet_sea_window"
+  }
+}

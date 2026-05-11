@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cream_seaglass_fragments": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:cream_seaglass_fragments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:cream_sea_window"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cream_seaglass_fragments"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:cream_sea_window"
+    ]
+  }
+}

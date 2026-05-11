@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_teal_seaglass_fragments": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:teal_seaglass_fragments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:teal_sea_window"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_teal_seaglass_fragments"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:teal_sea_window"
+    ]
+  }
+}

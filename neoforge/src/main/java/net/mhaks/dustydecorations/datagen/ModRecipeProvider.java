@@ -142,6 +142,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         threeByTwoPacker(recipeOutput, ModBlocks.CERULEAN_SEAGLASS_PANE.get(), ModBlocks.CERULEAN_SEAGLASS.get(), "seaglass_panes");
         threeByTwoPacker(recipeOutput, ModBlocks.TAUPE_SEAGLASS_PANE.get(), ModBlocks.TAUPE_SEAGLASS.get(), "seaglass_panes");
 
+        seaWindow(recipeOutput, ModBlocks.CREAM_SEA_WINDOW.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.HAZEL_SEA_WINDOW.get(), ModItems.HAZEL_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.LIQUORICE_SEA_WINDOW.get(), ModItems.LIQUORICE_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.MOCHA_SEA_WINDOW.get(), ModItems.MOCHA_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.SCARLET_SEA_WINDOW.get(), ModItems.SCARLET_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.HONEY_SEA_WINDOW.get(), ModItems.HONEY_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.MINT_SEA_WINDOW.get(), ModItems.MINT_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.TEAL_SEA_WINDOW.get(), ModItems.TEAL_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.CERULEAN_SEA_WINDOW.get(), ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get());
+        seaWindow(recipeOutput, ModBlocks.TAUPE_SEA_WINDOW.get(), ModItems.TAUPE_SEAGLASS_FRAGMENTS.get());
+
 
 
 
