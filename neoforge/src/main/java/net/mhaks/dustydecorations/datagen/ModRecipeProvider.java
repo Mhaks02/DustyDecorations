@@ -153,6 +153,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         seaWindow(recipeOutput, ModBlocks.CERULEAN_SEA_WINDOW.get(), ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get());
         seaWindow(recipeOutput, ModBlocks.TAUPE_SEA_WINDOW.get(), ModItems.TAUPE_SEAGLASS_FRAGMENTS.get());
 
+        threeByTwoPacker(recipeOutput, ModBlocks.CREAM_SEA_WINDOW_PANE.get(), ModBlocks.CREAM_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.HAZEL_SEA_WINDOW_PANE.get(), ModBlocks.HAZEL_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.LIQUORICE_SEA_WINDOW_PANE.get(), ModBlocks.LIQUORICE_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.MOCHA_SEA_WINDOW_PANE.get(), ModBlocks.MOCHA_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.SCARLET_SEA_WINDOW_PANE.get(), ModBlocks.SCARLET_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.HONEY_SEA_WINDOW_PANE.get(), ModBlocks.HONEY_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.MINT_SEA_WINDOW_PANE.get(), ModBlocks.MINT_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.TEAL_SEA_WINDOW_PANE.get(), ModBlocks.TEAL_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.CERULEAN_SEA_WINDOW_PANE.get(), ModBlocks.CERULEAN_SEA_WINDOW.get(), "sea_window_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.TAUPE_SEA_WINDOW_PANE.get(), ModBlocks.TAUPE_SEA_WINDOW.get(), "sea_window_panes");
+
 
 
 
@@ -203,6 +214,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(recipeCategory, result, count)   //1 instead?
                 .pattern("##")
                 .pattern("##")
+                .define('#', ingredient)
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+                .group(group)
+                .save(recipeOutput);
+    }
+
+    protected static void threeByTwoPacker(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient, @Nullable String group) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 16)
+                .pattern("###")
+                .pattern("###")
                 .define('#', ingredient)
                 .unlockedBy(getHasName(ingredient), has(ingredient))
                 .group(group)
@@ -282,6 +303,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(paperLantern)
                 .requires(ingredient)
                 .unlockedBy("has_paper_lantern", has(ModBlocks.PAPER_LANTERN.get()))
+                .save(recipeOutput);
+    }
+
+    protected static void seaWindow(RecipeOutput recipeOutput, ItemLike seaWindow, ItemLike fragment) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, seaWindow, 4)
+                .pattern(" # ")
+                .pattern("#@#")
+                .pattern(" # ")
+                .define('#', fragment)
+                .define('@', ItemTags.PLANKS)
+                .unlockedBy(getHasName(fragment), has(fragment))
+                .group("sea_windows")
                 .save(recipeOutput);
     }
 
