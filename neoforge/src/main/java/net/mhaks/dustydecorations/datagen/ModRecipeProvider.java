@@ -230,6 +230,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .save(recipeOutput);
 //        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SMALL_GLASS_BUOYS.get()) //TODO
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WOODEN_BUOYS.get(), 3)
+                .pattern("~~~")
+                .pattern("# #")
+                .define('~', Tags.Items.ROPES)
+                .define('#', ItemTags.PLANKS)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .save(recipeOutput);
 
 
 
