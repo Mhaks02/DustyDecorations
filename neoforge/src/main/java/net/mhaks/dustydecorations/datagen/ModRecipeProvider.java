@@ -220,6 +220,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         twoByTwoPacker(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.POSTERS.get(), 4, Items.PAPER, null);
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, Items.PAPER, RecipeCategory.DECORATIONS, ModBlocks.PAPER_STACK.get(),
                 getSimpleRecipeName(ModBlocks.PAPER_STACK.get()), null, getConversionRecipeName(Items.PAPER, ModBlocks.PAPER_STACK.get()), null); //3 instead of 1 obtained?
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GLASS_BUOY.get())
+                .pattern("~ ~")
+                .pattern(" # ")
+                .pattern("~ ~")
+                .define('#', Tags.Items.GLASS_BLOCKS_TINTED)
+                .define('~', Tags.Items.ROPES)
+                .unlockedBy("has_stained_glass", has(Tags.Items.GLASS_BLOCKS_TINTED))
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .save(recipeOutput);
+//        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SMALL_GLASS_BUOYS.get()) //TODO
 
 
 

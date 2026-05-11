@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ropes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ropes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stained_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:glass_blocks/tinted"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:glass_buoy"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stained_glass",
+      "has_ropes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:glass_buoy"
+    ]
+  }
+}
