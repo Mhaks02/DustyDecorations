@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple": {
+    "has_carrot": {
       "conditions": {
         "items": [
           {
@@ -43,7 +43,7 @@
       "has_the_recipe",
       "has_planks",
       "has_wooden_slabs",
-      "has_apple"
+      "has_carrot"
     ]
   ],
   "rewards": {
