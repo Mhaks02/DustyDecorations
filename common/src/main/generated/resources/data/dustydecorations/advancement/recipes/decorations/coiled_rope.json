@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ropes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ropes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:coiled_rope"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ropes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:coiled_rope"
+    ]
+  }
+}
