@@ -131,6 +131,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERULEAN_SEAGLASS.get(), ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get(), "seaglass");
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TAUPE_SEAGLASS.get(), ModItems.TAUPE_SEAGLASS_FRAGMENTS.get(), "seaglass");
 
+        threeByTwoPacker(recipeOutput, ModBlocks.CREAM_SEAGLASS_PANE.get(), ModBlocks.CREAM_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.HAZEL_SEAGLASS_PANE.get(), ModBlocks.HAZEL_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.LIQUORICE_SEAGLASS_PANE.get(), ModBlocks.LIQUORICE_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.MOCHA_SEAGLASS_PANE.get(), ModBlocks.MOCHA_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.SCARLET_SEAGLASS_PANE.get(), ModBlocks.SCARLET_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.HONEY_SEAGLASS_PANE.get(), ModBlocks.HONEY_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.MINT_SEAGLASS_PANE.get(), ModBlocks.MINT_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.TEAL_SEAGLASS_PANE.get(), ModBlocks.TEAL_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.CERULEAN_SEAGLASS_PANE.get(), ModBlocks.CERULEAN_SEAGLASS.get(), "seaglass_panes");
+        threeByTwoPacker(recipeOutput, ModBlocks.TAUPE_SEAGLASS_PANE.get(), ModBlocks.TAUPE_SEAGLASS.get(), "seaglass_panes");
+
 
 
 

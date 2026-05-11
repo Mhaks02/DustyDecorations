@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "seaglass_panes",
+  "key": {
+    "#": {
+      "item": "dustydecorations:scarlet_seaglass"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 16,
+    "id": "dustydecorations:scarlet_seaglass_pane"
+  }
+}

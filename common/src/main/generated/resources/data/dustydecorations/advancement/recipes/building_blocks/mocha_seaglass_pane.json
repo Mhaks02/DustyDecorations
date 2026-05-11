@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mocha_seaglass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:mocha_seaglass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:mocha_seaglass_pane"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mocha_seaglass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:mocha_seaglass_pane"
+    ]
+  }
+}
