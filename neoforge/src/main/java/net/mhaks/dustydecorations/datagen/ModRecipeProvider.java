@@ -256,6 +256,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         hangingFish(recipeOutput, ModBlocks.HANGING_COD.get(), Items.COD);
         hangingFish(recipeOutput, ModBlocks.HANGING_SALMON.get(), Items.SALMON);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.HANGING_KNIVES.get())
+                .pattern("@^@")
+                .pattern("###")
+                .define('#', Ingredient.of(ModBlocks.WEDGED_KNIFE.get(), ModBlocks.WEDGED_CLEAVER.get()))
+                .define('@', ItemTags.PLANKS)
+                .define('^', Items.IRON_NUGGET)
+                .unlockedBy("has_wedged_knife", has(ModBlocks.WEDGED_KNIFE.get()))      //TODO: create a c:knives tag or something
+                .unlockedBy("has_wedged_cleaver", has(ModBlocks.WEDGED_CLEAVER.get()))
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+                .save(recipeOutput);
 
 
 

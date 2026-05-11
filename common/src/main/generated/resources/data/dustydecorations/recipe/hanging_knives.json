@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": [
+      {
+        "item": "dustydecorations:wedged_knife"
+      },
+      {
+        "item": "dustydecorations:wedged_cleaver"
+      }
+    ],
+    "@": {
+      "tag": "minecraft:planks"
+    },
+    "^": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "@^@",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:hanging_knives"
+  }
+}
