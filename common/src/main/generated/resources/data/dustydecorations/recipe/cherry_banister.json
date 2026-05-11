@@ -3,12 +3,12 @@
   "category": "misc",
   "group": "banisters",
   "key": {
-    "F": {
+    "#": {
       "item": "minecraft:cherry_fence"
     }
   },
   "pattern": [
-    "FFF"
+    "###"
   ],
   "result": {
     "count": 6,
