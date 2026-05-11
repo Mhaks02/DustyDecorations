@@ -127,8 +127,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, banister, 6)
-                .pattern("FFF")
-                .define('F', fence)
+                .pattern("###")
+                .define('#', fence)
                 .unlockedBy("has_planks", has(hasPlanks))
                 .group("banisters")
                 .save(recipeOutput);
