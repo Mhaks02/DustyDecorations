@@ -100,6 +100,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         woolAwning(recipeOutput, ModBlocks.PINK_WOOL_AWNING.get(), Blocks.PINK_CARPET);
         //TODO: Universal dyeing?
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PAPER_LANTERN.get())
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', Items.PAPER)
+                .define('@', Blocks.TORCH)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_torch", has(Blocks.TORCH))
+                .save(recipeOutput);
+        paperLantern(recipeOutput, ModBlocks.SAKURA_PAPER_LANTERN.get(), Blocks.CHERRY_SAPLING);
+        paperLantern(recipeOutput, ModBlocks.TAIGA_PAPER_LANTERN.get(), Blocks.SPRUCE_SAPLING);
+        paperLantern(recipeOutput, ModBlocks.ORCHID_PAPER_LANTERN.get(), Blocks.BLUE_ORCHID);
+        paperLantern(recipeOutput, ModBlocks.PANDA_PAPER_LANTERN.get(), Blocks.BAMBOO);
+        paperLantern(recipeOutput, ModBlocks.VILLAGER_PAPER_LANTERN.get(), Items.EMERALD);
+        paperLantern(recipeOutput, ModBlocks.CREEPER_PAPER_LANTERN.get(), Items.GUNPOWDER);
+        paperLantern(recipeOutput, ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN.get(), Ingredient.of(Items.CHICKEN, Items.COOKED_CHICKEN));
+        paperLantern(recipeOutput, ModBlocks.PILLAGER_PAPER_LANTERN.get(), Items.ARROW);    //iron_axe?
+        paperLantern(recipeOutput, ModBlocks.WARDEN_PAPER_LANTERN.get(), Items.ECHO_SHARD);
+
 
 
 
@@ -205,6 +224,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_stick", has(Items.STICK))
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .group("wool_awnings")
+                .save(recipeOutput);
+    }
+
+    protected static void paperLantern(RecipeOutput recipeOutput, ItemLike paperLantern, ItemLike ingredient) {
+        paperLantern(recipeOutput, paperLantern, Ingredient.of(ingredient));
+    }
+    protected static void paperLantern(RecipeOutput recipeOutput, ItemLike paperLantern, Ingredient ingredient) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, paperLantern)
+                .requires(paperLantern)
+                .requires(ingredient)
+                .unlockedBy("has_paper_lantern", has(ModBlocks.PAPER_LANTERN.get()))
                 .save(recipeOutput);
     }
 
