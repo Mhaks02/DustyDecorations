@@ -837,6 +837,7 @@ public class ModBlocks {
                     .strength(.8f)
                     .sound(SoundType.TUFF)
             ));
+    */
 
     public static final RegistryObject<Block, Block> BIG_NAUTILUS_SHELL = registerBlock("big_nautilus_shell",
             () -> new BigNautilusShellBlock(BlockBehaviour.Properties.of()
