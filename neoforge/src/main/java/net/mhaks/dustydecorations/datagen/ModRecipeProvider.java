@@ -512,6 +512,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_redstone", has(Items.REDSTONE))
                 .unlockedBy("has_gold_nugget", has(Items.GOLD_NUGGET))
                 .save(recipeOutput);
+        hangingStuff(recipeOutput, ModBlocks.HANGING_SAUSAGES.get(), ModItems.RAW_BRATWURST.get());
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
