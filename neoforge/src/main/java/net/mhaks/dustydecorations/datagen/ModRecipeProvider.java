@@ -435,6 +435,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_big_nautilus_shell", has(ModBlocks.BIG_NAUTILUS_SHELL.get()))
                 .unlockedBy("has_lantern", has(Blocks.LANTERN))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.SMALL_NAUTILUS_SHELL.get())
+                .requires(Items.NAUTILUS_SHELL)
+                .unlockedBy("has_nautilus_shell", has(Items.NAUTILUS_SHELL))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
