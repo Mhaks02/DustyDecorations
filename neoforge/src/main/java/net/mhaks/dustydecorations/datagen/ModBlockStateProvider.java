@@ -266,10 +266,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         goldCoinsLayerAndFlatItem();
         threeTexturesCustomHorizontalBlockAndFlatBlockItem(ModBlocks.SCATTERED_GOLD_COINS);
 
-        blockAndItem(ModBlocks.SANDSTONE_TILE_BLOCK);
-        stairsBlockAndItem(ModBlocks.SANDSTONE_TILE_STAIRS, ModBlocks.SANDSTONE_TILE_BLOCK);
-        slabBlockAndItem(ModBlocks.SANDSTONE_TILE_SLAB, ModBlocks.SANDSTONE_TILE_BLOCK);
-        blockAndItem(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK);
+//        blockAndItem(ModBlocks.SANDSTONE_TILE_BLOCK);
+//        stairsBlockAndItem(ModBlocks.SANDSTONE_TILE_STAIRS, ModBlocks.SANDSTONE_TILE_BLOCK);
+//        slabBlockAndItem(ModBlocks.SANDSTONE_TILE_SLAB, ModBlocks.SANDSTONE_TILE_BLOCK);
+//        blockAndItem(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK);
 
         nautilusShell(ModBlocks.BIG_NAUTILUS_SHELL);
         nautilusShell(ModBlocks.BIG_NAUTILUS_LANTERN);

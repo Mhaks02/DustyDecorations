@@ -228,10 +228,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
                         output.accept(ModBlocks.GOLD_COINS_LAYER.get());
                         output.accept(ModBlocks.SCATTERED_GOLD_COINS.get());
-                        output.accept(ModBlocks.SANDSTONE_TILE_BLOCK.get());
-                        output.accept(ModBlocks.SANDSTONE_TILE_STAIRS.get());
-                        output.accept(ModBlocks.SANDSTONE_TILE_SLAB.get());
-                        output.accept(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK.get());
+//                        output.accept(ModBlocks.SANDSTONE_TILE_BLOCK.get());
+//                        output.accept(ModBlocks.SANDSTONE_TILE_STAIRS.get());
+//                        output.accept(ModBlocks.SANDSTONE_TILE_SLAB.get());
+//                        output.accept(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK.get());
                         output.accept(ModBlocks.BIG_NAUTILUS_SHELL.get());
                         output.accept(ModBlocks.BIG_NAUTILUS_LANTERN.get());
                         output.accept(ModBlocks.SMALL_NAUTILUS_SHELL.get());

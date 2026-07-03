@@ -816,6 +816,7 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
             ));
 
+    /* TODO: to be revised
     public static final RegistryObject<Block, Block> SANDSTONE_TILE_BLOCK = registerBlock("sandstone_tile",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
