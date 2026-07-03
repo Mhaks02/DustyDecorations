@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dustydecorations:small_glass_buoys"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:glass_buoy"
+  }
+}
