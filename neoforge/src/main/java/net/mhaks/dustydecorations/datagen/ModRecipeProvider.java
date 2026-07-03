@@ -463,6 +463,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.BURLAP.get(), RecipeCategory.DECORATIONS, ModBlocks.BURLAP_BLOCK.get());
         stairs(recipeOutput, ModBlocks.BURLAP_STAIRS.get(), ModBlocks.BURLAP_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BURLAP_SLAB.get(), ModBlocks.BURLAP_BLOCK.get());
+        carpet(recipeOutput, ModBlocks.BURLAP_CARPET.get(), ModBlocks.BURLAP_BLOCK.get());
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
