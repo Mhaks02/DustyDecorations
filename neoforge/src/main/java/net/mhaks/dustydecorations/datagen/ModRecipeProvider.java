@@ -374,11 +374,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', Items.FEATHER)
                 .define('B', Items.GLASS_BOTTLE)
                 .define('I', Items.INK_SAC)
-                .define('#', Items.COPPER_INGOT)        //  should be nugget from 1.21.9 and on
+                .define('#', ModItems.COPPER_NUGGET.get())
                 .unlockedBy("has_feather", has(Items.FEATHER))
                 .unlockedBy("has_glass_bottle", has(Items.GLASS_BOTTLE))
                 .unlockedBy("has_ink_sac", has(Items.INK_SAC))
-                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))    //  idem
+                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.EMPTY_SMALL_SHELF.get(), 6)
                 .pattern("###")
@@ -573,22 +573,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, "cowhide_rug_from_mooshroom_cowhide_rug");
 
         //TODO: copper_nugget doesn't exist yet
-//        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_LIGHT.get())
-//                .pattern("###")
-//                .pattern("#@#")
-//                .pattern("###")
-//                .define('#', Items.COPPER_NUGGET)
-//                .define('@', Blocks.REDSTONE_TORCH)
-//                .unlockedBy("has_copper_nugget", has(Items.COPPER_NUGGET))
-//                .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
-//                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_LIGHT.get())
-                .pattern(" # ")
+                .pattern("###")
                 .pattern("#@#")
-                .pattern(" # ")
-                .define('#', Items.COPPER_INGOT)
+                .pattern("###")
+                .define('#', ModItems.COPPER_NUGGET.get())
                 .define('@', Blocks.REDSTONE_TORCH)
-                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
                 .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CAMERA_QUADROPOD.get())

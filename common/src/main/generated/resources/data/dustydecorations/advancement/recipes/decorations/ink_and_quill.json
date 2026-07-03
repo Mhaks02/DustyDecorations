@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_ingot": {
+    "has_copper_nugget": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:copper_ingot"
+            "items": "dustydecorations:copper_nugget"
           }
         ]
       },
@@ -54,7 +54,7 @@
       "has_feather",
       "has_glass_bottle",
       "has_ink_sac",
-      "has_copper_ingot"
+      "has_copper_nugget"
     ]
   ],
   "rewards": {
