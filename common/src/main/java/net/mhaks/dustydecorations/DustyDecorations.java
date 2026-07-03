@@ -8,6 +8,7 @@ import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.platform.Services;
 import net.mhaks.dustydecorations.sound.ModSoundEvents;
+import net.mhaks.dustydecorations.util.ModTags;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 
