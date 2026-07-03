@@ -540,6 +540,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_mooshroom_cowhide_rug", has(ModBlocks.MOOSHROOM_COWHIDE_RUG.get()))
                 .save(recipeOutput, "cowhide_rug_from_mooshroom_cowhide_rug");
 
+        //TODO: copper_nugget doesn't exist yet
+//        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_LIGHT.get())
+//                .pattern("###")
+//                .pattern("#@#")
+//                .pattern("###")
+//                .define('#', Items.COPPER_NUGGET)
+//                .define('@', Blocks.REDSTONE_TORCH)
+//                .unlockedBy("has_copper_nugget", has(Items.COPPER_NUGGET))
+//                .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
+//                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_LIGHT.get())
+                .pattern(" # ")
+                .pattern("#@#")
+                .pattern(" # ")
+                .define('#', Items.COPPER_INGOT)
+                .define('@', Blocks.REDSTONE_TORCH)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
