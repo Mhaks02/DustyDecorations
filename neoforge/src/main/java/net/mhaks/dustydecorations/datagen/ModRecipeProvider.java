@@ -614,6 +614,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //TODO: baskets
 
         fourBlockStorageRecipes(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.GOURD.get(), RecipeCategory.DECORATIONS, Blocks.PUMPKIN);
+        hangingStuff(recipeOutput, ModBlocks.HANGING_GOURDS.get(), ModBlocks.GOURD.get());
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
