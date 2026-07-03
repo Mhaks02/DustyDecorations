@@ -717,6 +717,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_iron_block", has(Blocks.IRON_BLOCK))
                 .save(recipeOutput);
 
+        stairs(recipeOutput, ModBlocks.SEASTONE_STAIRS.get(), ModBlocks.SEASTONE_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEASTONE_SLAB.get(), ModBlocks.SEASTONE_BLOCK.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEASTONE_WALL.get(), ModBlocks.SEASTONE_BLOCK.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
