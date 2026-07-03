@@ -128,6 +128,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_BLOCK.get(), "corrugated_metal_ingot_from_corrugated_metal_block", "corrugated_metal_ingot");
         nineBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_NUGGET.get(), RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), "corrugated_metal_ingot_from_nuggets", "corrugated_metal_ingot");
         grate(recipeOutput, ModBlocks.CORRUGATED_METAL_GRATE.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
+        stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_STAIRS.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_SLAB.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
 
         //Might change that one to be the same as Seaglass Windows but without the plank.
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
