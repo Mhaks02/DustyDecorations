@@ -491,6 +491,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .save(recipeOutput);
+        twoByTwoPacker(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.CERAMIC_POT.get(), 4, Blocks.FLOWER_POT, null);
+        // copying vanilla recipe but might add an alternative craft like vanillatweaks' universal dyeing, locked behind config
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GLAZED_CERAMIC_POT.get())
+                .requires(ModBlocks.CERAMIC_POT.get())
+                .unlockedBy("has_ceramic_pot", has(ModBlocks.CERAMIC_POT.get()))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -536,7 +542,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         twoByTwoPacker(recipeOutput, recipeCategory, result, 1, ingredient, group);
     }
     protected static void twoByTwoPacker(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike result, int count, ItemLike ingredient, @Nullable String group) {
-        ShapedRecipeBuilder.shaped(recipeCategory, result, count)   //1 instead?
+        ShapedRecipeBuilder.shaped(recipeCategory, result, count)
                 .pattern("##")
                 .pattern("##")
                 .define('#', ingredient)
