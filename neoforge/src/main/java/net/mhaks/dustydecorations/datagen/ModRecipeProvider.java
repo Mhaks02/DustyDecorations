@@ -627,6 +627,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         scarecrow(recipeOutput, ModBlocks.BEETROOT_SCARECROW.get(), ModBlocks.CARVED_BEETROOT.get());
         scarecrow(recipeOutput, ModBlocks.PUMPKIN_SCARECROW.get(), Blocks.CARVED_PUMPKIN);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MINI_SNOWMAN.get())
+                .pattern("-")
+                .pattern("o")
+                .pattern("#")
+                .define('-', ItemTags.WOOL_CARPETS)
+                .define('o', Items.SNOWBALL)
+                .define('#', Blocks.SNOW_BLOCK)
+                .unlockedBy("has_carpets", has(ItemTags.WOOL_CARPETS))
+                .unlockedBy("has_snowball", has(Items.SNOWBALL))
+                .unlockedBy("has_snow_block", has(Blocks.SNOW_BLOCK))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,

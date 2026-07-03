@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:snow_block"
+    },
+    "-": {
+      "tag": "minecraft:wool_carpets"
+    },
+    "o": {
+      "item": "minecraft:snowball"
+    }
+  },
+  "pattern": [
+    "-",
+    "o",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:mini_snowman"
+  }
+}
