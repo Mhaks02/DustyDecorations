@@ -254,9 +254,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Tags.Items.ROPES)
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .save(recipeOutput);
-        hangingFish(recipeOutput, ModBlocks.HANGING_COD.get(), Items.COD);
-        hangingFish(recipeOutput, ModBlocks.HANGING_SALMON.get(), Items.SALMON);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.HANGING_KNIVES.get())
+        hangingStuff(recipeOutput, ModBlocks.HANGING_COD.get(), Items.COD);
+        hangingStuff(recipeOutput, ModBlocks.HANGING_SALMON.get(), Items.SALMON);
                 .pattern("@^@")
                 .pattern("###")
                 .define('#', Ingredient.of(ModBlocks.WEDGED_KNIFE.get(), ModBlocks.WEDGED_CLEAVER.get()))
@@ -620,14 +619,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    protected static void hangingFish(RecipeOutput recipeOutput, ItemLike hangingFish, ItemLike fish) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, hangingFish)
+    protected static void hangingStuff(RecipeOutput recipeOutput, ItemLike hangingObject, ItemLike object) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, hangingObject)
                 .pattern("~~~")
                 .pattern("###")
                 .define('~', Tags.Items.ROPES)
-                .define('#', fish)
+                .define('#', object)
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
-                .unlockedBy(getHasName(fish), has(fish))
+                .unlockedBy(getHasName(object), has(object))
+                .save(recipeOutput);
+    }
+
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .save(recipeOutput);
     }
 
