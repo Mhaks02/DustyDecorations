@@ -625,6 +625,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 //                .unlockedBy("has_beetroot")
                 .unlockedBy("has_torch", has(Blocks.TORCH))
                 .save(recipeOutput);
+        scarecrow(recipeOutput, ModBlocks.BEETROOT_SCARECROW.get(), ModBlocks.CARVED_BEETROOT.get());
+        scarecrow(recipeOutput, ModBlocks.PUMPKIN_SCARECROW.get(), Blocks.CARVED_PUMPKIN);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -840,6 +842,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', object)
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy(getHasName(object), has(object))
+                .save(recipeOutput);
+    }
+
+    protected static void scarecrow(RecipeOutput recipeOutput, ItemLike scarecrow, ItemLike carvedHead) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, scarecrow)
+                .pattern("~@~")
+                .pattern("^#^")
+                .pattern(" I ")
+                .define('~', ModItems.BURLAP.get())
+                .define('@', carvedHead)
+                .define('^', Items.WHEAT)
+                .define('#', Blocks.HAY_BLOCK)
+                .define('I', Items.STICK)
+                .unlockedBy("has_burlap", has(ModItems.BURLAP.get()))
+                .unlockedBy(getHasName(carvedHead), has(carvedHead))
+                .unlockedBy("has_wheat", has(Items.WHEAT))
+                .unlockedBy("has_hay_bale", has(Blocks.HAY_BLOCK))
                 .save(recipeOutput);
     }
 

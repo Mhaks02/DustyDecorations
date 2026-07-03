@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_burlap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:burlap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_carved_beetroot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:carved_beetroot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hay_bale": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:hay_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:beetroot_scarecrow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wheat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wheat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_burlap",
+      "has_carved_beetroot",
+      "has_wheat",
+      "has_hay_bale"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:beetroot_scarecrow"
+    ]
+  }
+}
