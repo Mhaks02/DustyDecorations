@@ -613,6 +613,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         //TODO: baskets
 
+        fourBlockStorageRecipes(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.GOURD.get(), RecipeCategory.DECORATIONS, Blocks.PUMPKIN);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
