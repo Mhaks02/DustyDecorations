@@ -595,6 +595,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_spyglass", has(Items.SPYGLASS))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WICKER_BLOCK.get(), 4)
+                .pattern("#~")
+                .pattern("~#")
+                .define('#', Items.STICK)
+                .define('~', Tags.Items.ROPES)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .save(recipeOutput);
+        stairs(recipeOutput, ModBlocks.WICKER_STAIRS.get(), ModBlocks.WICKER_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WICKER_SLAB.get(), ModBlocks.WICKER_BLOCK.get());
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
