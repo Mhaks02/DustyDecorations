@@ -771,6 +771,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOWY_STONE_BRICK_SLAB.get(), ModBlocks.SNOWY_STONE_BRICKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOWY_STONE_BRICK_WALL.get(), ModBlocks.SNOWY_STONE_BRICKS.get());
 
+        twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_BRICKS.get(), 4, Blocks.SMOOTH_STONE, null);
+        stairs(recipeOutput, ModBlocks.SMOOTH_STONE_BRICK_STAIRS.get(), ModBlocks.SMOOTH_STONE_BRICKS.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_BRICK_SLAB.get(), ModBlocks.SMOOTH_STONE_BRICKS.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_BRICK_WALL.get(), ModBlocks.SMOOTH_STONE_BRICKS.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
