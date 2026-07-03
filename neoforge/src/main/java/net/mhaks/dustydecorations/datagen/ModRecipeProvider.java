@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -789,6 +790,45 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         stairs(recipeOutput, ModBlocks.PLAIN_CUSHION_STAIRS.get(), ModBlocks.PLAIN_CUSHION_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLAIN_CUSHION_SLAB.get(), ModBlocks.PLAIN_CUSHION_BLOCK.get());
+
+        List<Item> dyes = List.of(
+                Items.WHITE_DYE,
+                Items.LIGHT_GRAY_DYE,
+                Items.GRAY_DYE,
+                Items.BLACK_DYE,
+                Items.BROWN_DYE,
+                Items.RED_DYE,
+                Items.ORANGE_DYE,
+                Items.YELLOW_DYE,
+                Items.LIME_DYE,
+                Items.GREEN_DYE,
+                Items.CYAN_DYE,
+                Items.LIGHT_BLUE_DYE,
+                Items.BLUE_DYE,
+                Items.PURPLE_DYE,
+                Items.MAGENTA_DYE,
+                Items.PINK_DYE
+        );
+        List<Item> cushions = List.of(
+                ModBlocks.WHITE_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.GRAY_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.BLACK_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.BROWN_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.RED_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.ORANGE_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.YELLOW_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.LIME_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.GREEN_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.CYAN_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.BLUE_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.PURPLE_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.MAGENTA_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.PINK_CUSHION_BLOCK.get().asItem()
+        );
+        colorBlockWithDye(recipeOutput, dyes, cushions, "cushions");
+        //TODO: should add another craft (toggleable in the settings maybe), like the universal dyeing crafts from Vanilla Tweaks
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
