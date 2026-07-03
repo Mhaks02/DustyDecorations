@@ -615,6 +615,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         fourBlockStorageRecipes(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.GOURD.get(), RecipeCategory.DECORATIONS, Blocks.PUMPKIN);
         hangingStuff(recipeOutput, ModBlocks.HANGING_GOURDS.get(), ModBlocks.GOURD.get());
+        fourBlockStorageRecipes(recipeOutput, RecipeCategory.FOOD, Items.BEETROOT, RecipeCategory.DECORATIONS, ModBlocks.CARVED_BEETROOT.get());    //TODO: should not be craftable back into beetroots imo, should behave like carved pumpkins instead
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
