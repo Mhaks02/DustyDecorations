@@ -425,6 +425,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModBlocks.GOLD_COINS_BLOCK.get())
                 .unlockedBy("has_gold_coins_block", has(ModBlocks.GOLD_COINS_BLOCK.get()))
                 .save(recipeOutput);
+        fourBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.SCATTERED_GOLD_COINS.get(), RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_LAYER.get(), "gold_coins_layer_from_scattered_gold_coins", null);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -489,22 +490,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    //copied nineBlockStorageRecipes()
-    protected static void fouBlockStorageRecipes(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked,
-                                                 RecipeCategory packedCategory, ItemLike packed) {
-        fouBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, getSimpleRecipeName(packed), null, getSimpleRecipeName(unpacked), null);
+    //copied neoforge's nineBlockStorageRecipes()
+    protected static void fourBlockStorageRecipes(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked,
+                                                  RecipeCategory packedCategory, ItemLike packed) {
+        fourBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, getSimpleRecipeName(packed), null, getSimpleRecipeName(unpacked), null);
     }
     protected static void fourBlockStorageRecipesWithCustomPacking(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked,
                                                                    RecipeCategory packedCategory, ItemLike packed, String packedName, String packedGroup) {
-        fouBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, packedName, packedGroup, getSimpleRecipeName(unpacked), null);
+        fourBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, packedName, packedGroup, getSimpleRecipeName(unpacked), null);
     }
     protected static void fourBlockStorageRecipesWithCustomUnpacking(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked,
                                                                      RecipeCategory packedCategory, ItemLike packed, String unpackedName, String unpackedGroup) {
-        fouBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, getSimpleRecipeName(packed), null, unpackedName, unpackedGroup);
+        fourBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, getSimpleRecipeName(packed), null, unpackedName, unpackedGroup);
     }
 
-    protected static void fouBlockStorageRecipes(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked, RecipeCategory packedCategory, ItemLike packed,
-                                                 String packedName, @Nullable String packedGroup, String unpackedName, @Nullable String unpackedGroup) {
+    protected static void fourBlockStorageRecipes(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked, RecipeCategory packedCategory, ItemLike packed,
+                                                  String packedName, @Nullable String packedGroup, String unpackedName, @Nullable String unpackedGroup) {
         ShapelessRecipeBuilder.shapeless(unpackedCategory, unpacked, 4)
                 .requires(packed)
                 .group(unpackedGroup)
