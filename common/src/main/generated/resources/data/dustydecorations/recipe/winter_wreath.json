@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "dustydecorations:winter_garland"
+    },
+    "@": {
+      "item": "minecraft:spruce_leaves"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:winter_wreath"
+  }
+}

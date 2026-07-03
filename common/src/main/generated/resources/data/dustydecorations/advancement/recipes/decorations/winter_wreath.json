@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spruce_leaves": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:spruce_leaves"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:winter_wreath"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_winter_garland": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:winter_garland"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_winter_garland",
+      "has_spruce_leaves"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:winter_wreath"
+    ]
+  }
+}

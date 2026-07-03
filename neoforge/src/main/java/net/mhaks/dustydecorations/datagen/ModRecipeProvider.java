@@ -665,6 +665,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 //                .unlockedBy("has_leaf_litter", has(Blocks.LEAF_LITTER))
                 //TODO: leaf_litter doesn't exist until 1.21.5
         garland(recipeOutput, ModBlocks.WINTER_GARLAND.get(), Ingredient.of(Blocks.SPRUCE_LEAVES), Items.SWEET_BERRIES);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WINTER_WREATH.get())
+                .pattern(" # ")
+                .pattern("#@#")
+                .pattern(" # ")
+                .define('#', ModBlocks.WINTER_GARLAND.get())
+                .define('@', Blocks.SPRUCE_LEAVES)
+                .unlockedBy("has_winter_garland", has(ModBlocks.WINTER_GARLAND.get()))
+                .unlockedBy("has_spruce_leaves", has(Blocks.SPRUCE_LEAVES))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
