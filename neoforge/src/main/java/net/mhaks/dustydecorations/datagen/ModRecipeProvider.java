@@ -648,6 +648,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .unlockedBy("has_burlap", has(ModItems.BURLAP.get()))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.NUTCRACKER.get())
+                .pattern(" @ ")
+                .pattern("|I|")
+                .pattern(" # ")
+                .define('#', ItemTags.PLANKS)
+                .define('I', Blocks.LEVER)
+                .define('|', Items.STICK)
+                .define('@', Blocks.BLACK_WOOL)
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_lever", has(Blocks.LEVER))
+                .unlockedBy("has_black_wool", has(Blocks.BLACK_WOOL))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
