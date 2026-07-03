@@ -745,6 +745,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB.get(), ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL.get(), ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOWY_COBBLESTONE_BLOCK.get(), 8)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', Blocks.COBBLESTONE)
+                .define('@', Items.SNOWBALL)
+                .unlockedBy("has_cobblestone", has(Blocks.COBBLESTONE))
+                .unlockedBy("has_snowball", has(Items.SNOWBALL))
+                .save(recipeOutput);
+        stairs(recipeOutput, ModBlocks.SNOWY_COBBLESTONE_STAIRS.get(), ModBlocks.SNOWY_COBBLESTONE_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOWY_COBBLESTONE_SLAB.get(), ModBlocks.SNOWY_COBBLESTONE_BLOCK.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOWY_COBBLESTONE_WALL.get(), ModBlocks.SNOWY_COBBLESTONE_BLOCK.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
