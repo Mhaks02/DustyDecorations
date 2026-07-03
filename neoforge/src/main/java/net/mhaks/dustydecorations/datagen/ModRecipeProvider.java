@@ -427,6 +427,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         fourBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.SCATTERED_GOLD_COINS.get(), RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_LAYER.get(), "gold_coins_layer_from_scattered_gold_coins", null);
         threeByThreePacker(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.BIG_NAUTILUS_SHELL.get(), Items.NAUTILUS_SHELL);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BIG_NAUTILUS_LANTERN.get())
+                .pattern("#")
+                .pattern("^")
+                .define('#', ModBlocks.BIG_NAUTILUS_SHELL.get())
+                .define('^', Blocks.LANTERN)
+                .unlockedBy("has_big_nautilus_shell", has(ModBlocks.BIG_NAUTILUS_SHELL.get()))
+                .unlockedBy("has_lantern", has(Blocks.LANTERN))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
