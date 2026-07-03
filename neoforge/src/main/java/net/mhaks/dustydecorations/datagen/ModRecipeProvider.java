@@ -684,6 +684,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_glowstone_dust", has(Items.GLOWSTONE_DUST))
                 .unlockedBy("has_dyes", has(Tags.Items.DYES))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.HOLIDAY_ORNAMENTS.get(), 8)
+                .pattern(" ~ ")
+                .pattern("*#*")
+                .pattern(" * ")
+                .define('~', Tags.Items.ROPES)
+                .define('*', Tags.Items.DYES)
+                .define('#', ItemTags.WOOL)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_dyes", has(Tags.Items.DYES))
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .save(recipeOutput);
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,

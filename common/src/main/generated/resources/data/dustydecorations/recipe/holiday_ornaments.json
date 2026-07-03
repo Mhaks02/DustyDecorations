@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:wool"
+    },
+    "*": {
+      "tag": "c:dyes"
+    },
+    "~": {
+      "tag": "c:ropes"
+    }
+  },
+  "pattern": [
+    " ~ ",
+    "*#*",
+    " * "
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:holiday_ornaments"
+  }
+}
