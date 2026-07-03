@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "dustydecorations:carved_beetroot"
+    },
+    "I": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "#",
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:beet_o_lantern"
+  }
+}
