@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:leaves"
+    },
+    "^": {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    "~": {
+      "tag": "c:ropes"
+    }
+  },
+  "pattern": [
+    "#~#",
+    "^#^"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:fall_garland"
+  }
+}

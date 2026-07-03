@@ -660,6 +660,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_lever", has(Blocks.LEVER))
                 .unlockedBy("has_black_wool", has(Blocks.BLACK_WOOL))
                 .save(recipeOutput);
+        garland(recipeOutput, ModBlocks.FALL_GARLAND.get(), Ingredient.of(ItemTags.LEAVES), Items.PUMPKIN_SEEDS);
+//                .define('#', Blocks.LEAF_LITTER)
+//                .unlockedBy("has_leaf_litter", has(Blocks.LEAF_LITTER))
+                //TODO: leaf_litter doesn't exist until 1.21.5
+        garland(recipeOutput, ModBlocks.WINTER_GARLAND.get(), Ingredient.of(Blocks.SPRUCE_LEAVES), Items.SWEET_BERRIES);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -895,7 +900,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
+    protected static void garland(RecipeOutput recipeOutput, ItemLike garland, Ingredient leafBlock, ItemLike seasonalItem) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, garland, 8)
+                .pattern("#~#")
+                .pattern("^#^")
+                .define('~', Tags.Items.ROPES)
+                .define('#', leafBlock)
+                .define('^', seasonalItem)
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_leaves", has(ItemTags.LEAVES))
+                .unlockedBy(getHasName(seasonalItem), has(seasonalItem))
+                .save(recipeOutput);
+    }
+
                 .save(recipeOutput);
     }
 

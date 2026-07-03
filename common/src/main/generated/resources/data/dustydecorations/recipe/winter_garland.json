@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:spruce_leaves"
+    },
+    "^": {
+      "item": "minecraft:sweet_berries"
+    },
+    "~": {
+      "tag": "c:ropes"
+    }
+  },
+  "pattern": [
+    "#~#",
+    "^#^"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:winter_garland"
+  }
+}
