@@ -84,6 +84,11 @@ public class ModItems {
             () -> new SpawnEggItem(ModEntityTypes.NAUTILUS_GOLEM.get(), -2504281, -14266757, new Item.Properties()
             ));
 
+    //TODO: to be removed after 1.21.9
+    public static final RegistryObject<Item, Item> COPPER_NUGGET = registerItem("copper_nugget",
+            () -> new Item(new Item.Properties()
+            ));
+
 
     private static RegistryObject<Item, Item> registerItem(String name, Supplier<Item> item) {
         return ITEMS.register(name, item);

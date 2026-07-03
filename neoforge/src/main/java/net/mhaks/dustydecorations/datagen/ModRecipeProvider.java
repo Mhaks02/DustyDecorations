@@ -891,6 +891,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         mural(recipeOutput, ModBlocks.DIORITE_MURAL.get(), Blocks.POLISHED_DIORITE);
         mural(recipeOutput, ModBlocks.ANDESITE_MURAL.get(), Blocks.POLISHED_ANDESITE);
 
+        nineBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), RecipeCategory.MISC, Items.COPPER_INGOT, getConversionRecipeName(Items.COPPER_INGOT, ModItems.COPPER_NUGGET.get()), getItemName(Items.COPPER_INGOT));
+
 
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
