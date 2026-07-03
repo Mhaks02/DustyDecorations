@@ -522,6 +522,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_paper", has(Items.PAPER))
                 .unlockedBy("has_raw_meat", has(Tags.Items.FOODS_RAW_MEAT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COWHIDE_RUG.get())
+                .pattern(" # ")
+                .pattern("###")
+                .pattern("###")
+                .define('#', Items.LEATHER)
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MOOSHROOM_COWHIDE_RUG.get())
+                .requires(ModBlocks.COWHIDE_RUG.get())
+                .requires(Tags.Items.MUSHROOMS)
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .unlockedBy("has_mushroom", has(Tags.Items.MUSHROOMS))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.COWHIDE_RUG.get())
+                .requires(ModBlocks.MOOSHROOM_COWHIDE_RUG.get())
+                .unlockedBy("has_mooshroom_cowhide_rug", has(ModBlocks.MOOSHROOM_COWHIDE_RUG.get()))
+                .save(recipeOutput, "cowhide_rug_from_mooshroom_cowhide_rug");
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
