@@ -727,6 +727,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SEASTONE_BRICKS.get(), ModBlocks.SEASTONE_BRICK_SLAB.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEASTONE_BRICK_WALL.get(), ModBlocks.SEASTONE_BRICKS.get());
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.SEASTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SEASTONE_BLOCK.get(), 0.1F, 200);
+        stairs(recipeOutput, ModBlocks.SMOOTH_SEASTONE_STAIRS.get(), ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SEASTONE_SLAB.get(), ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SEASTONE_WALL.get(), ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
