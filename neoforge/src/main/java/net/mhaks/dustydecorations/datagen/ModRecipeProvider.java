@@ -475,6 +475,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy("has_wheat", has(Items.WHEAT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SAILOR_FLAG.get())
+                .pattern("~~~")
+                .pattern(" # ")
+                .define('~', Tags.Items.ROPES)
+                .define('#', ItemTags.WOOL)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SAILOR_PENNANT_FLAG.get()) //todo: count? 2 maybe? or 4?
+                .pattern("~")
+                .pattern("#")
+                .define('~', Tags.Items.ROPES)
+                .define('#', ItemTags.WOOL)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
