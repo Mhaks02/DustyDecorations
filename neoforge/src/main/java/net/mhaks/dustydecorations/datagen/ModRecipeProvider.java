@@ -874,6 +874,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         quoin(recipeOutput, ModBlocks.RED_SANDSTONE_QUOIN.get(), Blocks.SMOOTH_RED_SANDSTONE);  //TODO: smooth_red_sandstone_quoin
         quoin(recipeOutput, ModBlocks.POLISHED_BLACKSTONE_QUOIN.get(), Blocks.POLISHED_BLACKSTONE);
 
+        mural(recipeOutput, ModBlocks.SEASTONE_MURAL.get(), ModBlocks.SEASTONE_BLOCK.get());
+        mural(recipeOutput, ModBlocks.SMOOTH_STONE_MURAL.get(), Blocks.SMOOTH_STONE);
+        mural(recipeOutput, ModBlocks.GRANITE_MURAL.get(), Blocks.POLISHED_GRANITE);
+        mural(recipeOutput, ModBlocks.DIORITE_MURAL.get(), Blocks.POLISHED_DIORITE);
+        mural(recipeOutput, ModBlocks.ANDESITE_MURAL.get(), Blocks.POLISHED_ANDESITE);
+
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -1132,6 +1139,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
+    protected static void mural(RecipeOutput recipeOutput, ItemLike mural, ItemLike material) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, mural, 6)
+                .pattern("#")
+                .pattern("#")
+                .pattern("#")
+                .define('#', material)
+                .unlockedBy(getHasName(mural), has(material))
                 .save(recipeOutput);
     }
 

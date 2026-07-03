@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_seastone_mural": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:seastone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:seastone_mural"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_seastone_mural"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:seastone_mural"
+    ]
+  }
+}
