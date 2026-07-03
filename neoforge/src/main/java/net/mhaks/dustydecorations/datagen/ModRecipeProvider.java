@@ -420,7 +420,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .save(recipeOutput);
         fourBlockStorageRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, Items.GOLD_NUGGET, RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_BLOCK.get(), "gold_nuggets_from_gold_coins_block", "gold_nugget");
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_LAYER.get(), 4) //TODO:  or 6? like snow
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_LAYER.get(), 6)
                 .pattern("###")
                 .define('#', ModBlocks.GOLD_COINS_BLOCK.get())
                 .unlockedBy("has_gold_coins_block", has(ModBlocks.GOLD_COINS_BLOCK.get()))
