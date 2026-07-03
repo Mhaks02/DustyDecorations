@@ -256,6 +256,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         hangingStuff(recipeOutput, ModBlocks.HANGING_COD.get(), Items.COD);
         hangingStuff(recipeOutput, ModBlocks.HANGING_SALMON.get(), Items.SALMON);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.HANGING_KNIVES.get())      //TODO: might be too expensive...
                 .pattern("@^@")
                 .pattern("###")
                 .define('#', Ingredient.of(ModBlocks.WEDGED_KNIFE.get(), ModBlocks.WEDGED_CLEAVER.get()))
