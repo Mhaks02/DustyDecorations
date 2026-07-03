@@ -148,6 +148,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         door(recipeOutput, ModBlocks.CORRUGATED_METAL_DOOR.get(), ModItems.CORRUGATED_METAL_INGOT.get());
         twoByTwoPacker(recipeOutput, RecipeCategory.REDSTONE, ModBlocks.CORRUGATED_METAL_TRAPDOOR.get(), ModItems.CORRUGATED_METAL_INGOT.get());
+        pressurePlate(recipeOutput, ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), ModItems.CORRUGATED_METAL_INGOT.get());
+        button(recipeOutput, ModBlocks.CORRUGATED_METAL_BUTTON.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
 
         //Might change that one to be the same as Seaglass Windows but without the plank.
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
