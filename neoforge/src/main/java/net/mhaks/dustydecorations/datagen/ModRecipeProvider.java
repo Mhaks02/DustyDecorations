@@ -426,6 +426,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_gold_coins_block", has(ModBlocks.GOLD_COINS_BLOCK.get()))
                 .save(recipeOutput);
         fourBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.SCATTERED_GOLD_COINS.get(), RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_LAYER.get(), "gold_coins_layer_from_scattered_gold_coins", null);
+        threeByThreePacker(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.BIG_NAUTILUS_SHELL.get(), Items.NAUTILUS_SHELL);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
