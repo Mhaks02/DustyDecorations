@@ -367,6 +367,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_glass", has(Tags.Items.GLASS_BLOCKS_CHEAP))
                 .save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.HONEY_JAR.get())
+                .requires(Items.HONEY_BOTTLE)
+                .unlockedBy("has_honey_bottle", has(Items.HONEY_BOTTLE))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, Items.HONEY_BOTTLE)
+                .requires(ModBlocks.HONEY_JAR.get())
+                .unlockedBy("has_honey_bottle", has(Items.HONEY_BOTTLE))
+                .unlockedBy("has_honey_jar", has(ModBlocks.HONEY_JAR.get()))
+                .save(recipeOutput, getConversionRecipeName(Items.HONEY_BOTTLE, ModBlocks.HONEY_JAR.get()));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.INK_AND_QUILL.get())
                 .pattern("F ")
                 .pattern("BI")
