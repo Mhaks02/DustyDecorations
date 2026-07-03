@@ -422,11 +422,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLD_COINS_LAYER.get(), 4) //TODO:  or 6? like snow
                 .pattern("###")
                 .define('#', ModBlocks.GOLD_COINS_BLOCK.get())
-                .unlockedBy("has_gold_coins", has(ModBlocks.GOLD_COINS_BLOCK.get()))
+                .unlockedBy("has_gold_coins_block", has(ModBlocks.GOLD_COINS_BLOCK.get()))
                 .save(recipeOutput);
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.SCATTERED_GOLD_COINS.get())
-
-
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
