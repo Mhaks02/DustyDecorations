@@ -497,6 +497,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.CERAMIC_POT.get())
                 .unlockedBy("has_ceramic_pot", has(ModBlocks.CERAMIC_POT.get()))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.VINTAGE_CASH_REGISTER.get())
+                .pattern("***")
+                .pattern("I@R")
+                .pattern("###")
+                .define('#', Items.COPPER_INGOT)
+                .define('I', Items.GOLD_INGOT)
+                .define('@', ModBlocks.GOLD_COINS_LAYER.get())
+                .define('R', Items.REDSTONE)
+                .define('*', Items.GOLD_NUGGET)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .unlockedBy("has_gold_coins", has(ModBlocks.GOLD_COINS_LAYER.get()))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .unlockedBy("has_gold_nugget", has(Items.GOLD_NUGGET))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
