@@ -559,6 +559,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CAMERA_QUADROPOD.get())
+                .pattern("#^#")
+                .pattern("#^#")
+                .define('#', Items.COPPER_INGOT)
+                .define('^', Items.GOLD_NUGGET)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_gold_nugget", has(Items.GOLD_NUGGET))
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CAMERA.get())
+                .pattern("###")
+                .pattern("@^S")
+                .pattern("###")
+                .define('#', Items.COPPER_INGOT)
+                .define('@', Items.GOLD_INGOT)
+                .define('^', Items.GUNPOWDER)
+                .define('S', Items.SPYGLASS)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .unlockedBy("has_gunpowder", has(Items.GUNPOWDER))
+                .unlockedBy("has_spyglass", has(Items.SPYGLASS))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MOVIE_CAMERA.get())
+                .pattern("###")
+                .pattern("@^S")
+                .pattern("###")
+                .define('#', Items.COPPER_INGOT)
+                .define('@', Items.GOLD_INGOT)
+                .define('^', Items.REDSTONE)
+                .define('S', Items.SPYGLASS)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .unlockedBy("has_spyglass", has(Items.SPYGLASS))
+                .save(recipeOutput);
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
