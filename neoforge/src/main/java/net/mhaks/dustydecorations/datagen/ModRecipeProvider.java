@@ -464,6 +464,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairs(recipeOutput, ModBlocks.BURLAP_STAIRS.get(), ModBlocks.BURLAP_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BURLAP_SLAB.get(), ModBlocks.BURLAP_BLOCK.get());
         carpet(recipeOutput, ModBlocks.BURLAP_CARPET.get(), ModBlocks.BURLAP_BLOCK.get());
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BURLAP_SACK.get(), 2)
+                .pattern(" #~")
+                .pattern("#@#")
+                .pattern("~# ")
+                .define('#', ModItems.BURLAP.get())
+                .define('~', Tags.Items.ROPES)
+                .define('@', Items.WHEAT)
+                .unlockedBy("has_burlap", has(ModItems.BURLAP.get()))
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_wheat", has(Items.WHEAT))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
