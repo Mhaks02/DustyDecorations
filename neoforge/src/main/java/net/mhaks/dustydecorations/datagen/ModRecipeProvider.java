@@ -863,6 +863,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairs(recipeOutput, ModBlocks.PINK_CUSHION_STAIRS.get(), ModBlocks.PINK_CUSHION_BLOCK.get(), "cushion_stairs");
         slab(recipeOutput, ModBlocks.PINK_CUSHION_SLAB.get(), ModBlocks.PINK_CUSHION_BLOCK.get(), "cushion_slabs");
 
+        quoin(recipeOutput, ModBlocks.SEASTONE_QUOIN.get(), ModBlocks.SMOOTH_SEASTONE_BLOCK.get());     //TODO: smooth_seastone_quoin
+        quoin(recipeOutput, ModBlocks.SMOOTH_STONE_QUOIN.get(), ModBlocks.SMOOTH_STONE_QUOIN.get());
+        quoin(recipeOutput, ModBlocks.POLISHED_GRANITE_QUOIN.get(), Blocks.POLISHED_GRANITE);
+        quoin(recipeOutput, ModBlocks.POLISHED_DIORITE_QUOIN.get(), Blocks.POLISHED_DIORITE);
+        quoin(recipeOutput, ModBlocks.POLISHED_ANDESITE_QUOIN.get(), Blocks.POLISHED_ANDESITE);
+        quoin(recipeOutput, ModBlocks.POLISHED_TUFF_QUOIN.get(), Blocks.POLISHED_TUFF);
+        quoin(recipeOutput, ModBlocks.PACKED_MUD_QUOIN.get(), Blocks.PACKED_MUD);
+        quoin(recipeOutput, ModBlocks.SANDSTONE_QUOIN.get(), Blocks.SMOOTH_SANDSTONE);  //TODO: smooth_sandstone_quoin
+        quoin(recipeOutput, ModBlocks.RED_SANDSTONE_QUOIN.get(), Blocks.SMOOTH_RED_SANDSTONE);  //TODO: smooth_red_sandstone_quoin
+        quoin(recipeOutput, ModBlocks.POLISHED_BLACKSTONE_QUOIN.get(), Blocks.POLISHED_BLACKSTONE);
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -1108,6 +1119,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy("has_leaves", has(ItemTags.LEAVES))
                 .unlockedBy(getHasName(seasonalItem), has(seasonalItem))
+                .save(recipeOutput);
+    }
+
+    protected static void quoin(RecipeOutput recipeOutput, ItemLike quoin, ItemLike material) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, quoin, 4)
+                .pattern("# ")
+                .pattern("##")
+                .pattern("# ")
+                .define('#', material)
+                .unlockedBy(getHasName(material), has(material))
                 .save(recipeOutput);
     }
 
