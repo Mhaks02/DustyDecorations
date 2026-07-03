@@ -776,6 +776,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_BRICK_SLAB.get(), ModBlocks.SMOOTH_STONE_BRICKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_BRICK_WALL.get(), ModBlocks.SMOOTH_STONE_BRICKS.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLAIN_CUSHION_BLOCK.get(), 8)
+                .pattern("@#@")
+                .pattern("#o#")
+                .pattern("@#@")
+                .define('@', ModBlocks.BURLAP_BLOCK.get())
+                .define('#', Items.LEATHER)
+                .define('o', Items.IRON_NUGGET)
+                .unlockedBy("has_burlap_block", has(ModBlocks.BURLAP_BLOCK.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+                .save(recipeOutput);
+        stairs(recipeOutput, ModBlocks.PLAIN_CUSHION_STAIRS.get(), ModBlocks.PLAIN_CUSHION_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLAIN_CUSHION_SLAB.get(), ModBlocks.PLAIN_CUSHION_BLOCK.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
