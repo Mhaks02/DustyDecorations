@@ -125,6 +125,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         paperLantern(recipeOutput, ModBlocks.PILLAGER_PAPER_LANTERN.get(), Items.ARROW);    //iron_axe?
         paperLantern(recipeOutput, ModBlocks.WARDEN_PAPER_LANTERN.get(), Items.ECHO_SHARD);
 
+        nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_BLOCK.get(), "corrugated_metal_ingot_from_corrugated_metal_block", "corrugated_metal_ingot");
+        nineBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_NUGGET.get(), RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), "corrugated_metal_ingot_from_nuggets", "corrugated_metal_ingot");
+        
+
         //Might change that one to be the same as Seaglass Windows but without the plank.
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HAZEL_SEAGLASS.get(), ModItems.HAZEL_SEAGLASS_FRAGMENTS.get(), "seaglass");

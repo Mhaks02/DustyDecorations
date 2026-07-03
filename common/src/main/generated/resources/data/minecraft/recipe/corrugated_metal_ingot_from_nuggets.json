@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "corrugated_metal_ingot",
+  "key": {
+    "#": {
+      "item": "dustydecorations:corrugated_metal_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:corrugated_metal_ingot"
+  }
+}

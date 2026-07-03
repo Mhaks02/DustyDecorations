@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "corrugated_metal_ingot",
+  "ingredients": [
+    {
+      "item": "dustydecorations:corrugated_metal_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "dustydecorations:corrugated_metal_ingot"
+  }
+}
