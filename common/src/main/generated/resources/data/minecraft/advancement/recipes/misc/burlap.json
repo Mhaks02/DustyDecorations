@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_burlap_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:burlap_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:burlap"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_burlap_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:burlap"
+    ]
+  }
+}

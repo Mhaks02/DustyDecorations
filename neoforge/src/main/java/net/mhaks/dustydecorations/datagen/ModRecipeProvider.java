@@ -460,6 +460,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wheat", has(Items.WHEAT))
                 .unlockedBy("has_string", has(Items.STRING))
                 .save(recipeOutput);
+        nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.BURLAP.get(), RecipeCategory.DECORATIONS, ModBlocks.BURLAP_BLOCK.get());
+        stairs(recipeOutput, ModBlocks.BURLAP_STAIRS.get(), ModBlocks.BURLAP_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BURLAP_SLAB.get(), ModBlocks.BURLAP_BLOCK.get());
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -552,6 +555,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group(packedGroup)
                 .unlockedBy(getHasName(unpacked), has(unpacked))
                 .save(recipeOutput, ResourceLocation.parse(packedName));
+    }
+
+    protected static void stairs(RecipeOutput recipeOutput, ItemLike stairs, ItemLike material) {
+        stairBuilder(stairs, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+    protected static void stairs(RecipeOutput recipeOutput, ItemLike stairs, ItemLike material, String group) {
+        stairBuilder(stairs, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).group(group).save(recipeOutput);
+    }
+
+    protected static void slab(RecipeOutput recipeOutput, ItemLike slab, ItemLike material, String group) {
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, slab, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).group(group).save(recipeOutput);
     }
 
     protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
