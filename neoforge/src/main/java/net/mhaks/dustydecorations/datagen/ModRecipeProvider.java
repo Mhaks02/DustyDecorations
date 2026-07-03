@@ -605,6 +605,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         stairs(recipeOutput, ModBlocks.WICKER_STAIRS.get(), ModBlocks.WICKER_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WICKER_SLAB.get(), ModBlocks.WICKER_BLOCK.get());
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WICKER_BASKET.get(), 3)        //TODO: count?
+                .pattern("# #")
+                .pattern("###")
+                .define('#', ModBlocks.WICKER_BLOCK.get())
+                .unlockedBy("has_wicker_block", has(ModBlocks.WICKER_BLOCK.get()))
+                .save(recipeOutput);
+        //TODO: baskets
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
