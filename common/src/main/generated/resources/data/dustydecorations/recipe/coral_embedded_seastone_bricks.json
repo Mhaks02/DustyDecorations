@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "dustydecorations:seastone_bricks"
+    },
+    "@": {
+      "tag": "c:corals"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:coral_embedded_seastone_bricks"
+  }
+}

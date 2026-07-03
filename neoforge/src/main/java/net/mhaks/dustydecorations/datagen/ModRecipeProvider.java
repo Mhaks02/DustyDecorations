@@ -732,6 +732,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SEASTONE_SLAB.get(), ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SEASTONE_WALL.get(), ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get(), 8)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', ModBlocks.SEASTONE_BRICKS.get())
+                .define('@', ModTags.Items.CORALS)
+                .unlockedBy("has_seastone_bricks", has(ModBlocks.SEASTONE_BRICKS.get()))
+                .unlockedBy("has_corals", has(ModTags.Items.CORALS))
+                .save(recipeOutput);
+        stairs(recipeOutput, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS.get(), ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB.get(), ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL.get(), ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
