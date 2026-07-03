@@ -725,6 +725,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairs(recipeOutput, ModBlocks.SEASTONE_BRICK_STAIRS.get(), ModBlocks.SEASTONE_BRICKS.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEASTONE_BRICK_SLAB.get(), ModBlocks.SEASTONE_BRICKS.get());
         chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SEASTONE_BRICKS.get(), ModBlocks.SEASTONE_BRICK_SLAB.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEASTONE_BRICK_WALL.get(), ModBlocks.SEASTONE_BRICKS.get());
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
