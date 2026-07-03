@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "NI",
+    "IN",
+    "NI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:giant_chain"
+  }
+}
