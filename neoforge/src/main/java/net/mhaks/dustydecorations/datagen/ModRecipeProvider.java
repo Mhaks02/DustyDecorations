@@ -705,6 +705,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
                 .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GIANT_ANCHOR.get())
+                .pattern(" I ")
+                .pattern("#I#")
+                .pattern("I@I")
+                .define('I', Items.IRON_INGOT)
+                .define('#', Blocks.IRON_BARS)
+                .define('@', Blocks.IRON_BLOCK)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_iron_bars", has(Blocks.IRON_BARS))
+                .unlockedBy("has_iron_block", has(Blocks.IRON_BLOCK))
+                .save(recipeOutput);
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
