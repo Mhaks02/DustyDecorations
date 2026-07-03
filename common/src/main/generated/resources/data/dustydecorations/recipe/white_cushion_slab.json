@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "cushion_slabs",
+  "key": {
+    "#": {
+      "item": "dustydecorations:white_cushion"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "dustydecorations:white_cushion_slab"
+  }
+}

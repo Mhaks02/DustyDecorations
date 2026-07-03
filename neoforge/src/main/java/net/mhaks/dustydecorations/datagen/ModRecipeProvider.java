@@ -830,6 +830,39 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         colorBlockWithDye(recipeOutput, dyes, cushions, "cushions");
         //TODO: should add another craft (toggleable in the settings maybe), like the universal dyeing crafts from Vanilla Tweaks
 
+        stairs(recipeOutput, ModBlocks.WHITE_CUSHION_STAIRS.get(), ModBlocks.WHITE_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.WHITE_CUSHION_SLAB.get(), ModBlocks.WHITE_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.LIGHT_GRAY_CUSHION_STAIRS.get(), ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.LIGHT_GRAY_CUSHION_SLAB.get(), ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.GRAY_CUSHION_STAIRS.get(), ModBlocks.GRAY_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.GRAY_CUSHION_SLAB.get(), ModBlocks.GRAY_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.BLACK_CUSHION_STAIRS.get(), ModBlocks.BLACK_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.BLACK_CUSHION_SLAB.get(), ModBlocks.BLACK_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.BROWN_CUSHION_STAIRS.get(), ModBlocks.BROWN_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.BROWN_CUSHION_SLAB.get(), ModBlocks.BROWN_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.RED_CUSHION_STAIRS.get(), ModBlocks.RED_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.RED_CUSHION_SLAB.get(), ModBlocks.RED_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.ORANGE_CUSHION_STAIRS.get(), ModBlocks.ORANGE_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.ORANGE_CUSHION_SLAB.get(), ModBlocks.ORANGE_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.YELLOW_CUSHION_STAIRS.get(), ModBlocks.YELLOW_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.YELLOW_CUSHION_SLAB.get(), ModBlocks.YELLOW_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.LIME_CUSHION_STAIRS.get(), ModBlocks.LIME_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.LIME_CUSHION_SLAB.get(), ModBlocks.LIME_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.GREEN_CUSHION_STAIRS.get(), ModBlocks.GREEN_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.GREEN_CUSHION_SLAB.get(), ModBlocks.GREEN_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.CYAN_CUSHION_STAIRS.get(), ModBlocks.CYAN_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.CYAN_CUSHION_SLAB.get(), ModBlocks.CYAN_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.LIGHT_BLUE_CUSHION_STAIRS.get(), ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.LIGHT_BLUE_CUSHION_SLAB.get(), ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.BLUE_CUSHION_STAIRS.get(), ModBlocks.BLUE_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.BLUE_CUSHION_SLAB.get(), ModBlocks.BLUE_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.PURPLE_CUSHION_STAIRS.get(), ModBlocks.PURPLE_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.PURPLE_CUSHION_SLAB.get(), ModBlocks.PURPLE_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.MAGENTA_CUSHION_STAIRS.get(), ModBlocks.MAGENTA_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.MAGENTA_CUSHION_SLAB.get(), ModBlocks.MAGENTA_CUSHION_BLOCK.get(), "cushion_slabs");
+        stairs(recipeOutput, ModBlocks.PINK_CUSHION_STAIRS.get(), ModBlocks.PINK_CUSHION_BLOCK.get(), "cushion_stairs");
+        slab(recipeOutput, ModBlocks.PINK_CUSHION_SLAB.get(), ModBlocks.PINK_CUSHION_BLOCK.get(), "cushion_slabs");
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
