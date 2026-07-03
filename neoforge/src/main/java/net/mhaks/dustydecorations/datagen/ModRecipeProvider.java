@@ -674,6 +674,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_winter_garland", has(ModBlocks.WINTER_GARLAND.get()))
                 .unlockedBy("has_spruce_leaves", has(Blocks.SPRUCE_LEAVES))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.FAIRY_LIGHTS.get(), 8)
+                .pattern(" ~ ")
+                .pattern("*^*")
+                .define('~', Tags.Items.ROPES)
+                .define('^', Items.GLOWSTONE_DUST)
+                .define('*', Tags.Items.DYES)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_glowstone_dust", has(Items.GLOWSTONE_DUST))
+                .unlockedBy("has_dyes", has(Tags.Items.DYES))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
