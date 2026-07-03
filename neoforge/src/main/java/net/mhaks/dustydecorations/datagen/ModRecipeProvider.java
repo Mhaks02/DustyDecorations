@@ -452,6 +452,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cold_seaglass_fragments", has(ModTags.Items.COLD_SEAGLASS_FRAGMENTS))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BURLAP.get(), 4)
+                .pattern("#~")
+                .pattern("~#")
+                .define('#', Items.WHEAT)
+                .define('~', Items.STRING)
+                .unlockedBy("has_wheat", has(Items.WHEAT))
+                .unlockedBy("has_string", has(Items.STRING))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
