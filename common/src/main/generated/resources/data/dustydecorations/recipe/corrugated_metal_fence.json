@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "dustydecorations:corrugated_metal_block"
+    },
+    "@": {
+      "item": "dustydecorations:corrugated_metal_ingot"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "#@#"
+  ],
+  "result": {
+    "count": 6,
+    "id": "dustydecorations:corrugated_metal_fence"
+  }
+}

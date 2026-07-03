@@ -130,6 +130,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         grate(recipeOutput, ModBlocks.CORRUGATED_METAL_GRATE.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_STAIRS.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_SLAB.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.CORRUGATED_METAL_FENCE_GATE.get())
+                .pattern("@#@")
+                .pattern("@#@")
+                .define('@', ModItems.CORRUGATED_METAL_INGOT.get())
+                .define('#', ModBlocks.CORRUGATED_METAL_BLOCK.get())
+                .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
+                .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CORRUGATED_METAL_FENCE.get(), 6)
+                .pattern("#@#")
+                .pattern("#@#")
+                .define('#', ModBlocks.CORRUGATED_METAL_BLOCK.get())
+                .define('@', ModItems.CORRUGATED_METAL_INGOT.get())
+                .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
+                .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
+                .save(recipeOutput);
 
         //Might change that one to be the same as Seaglass Windows but without the plank.
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
