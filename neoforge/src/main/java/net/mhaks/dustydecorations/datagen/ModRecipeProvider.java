@@ -317,6 +317,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wedged_cleaver", has(ModBlocks.WEDGED_CLEAVER.get()))
                 .save(recipeOutput);
 
+        //TODO:
+//        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_FRYING_PAN.get())
+//        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_FRYING_PAN.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_FRYING_PAN.get())
+                .pattern("~  ")
+                .pattern("###")
+                .define('#', Items.IRON_INGOT)
+                .define('~', Items.IRON_NUGGET)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_FRYING_PAN.get())
+                .pattern("~  ")
+                .pattern("###")
+                .define('#', Items.COPPER_INGOT)
+                .define('~', ModItems.COPPER_NUGGET.get())
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BIG_COOKING_POT.get())
                 .pattern("~ ~")
                 .pattern("# #")
