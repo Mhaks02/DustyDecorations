@@ -513,6 +513,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_gold_nugget", has(Items.GOLD_NUGGET))
                 .save(recipeOutput);
         hangingStuff(recipeOutput, ModBlocks.HANGING_SAUSAGES.get(), ModItems.RAW_BRATWURST.get());
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WRAPPED_MEAT.get(), 4)
+                .pattern(" # ")
+                .pattern("#@#")
+                .pattern(" # ")
+                .define('#', Items.PAPER)
+                .define('@', Tags.Items.FOODS_RAW_MEAT)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_raw_meat", has(Tags.Items.FOODS_RAW_MEAT))
+                .save(recipeOutput);
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
