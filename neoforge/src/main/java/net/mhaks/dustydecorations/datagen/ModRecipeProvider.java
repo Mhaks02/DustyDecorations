@@ -3,6 +3,7 @@ package net.mhaks.dustydecorations.datagen;
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.item.ModItems;
+import net.mhaks.dustydecorations.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -439,6 +440,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.NAUTILUS_SHELL)
                 .unlockedBy("has_nautilus_shell", has(Items.NAUTILUS_SHELL))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COLD_NAUTILUS_WIND_CHIME.get())
+                .pattern(" ~ ")
+                .pattern(" @ ")
+                .pattern("###")
+                .define('~', Tags.Items.ROPES)
+                .define('@', Ingredient.of(Items.NAUTILUS_SHELL, ModBlocks.SMALL_NAUTILUS_SHELL.get()))
+                .define('#', ModTags.Items.COLD_SEAGLASS_FRAGMENTS)
+                .unlockedBy("has_ropes", has(Tags.Items.ROPES))
+                .unlockedBy("has_nautilus_shell", has(Items.NAUTILUS_SHELL))
+                .unlockedBy("has_cold_seaglass_fragments", has(ModTags.Items.COLD_SEAGLASS_FRAGMENTS))
+                .save(recipeOutput);
+
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
