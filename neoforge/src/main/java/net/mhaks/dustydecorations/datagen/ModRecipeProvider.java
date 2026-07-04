@@ -1047,6 +1047,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, slab, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).group(group).save(recipeOutput);
     }
 
+    protected static void fence(RecipeOutput recipeOutput, ItemLike fence, ItemLike material) {
+        fenceBuilder(fence, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+    protected static void fenceGate(RecipeOutput recipeOutput, ItemLike fenceGate, ItemLike material) {
+        fenceGateBuilder(fenceGate, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+
+    protected static void door(RecipeOutput recipeOutput, ItemLike door, ItemLike material) {
+        doorBuilder(door, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+    protected static void trapdoor(RecipeOutput recipeOutput, ItemLike door, ItemLike material) {
+        trapdoorBuilder(door, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+
+    protected static void button(RecipeOutput recipeOutput, ItemLike button, ItemLike material) {
+        buttonBuilder(button, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+
     protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, banister, 6)
                 .pattern("###")
