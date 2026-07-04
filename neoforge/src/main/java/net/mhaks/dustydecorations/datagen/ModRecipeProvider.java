@@ -74,6 +74,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         barrel(recipeOutput, ModBlocks.SEA_PICKLE_BARREL.get(), Items.SEA_PICKLE);
         barrel(recipeOutput, ModBlocks.COD_BARREL.get(), Items.COD);
         barrel(recipeOutput, ModBlocks.SALMON_BARREL.get(), Items.SALMON);
+        //TODO: DUSTYDECO_BARREL?
+
         wallpaper(recipeOutput, ModBlocks.SUNFLOWER_WALLPAPER_BLOCK.get(), Blocks.WHITE_WOOL, Items.SUNFLOWER);
         wallpaper(recipeOutput, ModBlocks.REGAL_WALLPAPER_BLOCK.get(), Blocks.RED_WOOL, Items.GOLD_NUGGET);
         wallpaper(recipeOutput, ModBlocks.VINE_WALLPAPER_BLOCK.get(), Blocks.LIME_WOOL, Blocks.VINE);
@@ -151,6 +153,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         pressurePlate(recipeOutput, ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), ModItems.CORRUGATED_METAL_INGOT.get());
         button(recipeOutput, ModBlocks.CORRUGATED_METAL_BUTTON.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_ROOFING.get(), ModItems.CORRUGATED_METAL_INGOT.get());
+
+        // these will be oxidisable instead
+//        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get(), 8)
+//                .pattern("###")
+//                .pattern("#@#")
+//                .pattern("###")
+//                .define('#', ModBlocks.CORRUGATED_METAL_BLOCK.get())
+//                .define('@', Items.WATER_BUCKET)
+//                .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
+//                .save(recipeOutput);
 
         //Might change that one to be the same as Seaglass Windows but without the plank.
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
@@ -952,6 +964,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
 
 
+        //TODO: all waxed variants recipes
+        //TODO: stonecutting recipes
+//
 
 //        List<ItemLike> BLOCK_SMELTABLES = List.of(
 //                ModItems.<MY_ITEM>,
@@ -1005,6 +1020,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group(group)
                 .save(recipeOutput);
     }
+
+//    protected static void threeByThreePacker(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike result, ItemLike ingredient, @Nullable String group) {
+//        threeByThreePacker(recipeOutput, recipeCategory, result, 1, ingredient, group);
+//    }
+//    protected static void threeByThreePacker(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike result, int count, ItemLike ingredient, @Nullable String group) {
+//        ShapedRecipeBuilder.shaped(recipeCategory, result, count)
+//                .pattern("###")
+//                .pattern("###")
+//                .pattern("###")
+//                .define('#', ingredient)
+//                .unlockedBy(getHasName(ingredient), has(ingredient))
+//                .group(group)
+//                .save(recipeOutput);
+//    }
 
     protected static void threeByTwoPacker(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient, @Nullable String group) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 16)
@@ -1073,6 +1102,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     protected static void button(RecipeOutput recipeOutput, ItemLike button, ItemLike material) {
         buttonBuilder(button, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
+    }
+
+    protected static void wax(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike waxed, ItemLike waxable) {
+        ShapelessRecipeBuilder.shapeless(recipeCategory, waxed)
+                .requires(Items.HONEYCOMB)
+                .requires(waxable)
+                .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+                .unlockedBy(getHasName(waxable), has(waxable))
+                .save(recipeOutput, getConversionRecipeName(waxed, Items.HONEYCOMB));
     }
 
     protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
