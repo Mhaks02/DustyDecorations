@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "dustydecorations:copper_light"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:waxed_copper_light"
+  }
+}

@@ -609,8 +609,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_mooshroom_cowhide_rug", has(ModBlocks.MOOSHROOM_COWHIDE_RUG.get()))
                 .save(recipeOutput, "cowhide_rug_from_mooshroom_cowhide_rug");
 
-        //TODO: copper_nugget doesn't exist yet
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_LIGHT.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.COPPER_LIGHT.get())
                 .pattern("###")
                 .pattern("#@#")
                 .pattern("###")
@@ -619,6 +618,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
                 .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
                 .save(recipeOutput);
+        wax(recipeOutput, RecipeCategory.REDSTONE, ModBlocks.WAXED_COPPER_LIGHT.get(), ModBlocks.COPPER_LIGHT.get());
+        wax(recipeOutput, RecipeCategory.REDSTONE, ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get(), ModBlocks.SHODDY_COPPER_LIGHT.get());
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CAMERA_QUADROPOD.get())
                 .pattern("#^#")
                 .pattern("#^#")
