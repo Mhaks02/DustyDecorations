@@ -940,6 +940,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         mural(recipeOutput, ModBlocks.ANDESITE_MURAL.get(), Blocks.POLISHED_ANDESITE);
 
         nineBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), RecipeCategory.MISC, Items.COPPER_INGOT, getConversionRecipeName(Items.COPPER_INGOT, ModItems.COPPER_NUGGET.get()), getItemName(Items.COPPER_INGOT));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), 6)
+                .pattern("#@#")
+                .pattern("@#@")
+                .define('#', Items.IRON_INGOT)
+                .define('@', Items.COPPER_INGOT)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
 
 
 
