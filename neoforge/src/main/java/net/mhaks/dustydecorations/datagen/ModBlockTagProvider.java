@@ -318,6 +318,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SNOWY_STONE_BRICK_WALL.get())
                 .add(ModBlocks.SMOOTH_STONE_BRICK_WALL.get())
         ;
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.CORRUGATED_METAL_FENCE.get())
+                .add(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE.get())
+        ;
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.CORRUGATED_METAL_FENCE_GATE.get())
+                .add(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE.get())
+        ;
         tag(Tags.Blocks.ROPES)
                 .add(ModBlocks.ROPE.get())
         ;
