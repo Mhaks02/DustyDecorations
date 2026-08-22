@@ -231,6 +231,7 @@ public class ModBlocks {
                     .noOcclusion()
                     .noCollission()
                     .lightLevel(value -> 12)
+                    .strength(.1f)
             ));
     public static final RegistryObject<Block, Block> SAKURA_PAPER_LANTERN = registerBlock("sakura_paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.ofFullCopy(PAPER_LANTERN.get())
@@ -264,42 +265,50 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_GRATE = registerBlock("corrugated_metal_grate",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
                     .noOcclusion()
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_STAIRS = registerBlock("corrugated_metal_stairs",
             () -> new StairBlock(ModBlocks.CORRUGATED_METAL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_SLAB = registerBlock("corrugated_metal_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE = registerBlock("corrugated_metal_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             )); //TODO: fence tags
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE_GATE = registerBlock("corrugated_metal_fence_gate",
             () -> new CorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_DOOR = registerBlock("corrugated_metal_door",
             () -> new CorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_TRAPDOOR = registerBlock("corrugated_metal_trapdoor",
             () -> new CorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_PRESSURE_PLATE = registerBlock("corrugated_metal_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
@@ -315,48 +324,57 @@ public class ModBlocks {
             () -> new CorrugatedMetalRoofingBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
 
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_BLOCK = registerBlock("rusted_corrugated_metal_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_GRATE = registerBlock("rusted_corrugated_metal_grate",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
                     .noOcclusion()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_STAIRS = registerBlock("rusted_corrugated_metal_stairs",
             () -> new StairBlock(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_SLAB = registerBlock("rusted_corrugated_metal_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_FENCE = registerBlock("rusted_corrugated_metal_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             )); //TODO: fence tags
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_FENCE_GATE = registerBlock("rusted_corrugated_metal_fence_gate",
             () -> new CorrugatedMetalFenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_DOOR = registerBlock("rusted_corrugated_metal_door",
             () -> new CorrugatedMetalDoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_TRAPDOOR = registerBlock("rusted_corrugated_metal_trapdoor",
             () -> new CorrugatedMetalTrapdoorBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RUSTED_CORRUGATED_METAL_PRESSURE_PLATE = registerBlock("rusted_corrugated_metal_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.COPPER, BlockBehaviour.Properties.of()
@@ -372,8 +390,10 @@ public class ModBlocks {
             () -> new CorrugatedMetalRoofingBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.COPPER)
+                    .requiresCorrectToolForDrops()
             ));
 
+    //TODO: silk touch for drops
     public static final RegistryObject<Block, Block> CREAM_SEAGLASS = registerBlock("cream_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
@@ -545,10 +565,12 @@ public class ModBlocks {
     public static final RegistryObject<Block, Block> SEAGLASS_SAND = registerBlock("seaglass_sand",
             () -> new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.of()
                     .sound(SoundType.SAND)
+                    .strength(.25f)
             ));
     public static final RegistryObject<Block, Block> SEAGLASS_GRAVEL = registerBlock("seaglass_gravel",
             () -> new ColoredFallingBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.of()
                     .sound(SoundType.GRAVEL)
+                    .strength(.25f)
             ));
 
     //TODO: copper chain connect blockstate
@@ -572,26 +594,26 @@ public class ModBlocks {
     //TODO: vérifier toprim / fullface etc...
     public static final RegistryObject<Block, Block> TREASURE_MAP = registerBlock("treasure_map",
             () -> new TreasureMapBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.1f)
                     .sound(SoundType.WOOL)
                     .noCollission()
             ));
     //TODO: scattered papers model offset
     public static final RegistryObject<Block, Block> SCATTERED_PAPERS = registerBlock("scattered_papers",
             () -> new ScatteredPapersBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.WOOL)
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> POSTERS = registerBlock("posters",
             () -> new PostersBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.WOOL)
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> PAPER_STACK = registerBlock("paper_stack",
             () -> new PaperStackBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.1f)
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> GLASS_BUOY = registerBlock("glass_buoy",
@@ -652,12 +674,12 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> CUTTING_BOARD = registerBlock("cutting_board",
             () -> new CuttingBoardBlock(BlockBehaviour.Properties.of()
-                    .strength(1.5f)
+                    .strength(.7f)
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> KNIFE_AND_CUTTING_BOARD = registerBlock("knife_and_cutting_board",
             () -> new CuttingBoardBlock(BlockBehaviour.Properties.of()
-                    .strength(1.5f)
+                    .strength(.7f)
                     .sound(SoundType.WOOD)
             ));
     //TODO: particles have wood texture i need to change that back
@@ -683,7 +705,7 @@ public class ModBlocks {
                 ));
     public static final RegistryObject<Block, Block> DECORATIVE_BOWL = registerBlockWithoutItem("decorative_bowl",
             () -> new DecorativeBowlBlock(BlockBehaviour.Properties.of()
-                    .strength(1.5f)
+                    .instabreak()
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> JARS = registerBlock("jars",
@@ -718,48 +740,48 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> BOOKS = registerBlock("books",
             () -> new BooksBlock(BlockBehaviour.Properties.of()
-                    .strength(1f)
+                    .strength(.5f)
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> BOOK_STACK = registerBlock("book_stack",
             () -> new BookStackBlock(BlockBehaviour.Properties.of()
-                    .strength(1f)
+                    .strength(.5f)
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> GLOBE = registerBlock("globe",
             () -> new GlobeBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
+                    .strength(1f)
                     .sound(SoundType.METAL)
             ));
     public static final RegistryObject<Block, Block> VINTAGE_GLOBE = registerBlock("vintage_globe",
             () -> new GlobeBlock(BlockBehaviour.Properties.of()
-                    .strength(2.5f)
+                    .strength(1f)
                     .sound(SoundType.METAL)
             ));
     public static final RegistryObject<Block, Block> BOVINE_SKULL = registerBlock("bovine_skull",
             () -> new BovineSkullBlock(BlockBehaviour.Properties.of()
-                    .strength(1f)
+                    .strength(.5f)
                     .sound(SoundType.BONE_BLOCK)
             ));
     public static final RegistryObject<Block, Block> EQUINE_SKULL = registerBlock("equine_skull",
             () -> new EquineSkullBlock(BlockBehaviour.Properties.of()
-                    .strength(1f)
+                    .strength(.5f)
                     .sound(SoundType.BONE_BLOCK)
             ));
     public static final RegistryObject<Block, Block> CANINE_SKULL = registerBlock("canine_skull",
             () -> new CanineSkullBlock(BlockBehaviour.Properties.of()
-                    .strength(1f)
+                    .strength(.5f)
                     .sound(SoundType.BONE_BLOCK)
             ));
     public static final RegistryObject<Block, Block> FISH_BONES = registerBlock("fish_bones",
             () -> new FishBonesBlock(BlockBehaviour.Properties.of()
-                    .strength(.3f)
+                    .instabreak()
                     .sound(SoundType.BONE_BLOCK)
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> SMALL_SHARK_JAW = registerBlock("small_shark_jaw",
             () -> new SmallSharkJawBlock(BlockBehaviour.Properties.of()
-                    .strength(.3f)
+                    .instabreak()
                     .sound(SoundType.BONE_BLOCK)
                     .noOcclusion()
                     .noCollission()
@@ -774,14 +796,14 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> MEGALODON_TOOTH = registerBlock("megalodon_tooth",
             () -> new SmallSharkJawBlock(BlockBehaviour.Properties.of()
-                    .strength(.3f)
+                    .instabreak()
                     .sound(SoundType.BONE_BLOCK)
                     .noOcclusion()
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> FISHING_LURES = registerBlock("fishing_lures",
             () -> new FishingLuresBlock(BlockBehaviour.Properties.of()
-                    .strength(.3f)
+                    .instabreak()
                     .sound(SoundType.BONE_BLOCK)
                     .noOcclusion()
                     .noCollission()
@@ -792,10 +814,12 @@ public class ModBlocks {
     public static final RegistryObject<Block, Block> STONE_MARINE_FOSSIL = registerBlock("stone_marine_fossil",
             () -> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> DEEPSLATE_MARINE_FOSSIL = registerBlock("deepslate_marine_fossil",
             () -> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
             ));
 
     //TODO: custom sounds
@@ -812,7 +836,7 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> SCATTERED_GOLD_COINS = registerBlock("scattered_gold_coins",
             () -> new ScatteredGoldCoinsBlock(BlockBehaviour.Properties.of()
-                    .strength(.3f)
+                    .strength(.2f)
                     .sound(SoundType.METAL)
             ));
 
@@ -841,39 +865,40 @@ public class ModBlocks {
 
     public static final RegistryObject<Block, Block> BIG_NAUTILUS_SHELL = registerBlock("big_nautilus_shell",
             () -> new BigNautilusShellBlock(BlockBehaviour.Properties.of()
-                    .strength(2.25f)
+                    .strength(2f)
                     .sound(SoundType.BONE_BLOCK)
             ));
     public static final RegistryObject<Block, Block> BIG_NAUTILUS_LANTERN = registerBlock("big_nautilus_lantern",
             () -> new BigNautilusLanternBlock(BlockBehaviour.Properties.of()
-                    .strength(2.25f)
+                    .strength(2f)
                     .sound(SoundType.BONE_BLOCK)
                     .lightLevel(value -> 15)
             ));
+    //TODO: vanilla item placeable, like the decorative bowl?
     public static final RegistryObject<Block, Block> SMALL_NAUTILUS_SHELL = registerBlock("small_nautilus_shell",
             () -> new SmallNautilusShellBlock(BlockBehaviour.Properties.of()
-                    .strength(1.25f)
+                    .strength(1f)
                     .sound(SoundType.BONE_BLOCK)
             ));
     public static final RegistryObject<Block, Block> COLD_NAUTILUS_WIND_CHIME = registerBlock("cold_nautilus_wind_chime",
             () -> new NautilusWindChimeBlock(BlockBehaviour.Properties.of()
-                    .strength(1.25f)
+                    .strength(1f)
                     .sound(SoundType.SMALL_AMETHYST_BUD)
             ));
 
     public static final RegistryObject<Block, Block> BURLAP_BLOCK = registerBlock("burlap_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(.5f)
+                    .strength(.6f)
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> BURLAP_STAIRS = registerBlock("burlap_stairs",
             () -> new StairBlock(BURLAP_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
-                    .strength(.5f)
+                    .strength(.6f)
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> BURLAP_SLAB = registerBlock("burlap_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.5f)
+                    .strength(.6f)
                     .sound(SoundType.WOOL)
             ));
     public static final RegistryObject<Block, Block> BURLAP_CARPET = registerBlock("burlap_carpet",
@@ -900,7 +925,7 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> SAILOR_PENNANT_FLAG = registerBlock("sailor_pennant_flag",
             () -> new SailorPennantFlagBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.WOOD)
                     .noOcclusion()
                     .noCollission()
@@ -920,7 +945,7 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> VINTAGE_CASH_REGISTER = registerBlock("vintage_cash_register",
             () -> new VintageCashRegisterBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.5f)
                     .sound(SoundType.COPPER)
             ));
     public static final RegistryObject<Block, Block> HANGING_SAUSAGES = registerBlock("hanging_sausages",
@@ -983,22 +1008,22 @@ public class ModBlocks {
 
     public static final RegistryObject<Block, Block> WICKER_BLOCK = registerBlock("wicker",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(.5f)
                     .sound(SoundType.BAMBOO)
             ));
     public static final RegistryObject<Block, Block> WICKER_STAIRS = registerBlock("wicker_stairs",
             () -> new StairBlock(WICKER_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(.5f)
                     .sound(SoundType.BAMBOO)
             ));
     public static final RegistryObject<Block, Block> WICKER_SLAB = registerBlock("wicker_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(.5f)
                     .sound(SoundType.BAMBOO)
             ));
     public static final RegistryObject<Block, Block> WICKER_BASKET = registerBlock("wicker_basket",
             () -> new WickerBasketBlock(BlockBehaviour.Properties.of()
-                    .strength(.4f)
+                    .strength(.2f)
                     .sound(SoundType.BAMBOO)
             ));
     public static final RegistryObject<Block, Block> APPLE_WICKER_BASKET = registerBlock("apple_wicker_basket",
@@ -1043,39 +1068,39 @@ public class ModBlocks {
 
     public static final RegistryObject<Block, Block> GOURD = registerBlock("gourd",
             () -> new GourdBlock(BlockBehaviour.Properties.of()
-                    .strength(.4f)
+                    .strength(.2f)
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> HANGING_GOURDS = registerBlock("hanging_gourds",
             () -> new HangingGourdsBlock(BlockBehaviour.Properties.of()
-                    .strength(.4f)
+                    .strength(.2f)
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> CARVED_BEETROOT = registerBlock("carved_beetroot",
             () -> new CarvedBeetrootBlock(BlockBehaviour.Properties.of()
-                    .strength(.4f)
+                    .strength(.2f)
                     .sound(SoundType.WOOD)
             ));
     public static final RegistryObject<Block, Block> BEET_O_LANTERN = registerBlock("beet_o_lantern",
             () -> new CarvedBeetrootBlock(BlockBehaviour.Properties.of()
-                    .strength(.4f)
+                    .strength(.2f)
                     .sound(SoundType.WOOD)
                     .lightLevel(state -> 3 + 4 * state.getValue(CarvedBeetrootBlock.AMOUNT))
             ));
     public static final RegistryObject<Block, Block> BEETROOT_SCARECROW = registerBlock("beetroot_scarecrow",
             () -> new ScarecrowBlock(ScarecrowBlock.Types.BEETROOT, BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.4f)
                     .sound(SoundType.GRASS)
             ));
     public static final RegistryObject<Block, Block> PUMPKIN_SCARECROW = registerBlock("pumpkin_scarecrow",
             () -> new ScarecrowBlock(ScarecrowBlock.Types.PUMPKIN, BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.4f)
                     .sound(SoundType.GRASS)
             ));
     //TODO: Snowman's shape
     public static final RegistryObject<Block, Block> MINI_SNOWMAN = registerBlock("mini_snowman",
             () -> new MiniSnowmanBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.1f)
                     .sound(SoundType.SNOW)
             ));
     public static final RegistryObject<Block, Block> PLUSHIE = registerBlock("plushie",
@@ -1091,14 +1116,14 @@ public class ModBlocks {
     //TODO: Unify all 2D full-height decorations block into the same BlockClass --> refactor FishingLuresBlock and make it the main for example
     public static final RegistryObject<Block, Block> FALL_GARLAND = registerBlock("fall_garland",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.GRASS)
                     .noOcclusion()
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> WINTER_GARLAND = registerBlock("winter_garland",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.GRASS)
                     .noOcclusion()
                     .noCollission()
@@ -1106,13 +1131,13 @@ public class ModBlocks {
     //TODO: canSurvive à revoir
     public static final RegistryObject<Block, Block> WINTER_WREATH = registerBlock("winter_wreath",
             () -> new WinterWreathBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .strength(.1f)
                     .sound(SoundType.GRASS)
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> FAIRY_LIGHTS = registerBlock("fairy_lights",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.WOOD)
                     .noOcclusion()
                     .noCollission()
@@ -1120,136 +1145,168 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block, Block> HOLIDAY_ORNAMENTS = registerBlock("holiday_ornaments",
             () -> new HolidaysOrnamentsBlock(BlockBehaviour.Properties.of()
-                    .strength(.2f)
+                    .instabreak()
                     .sound(SoundType.WOOD)
                     .noCollission()
             ));
     public static final RegistryObject<Block, Block> GIANT_ANCHOR = registerBlock("giant_anchor",
             () -> new GiantAnchorBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(2f)
                     .sound(SoundType.METAL)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> GIANT_CHAIN = registerBlock("giant_chain",
             () -> new GiantChainBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(2f)
                     .sound(SoundType.METAL)
+                    .requiresCorrectToolForDrops()
             ));
 
+    //TODO: strenghts
     public static final RegistryObject<Block, Block> SEASTONE_BLOCK = registerBlock("seastone",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_STAIRS = registerBlock("seastone_stairs",
             () -> new StairBlock(SEASTONE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_SLAB = registerBlock("seastone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_WALL = registerBlock("seastone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_BRICKS = registerBlock("seastone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CHISELED_SEASTONE_BRICKS = registerBlock("chiseled_seastone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_BRICK_STAIRS = registerBlock("seastone_brick_stairs",
             () -> new StairBlock(SEASTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_BRICK_SLAB = registerBlock("seastone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SEASTONE_BRICK_WALL = registerBlock("seastone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_BLOCK = registerBlock("smooth_seastone",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_STAIRS = registerBlock("smooth_seastone_stairs",
             () -> new StairBlock(SMOOTH_SEASTONE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_SLAB = registerBlock("smooth_seastone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_SEASTONE_WALL = registerBlock("smooth_seastone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICKS = registerBlock("coral_embedded_seastone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS = registerBlock("coral_embedded_seastone_brick_stairs",
             () -> new StairBlock(CORAL_EMBEDDED_SEASTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICK_SLAB = registerBlock("coral_embedded_seastone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> CORAL_EMBEDDED_SEASTONE_BRICK_WALL = registerBlock("coral_embedded_seastone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_BLOCK = registerBlock("snowy_cobblestone",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_STAIRS = registerBlock("snowy_cobblestone_stairs",
             () -> new StairBlock(SNOWY_COBBLESTONE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_SLAB = registerBlock("snowy_cobblestone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_WALL = registerBlock("smooth_seastone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_STONE_BRICKS = registerBlock("snowy_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_STONE_BRICK_STAIRS = registerBlock("snowy_stone_brick_stairs",
             () -> new StairBlock(SNOWY_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_STONE_BRICK_SLAB = registerBlock("snowy_stone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SNOWY_STONE_BRICK_WALL = registerBlock("snowy_stone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICKS = registerBlock("smooth_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_STAIRS = registerBlock("smooth_stone_brick_stairs",
             () -> new StairBlock(SMOOTH_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_SLAB = registerBlock("smooth_stone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_WALL = registerBlock("smooth_tone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
 
     public static final RegistryObject<Block, Block> PLAIN_CUSHION_BLOCK = registerBlock("plain_cushion",
@@ -1510,77 +1567,92 @@ public class ModBlocks {
 
     public static final RegistryObject<Block, Block> SEASTONE_QUOIN = registerBlock("seastone_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_STONE_QUOIN = registerBlock("smooth_stone_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> POLISHED_GRANITE_QUOIN = registerBlock("polished_granite_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> POLISHED_DIORITE_QUOIN = registerBlock("polished_diorite_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> POLISHED_ANDESITE_QUOIN = registerBlock("polished_andesite_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> POLISHED_TUFF_QUOIN = registerBlock("polished_tuff_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> PACKED_MUD_QUOIN = registerBlock("packed_mud_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SANDSTONE_QUOIN = registerBlock("sandstone_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> RED_SANDSTONE_QUOIN = registerBlock("red_sandstone_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> POLISHED_BLACKSTONE_QUOIN = registerBlock("polished_blackstone_quoin",
             () -> new QuoinBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
             ));
 
     public static final RegistryObject<Block, Block> SEASTONE_MURAL = registerBlock("seastone_mural",
             () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> SMOOTH_STONE_MURAL = registerBlock("smooth_stone_mural",
             () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> GRANITE_MURAL = registerBlock("granite_mural",
             () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> DIORITE_MURAL = registerBlock("diorite_mural",
             () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> ANDESITE_MURAL = registerBlock("andesite_mural",
             () -> new VerticalSlabBlock(BlockBehaviour.Properties.of()
-                    .strength(.8f)
+                    .strength(1.5f)
+                    .requiresCorrectToolForDrops()
             ));
-
 
 //TODO: piston behaviours
 //TODO: check all strengths and hardness
 //TODO: propagateSkyLight
 //TODO: item lore
 //TODO: random Block pos
-//TODO: make all VoxelShapes protected instead of private
-//TODO: Check les cullfaces de TOUS les modèles
+//TODO: make all VoxelShapes protected instead of private?
+//TODO: Check les cullfaces de TOUS les models
 
     public static final RegistryObject<Block, Block> DUSTY_DECORATIONS_BARREL = registerBlock("dusty_decorations_barrel",
         () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.APPLE_BARREL.get())));
+
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
