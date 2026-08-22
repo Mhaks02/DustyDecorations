@@ -132,6 +132,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.EMPTY_SMALL_SHELF.get())
                 .add(ModBlocks.SMALL_BOOKSHELF.get())
         ;
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.SEAGLASS_SAND.get())
+                .add(ModBlocks.SEAGLASS_GRAVEL.get())
+                ;
         tag(ModTags.Blocks.BANISTERS)
                 .add(ModBlocks.OAK_BANISTER.get())
                 .add(ModBlocks.SPRUCE_BANISTER.get())
