@@ -24,7 +24,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        //TODO: CorrugatedFence, Rope
 //        tag(ModItems.<MY_ITEM>.get());
 
         tag(ModTags.Items.NAUTILUS_SHELLS)
@@ -54,5 +53,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Blocks.FIRE_CORAL.asItem())
                 .add(Blocks.HORN_CORAL.asItem())
                 .add(Blocks.TUBE_CORAL.asItem());
+
     }
 }
