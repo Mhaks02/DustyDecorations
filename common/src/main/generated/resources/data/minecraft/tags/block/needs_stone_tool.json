@@ -1,0 +1,28 @@
+{
+  "values": [
+    "dustydecorations:corrugated_metal_block",
+    "dustydecorations:corrugated_metal_grate",
+    "dustydecorations:corrugated_metal_stairs",
+    "dustydecorations:corrugated_metal_slab",
+    "dustydecorations:corrugated_metal_fence",
+    "dustydecorations:corrugated_metal_fence_gate",
+    "dustydecorations:corrugated_metal_door",
+    "dustydecorations:corrugated_metal_trapdoor",
+    "dustydecorations:corrugated_metal_pressure_plate",
+    "dustydecorations:corrugated_metal_button",
+    "dustydecorations:corrugated_metal_roofing",
+    "dustydecorations:rusted_corrugated_metal_block",
+    "dustydecorations:rusted_corrugated_metal_grate",
+    "dustydecorations:rusted_corrugated_metal_stairs",
+    "dustydecorations:rusted_corrugated_metal_slab",
+    "dustydecorations:rusted_corrugated_metal_fence",
+    "dustydecorations:rusted_corrugated_metal_fence_gate",
+    "dustydecorations:rusted_corrugated_metal_door",
+    "dustydecorations:rusted_corrugated_metal_trapdoor",
+    "dustydecorations:rusted_corrugated_metal_pressure_plate",
+    "dustydecorations:rusted_corrugated_metal_button",
+    "dustydecorations:rusted_corrugated_metal_roofing",
+    "dustydecorations:giant_anchor",
+    "dustydecorations:giant_chain"
+  ]
+}
