@@ -7,9 +7,9 @@ import net.mhaks.dustydecorations.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    private static final String MOD_ID = ModConstants.MOD_ID + ":";
+
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
@@ -277,11 +279,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_glass_buoys", has(ModBlocks.GLASS_BUOY.get()))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GLASS_BUOY.get())
-                        .requires(ModBlocks.SMALL_GLASS_BUOYS.get())
+                .requires(ModBlocks.SMALL_GLASS_BUOYS.get())
                 .unlockedBy("has_stained_glass", has(Tags.Items.GLASS_BLOCKS_TINTED))
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy("has_small_glass_buoys", has(ModBlocks.SMALL_GLASS_BUOYS.get()))
-                        .save(recipeOutput, getConversionRecipeName(ModBlocks.GLASS_BUOY.get(), ModBlocks.SMALL_GLASS_BUOYS.get()));
+                .save(recipeOutput, MOD_ID + getConversionRecipeName(ModBlocks.GLASS_BUOY.get(), ModBlocks.SMALL_GLASS_BUOYS.get()));
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WOODEN_BUOYS.get(), 3)
                 .pattern("~~~")
                 .pattern("# #")
@@ -414,7 +416,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.HONEY_JAR.get())
                 .unlockedBy("has_honey_bottle", has(Items.HONEY_BOTTLE))
                 .unlockedBy("has_honey_jar", has(ModBlocks.HONEY_JAR.get()))
-                .save(recipeOutput, getConversionRecipeName(Items.HONEY_BOTTLE, ModBlocks.HONEY_JAR.get()));
+                .save(recipeOutput, MOD_ID + getConversionRecipeName(Items.HONEY_BOTTLE, ModBlocks.HONEY_JAR.get()));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.INK_AND_QUILL.get())
                 .pattern("F ")
@@ -541,7 +543,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wheat", has(Items.WHEAT))
                 .unlockedBy("has_string", has(Items.STRING))
                 .save(recipeOutput);
-        nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.BURLAP.get(), RecipeCategory.DECORATIONS, ModBlocks.BURLAP_BLOCK.get());
+        nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ModItems.BURLAP.get(), RecipeCategory.DECORATIONS, ModBlocks.BURLAP_BLOCK.get(), "burlap_from_block", null);
         stairs(recipeOutput, ModBlocks.BURLAP_STAIRS.get(), ModBlocks.BURLAP_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BURLAP_SLAB.get(), ModBlocks.BURLAP_BLOCK.get());
         carpet(recipeOutput, ModBlocks.BURLAP_CARPET.get(), ModBlocks.BURLAP_BLOCK.get());
@@ -619,7 +621,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.COWHIDE_RUG.get())
                 .requires(ModBlocks.MOOSHROOM_COWHIDE_RUG.get())
                 .unlockedBy("has_mooshroom_cowhide_rug", has(ModBlocks.MOOSHROOM_COWHIDE_RUG.get()))
-                .save(recipeOutput, "cowhide_rug_from_mooshroom_cowhide_rug");
+                .save(recipeOutput, ModConstants.identifierOf("cowhide_rug_from_mooshroom_cowhide_rug"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.COPPER_LIGHT.get())
                 .pattern("###")
@@ -1004,7 +1006,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                                                                        List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(recipeOutput, ModConstants.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+                    .save(recipeOutput, MOD_ID + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
 
@@ -1065,15 +1067,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(packed)
                 .group(unpackedGroup)
                 .unlockedBy(getHasName(packed), has(packed))
-                .save(recipeOutput, ResourceLocation.parse(unpackedName));
+                .save(recipeOutput, ModConstants.identifierOf(unpackedName));
         ShapedRecipeBuilder.shaped(packedCategory, packed)
                 .define('#', unpacked)
                 .pattern("##")
                 .pattern("##")
                 .group(packedGroup)
                 .unlockedBy(getHasName(unpacked), has(unpacked))
-                .save(recipeOutput, ResourceLocation.parse(packedName));
+                .save(recipeOutput, ModConstants.identifierOf(packedName));
     }
+
+    protected static void nineBlockStorageRecipes(
+            RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked, RecipeCategory packedCategory, ItemLike packed
+    ) {
+        nineBlockStorageRecipes(
+                recipeOutput, unpackedCategory, unpacked, packedCategory, packed, getSimpleRecipeName(packed), null, getSimpleRecipeName(unpacked), null
+        );
+    }
+
+    protected static void nineBlockStorageRecipesWithCustomPacking(
+            RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked, RecipeCategory packedCategory, ItemLike packed, String packedName, String packedGroup
+    ) {
+        nineBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, packedName, packedGroup, getSimpleRecipeName(unpacked), null);
+    }
+
+    protected static void nineBlockStorageRecipesRecipesWithCustomUnpacking(
+            RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked, RecipeCategory packedCategory, ItemLike packed, String unpackedName, String unpackedGroup
+    ) {
+        nineBlockStorageRecipes(recipeOutput, unpackedCategory, unpacked, packedCategory, packed, getSimpleRecipeName(packed), null, unpackedName, unpackedGroup);
+    }
+
+    protected static void nineBlockStorageRecipes(RecipeOutput recipeOutput, RecipeCategory unpackedCategory, ItemLike unpacked,
+                                                  RecipeCategory packedCategory, ItemLike packed, String packedName, @Nullable String packedGroup, String unpackedName, @Nullable String unpackedGroup) {
+        ShapelessRecipeBuilder.shapeless(unpackedCategory, unpacked, 9)
+                .requires(packed)
+                .group(unpackedGroup)
+                .unlockedBy(getHasName(packed), has(packed))
+                .save(recipeOutput, ModConstants.identifierOf(unpackedName));
+        ShapedRecipeBuilder.shaped(packedCategory, packed)
+                .define('#', unpacked)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .group(packedGroup)
+                .unlockedBy(getHasName(unpacked), has(unpacked))
+                .save(recipeOutput, ModConstants.identifierOf(packedName));
+    }
+
 
     protected static void stairs(RecipeOutput recipeOutput, ItemLike stairs, ItemLike material) {
         stairBuilder(stairs, Ingredient.of(material)).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
@@ -1110,7 +1150,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(waxable)
                 .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
                 .unlockedBy(getHasName(waxable), has(waxable))
-                .save(recipeOutput, getConversionRecipeName(waxed, Items.HONEYCOMB));
+                .save(recipeOutput, MOD_ID + getConversionRecipeName(waxed, Items.HONEYCOMB));
     }
 
     protected static void banister(RecipeOutput recipeOutput, ItemLike banister, ItemLike fence, ItemLike hasPlanks) {
@@ -1254,6 +1294,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_leaves", has(ItemTags.LEAVES))
                 .unlockedBy(getHasName(seasonalItem), has(seasonalItem))
                 .save(recipeOutput);
+    }
+
+    //copied from Neoforge's RecipeProvider
+    protected static void colorBlockWithDye(RecipeOutput recipeOutput, List<Item> dyes, List<Item> dyeableItems, String group) {
+        for (int i = 0; i < dyes.size(); i++) {
+            Item item = dyes.get(i);
+            Item item1 = dyeableItems.get(i);
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, item1)
+                    .requires(item)
+                    .requires(Ingredient.of(dyeableItems.stream().filter(p_288265_ -> !p_288265_.equals(item1)).map(ItemStack::new)))
+                    .group(group)
+                    .unlockedBy("has_needed_dye", has(item))
+                    .save(recipeOutput, ModConstants.identifierOf("dye_" + getItemName(item1)));
+        }
     }
 
     protected static void quoin(RecipeOutput recipeOutput, ItemLike quoin, ItemLike material) {
