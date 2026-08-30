@@ -4,7 +4,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.client.DustyDecorationsClient;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
