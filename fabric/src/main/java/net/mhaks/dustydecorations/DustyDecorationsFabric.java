@@ -6,8 +6,8 @@ import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.mhaks.dustydecorations.worldgen.ModWorldGeneration;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class DustyDecorationsFabric implements ModInitializer {
     
