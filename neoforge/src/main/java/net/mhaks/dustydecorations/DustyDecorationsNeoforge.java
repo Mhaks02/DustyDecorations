@@ -1,7 +1,6 @@
 package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
-import net.mhaks.dustydecorations.client.DustyDecorationsClient;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
@@ -11,6 +10,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,6 +19,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 
 @Mod(ModConstants.MOD_ID)
@@ -46,6 +47,11 @@ public class DustyDecorationsNeoforge {
         @SubscribeEvent
         public static void registerScreen(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.VINTAGE_CASH_REGISTER_MENU.get(), VintageCashRegisterScreen::new);
+        }
+
+        @SubscribeEvent
+        public static void addBlocksToBlockEntityType(BlockEntityTypeAddBlocksEvent event) {
+            event.modify(BlockEntityType.BRUSHABLE_BLOCK, ModBlocks.SEAGLASS_SAND.get(), ModBlocks.SEAGLASS_GRAVEL.get());
         }
 
         @SubscribeEvent

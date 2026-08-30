@@ -21,6 +21,12 @@ public class DustyDecorationsFabric implements ModInitializer {
         ModConstants.LOGGER.info("Hello Fabric world!");
         DustyDecorations.init();
 
+        ModWorldGeneration.generateWorldGen();
+
+
+        BlockEntityType.BRUSHABLE_BLOCK.addSupportedBlock(ModBlocks.SEAGLASS_SAND.get());
+        BlockEntityType.BRUSHABLE_BLOCK.addSupportedBlock(ModBlocks.SEAGLASS_GRAVEL.get());
+
         FabricDefaultAttributeRegistry.register(ModEntityTypes.NAUTILUS_GOLEM.get(), NautilusGolemEntity.createAttributes());
 
 

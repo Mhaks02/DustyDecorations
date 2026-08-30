@@ -1,14 +1,14 @@
 package net.mhaks.dustydecorations;
 
-import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
+import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.item.ModCreativeModeTabs;
 import net.mhaks.dustydecorations.item.ModItems;
-import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.platform.Services;
 import net.mhaks.dustydecorations.sound.ModSoundEvents;
-import net.mhaks.dustydecorations.util.ModTags;
+import net.mhaks.dustydecorations.worldgen.feature.ModFeature;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 
@@ -33,6 +33,7 @@ public class DustyDecorations {
         ModMenuTypes.registerModMenuTypes();
         ModSoundEvents.registerModSounds();
         ModEntityTypes.registerModEntityTypes();
+        ModFeature.registerModFeature();
 
 
 

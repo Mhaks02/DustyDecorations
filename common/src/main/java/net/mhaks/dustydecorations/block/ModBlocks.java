@@ -3,19 +3,20 @@ package net.mhaks.dustydecorations.block;
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.custom.*;
 import net.mhaks.dustydecorations.block.custom.BarrelBlock;
-import net.mhaks.dustydecorations.block.custom.PaperLanternBlock;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.util.ColorRGBA;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Supplier;
 
@@ -626,17 +627,20 @@ public class ModBlocks {
             () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
 
-    //TODO: find better names maybe
-    //TODO: brushing
+    //TODO: custom sounds maybe?
     public static final RegistryObject<Block, Block> SEAGLASS_SAND = registerBlock("seaglass_sand",
-            () -> new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.of()
-                    .sound(SoundType.SAND)
+            () -> new BrushableBlock(Blocks.SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED, BlockBehaviour.Properties.of()
+                    .sound(SoundType.SUSPICIOUS_SAND)
                     .strength(.25f)
+                    .instrument(NoteBlockInstrument.SNARE)
+                    .pushReaction(PushReaction.DESTROY)
             ));
     public static final RegistryObject<Block, Block> SEAGLASS_GRAVEL = registerBlock("seaglass_gravel",
-            () -> new ColoredFallingBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.of()
-                    .sound(SoundType.GRAVEL)
+            () -> new BrushableBlock(Blocks.GRAVEL, SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED, BlockBehaviour.Properties.of()
+                    .sound(SoundType.SUSPICIOUS_GRAVEL)
                     .strength(.25f)
+                    .instrument(NoteBlockInstrument.SNARE)
+                    .pushReaction(PushReaction.DESTROY)
             ));
 
     //TODO: copper chain connect blockstate
