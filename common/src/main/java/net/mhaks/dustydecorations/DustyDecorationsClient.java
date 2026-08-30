@@ -1,4 +1,4 @@
-package net.mhaks.dustydecorations.client;
+package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
