@@ -10,6 +10,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -43,6 +44,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHERRY_BANISTER.get());
         dropSelf(ModBlocks.BAMBOO_BANISTER.get());
         dropSelf(ModBlocks.DRY_BAMBOO_BANISTER.get());
+        dropSelf(ModBlocks.CRIMSON_BANISTER.get());
+        dropSelf(ModBlocks.WARPED_BANISTER.get());
 
         dropSelf(ModBlocks.OAK_LARGE_SHELF.get());
         dropSelf(ModBlocks.SPRUCE_LARGE_SHELF.get());
@@ -112,10 +115,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CORRUGATED_METAL_BLOCK.get());
         dropSelf(ModBlocks.CORRUGATED_METAL_GRATE.get());
         dropSelf(ModBlocks.CORRUGATED_METAL_STAIRS.get());
-        createSlabItemTable(ModBlocks.CORRUGATED_METAL_SLAB.get());
+        add(ModBlocks.CORRUGATED_METAL_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.CORRUGATED_METAL_FENCE.get());
         dropSelf(ModBlocks.CORRUGATED_METAL_FENCE_GATE.get());
-        createDoorTable(ModBlocks.CORRUGATED_METAL_DOOR.get());
+        add(ModBlocks.CORRUGATED_METAL_DOOR.get(), this::createDoorTable);
         dropSelf(ModBlocks.CORRUGATED_METAL_TRAPDOOR.get());
         dropSelf(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.CORRUGATED_METAL_BUTTON.get());
@@ -124,10 +127,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_BLOCK.get());
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_GRATE.get());
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_STAIRS.get());
-        createSlabItemTable(ModBlocks.WAXED_CORRUGATED_METAL_SLAB.get());
+        add(ModBlocks.WAXED_CORRUGATED_METAL_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_FENCE.get());
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_FENCE_GATE.get());
-        createDoorTable(ModBlocks.WAXED_CORRUGATED_METAL_DOOR.get());
+        add(ModBlocks.WAXED_CORRUGATED_METAL_DOOR.get(), this::createDoorTable);
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_TRAPDOOR.get());
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.WAXED_CORRUGATED_METAL_BUTTON.get());
@@ -136,10 +139,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get());
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get());
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS.get());
-        createSlabItemTable(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB.get());
+        add(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE.get());
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE.get());
-        createDoorTable(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.get());
+        add(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.get(), this::createDoorTable);
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR.get());
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON.get());
@@ -148,10 +151,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK.get());
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_GRATE.get());
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_STAIRS.get());
-        createSlabItemTable(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_SLAB.get());
+        add(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE.get());
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE_GATE.get());
-        createDoorTable(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_DOOR.get());
+        add(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_DOOR.get(), this::createDoorTable);
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_TRAPDOOR.get());
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BUTTON.get());
@@ -293,7 +296,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.STONE_MARINE_FOSSIL.get(), noDrop());
         add(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get(), noDrop());
 
-        add(ModBlocks.GOLD_COINS_BLOCK.get(),
+        dropSelf(ModBlocks.GOLD_COINS_BLOCK.get());
+        add(ModBlocks.GOLD_COINS_LAYER.get(),
                 block -> LootTable.lootTable()
                         .withPool(LootPool.lootPool()
                                 .when(LootItemEntityPropertyCondition.entityPresent(LootContext.EntityTarget.THIS))
@@ -312,32 +316,29 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 )
                         )
         );
-
         dropSelf(ModBlocks.SCATTERED_GOLD_COINS.get());
 
         dropSelf(ModBlocks.BIG_NAUTILUS_SHELL.get());
         dropSelf(ModBlocks.BIG_NAUTILUS_LANTERN.get());
         dropSelf(ModBlocks.SMALL_NAUTILUS_SHELL.get());
-        add(ModBlocks.COLD_NAUTILUS_WIND_CHIME.get(), block -> LootTable.lootTable()
+        dropSelf(ModBlocks.COLD_NAUTILUS_WIND_CHIME.get());
+
+        dropSelf(ModBlocks.BURLAP_BLOCK.get());
+        dropSelf(ModBlocks.BURLAP_STAIRS.get());
+        add(ModBlocks.BURLAP_SLAB.get(), this::createSlabItemTable);
+        dropSelf(ModBlocks.BURLAP_CARPET.get());
+        dropSelf(ModBlocks.BURLAP_AWNING.get());
+        add(ModBlocks.BURLAP_SACK.get(), block -> LootTable.lootTable()
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1.0F))
                         .add(LootItem.lootTableItem(block))
                         .apply(List.of(2, 3),
                                 integer -> SetItemCountFunction.setCount(ConstantValue.exactly((float) integer))
                                         .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties()
-                                                        .hasProperty(BurlapSackBlock.STACKED_SACKS, integer)
-                                                )
-                                        )
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BurlapSackBlock.STACKED_SACKS, integer)))
                         )
                 )
         );
-
-        dropSelf(ModBlocks.BURLAP_BLOCK.get());
-        dropSelf(ModBlocks.BURLAP_STAIRS.get());
-        createSlabItemTable(ModBlocks.BURLAP_SLAB.get());
-        dropSelf(ModBlocks.BURLAP_CARPET.get());
-        dropSelf(ModBlocks.BURLAP_AWNING.get());
 
         dropSelf(ModBlocks.SAILOR_FLAG.get());
         dropSelf(ModBlocks.SAILOR_PENNANT_FLAG.get());
@@ -349,10 +350,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         .apply(List.of(2, 3, 4),
                                 integer -> SetItemCountFunction.setCount(ConstantValue.exactly((float) integer))
                                         .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties()
-                                                        .hasProperty(CeramicPotBlock.AMOUNT, integer)
-                                                )
-                                        )
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CeramicPotBlock.AMOUNT, integer)))
                         )
                 )
         );
@@ -393,38 +391,32 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SHODDY_COPPER_LIGHT.get());
         dropSelf(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get());
 
-        //TODO: camera
-        add(ModBlocks.CAMERA_QUADROPOD.get(), block -> LootTable.lootTable()
-                .withPool(applyExplosionCondition(block, LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1.0F))
-                                .add(LootItem.lootTableItem(ModBlocks.CAMERA_QUADROPOD.get()))
-                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CameraQuadropodBlock.HALF, DoubleBlockHalf.LOWER)))
-                                .add(AlternativesEntry.alternatives(
-                                                CameraQuadropodBlock.CAMERA.getPossibleValues(), attachedCamera -> {
-                                                    if (!attachedCamera.equals(ModConstants.AttachedCamera.NONE)) {
-                                                        return attachedCamera.equals(ModConstants.AttachedCamera.CAMERA)
-                                                                ? LootItem.lootTableItem(ModBlocks.CAMERA.get())
-                                                                : LootItem.lootTableItem(ModBlocks.MOVIE_CAMERA.get());
-                                                    }
-                                                    return null;
-                                                })
-                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CameraQuadropodBlock.HALF, DoubleBlockHalf.LOWER))))
-                        )
+        add(ModBlocks.CAMERA_QUADROPOD.get(), block -> applyExplosionDecay(block, LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .add(LootItem.lootTableItem(ModBlocks.CAMERA_QUADROPOD.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CameraQuadropodBlock.HALF, DoubleBlockHalf.LOWER))))
+                )
+                .withPool(LootPool.lootPool()
+                        .add(AlternativesEntry.alternatives(
+                                LootItem.lootTableItem(ModBlocks.CAMERA.get())
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
+                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CameraQuadropodBlock.CAMERA, ModConstants.AttachedCamera.CAMERA))),
+                                LootItem.lootTableItem(ModBlocks.MOVIE_CAMERA.get())
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
+                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CameraQuadropodBlock.CAMERA, ModConstants.AttachedCamera.MOVIE_CAMERA)))
+                        ).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CameraQuadropodBlock.HALF, DoubleBlockHalf.LOWER)))))
                 )
         );
-//                .withPool(LootPool.lootPool()
-//                        .when(LootItemEntityPropertyCondition.entityPresent(LootContext.EntityTarget.THIS))
-//                        .add(AlternativesEntry.alternatives(CameraQuadropodBlock.CAMERA.getPossibleValues(),
-//                                attachedCamera -> true
-//                        ? LootItem.lootTableItem(ModBlocks.CAMERA_QUADROPOD.get())
-//                                : LootItem.lootTableItem(ModBlocks.CAMERA_QUADROPOD.get())))
+        dropSelf(ModBlocks.CAMERA.get());
+        dropSelf(ModBlocks.MOVIE_CAMERA.get());
 
         dropSelf(ModBlocks.WICKER_BLOCK.get());
         dropSelf(ModBlocks.WICKER_STAIRS.get());
-        createSlabItemTable(ModBlocks.WICKER_SLAB.get());
+        add(ModBlocks.WICKER_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.WICKER_BASKET.get());
+
         //TODO: wicker baskets
         dropSelf(ModBlocks.APPLE_WICKER_BASKET.get());
         dropSelf(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get());
@@ -444,8 +436,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.HANGING_GOURDS.get());
         dropSelf(ModBlocks.CARVED_BEETROOT.get());
         dropSelf(ModBlocks.BEET_O_LANTERN.get());
-        createSinglePropConditionTable(ModBlocks.BEETROOT_SCARECROW.get(), ScarecrowBlock.HALF, DoubleBlockHalf.LOWER);
-        createSinglePropConditionTable(ModBlocks.PUMPKIN_SCARECROW.get(), ScarecrowBlock.HALF, DoubleBlockHalf.LOWER);
+        add(ModBlocks.BEETROOT_SCARECROW.get(), block -> this.createSinglePropConditionTable(block, ScarecrowBlock.HALF, DoubleBlockHalf.LOWER));
+        add(ModBlocks.PUMPKIN_SCARECROW.get(), block -> this.createSinglePropConditionTable(block, ScarecrowBlock.HALF, DoubleBlockHalf.LOWER));
         dropSelf(ModBlocks.MINI_SNOWMAN.get());
         dropSelf(ModBlocks.PLUSHIE.get());
         dropSelf(ModBlocks.NUTCRACKER.get());
@@ -454,95 +446,97 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.WINTER_WREATH.get());
         dropSelf(ModBlocks.FAIRY_LIGHTS.get());
         dropSelf(ModBlocks.HOLIDAY_ORNAMENTS.get());
-        createSinglePropConditionTable(ModBlocks.GIANT_ANCHOR.get(), GiantAnchorBlock.HALF, DoubleBlockHalf.LOWER);
+
+        add(ModBlocks.GIANT_ANCHOR.get(), block -> this.createSinglePropConditionTable(block, GiantAnchorBlock.HALF, DoubleBlockHalf.LOWER));
         dropSelf(ModBlocks.GIANT_CHAIN.get());
 
         dropSelf(ModBlocks.SEASTONE_BLOCK.get());
         dropSelf(ModBlocks.SEASTONE_STAIRS.get());
-        createSlabItemTable(ModBlocks.SEASTONE_SLAB.get());
+        add(ModBlocks.SEASTONE_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.SEASTONE_WALL.get());
 
         dropSelf(ModBlocks.SEASTONE_BRICKS.get());
         dropSelf(ModBlocks.CHISELED_SEASTONE_BRICKS.get());
         dropSelf(ModBlocks.SEASTONE_BRICK_STAIRS.get());
-        createSlabItemTable(ModBlocks.SEASTONE_BRICK_SLAB.get());
+        add(ModBlocks.SEASTONE_BRICK_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.SEASTONE_BRICK_WALL.get());
 
         dropSelf(ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
         dropSelf(ModBlocks.SMOOTH_SEASTONE_STAIRS.get());
-        createSlabItemTable(ModBlocks.SMOOTH_SEASTONE_SLAB.get());
+        add(ModBlocks.SMOOTH_SEASTONE_SLAB.get(), this::createSlabItemTable);
+        dropSelf(ModBlocks.SMOOTH_SEASTONE_WALL.get());
 
         dropSelf(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
         dropSelf(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS.get());
-        createSlabItemTable(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB.get());
+        add(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL.get());
 
         dropSelf(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get());
         dropSelf(ModBlocks.SNOWY_COBBLESTONE_STAIRS.get());
-        createSlabItemTable(ModBlocks.SNOWY_COBBLESTONE_SLAB.get());
+        add(ModBlocks.SNOWY_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.SNOWY_COBBLESTONE_WALL.get());
 
         dropSelf(ModBlocks.SNOWY_STONE_BRICKS.get());
         dropSelf(ModBlocks.SNOWY_STONE_BRICK_STAIRS.get());
-        createSlabItemTable(ModBlocks.SNOWY_STONE_BRICK_SLAB.get());
+        add(ModBlocks.SNOWY_STONE_BRICK_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.SNOWY_STONE_BRICK_WALL.get());
 
         dropSelf(ModBlocks.SMOOTH_STONE_BRICKS.get());
         dropSelf(ModBlocks.SMOOTH_STONE_BRICK_STAIRS.get());
-        createSlabItemTable(ModBlocks.SMOOTH_STONE_BRICK_SLAB.get());
+        add(ModBlocks.SMOOTH_STONE_BRICK_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.SMOOTH_STONE_BRICK_WALL.get());
 
         dropSelf(ModBlocks.PLAIN_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.PLAIN_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.PLAIN_CUSHION_SLAB.get());
+        add(ModBlocks.PLAIN_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.WHITE_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.WHITE_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.WHITE_CUSHION_SLAB.get());
+        add(ModBlocks.WHITE_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.LIGHT_GRAY_CUSHION_SLAB.get());
+        add(ModBlocks.LIGHT_GRAY_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.GRAY_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.GRAY_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.GRAY_CUSHION_SLAB.get());
+        add(ModBlocks.GRAY_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.BLACK_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.BLACK_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.BLACK_CUSHION_SLAB.get());
+        add(ModBlocks.BLACK_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.BROWN_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.BROWN_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.BROWN_CUSHION_SLAB.get());
+        add(ModBlocks.BROWN_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.RED_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.RED_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.RED_CUSHION_SLAB.get());
+        add(ModBlocks.RED_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.ORANGE_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.ORANGE_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.ORANGE_CUSHION_SLAB.get());
+        add(ModBlocks.ORANGE_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.YELLOW_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.YELLOW_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.YELLOW_CUSHION_SLAB.get());
+        add(ModBlocks.YELLOW_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.LIME_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.LIME_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.LIME_CUSHION_SLAB.get());
+        add(ModBlocks.LIME_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.GREEN_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.GREEN_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.GREEN_CUSHION_SLAB.get());
+        add(ModBlocks.GREEN_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.CYAN_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.CYAN_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.CYAN_CUSHION_SLAB.get());
+        add(ModBlocks.CYAN_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.LIGHT_BLUE_CUSHION_SLAB.get());
+        add(ModBlocks.LIGHT_BLUE_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.BLUE_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.BLUE_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.BLUE_CUSHION_SLAB.get());
+        add(ModBlocks.BLUE_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.PURPLE_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.PURPLE_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.PURPLE_CUSHION_SLAB.get());
+        add(ModBlocks.PURPLE_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.MAGENTA_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.MAGENTA_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.MAGENTA_CUSHION_SLAB.get());
+        add(ModBlocks.MAGENTA_CUSHION_SLAB.get(), this::createSlabItemTable);
         dropSelf(ModBlocks.PINK_CUSHION_BLOCK.get());
         dropSelf(ModBlocks.PINK_CUSHION_STAIRS.get());
-        createSlabItemTable(ModBlocks.PINK_CUSHION_SLAB.get());
+        add(ModBlocks.PINK_CUSHION_SLAB.get(), this::createSlabItemTable);
 
         dropSelf(ModBlocks.SEASTONE_QUOIN.get());
         dropSelf(ModBlocks.SMOOTH_STONE_QUOIN.get());
