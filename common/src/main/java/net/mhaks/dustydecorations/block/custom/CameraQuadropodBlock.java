@@ -119,6 +119,8 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
         level.setBlock(pos.above(), state.setValue(HALF, DoubleBlockHalf.UPPER), 3);
     }
 
+    //TODO: shift+right-click to remove movie/camera from quadropod
+    //TODO: soundevent
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (state.getValue(CAMERA) == ModConstants.AttachedCamera.MOVIE_CAMERA) {
