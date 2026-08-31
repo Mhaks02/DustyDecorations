@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dustydecorations:glazed_ceramic_pot"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "dustydecorations:glazed_ceramic_pot",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "amount": "2"
+              }
+            }
+          ],
+          "count": 2.0,
+          "function": "minecraft:set_count"
+        },
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "dustydecorations:glazed_ceramic_pot",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "amount": "3"
+              }
+            }
+          ],
+          "count": 3.0,
+          "function": "minecraft:set_count"
+        },
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "dustydecorations:glazed_ceramic_pot",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "amount": "4"
+              }
+            }
+          ],
+          "count": 4.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dustydecorations:blocks/glazed_ceramic_pot"
+}

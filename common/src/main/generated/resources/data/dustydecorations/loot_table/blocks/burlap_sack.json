@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dustydecorations:burlap_sack"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "dustydecorations:burlap_sack",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "amount": "2"
+              }
+            }
+          ],
+          "count": 2.0,
+          "function": "minecraft:set_count"
+        },
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "dustydecorations:burlap_sack",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "amount": "3"
+              }
+            }
+          ],
+          "count": 3.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dustydecorations:blocks/burlap_sack"
+}

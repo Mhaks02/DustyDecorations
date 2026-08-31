@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:archaeology",
+  "type": "minecraft:block",
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -50,14 +50,14 @@
           "add": false,
           "count": {
             "type": "minecraft:uniform",
-            "max": 12.0,
-            "min": 2.0
+            "max": 3.0,
+            "min": 0.0
           },
           "function": "minecraft:set_count"
         }
       ],
-      "rolls": 1.0
+      "rolls": 7.0
     }
   ],
-  "random_sequence": "dustydecorations:archaeology/seaglass"
+  "random_sequence": "dustydecorations:blocks/seaglass_sand"
 }

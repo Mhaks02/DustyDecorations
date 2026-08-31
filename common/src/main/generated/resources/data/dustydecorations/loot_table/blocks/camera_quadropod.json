@@ -1,0 +1,97 @@
+{
+  "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "dustydecorations:camera_quadropod",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "dustydecorations:camera_quadropod"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "dustydecorations:camera_quadropod",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "attached_camera": "camera"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "add": false,
+                  "count": 1.0,
+                  "function": "minecraft:set_count"
+                }
+              ],
+              "name": "dustydecorations:camera"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "dustydecorations:camera_quadropod",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "attached_camera": "movie_camera"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "add": false,
+                  "count": 1.0,
+                  "function": "minecraft:set_count"
+                }
+              ],
+              "name": "dustydecorations:movie_camera"
+            }
+          ],
+          "conditions": [
+            {
+              "block": "dustydecorations:camera_quadropod",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dustydecorations:blocks/camera_quadropod"
+}
