@@ -83,7 +83,8 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
 
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
-        level.setBlock(pos.above(), state.setValue(HALF, DoubleBlockHalf.UPPER), 3);
+        boolean flag = level.getFluidState(pos.above()).getType() == Fluids.WATER;
+        level.setBlock(pos.above(), state.setValue(HALF, DoubleBlockHalf.UPPER).setValue(WATERLOGGED, flag), 3);
     }
 
     @Override
@@ -103,17 +104,18 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
 
     @Override
     protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        DoubleBlockHalf doubleBlockHalf = state.getValue(HALF);
+        state = state.setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER);
         if (state.getValue(WATERLOGGED)) {
             level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
-        DoubleBlockHalf doubleBlockHalf = state.getValue(HALF);
         if (direction.getAxis() != Direction.Axis.Y || doubleBlockHalf == DoubleBlockHalf.LOWER != (direction == Direction.UP)) {
             return doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canSurvive(level, pos)
                     ? Blocks.AIR.defaultBlockState()
                     : super.updateShape(state, direction, neighborState, level, pos, neighborPos);
         } else {
             return neighborState.getBlock() instanceof GiantAnchorBlock && neighborState.getValue(HALF) != doubleBlockHalf
-                    ? neighborState.setValue(HALF, doubleBlockHalf)
+                    ? neighborState.setValue(HALF, doubleBlockHalf).setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER)
                     : Blocks.AIR.defaultBlockState();
         }
     }
