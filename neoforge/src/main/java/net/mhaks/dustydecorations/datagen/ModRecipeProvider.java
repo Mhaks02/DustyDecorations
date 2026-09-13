@@ -563,7 +563,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ropes", has(Tags.Items.ROPES))
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SAILOR_PENNANT_FLAG.get()) //todo: count? 2 maybe? or 4?
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SAILOR_PENNON.get()) //todo: count? 2 maybe? or 4?
                 .pattern("~")
                 .pattern("#")
                 .define('~', Tags.Items.ROPES)

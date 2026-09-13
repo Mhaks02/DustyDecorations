@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dustydecorations:sailor_pennant_flag"
+        "recipe": "dustydecorations:sailor_pennon"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "dustydecorations:sailor_pennant_flag"
+      "dustydecorations:sailor_pennon"
     ]
   }
 }

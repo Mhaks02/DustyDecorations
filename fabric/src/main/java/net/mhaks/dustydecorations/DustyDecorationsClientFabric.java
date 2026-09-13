@@ -140,7 +140,7 @@ public class DustyDecorationsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BURLAP_SACK.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAILOR_FLAG.get(), RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAILOR_PENNANT_FLAG.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAILOR_PENNON.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VINTAGE_CASH_REGISTER.get(), RenderType.cutout());
 

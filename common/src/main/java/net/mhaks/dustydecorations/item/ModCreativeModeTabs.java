@@ -222,7 +222,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BURLAP_SACK.get());
 
                         output.accept(ModBlocks.SAILOR_FLAG.get());
-                        output.accept(ModBlocks.SAILOR_PENNANT_FLAG.get());
+                        output.accept(ModBlocks.SAILOR_PENNON.get());
 
                         output.accept(ModBlocks.CERAMIC_POT.get());
                         output.accept(ModBlocks.GLAZED_CERAMIC_POT.get());

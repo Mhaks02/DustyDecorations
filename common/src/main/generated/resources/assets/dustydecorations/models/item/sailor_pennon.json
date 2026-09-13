@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dustydecorations:block/sailor_pennant_flag/0"
+    "layer0": "dustydecorations:block/sailor_pennon/0"
   }
 }

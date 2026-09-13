@@ -23,12 +23,12 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class SailorPennantFlagBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+public class SailorPennonBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_5;
-    public static final MapCodec<SailorPennantFlagBlock> CODEC = simpleCodec(SailorPennantFlagBlock::new);
+    public static final MapCodec<SailorPennonBlock> CODEC = simpleCodec(SailorPennonBlock::new);
 
-    public SailorPennantFlagBlock(Properties properties) {
+    public SailorPennonBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)

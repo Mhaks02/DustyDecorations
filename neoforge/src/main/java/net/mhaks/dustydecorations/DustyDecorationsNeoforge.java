@@ -179,7 +179,7 @@ public class DustyDecorationsNeoforge {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BURLAP_SACK.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_FLAG.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_PENNANT_FLAG.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SAILOR_PENNON.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.VINTAGE_CASH_REGISTER.get(), RenderType.cutout());
 

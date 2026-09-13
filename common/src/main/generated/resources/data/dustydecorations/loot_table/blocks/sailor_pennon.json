@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dustydecorations:sailor_pennant_flag"
+          "name": "dustydecorations:sailor_pennon"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "dustydecorations:blocks/sailor_pennant_flag"
+  "random_sequence": "dustydecorations:blocks/sailor_pennon"
 }

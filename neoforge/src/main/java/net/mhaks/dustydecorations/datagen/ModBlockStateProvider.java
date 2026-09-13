@@ -307,7 +307,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         threeStackedHorizontalBlockAndItem(ModBlocks.BURLAP_SACK);
 
         sailorFlagAndItem();
-        fiveTexturesCustomHorizontalBlockAndFlatBlockItem(ModBlocks.SAILOR_PENNANT_FLAG);
+        fiveTexturesCustomHorizontalBlockAndFlatBlockItem(ModBlocks.SAILOR_PENNON);
 
         fourStackedHorizontalBlockAndItem(ModBlocks.CERAMIC_POT);
         fourStackedHorizontalBlockAndItem(ModBlocks.GLAZED_CERAMIC_POT);

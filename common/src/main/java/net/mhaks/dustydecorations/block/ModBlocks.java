@@ -991,8 +991,8 @@ public class ModBlocks {
                     .strength(.2f)
                     .sound(SoundType.WOOD)
             ));
-    public static final RegistryObject<Block, Block> SAILOR_PENNANT_FLAG = registerBlock("sailor_pennant_flag",
-            () -> new SailorPennantFlagBlock(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block, Block> SAILOR_PENNON = registerBlock("sailor_pennon",
+            () -> new SailorPennonBlock(BlockBehaviour.Properties.of()
                     .instabreak()
                     .sound(SoundType.WOOD)
                     .noOcclusion()
