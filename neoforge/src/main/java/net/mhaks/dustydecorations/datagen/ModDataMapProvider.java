@@ -4,6 +4,7 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DataMapProvider;
+import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 import net.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
 import net.neoforged.neoforge.registries.datamaps.builtin.Waxable;
@@ -63,6 +64,9 @@ public class ModDataMapProvider extends DataMapProvider {
                 .add(ModBlocks.COPPER_LIGHT.getId(), new Waxable(ModBlocks.WAXED_COPPER_LIGHT.get()), false)
                 .add(ModBlocks.SHODDY_COPPER_LIGHT.getId(), new Waxable(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get()), false)
                 ;
+
+        this.builder(NeoForgeDataMaps.COMPOSTABLES)
+                .add(ModBlocks.FISH_BONES.getId(), new Compostable(.1f), false);
 
     }
 
