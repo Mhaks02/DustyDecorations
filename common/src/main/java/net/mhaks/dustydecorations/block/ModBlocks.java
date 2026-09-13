@@ -226,7 +226,7 @@ public class ModBlocks {
             () -> new WoolAwningBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_WOOL_AWNING.get())
             ));
 
-    //TODO: lantern sound, strength, instabreak?, etc...
+    //TODO: lantern sound?
     public static final RegistryObject<Block, Block> PAPER_LANTERN = registerBlock("paper_lantern",
             () -> new PaperLanternBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
@@ -292,7 +292,7 @@ public class ModBlocks {
                     .strength(4f)
                     .sound(SoundType.COPPER)
                     .requiresCorrectToolForDrops()
-            )); //TODO: fence tags
+            ));
     public static final RegistryObject<Block, Block> CORRUGATED_METAL_FENCE_GATE = registerBlock("corrugated_metal_fence_gate",
             () -> new WeatheringCorrugatedMetalFenceGateBlock(WeatheringCopper.WeatherState.UNAFFECTED, WoodType.ACACIA, BlockBehaviour.Properties.of()
                     .strength(4f)
@@ -460,7 +460,6 @@ public class ModBlocks {
     public static final RegistryObject<Block, Block> WAXED_RUSTED_CORRUGATED_METAL_ROOFING = registerBlock("waxed_rusted_corrugated_metal_roofing",
             () -> new CorrugatedMetalRoofingBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING.get())));
 
-    //TODO: silk touch for drops
     public static final RegistryObject<Block, Block> CREAM_SEAGLASS = registerBlock("cream_seaglass",
             () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(0.3f)
@@ -627,7 +626,7 @@ public class ModBlocks {
             () -> new SeaglassLampBlock(BlockBehaviour.Properties.ofFullCopy(CREAM_SEAGLASS_LAMP.get())
             ));
 
-    //TODO: custom sounds maybe?
+    //TODO: custom brushing sounds maybe?
     public static final RegistryObject<Block, Block> SEAGLASS_SAND = registerBlock("seaglass_sand",
             () -> new BrushableBlock(Blocks.SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED, BlockBehaviour.Properties.of()
                     .sound(SoundType.SUSPICIOUS_SAND)
@@ -752,7 +751,6 @@ public class ModBlocks {
                     .strength(.7f)
                     .sound(SoundType.WOOD)
             ));
-    //TODO: particles have wood texture i need to change that back
     public static final RegistryObject<Block, Block> IRON_FRYING_PAN = registerBlock("iron_frying_pan",
             () -> new FryingPanBlock(BlockBehaviour.Properties.of()
                     .strength(2f)
@@ -1183,7 +1181,6 @@ public class ModBlocks {
                     .strength(.2f)
                     .sound(SoundType.WOOD)
             ));
-    //TODO: Unify all 2D full-height decorations block into the same BlockClass --> refactor FishingLuresBlock and make it the main for example
     public static final RegistryObject<Block, Block> FALL_GARLAND = registerBlock("fall_garland",
             () -> new GarlandBlock(BlockBehaviour.Properties.of()
                     .instabreak()
@@ -1232,7 +1229,6 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
             ));
 
-    //TODO: strenghts
     public static final RegistryObject<Block, Block> SEASTONE_BLOCK = registerBlock("seastone",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(1.5f)
@@ -1713,10 +1709,8 @@ public class ModBlocks {
             ));
 
 //TODO: piston behaviours
-//TODO: check all strengths and hardness
 //TODO: propagateSkyLight
 //TODO: item lore
-//TODO: random Block pos
 //TODO: make all VoxelShapes protected instead of private?
 //TODO: Check les cullfaces de TOUS les models
 
