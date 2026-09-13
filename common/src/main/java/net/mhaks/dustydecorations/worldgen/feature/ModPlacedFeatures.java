@@ -17,6 +17,9 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SUS_SEAGLASS_SAND = registerKey("sus_seaglass_sand");
     public static final ResourceKey<PlacedFeature> SUS_SEAGLASS_GRAVEL = registerKey("sus_seaglass_gravel");
 
+    public static final ResourceKey<PlacedFeature> ORE_MARINE_FOSSIL = registerKey("ore_marine_fossil");
+    public static final ResourceKey<PlacedFeature> ORE_MARINE_FOSSIL_BURIED = registerKey("ore_marine_fossil_buried");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -27,6 +30,20 @@ public class ModPlacedFeatures {
                 CountPlacement.of(2), RarityFilter.onAverageOnceEvery(3), InSquarePlacement.spread(), BiomeFilter.biome(), HeightRangePlacement.uniform(VerticalAnchor.absolute(60), VerticalAnchor.absolute(63))
         ));
 
+        register(context, ORE_MARINE_FOSSIL, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_MARINE_FOSSIL), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(32))));
+        register(context, ORE_MARINE_FOSSIL_BURIED, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_MARINE_FOSSIL_BURIED), commonOrePlacement(4, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(64))));
+    }
+
+    private static List<PlacementModifier> orePlacement(PlacementModifier countPlacement, PlacementModifier heightRange) {
+        return List.of(countPlacement, InSquarePlacement.spread(), heightRange, BiomeFilter.biome());
+    }
+
+    private static List<PlacementModifier> commonOrePlacement(int count, PlacementModifier heightRange) {
+        return orePlacement(CountPlacement.of(count), heightRange);
+    }
+
+    private static List<PlacementModifier> rareOrePlacement(int chance, PlacementModifier heightRange) {
+        return orePlacement(RarityFilter.onAverageOnceEvery(chance), heightRange);
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

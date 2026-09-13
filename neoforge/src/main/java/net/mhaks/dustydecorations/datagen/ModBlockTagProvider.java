@@ -164,6 +164,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING.get())
                 .add(ModBlocks.GIANT_ANCHOR.get())
                 .add(ModBlocks.GIANT_CHAIN.get())
+                .add(ModBlocks.STONE_MARINE_FOSSIL.get())
+                .add(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get())
                 ;
 //        tag(BlockTags.NEEDS_IRON_TOOL)
 //        tag(BlockTags.NEEDS_DIAMOND_TOOL)

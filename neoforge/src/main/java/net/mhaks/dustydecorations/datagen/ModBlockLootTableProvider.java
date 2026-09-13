@@ -6,9 +6,13 @@ import net.mhaks.dustydecorations.block.custom.*;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
@@ -17,8 +21,11 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -293,8 +300,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.FISHING_LURES.get());
 
         //TODO
-        add(ModBlocks.STONE_MARINE_FOSSIL.get(), noDrop());
-        add(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get(), noDrop());
+        add(ModBlocks.STONE_MARINE_FOSSIL.get(), block -> createMarineFossilOreDrops(block, 1, 3));
+        add(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get(), block -> createMarineFossilOreDrops(block, 1, 3));
 
         dropSelf(ModBlocks.GOLD_COINS_BLOCK.get());
         add(ModBlocks.GOLD_COINS_LAYER.get(),
@@ -575,6 +582,40 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         .add(LootItem.lootTableItem(ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get()))
                         .add(LootItem.lootTableItem(ModItems.TAUPE_SEAGLASS_FRAGMENTS.get()))
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 3.0F)))
+                )
+        );
+    }
+
+    protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(
+                block, this.applyExplosionDecay(block, LootItem.lootTableItem(item)
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                        .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                )
+        );
+    }
+    protected LootTable.Builder createMarineFossilOreDrops(Block block, float minDrops, float maxDrops) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return LootTable.lootTable().withPool(LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0F))
+                .add(LootItem.lootTableItem(block).when(this.hasSilkTouch()).otherwise(
+                        this.applyExplosionDecay(block, LootItem.lootTableItem(ModBlocks.FISH_BONES.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                                .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                                .setWeight(15)))
+                )
+                .add(LootItem.lootTableItem(block).when(this.hasSilkTouch()).otherwise(
+                        this.applyExplosionDecay(block, LootItem.lootTableItem(ModBlocks.SMALL_SHARK_JAW.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))
+                )
+                .add(LootItem.lootTableItem(block).when(this.hasSilkTouch()).otherwise(
+                        this.applyExplosionDecay(block, LootItem.lootTableItem(ModBlocks.BIG_SHARK_JAW.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))
+                )
+                .add(LootItem.lootTableItem(block).when(this.hasSilkTouch()).otherwise(
+                        this.applyExplosionDecay(block, LootItem.lootTableItem(ModBlocks.MEGALODON_TOOTH.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))
                 )
         );
     }

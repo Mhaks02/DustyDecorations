@@ -10,5 +10,8 @@ public class ModOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_BEACH), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.SUS_SEAGLASS_SAND);
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_BEACH), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.SUS_SEAGLASS_GRAVEL);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_DEEP_OCEAN), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.ORE_MARINE_FOSSIL);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_DEEP_OCEAN), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.ORE_MARINE_FOSSIL_BURIED);
     }
 }

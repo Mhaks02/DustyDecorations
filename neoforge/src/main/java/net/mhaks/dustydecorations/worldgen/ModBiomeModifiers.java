@@ -18,6 +18,9 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> SUS_SEAGLASS_SAND = registerKey("sus_seaglass_sand");
     public static final ResourceKey<BiomeModifier> SUS_SEAGLASS_GRAVEL = registerKey("sus_seaglass_gravel");
 
+    public static final ResourceKey<BiomeModifier> ORE_MARINE_FOSSIL = registerKey("ore_marine_fossil");
+    public static final ResourceKey<BiomeModifier> ORE_MARINE_FOSSIL_BURIED = registerKey("ore_marine_fossil_buried");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -27,10 +30,20 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SUS_SEAGLASS_SAND)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
-
         context.register(SUS_SEAGLASS_GRAVEL, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_BEACH),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SUS_SEAGLASS_GRAVEL)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+
+        context.register(ORE_MARINE_FOSSIL, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_DEEP_OCEAN),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ORE_MARINE_FOSSIL)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        context.register(ORE_MARINE_FOSSIL_BURIED, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_DEEP_OCEAN),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ORE_MARINE_FOSSIL_BURIED)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
     }

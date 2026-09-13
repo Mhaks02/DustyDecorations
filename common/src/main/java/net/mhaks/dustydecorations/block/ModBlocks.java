@@ -879,16 +879,16 @@ public class ModBlocks {
                     .noCollission()
             ));
 
-    //TODO: find better names maybe
-    //TODO: sus sand
     public static final RegistryObject<Block, Block> STONE_MARINE_FOSSIL = registerBlock("stone_marine_fossil",
             () -> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.STONE)
+                    .strength(1.25f)
                     .requiresCorrectToolForDrops()
             ));
     public static final RegistryObject<Block, Block> DEEPSLATE_MARINE_FOSSIL = registerBlock("deepslate_marine_fossil",
             () -> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.DEEPSLATE)
+                    .strength(2.5f)
                     .requiresCorrectToolForDrops()
             ));
 
