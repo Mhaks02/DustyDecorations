@@ -138,8 +138,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         cutoutBlockAndItem(ModBlocks.CORRUGATED_METAL_GRATE);
         stairsBlockAndItem(ModBlocks.CORRUGATED_METAL_STAIRS, ModBlocks.CORRUGATED_METAL_BLOCK);
         slabBlockAndItem(ModBlocks.CORRUGATED_METAL_SLAB, ModBlocks.CORRUGATED_METAL_BLOCK);
-        fenceBlockAndItem(ModBlocks.CORRUGATED_METAL_FENCE, ModBlocks.CORRUGATED_METAL_BLOCK);
-        fenceGateBlockAndItem(ModBlocks.CORRUGATED_METAL_FENCE_GATE, ModBlocks.CORRUGATED_METAL_BLOCK);
+        fenceBlockAndItem(ModBlocks.CORRUGATED_METAL_FENCE);
+        fenceGateBlockAndItem(ModBlocks.CORRUGATED_METAL_FENCE_GATE);
         doorBlockAndItem(ModBlocks.CORRUGATED_METAL_DOOR);
         trapdoorBlockAndItem(ModBlocks.CORRUGATED_METAL_TRAPDOOR, ModBlocks.CORRUGATED_METAL_BLOCK);
         pressurePlateAndItem(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.CORRUGATED_METAL_BLOCK);
@@ -162,8 +162,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         cutoutBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE);
         stairsBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         slabBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
-        fenceBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
-        fenceGateBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
+        fenceBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE);
+        fenceGateBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE);
         doorBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR);
         trapdoorBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         pressurePlateAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
@@ -245,7 +245,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockAndFlatItem(ModBlocks.DISPLAYED_OARS);
         customHorizontalFaceBlockAndFlatBlockItem(ModBlocks.TREASURE_MAP);
         scatteredPapersAndFlatItem();
-        //TODO
         flatItem(ModBlocks.POSTERS);
         customHorizontalBlockAndItem(ModBlocks.PAPER_STACK);
         fourTexturesCustomBlockAndItem(ModBlocks.GLASS_BUOY);
@@ -260,7 +259,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalFaceBlockAndItem(ModBlocks.WEDGED_CLEAVER);
         customHorizontalBlockAndItem(ModBlocks.CUTTING_BOARD);
         customHorizontalBlockAndItem(ModBlocks.KNIFE_AND_CUTTING_BOARD);
-        //TODO
         blockItem(ModBlocks.IRON_FRYING_PAN);
         blockItem(ModBlocks.COPPER_FRYING_PAN);
         customHorizontalBlockAndItem(ModBlocks.BIG_COOKING_POT);
@@ -966,22 +964,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void wallBlockAndItem(RegistryObject<Block, Block> wallBlock, RegistryObject<Block, Block> blockTexture) {
         wallBlock((WallBlock) wallBlock.get(), getBlockPath(blockTexture));
-//        wallInventory(wallBlock, blockTexture);
-        wallItem(wallBlock);
+        wallItem(wallBlock, blockTexture);
     }
-    private void wallBlockAndItem(RegistryObject<Block, Block> wallBlock, RegistryObject<Block, Block> blockTexture, String texture) {
-        wallBlock((WallBlock) wallBlock.get(), getBlockPath(blockTexture, texture));
-//        wallInventory(wallBlock, blockTexture, texture);
-        wallItem(wallBlock);
+    private void wallBlockAndItem(RegistryObject<Block, Block> wallBlock, RegistryObject<Block, Block> blockTexture, String textureSuffix) {
+        wallBlock((WallBlock) wallBlock.get(), getBlockPath(blockTexture, textureSuffix));
+        wallItem(wallBlock, blockTexture, textureSuffix);
     }
-    private void fenceBlockAndItem(RegistryObject<Block, Block> fenceBlock, RegistryObject<Block, Block> blockTexture) {
+    private void fenceBlockAndItem(RegistryObject<Block, Block> fenceBlock) {
         String fencePath = fenceBlock.getId().getPath();
-        fenceBlock((FenceBlock) fenceBlock.get(), getBlockPath(blockTexture));
+        fenceBlock((FenceBlock) fenceBlock.get(), getBlockPath(fenceBlock));
         itemModels().withExistingParent(fencePath, mcLoc(BLOCK_FOLDER + "fence_inventory"))
-                .texture("texture", getBlockPath(blockTexture));
+                .texture("texture", getBlockPath(fenceBlock));
     }
-    private void fenceGateBlockAndItem(RegistryObject<Block, Block> fenceGateBlock, RegistryObject<Block, Block> blockTexture) {
-        fenceGateBlock((FenceGateBlock) fenceGateBlock.get(), getBlockPath(blockTexture));
+    private void fenceGateBlockAndItem(RegistryObject<Block, Block> fenceGateBlock) {
+        String fenceGatePath = fenceGateBlock.getId().getPath();
+        String fenceTexture = fenceGatePath.substring(0, fenceGatePath.length() - 5);
+        fenceGateBlock((FenceGateBlock) fenceGateBlock.get(), modLoc(BLOCK_FOLDER + fenceTexture));
         blockItem(fenceGateBlock);
     }
     private void doorBlockAndItem(RegistryObject<Block, Block> doorBlock) {
@@ -1003,15 +1001,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
     }
 
-    private void fenceItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc(BLOCK_FOLDER + "fence_inventory"))
-                .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
-    }
-    private void buttonItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
-        itemModels().withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
-                .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
-    }
-    private void wallItem(RegistryObject<Block, Block> block) {
     private void waxedBlockAndItem(RegistryObject<Block, Block> waxedBlock) {
         String waxed = waxedBlock.getId().getPath();
         String nonWaxed = waxed.substring(6);
@@ -1081,15 +1070,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("texture", modLoc(BLOCK_FOLDER + waxedTexture));
     }
 
+    private void wallItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
         String blockPath = block.getId().getPath();
-//        itemModels().withExistingParent(blockPath, modLoc(BLOCK_FOLDER + blockPath + "_inventory"));
-        itemModels().withExistingParent(blockPath, mcLoc(BLOCK_FOLDER + "wall_inventory"));
+        models().withExistingParent(BLOCK_FOLDER + blockPath + "_inventory", mcLoc(BLOCK_FOLDER + "wall_inventory"))
+                .texture("wall", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
+        itemModels().withExistingParent(ITEM_FOLDER + blockPath, modLoc(BLOCK_FOLDER + blockPath + "_inventory"));
     }
-    private void wallInventory(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture) {
-        models().wallInventory(block.getId().getPath() + "_inventory", getBlockPath(blockTexture));
-    }
-    private void wallInventory(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture, String texture) {
-        models().wallInventory(block.getId().getPath() + "_inventory", getBlockPath(blockTexture, texture));
+    private void wallItem(RegistryObject<Block, Block> block, RegistryObject<Block, Block> blockTexture, String textureSuffix) {
+        String blockPath = block.getId().getPath();
+        models().withExistingParent(BLOCK_FOLDER + blockPath + "_inventory", mcLoc(BLOCK_FOLDER + "wall_inventory"))
+                .texture("wall", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath() + textureSuffix));
+        itemModels().withExistingParent(ITEM_FOLDER + blockPath, modLoc(BLOCK_FOLDER + blockPath + "_inventory"));
     }
 
     private void blockItem(RegistryObject<Block, Block> block) {
