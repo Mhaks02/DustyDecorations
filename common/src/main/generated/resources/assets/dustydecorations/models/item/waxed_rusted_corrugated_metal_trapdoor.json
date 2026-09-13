@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/waxed_rusted_corrugated_metal_trapdoor_bottom",
+  "textures": {
+    "texture": "dustydecorations:block/waxed_rusted_corrugated_metal_block"
+  }
+}

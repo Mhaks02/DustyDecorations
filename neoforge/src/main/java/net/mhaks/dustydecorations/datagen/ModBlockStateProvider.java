@@ -37,6 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private static final String BACK = "_back";
     private static final String LEFT = "_left";
     private static final String RIGHT = "_right";
+    private static final String POST = "_post";
     private static final String SIDE = "_side";
     private static final String UPPER = "_upper";
     private static final String LOWER = "_lower";
@@ -145,6 +146,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlockAndItem(ModBlocks.CORRUGATED_METAL_BUTTON, ModBlocks.CORRUGATED_METAL_BLOCK);
         customHorizontalBlockAndItem(ModBlocks.CORRUGATED_METAL_ROOFING);
 
+        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedCutoutBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_GRATE);
+        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_STAIRS, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_SLAB, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedFenceBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_FENCE);
+        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.WAXED_CORRUGATED_METAL_FENCE);
+        waxedDoorBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_DOOR);
+        waxedTrapdoorBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_TRAPDOOR, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedPressurePlateBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedButtonBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_BUTTON, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedCustomHorizontalBlock(ModBlocks.WAXED_CORRUGATED_METAL_ROOFING);
+
         blockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         cutoutBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE);
         stairsBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
@@ -156,6 +169,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         buttonBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK);
         customHorizontalBlockAndItem(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING);
+
+        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedCutoutBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_GRATE);
+        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_STAIRS, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_SLAB, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedFenceBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE);
+        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE);
+        waxedDoorBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_DOOR);
+        waxedTrapdoorBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_TRAPDOOR, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedPressurePlateBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedButtonBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BUTTON, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedCustomHorizontalBlock(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_ROOFING);
 
         translucentBlockAndItem(ModBlocks.CREAM_SEAGLASS);
         translucentBlockAndItem(ModBlocks.HAZEL_SEAGLASS);
@@ -987,6 +1012,75 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("texture", modLoc(BLOCK_FOLDER + blockTexture.getId().getPath()));
     }
     private void wallItem(RegistryObject<Block, Block> block) {
+    private void waxedBlockAndItem(RegistryObject<Block, Block> waxedBlock) {
+        String waxed = waxedBlock.getId().getPath();
+        String nonWaxed = waxed.substring(6);
+        simpleBlock(waxedBlock.get(), models().cubeAll(waxed, modLoc(BLOCK_FOLDER + nonWaxed)));
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
+                .texture("all", BLOCK_FOLDER + waxed);
+    }
+    private void waxedCustomHorizontalBlock(RegistryObject<Block, Block> waxedBlock) {
+        String waxed = waxedBlock.getId().getPath();
+        String nonWaxed = waxed.substring(6);
+        horizontalBlock(waxedBlock.get(), models().withExistingParent(BLOCK_FOLDER + waxed, modLoc(BLOCK_FOLDER + nonWaxed)));
+    }
+    private void waxedBlockAndItem(RegistryObject<Block, Block> waxedBlock, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedBlock.getId().getPath();
+        String waxedTexture = textureBlock.getId().getPath();
+        String nonWaxedTexture = waxedTexture.substring(6);
+        simpleBlock(waxedBlock.get(), models().cubeAll(waxed, modLoc(BLOCK_FOLDER + nonWaxedTexture)));
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
+                .texture("all", BLOCK_FOLDER + waxedTexture);
+    }
+    private void waxedCutoutBlockAndItem(RegistryObject<Block, Block> waxedBlock) {
+        String waxed = waxedBlock.getId().getPath();
+        String nonWaxed = waxed.substring(6);
+        simpleBlock(waxedBlock.get(), models().cubeAll(waxed, modLoc(BLOCK_FOLDER + nonWaxed)).renderType(CUTOUT));
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
+                .texture("all", BLOCK_FOLDER + waxed);
+    }
+    //TODO: maybe change the texture someday cuz it's wacky but oh well
+    private void waxedFenceBlockAndItem(RegistryObject<Block, Block> waxedFenceBlock) {
+        String waxed = waxedFenceBlock.getId().getPath();
+        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxed.substring(6));
+        fenceBlock((FenceBlock) waxedFenceBlock.get(), nonWaxedTexture);
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, mcLoc(BLOCK_FOLDER + "fence_inventory"))
+                .texture("texture", modLoc(BLOCK_FOLDER + waxed));
+    }
+    private void waxedDoorBlockAndItem(RegistryObject<Block, Block> waxedDoorBlock) {
+        String waxed = waxedDoorBlock.getId().getPath();
+        String nonWaxed = waxed.substring(6);
+        doorBlock((DoorBlock) waxedDoorBlock.get(), modLoc(BLOCK_FOLDER + nonWaxed + BOTTOM), modLoc(BLOCK_FOLDER + nonWaxed + TOP));
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, GENERATED)
+                .texture("layer0", ITEM_FOLDER + waxed);
+    }
+    private void waxedTrapdoorBlockAndItem(RegistryObject<Block, Block> waxedTrapdoorBlock, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedTrapdoorBlock.getId().getPath();
+        String waxedTexture = textureBlock.getId().getPath();
+        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
+        trapdoorBlock((TrapDoorBlock) waxedTrapdoorBlock.get(), nonWaxedTexture, true);
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed + BOTTOM))
+                .texture("texture", BLOCK_FOLDER + waxedTexture);
+    }
+    //TODO: should fix model/texture as well
+    private void waxedPressurePlateBlockAndItem(RegistryObject<Block, Block> waxedPressurePlateBlock, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedPressurePlateBlock.getId().getPath();
+        String waxedTexture = textureBlock.getId().getPath();
+        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
+        pressurePlateBlock((PressurePlateBlock) waxedPressurePlateBlock.get(), nonWaxedTexture);
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
+                .texture("texture", BLOCK_FOLDER + waxedTexture);
+    }
+    //TODO: same as before, should fix model/texture
+    private void waxedButtonBlockAndItem(RegistryObject<Block, Block> waxedButtonBlock, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedButtonBlock.getId().getPath();
+        String waxedTexture = textureBlock.getId().getPath();
+        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
+        buttonBlock((ButtonBlock) waxedButtonBlock.get(), nonWaxedTexture);
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, mcLoc(BLOCK_FOLDER + "button_inventory"))
+                .texture("texture", modLoc(BLOCK_FOLDER + waxedTexture));
+    }
+
         String blockPath = block.getId().getPath();
 //        itemModels().withExistingParent(blockPath, modLoc(BLOCK_FOLDER + blockPath + "_inventory"));
         itemModels().withExistingParent(blockPath, mcLoc(BLOCK_FOLDER + "wall_inventory"));

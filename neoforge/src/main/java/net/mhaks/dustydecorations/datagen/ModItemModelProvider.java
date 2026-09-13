@@ -14,7 +14,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        basicItem(ModItems.<MY_ITEM>.get());
+
         basicItem(ModItems.CREAM_SEAGLASS_FRAGMENTS.get());
         basicItem(ModItems.HAZEL_SEAGLASS_FRAGMENTS.get());
         basicItem(ModItems.LIQUORICE_SEAGLASS_FRAGMENTS.get());

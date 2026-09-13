@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/waxed_rusted_corrugated_metal_fence_gate",
+  "textures": {
+    "all": "dustydecorations:block/waxed_rusted_corrugated_metal_fence"
+  }
+}

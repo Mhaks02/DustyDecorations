@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/waxed_corrugated_metal_stairs",
+  "textures": {
+    "all": "dustydecorations:block/waxed_corrugated_metal_block"
+  }
+}
