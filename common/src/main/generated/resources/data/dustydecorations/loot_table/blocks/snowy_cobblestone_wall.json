@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dustydecorations:smooth_seastone_brick_wall"
+          "name": "dustydecorations:snowy_cobblestone_wall"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "dustydecorations:blocks/smooth_seastone_brick_wall"
+  "random_sequence": "dustydecorations:blocks/snowy_cobblestone_wall"
 }

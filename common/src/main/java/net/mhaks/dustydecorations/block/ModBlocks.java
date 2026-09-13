@@ -1333,7 +1333,7 @@ public class ModBlocks {
                     .strength(.8f)
                     .requiresCorrectToolForDrops()
             ));
-    public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_WALL = registerBlock("smooth_seastone_brick_wall",
+    public static final RegistryObject<Block, Block> SNOWY_COBBLESTONE_WALL = registerBlock("snowy_cobblestone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
                     .requiresCorrectToolForDrops()
@@ -1373,7 +1373,7 @@ public class ModBlocks {
                     .strength(.8f)
                     .requiresCorrectToolForDrops()
             ));
-    public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_WALL = registerBlock("smooth_tone_brick_wall",
+    public static final RegistryObject<Block, Block> SMOOTH_STONE_BRICK_WALL = registerBlock("smooth_stone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(.8f)
                     .requiresCorrectToolForDrops()

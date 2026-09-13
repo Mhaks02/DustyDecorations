@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "dustydecorations:snowy_cobblestone"
+      "item": "dustydecorations:smooth_stone_bricks"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 6,
-    "id": "dustydecorations:smooth_seastone_brick_wall"
+    "id": "dustydecorations:smooth_stone_brick_wall"
   }
 }

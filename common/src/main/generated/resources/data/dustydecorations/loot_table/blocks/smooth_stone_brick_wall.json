@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dustydecorations:smooth_tone_brick_wall"
+          "name": "dustydecorations:smooth_stone_brick_wall"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "dustydecorations:blocks/smooth_tone_brick_wall"
+  "random_sequence": "dustydecorations:blocks/smooth_stone_brick_wall"
 }

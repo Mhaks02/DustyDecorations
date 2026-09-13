@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smooth_stone_bricks": {
+    "has_snowy_cobblestone": {
       "conditions": {
         "items": [
           {
-            "items": "dustydecorations:smooth_stone_bricks"
+            "items": "dustydecorations:snowy_cobblestone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dustydecorations:smooth_tone_brick_wall"
+        "recipe": "dustydecorations:snowy_cobblestone_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smooth_stone_bricks"
+      "has_snowy_cobblestone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "dustydecorations:smooth_tone_brick_wall"
+      "dustydecorations:snowy_cobblestone_wall"
     ]
   }
 }
