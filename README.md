@@ -1,11 +1,14 @@
 <div align="center">
 <img src="https://github.com/Mhaks02/resources/blob/main/dustydecorations/dusty_title_image.svg?raw=true" width="75%"/>
 </div>
-___
+
+<h1></h1>
+
 <div align="center">
 	<a href="https://modrinth.com/mod/dusty-decorations"><img src="https://github.com/Mhaks02/resources/blob/main/readme_misc/modrinth_icon_x96.svg?raw=true"><a href="https://www.curseforge.com/minecraft/mc-mods/dusty-decorations"><img src="https://github.com/Mhaks02/resources/blob/main/readme_misc/curseforge_icon_x96.svg?raw=true"><a href="https://github.com/Mhaks02/dustydecorations"><img src="https://github.com/Mhaks02/resources/blob/main/readme_misc/github_icon_x96.svg?raw=true">
 </div>
-___
+
+<h1></h1>
 
 <div align="center">
 	<h3>Dusty Decorations is a Minecraft mod that adds many decorative blocks, most of them themed around ports and markets, with a rustic feel!</h3>
