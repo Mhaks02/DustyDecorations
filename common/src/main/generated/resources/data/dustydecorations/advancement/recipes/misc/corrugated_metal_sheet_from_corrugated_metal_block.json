@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_corrugated_metal_nugget": {
+    "has_corrugated_metal_block": {
       "conditions": {
         "items": [
           {
-            "items": "dustydecorations:corrugated_metal_nugget"
+            "items": "dustydecorations:corrugated_metal_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dustydecorations:corrugated_metal_ingot_from_nuggets"
+        "recipe": "dustydecorations:corrugated_metal_sheet_from_corrugated_metal_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_corrugated_metal_nugget"
+      "has_corrugated_metal_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "dustydecorations:corrugated_metal_ingot_from_nuggets"
+      "dustydecorations:corrugated_metal_sheet_from_corrugated_metal_block"
     ]
   }
 }

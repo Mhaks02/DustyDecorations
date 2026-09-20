@@ -5,13 +5,12 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.*;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModItems {
@@ -59,10 +58,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()
             ));
 
-    public static final RegistryObject<Item, Item> CORRUGATED_METAL_INGOT = registerItem("corrugated_metal_ingot",
-            () -> new Item(new Item.Properties()
-            ));
-    public static final RegistryObject<Item, Item> CORRUGATED_METAL_NUGGET = registerItem("corrugated_metal_nugget",
+    public static final RegistryObject<Item, Item> CORRUGATED_METAL_SHEET = registerItem("corrugated_metal_sheet",
             () -> new Item(new Item.Properties()
             ));
 

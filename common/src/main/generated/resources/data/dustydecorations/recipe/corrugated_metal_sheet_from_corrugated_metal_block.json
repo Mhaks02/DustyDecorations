@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "dustydecorations:corrugated_metal_ingot"
+      "item": "dustydecorations:corrugated_metal_block"
     }
   ],
   "result": {
     "count": 9,
-    "id": "dustydecorations:corrugated_metal_nugget"
+    "id": "dustydecorations:corrugated_metal_sheet"
   }
 }

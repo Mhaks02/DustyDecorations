@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dustydecorations:corrugated_metal_ingot"
+        "recipe": "dustydecorations:corrugated_metal_sheet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "dustydecorations:corrugated_metal_ingot"
+      "dustydecorations:corrugated_metal_sheet"
     ]
   }
 }

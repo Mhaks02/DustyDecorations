@@ -1,7 +1,6 @@
 package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.ModConstants;
-import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;

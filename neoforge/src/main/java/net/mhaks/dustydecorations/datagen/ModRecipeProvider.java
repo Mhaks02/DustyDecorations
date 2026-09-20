@@ -129,42 +129,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         paperLantern(recipeOutput, ModBlocks.PILLAGER_PAPER_LANTERN.get(), Items.ARROW);    //iron_axe?
         paperLantern(recipeOutput, ModBlocks.WARDEN_PAPER_LANTERN.get(), Items.ECHO_SHARD);
 
-        nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_BLOCK.get(), "corrugated_metal_ingot_from_corrugated_metal_block", "corrugated_metal_ingot");
-        nineBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_NUGGET.get(), RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), "corrugated_metal_ingot_from_nuggets", "corrugated_metal_ingot");
+        nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ModItems.CORRUGATED_METAL_SHEET.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_BLOCK.get(), "corrugated_metal_sheet_from_corrugated_metal_block", null);
         grate(recipeOutput, ModBlocks.CORRUGATED_METAL_GRATE.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_STAIRS.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_METAL_SLAB.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.CORRUGATED_METAL_FENCE_GATE.get())
                 .pattern("@#@")
                 .pattern("@#@")
-                .define('@', ModItems.CORRUGATED_METAL_INGOT.get())
+                .define('@', ModItems.CORRUGATED_METAL_SHEET.get())
                 .define('#', ModBlocks.CORRUGATED_METAL_BLOCK.get())
-                .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
+                .unlockedBy("has_corrugated_metal_sheet", has(ModItems.CORRUGATED_METAL_SHEET.get()))
                 .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CORRUGATED_METAL_FENCE.get(), 6)
                 .pattern("#@#")
                 .pattern("#@#")
                 .define('#', ModBlocks.CORRUGATED_METAL_BLOCK.get())
-                .define('@', ModItems.CORRUGATED_METAL_INGOT.get())
+                .define('@', ModItems.CORRUGATED_METAL_SHEET.get())
                 .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
-                .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
+                .unlockedBy("has_corrugated_metal_sheet", has(ModItems.CORRUGATED_METAL_SHEET.get()))
                 .save(recipeOutput);
-        door(recipeOutput, ModBlocks.CORRUGATED_METAL_DOOR.get(), ModItems.CORRUGATED_METAL_INGOT.get());
-        twoByTwoPacker(recipeOutput, RecipeCategory.REDSTONE, ModBlocks.CORRUGATED_METAL_TRAPDOOR.get(), ModItems.CORRUGATED_METAL_INGOT.get());
-        pressurePlate(recipeOutput, ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), ModItems.CORRUGATED_METAL_INGOT.get());
         button(recipeOutput, ModBlocks.CORRUGATED_METAL_BUTTON.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
-        stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_ROOFING.get(), ModItems.CORRUGATED_METAL_INGOT.get());
-
-        // these will be oxidisable instead
-//        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get(), 8)
-//                .pattern("###")
-//                .pattern("#@#")
-//                .pattern("###")
-//                .define('#', ModBlocks.CORRUGATED_METAL_BLOCK.get())
-//                .define('@', Items.WATER_BUCKET)
-//                .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
-//                .save(recipeOutput);
+        stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_ROOFING.get(), ModItems.CORRUGATED_METAL_SHEET.get());
 
         //Might change that one to be the same as Seaglass Windows but without the plank.
         twoByTwoPacker(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CREAM_SEAGLASS.get(), ModItems.CREAM_SEAGLASS_FRAGMENTS.get(), "seaglass");
@@ -226,9 +212,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .pattern(" # ")
                 .pattern("###")
-                .define('#', ModItems.CORRUGATED_METAL_INGOT.get())
+                .define('#', ModItems.CORRUGATED_METAL_SHEET.get())
                 .define('I', Blocks.CHAIN)
-                .unlockedBy("has_corrugated_metal_ingot", has(ModItems.CORRUGATED_METAL_INGOT.get()))
+                .unlockedBy("has_corrugated_metal_sheet", has(ModItems.CORRUGATED_METAL_SHEET.get()))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIFE_PRESERVER.get())
                 .pattern("~#~")
@@ -953,7 +939,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         mural(recipeOutput, ModBlocks.ANDESITE_MURAL.get(), Blocks.POLISHED_ANDESITE);
 
         nineBlockStorageRecipesWithCustomPacking(recipeOutput, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), RecipeCategory.MISC, Items.COPPER_INGOT, getConversionRecipeName(Items.COPPER_INGOT, ModItems.COPPER_NUGGET.get()), getItemName(Items.COPPER_INGOT));
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUGATED_METAL_INGOT.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUGATED_METAL_SHEET.get(), 6)
                 .pattern("#@#")
                 .pattern("@#@")
                 .define('#', Items.IRON_INGOT)
@@ -963,7 +949,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
 
 
-        //TODO: all waxed variants recipes
         //TODO: stonecutting recipes
 //
 

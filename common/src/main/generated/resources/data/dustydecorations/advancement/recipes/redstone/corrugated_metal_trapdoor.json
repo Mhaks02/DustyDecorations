@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_corrugated_metal_ingot": {
+    "has_corrugated_metal_sheet": {
       "conditions": {
         "items": [
           {
-            "items": "dustydecorations:corrugated_metal_ingot"
+            "items": "dustydecorations:corrugated_metal_sheet"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_corrugated_metal_ingot"
+      "has_corrugated_metal_sheet"
     ]
   ],
   "rewards": {
