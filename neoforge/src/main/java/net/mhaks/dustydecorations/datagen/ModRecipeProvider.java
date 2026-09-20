@@ -149,6 +149,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_corrugated_metal_block", has(ModBlocks.CORRUGATED_METAL_BLOCK.get()))
                 .unlockedBy("has_corrugated_metal_sheet", has(ModItems.CORRUGATED_METAL_SHEET.get()))
                 .save(recipeOutput);
+        door(recipeOutput, ModBlocks.CORRUGATED_METAL_DOOR.get(), ModItems.CORRUGATED_METAL_SHEET.get());
+        twoByTwoPacker(recipeOutput, RecipeCategory.REDSTONE, ModBlocks.CORRUGATED_METAL_TRAPDOOR.get(), ModItems.CORRUGATED_METAL_SHEET.get());
+        pressurePlate(recipeOutput, ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get(), ModItems.CORRUGATED_METAL_SHEET.get());
         button(recipeOutput, ModBlocks.CORRUGATED_METAL_BUTTON.get(), ModBlocks.CORRUGATED_METAL_BLOCK.get());
         stairs(recipeOutput, ModBlocks.CORRUGATED_METAL_ROOFING.get(), ModItems.CORRUGATED_METAL_SHEET.get());
 
