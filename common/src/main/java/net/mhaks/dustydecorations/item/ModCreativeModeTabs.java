@@ -444,6 +444,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRATWURST_HOT_DOG.get());
                         output.accept(ModItems.NAUTILUS_GOLEM_SPAWN_EGG.get());
 
+                        output.accept(ModItems.COPPER_NUGGET.get());
                         output.accept(ModItems.CORRUGATED_METAL_SHEET.get());
 
                     }).build());

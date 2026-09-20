@@ -82,8 +82,13 @@ public class ModItems {
 
     //TODO: to be removed after 1.21.9
     public static final RegistryObject<Item, Item> COPPER_NUGGET = registerItem("copper_nugget",
-            () -> new Item(new Item.Properties()
-            ));
+            () -> new Item(new Item.Properties()) {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.dustydecorations.copper_nugget").withStyle(style -> style.withColor(ChatFormatting.GRAY)));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
 
     private static RegistryObject<Item, Item> registerItem(String name, Supplier<Item> item) {

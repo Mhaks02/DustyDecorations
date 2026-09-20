@@ -34,6 +34,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         spawnEggItem(ModItems.NAUTILUS_GOLEM_SPAWN_EGG.get());
 
+        basicItem(ModItems.COPPER_NUGGET.get());
+
 
     }
 }
