@@ -55,124 +55,97 @@
           ]
         },
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "conditions": [
             {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantments": "minecraft:fortune",
+                      "levels": {
+                        "min": 1
+                      }
                     }
-                  }
+                  ]
                 }
-              ],
-              "name": "dustydecorations:stone_marine_fossil"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
             },
             {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "add": false,
-                  "count": 1.0,
-                  "function": "minecraft:set_count"
-                },
-                {
-                  "function": "minecraft:explosion_decay"
-                }
-              ],
-              "name": "dustydecorations:small_shark_jaw"
+              "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "dustydecorations:small_shark_jaw"
         },
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "conditions": [
             {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantments": "minecraft:fortune",
+                      "levels": {
+                        "min": 1
+                      }
                     }
-                  }
+                  ]
                 }
-              ],
-              "name": "dustydecorations:stone_marine_fossil"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
             },
             {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "add": false,
-                  "count": 1.0,
-                  "function": "minecraft:set_count"
-                },
-                {
-                  "function": "minecraft:explosion_decay"
-                }
-              ],
-              "name": "dustydecorations:big_shark_jaw"
+              "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "dustydecorations:big_shark_jaw"
         },
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "conditions": [
             {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantments": "minecraft:fortune",
+                      "levels": {
+                        "min": 1
+                      }
                     }
-                  }
+                  ]
                 }
-              ],
-              "name": "dustydecorations:stone_marine_fossil"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
             },
             {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "add": false,
-                  "count": 1.0,
-                  "function": "minecraft:set_count"
-                },
-                {
-                  "function": "minecraft:explosion_decay"
-                }
-              ],
-              "name": "dustydecorations:megalodon_tooth"
+              "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "dustydecorations:megalodon_tooth"
         }
       ],
       "rolls": 1.0
