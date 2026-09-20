@@ -25,6 +25,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get());
         basicItem(ModItems.TAUPE_SEAGLASS_FRAGMENTS.get());
 
+        basicItem(ModItems.CORRUGATED_METAL_SHEET.get());
+
         basicItem(ModItems.BURLAP.get());
         basicItem(ModItems.RAW_BRATWURST.get());
         basicItem(ModItems.SMOKED_BRATWURST.get());
