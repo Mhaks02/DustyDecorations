@@ -148,10 +148,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
         waxedCutoutBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_GRATE);
-        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_STAIRS, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
-        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_SLAB, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedStairsAndItem(ModBlocks.WAXED_CORRUGATED_METAL_STAIRS, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
+        waxedSlabAndItem(ModBlocks.WAXED_CORRUGATED_METAL_SLAB, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
         waxedFenceBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_FENCE);
-        waxedBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.WAXED_CORRUGATED_METAL_FENCE);
+        waxedFenceGateBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.WAXED_CORRUGATED_METAL_FENCE);
         waxedDoorBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_DOOR);
         waxedTrapdoorBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_TRAPDOOR, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
         waxedPressurePlateBlockAndItem(ModBlocks.WAXED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.WAXED_CORRUGATED_METAL_BLOCK);
@@ -172,10 +172,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
         waxedCutoutBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_GRATE);
-        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_STAIRS, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
-        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_SLAB, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedStairsAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_STAIRS, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
+        waxedSlabAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_SLAB, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
         waxedFenceBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE);
-        waxedBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE);
+        waxedFenceGateBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE_GATE, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE);
         waxedDoorBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_DOOR);
         waxedTrapdoorBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_TRAPDOOR, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
         waxedPressurePlateBlockAndItem(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_PRESSURE_PLATE, ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK);
@@ -1013,13 +1013,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         String nonWaxed = waxed.substring(6);
         horizontalBlock(waxedBlock.get(), models().withExistingParent(BLOCK_FOLDER + waxed, modLoc(BLOCK_FOLDER + nonWaxed)));
     }
-    private void waxedBlockAndItem(RegistryObject<Block, Block> waxedBlock, RegistryObject<Block, Block> textureBlock) {
-        String waxed = waxedBlock.getId().getPath();
+    private void waxedStairsAndItem(RegistryObject<Block, Block> waxedStairs, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedStairs.getId().getPath();
         String waxedTexture = textureBlock.getId().getPath();
         String nonWaxedTexture = waxedTexture.substring(6);
-        simpleBlock(waxedBlock.get(), models().cubeAll(waxed, modLoc(BLOCK_FOLDER + nonWaxedTexture)));
+        stairsBlock((StairBlock) waxedStairs.get(), modLoc(BLOCK_FOLDER + nonWaxedTexture));
         itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
-                .texture("all", BLOCK_FOLDER + waxedTexture);
+                .texture("bottom", BLOCK_FOLDER + waxedTexture)
+                .texture("side", BLOCK_FOLDER + waxedTexture)
+                .texture("top", BLOCK_FOLDER + waxedTexture);
+    }
+    private void waxedSlabAndItem(RegistryObject<Block, Block> waxedSlab, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedSlab.getId().getPath();
+        String waxedTexture = textureBlock.getId().getPath();
+        String nonWaxedTexture = waxedTexture.substring(6);
+        slabBlock((SlabBlock) waxedSlab.get(), modLoc(BLOCK_FOLDER + nonWaxedTexture), modLoc(BLOCK_FOLDER + nonWaxedTexture));
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
+                .texture("bottom", BLOCK_FOLDER + waxedTexture)
+                .texture("side", BLOCK_FOLDER + waxedTexture)
+                .texture("top", BLOCK_FOLDER + waxedTexture);
     }
     private void waxedCutoutBlockAndItem(RegistryObject<Block, Block> waxedBlock) {
         String waxed = waxedBlock.getId().getPath();
@@ -1035,6 +1047,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock((FenceBlock) waxedFenceBlock.get(), nonWaxedTexture);
         itemModels().withExistingParent(ITEM_FOLDER + waxed, mcLoc(BLOCK_FOLDER + "fence_inventory"))
                 .texture("texture", modLoc(BLOCK_FOLDER + waxed));
+    }
+    private void waxedFenceGateBlockAndItem(RegistryObject<Block, Block> waxedFenceGate, RegistryObject<Block, Block> textureBlock) {
+        String waxed = waxedFenceGate.getId().getPath();
+        String waxedTexture = textureBlock.getId().getPath();
+        String nonWaxedTexture = waxedTexture.substring(6);
+        fenceGateBlock((FenceGateBlock) waxedFenceGate.get(), modLoc(BLOCK_FOLDER + nonWaxedTexture));
+        itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
+                .texture("texture", BLOCK_FOLDER + waxedTexture);
     }
     private void waxedDoorBlockAndItem(RegistryObject<Block, Block> waxedDoorBlock) {
         String waxed = waxedDoorBlock.getId().getPath();

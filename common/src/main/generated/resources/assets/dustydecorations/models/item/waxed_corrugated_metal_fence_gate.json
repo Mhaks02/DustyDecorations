@@ -1,6 +1,6 @@
 {
   "parent": "dustydecorations:block/waxed_corrugated_metal_fence_gate",
   "textures": {
-    "all": "dustydecorations:block/waxed_corrugated_metal_fence"
+    "texture": "dustydecorations:block/waxed_corrugated_metal_fence"
   }
 }

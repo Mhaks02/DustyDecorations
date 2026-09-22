@@ -1,6 +1,8 @@
 {
   "parent": "dustydecorations:block/waxed_rusted_corrugated_metal_slab",
   "textures": {
-    "all": "dustydecorations:block/waxed_rusted_corrugated_metal_block"
+    "bottom": "dustydecorations:block/waxed_rusted_corrugated_metal_block",
+    "side": "dustydecorations:block/waxed_rusted_corrugated_metal_block",
+    "top": "dustydecorations:block/waxed_rusted_corrugated_metal_block"
   }
 }
