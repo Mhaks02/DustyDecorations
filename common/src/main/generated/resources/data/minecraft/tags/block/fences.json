@@ -1,6 +1,8 @@
 {
   "values": [
     "dustydecorations:corrugated_metal_fence",
-    "dustydecorations:rusted_corrugated_metal_fence"
+    "dustydecorations:rusted_corrugated_metal_fence",
+    "dustydecorations:waxed_corrugated_metal_fence",
+    "dustydecorations:waxed_rusted_corrugated_metal_fence"
   ]
 }
