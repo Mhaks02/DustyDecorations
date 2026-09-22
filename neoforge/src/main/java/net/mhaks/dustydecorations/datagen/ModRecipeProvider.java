@@ -2,6 +2,7 @@ package net.mhaks.dustydecorations.datagen;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.custom.WickerBasketBlock;
 import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -673,7 +674,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModBlocks.WICKER_BLOCK.get())
                 .unlockedBy("has_wicker_block", has(ModBlocks.WICKER_BLOCK.get()))
                 .save(recipeOutput);
-        //TODO: baskets
+        List<Item> wickerBaskets = List.of(
+                ModBlocks.APPLE_WICKER_BASKET.get().asItem(),
+                ModBlocks.SWEET_BERRIES_WICKER_BASKET.get().asItem(),
+                ModBlocks.GLOW_BERRIES_WICKER_BASKET.get().asItem(),
+                ModBlocks.CARROT_WICKER_BASKET.get().asItem(),
+                ModBlocks.POTATO_WICKER_BASKET.get().asItem(),
+                ModBlocks.BEETROOT_WICKER_BASKET.get().asItem(),
+                ModBlocks.SEA_PICKLE_WICKER_BASKET.get().asItem(),
+                ModBlocks.COD_WICKER_BASKET.get().asItem(),
+                ModBlocks.SALMON_WICKER_BASKET.get().asItem(),
+                ModBlocks.PINK_PETALS_WICKER_BASKET.get().asItem(),
+                ModBlocks.LILAC_WICKER_BASKET.get().asItem(),
+                ModBlocks.ROSE_BUSH_WICKER_BASKET.get().asItem(),
+                ModBlocks.PEONY_WICKER_BASKET.get().asItem()
+        );
+        List<Item> wickerBasketsIngredients = List.of(
+                Items.APPLE,
+                Items.SWEET_BERRIES,
+                Items.GLOW_BERRIES,
+                Items.CARROT,
+                Items.POTATO,
+                Items.BEETROOT,
+                Items.SEA_PICKLE,
+                Items.COD,
+                Items.SALMON,
+                Items.PINK_PETALS,
+                Items.LILAC,
+                Items.ROSE_BUSH,
+                Items.PEONY
+        );
+        wickerBaskets(recipeOutput, wickerBaskets, wickerBasketsIngredients, "wicker_baskets");
 
         fourBlockStorageRecipes(recipeOutput, RecipeCategory.DECORATIONS, ModBlocks.GOURD.get(), RecipeCategory.DECORATIONS, Blocks.PUMPKIN);
         hangingStuff(recipeOutput, ModBlocks.HANGING_GOURDS.get(), ModBlocks.GOURD.get());
@@ -1238,6 +1269,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_redstone_lamp", has(Blocks.REDSTONE_LAMP))
                 .group("seaglass_lamps")
                 .save(recipeOutput);
+    }
+
+    protected static void wickerBaskets(RecipeOutput recipeOutput, List<Item> wickerBaskets, List<Item> wickerBasketsIngredients, String group) {
+        for (int i = 0; i < wickerBaskets.size(); i++) {
+            ItemLike item = wickerBasketsIngredients.get(i);
+            ItemLike item1 = wickerBaskets.get(i);
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, item1)
+                    .requires(item, 3)
+                    .requires(ModBlocks.WICKER_BASKET.get())
+                    .group(group)
+                    .unlockedBy("has_needed_ingredient", has(item))
+                    .save(recipeOutput, ModConstants.identifierOf(getItemName(item1)));
+        }
     }
 
     protected static void hangingStuff(RecipeOutput recipeOutput, ItemLike hangingObject, ItemLike object) {
