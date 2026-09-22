@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_winter_garland",
+  "textures": {
+    "0": "dustydecorations:block/winter_garland/1"
+  }
+}

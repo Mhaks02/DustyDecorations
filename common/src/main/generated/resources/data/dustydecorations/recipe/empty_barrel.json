@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:barrel"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:empty_barrel"
+  }
+}

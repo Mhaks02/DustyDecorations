@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sea_window_panes",
+  "key": {
+    "#": {
+      "item": "dustydecorations:hazel_sea_window"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 16,
+    "id": "dustydecorations:hazel_sea_window_pane"
+  }
+}

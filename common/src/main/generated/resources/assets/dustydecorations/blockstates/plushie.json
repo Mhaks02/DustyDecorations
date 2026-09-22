@@ -1,0 +1,274 @@
+{
+  "variants": {
+    "facing=east,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/alex_plushie",
+      "y": 90
+    },
+    "facing=east,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/alex_plushie",
+      "y": 90
+    },
+    "facing=east,texture=1,waterlogged=false": {
+      "model": "dustydecorations:block/ari_plushie",
+      "y": 90
+    },
+    "facing=east,texture=1,waterlogged=true": {
+      "model": "dustydecorations:block/ari_plushie",
+      "y": 90
+    },
+    "facing=east,texture=2,waterlogged=false": {
+      "model": "dustydecorations:block/efe_plushie",
+      "y": 90
+    },
+    "facing=east,texture=2,waterlogged=true": {
+      "model": "dustydecorations:block/efe_plushie",
+      "y": 90
+    },
+    "facing=east,texture=3,waterlogged=false": {
+      "model": "dustydecorations:block/kai_plushie",
+      "y": 90
+    },
+    "facing=east,texture=3,waterlogged=true": {
+      "model": "dustydecorations:block/kai_plushie",
+      "y": 90
+    },
+    "facing=east,texture=4,waterlogged=false": {
+      "model": "dustydecorations:block/makena_plushie",
+      "y": 90
+    },
+    "facing=east,texture=4,waterlogged=true": {
+      "model": "dustydecorations:block/makena_plushie",
+      "y": 90
+    },
+    "facing=east,texture=5,waterlogged=false": {
+      "model": "dustydecorations:block/noor_plushie",
+      "y": 90
+    },
+    "facing=east,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/noor_plushie",
+      "y": 90
+    },
+    "facing=east,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/steve_plushie",
+      "y": 90
+    },
+    "facing=east,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/steve_plushie",
+      "y": 90
+    },
+    "facing=east,texture=7,waterlogged=false": {
+      "model": "dustydecorations:block/sunny_plushie",
+      "y": 90
+    },
+    "facing=east,texture=7,waterlogged=true": {
+      "model": "dustydecorations:block/sunny_plushie",
+      "y": 90
+    },
+    "facing=east,texture=8,waterlogged=false": {
+      "model": "dustydecorations:block/zuri_plushie",
+      "y": 90
+    },
+    "facing=east,texture=8,waterlogged=true": {
+      "model": "dustydecorations:block/zuri_plushie",
+      "y": 90
+    },
+    "facing=north,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/alex_plushie"
+    },
+    "facing=north,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/alex_plushie"
+    },
+    "facing=north,texture=1,waterlogged=false": {
+      "model": "dustydecorations:block/ari_plushie"
+    },
+    "facing=north,texture=1,waterlogged=true": {
+      "model": "dustydecorations:block/ari_plushie"
+    },
+    "facing=north,texture=2,waterlogged=false": {
+      "model": "dustydecorations:block/efe_plushie"
+    },
+    "facing=north,texture=2,waterlogged=true": {
+      "model": "dustydecorations:block/efe_plushie"
+    },
+    "facing=north,texture=3,waterlogged=false": {
+      "model": "dustydecorations:block/kai_plushie"
+    },
+    "facing=north,texture=3,waterlogged=true": {
+      "model": "dustydecorations:block/kai_plushie"
+    },
+    "facing=north,texture=4,waterlogged=false": {
+      "model": "dustydecorations:block/makena_plushie"
+    },
+    "facing=north,texture=4,waterlogged=true": {
+      "model": "dustydecorations:block/makena_plushie"
+    },
+    "facing=north,texture=5,waterlogged=false": {
+      "model": "dustydecorations:block/noor_plushie"
+    },
+    "facing=north,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/noor_plushie"
+    },
+    "facing=north,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/steve_plushie"
+    },
+    "facing=north,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/steve_plushie"
+    },
+    "facing=north,texture=7,waterlogged=false": {
+      "model": "dustydecorations:block/sunny_plushie"
+    },
+    "facing=north,texture=7,waterlogged=true": {
+      "model": "dustydecorations:block/sunny_plushie"
+    },
+    "facing=north,texture=8,waterlogged=false": {
+      "model": "dustydecorations:block/zuri_plushie"
+    },
+    "facing=north,texture=8,waterlogged=true": {
+      "model": "dustydecorations:block/zuri_plushie"
+    },
+    "facing=south,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/alex_plushie",
+      "y": 180
+    },
+    "facing=south,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/alex_plushie",
+      "y": 180
+    },
+    "facing=south,texture=1,waterlogged=false": {
+      "model": "dustydecorations:block/ari_plushie",
+      "y": 180
+    },
+    "facing=south,texture=1,waterlogged=true": {
+      "model": "dustydecorations:block/ari_plushie",
+      "y": 180
+    },
+    "facing=south,texture=2,waterlogged=false": {
+      "model": "dustydecorations:block/efe_plushie",
+      "y": 180
+    },
+    "facing=south,texture=2,waterlogged=true": {
+      "model": "dustydecorations:block/efe_plushie",
+      "y": 180
+    },
+    "facing=south,texture=3,waterlogged=false": {
+      "model": "dustydecorations:block/kai_plushie",
+      "y": 180
+    },
+    "facing=south,texture=3,waterlogged=true": {
+      "model": "dustydecorations:block/kai_plushie",
+      "y": 180
+    },
+    "facing=south,texture=4,waterlogged=false": {
+      "model": "dustydecorations:block/makena_plushie",
+      "y": 180
+    },
+    "facing=south,texture=4,waterlogged=true": {
+      "model": "dustydecorations:block/makena_plushie",
+      "y": 180
+    },
+    "facing=south,texture=5,waterlogged=false": {
+      "model": "dustydecorations:block/noor_plushie",
+      "y": 180
+    },
+    "facing=south,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/noor_plushie",
+      "y": 180
+    },
+    "facing=south,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/steve_plushie",
+      "y": 180
+    },
+    "facing=south,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/steve_plushie",
+      "y": 180
+    },
+    "facing=south,texture=7,waterlogged=false": {
+      "model": "dustydecorations:block/sunny_plushie",
+      "y": 180
+    },
+    "facing=south,texture=7,waterlogged=true": {
+      "model": "dustydecorations:block/sunny_plushie",
+      "y": 180
+    },
+    "facing=south,texture=8,waterlogged=false": {
+      "model": "dustydecorations:block/zuri_plushie",
+      "y": 180
+    },
+    "facing=south,texture=8,waterlogged=true": {
+      "model": "dustydecorations:block/zuri_plushie",
+      "y": 180
+    },
+    "facing=west,texture=0,waterlogged=false": {
+      "model": "dustydecorations:block/alex_plushie",
+      "y": 270
+    },
+    "facing=west,texture=0,waterlogged=true": {
+      "model": "dustydecorations:block/alex_plushie",
+      "y": 270
+    },
+    "facing=west,texture=1,waterlogged=false": {
+      "model": "dustydecorations:block/ari_plushie",
+      "y": 270
+    },
+    "facing=west,texture=1,waterlogged=true": {
+      "model": "dustydecorations:block/ari_plushie",
+      "y": 270
+    },
+    "facing=west,texture=2,waterlogged=false": {
+      "model": "dustydecorations:block/efe_plushie",
+      "y": 270
+    },
+    "facing=west,texture=2,waterlogged=true": {
+      "model": "dustydecorations:block/efe_plushie",
+      "y": 270
+    },
+    "facing=west,texture=3,waterlogged=false": {
+      "model": "dustydecorations:block/kai_plushie",
+      "y": 270
+    },
+    "facing=west,texture=3,waterlogged=true": {
+      "model": "dustydecorations:block/kai_plushie",
+      "y": 270
+    },
+    "facing=west,texture=4,waterlogged=false": {
+      "model": "dustydecorations:block/makena_plushie",
+      "y": 270
+    },
+    "facing=west,texture=4,waterlogged=true": {
+      "model": "dustydecorations:block/makena_plushie",
+      "y": 270
+    },
+    "facing=west,texture=5,waterlogged=false": {
+      "model": "dustydecorations:block/noor_plushie",
+      "y": 270
+    },
+    "facing=west,texture=5,waterlogged=true": {
+      "model": "dustydecorations:block/noor_plushie",
+      "y": 270
+    },
+    "facing=west,texture=6,waterlogged=false": {
+      "model": "dustydecorations:block/steve_plushie",
+      "y": 270
+    },
+    "facing=west,texture=6,waterlogged=true": {
+      "model": "dustydecorations:block/steve_plushie",
+      "y": 270
+    },
+    "facing=west,texture=7,waterlogged=false": {
+      "model": "dustydecorations:block/sunny_plushie",
+      "y": 270
+    },
+    "facing=west,texture=7,waterlogged=true": {
+      "model": "dustydecorations:block/sunny_plushie",
+      "y": 270
+    },
+    "facing=west,texture=8,waterlogged=false": {
+      "model": "dustydecorations:block/zuri_plushie",
+      "y": 270
+    },
+    "facing=west,texture=8,waterlogged=true": {
+      "model": "dustydecorations:block/zuri_plushie",
+      "y": 270
+    }
+  }
+}

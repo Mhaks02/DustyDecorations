@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dustydecorations:carved_beetroot"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:beetroot"
+  }
+}

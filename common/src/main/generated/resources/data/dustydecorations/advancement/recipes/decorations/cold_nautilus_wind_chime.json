@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cold_seaglass_fragments": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#dustydecorations:cold_seaglass_fragments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nautilus_shell": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:nautilus_shell"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ropes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ropes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:cold_nautilus_wind_chime"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ropes",
+      "has_nautilus_shell",
+      "has_cold_seaglass_fragments"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:cold_nautilus_wind_chime"
+    ]
+  }
+}

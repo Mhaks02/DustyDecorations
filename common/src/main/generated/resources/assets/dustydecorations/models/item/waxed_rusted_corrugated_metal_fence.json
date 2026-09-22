@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "dustydecorations:block/waxed_rusted_corrugated_metal_fence"
+  }
+}

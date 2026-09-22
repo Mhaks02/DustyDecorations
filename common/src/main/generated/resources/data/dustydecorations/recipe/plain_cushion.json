@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "@": {
+      "item": "dustydecorations:burlap_block"
+    },
+    "o": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "@#@",
+    "#o#",
+    "@#@"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:plain_cushion"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wicker_baskets",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_petals"
+    },
+    {
+      "item": "minecraft:pink_petals"
+    },
+    {
+      "item": "minecraft:pink_petals"
+    },
+    {
+      "item": "dustydecorations:wicker_basket"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:pink_petals_wicker_basket"
+  }
+}

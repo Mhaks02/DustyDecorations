@@ -2,6 +2,9 @@ plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev'
 }
+dependencies {
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+}
 
 neoForge {
     version = neoforge_version
@@ -28,6 +31,12 @@ neoForge {
         server {
             server()
         }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all',
+            '--output', rootProject.project(':common').file('src/main/generated/resources').getAbsolutePath(),
+            '--existing', rootProject.project(':common').file('src/main/resources').getAbsolutePath()
+        }
     }
     mods {
         "${mod_id}" {
@@ -36,4 +45,4 @@ neoForge {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets.main.resources { srcDir project(':common').file('src/main/generated/resources') }

@@ -1,0 +1,184 @@
+{
+  "variants": {
+    "amount=0,facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/jars_0",
+      "y": 90
+    },
+    "amount=0,facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/jars_0",
+      "y": 90
+    },
+    "amount=0,facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/jars_0"
+    },
+    "amount=0,facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/jars_0"
+    },
+    "amount=0,facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/jars_0",
+      "y": 180
+    },
+    "amount=0,facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/jars_0",
+      "y": 180
+    },
+    "amount=0,facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/jars_0",
+      "y": 270
+    },
+    "amount=0,facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/jars_0",
+      "y": 270
+    },
+    "amount=1,facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/jars_1",
+      "y": 90
+    },
+    "amount=1,facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/jars_1",
+      "y": 90
+    },
+    "amount=1,facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/jars_1"
+    },
+    "amount=1,facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/jars_1"
+    },
+    "amount=1,facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/jars_1",
+      "y": 180
+    },
+    "amount=1,facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/jars_1",
+      "y": 180
+    },
+    "amount=1,facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/jars_1",
+      "y": 270
+    },
+    "amount=1,facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/jars_1",
+      "y": 270
+    },
+    "amount=2,facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/jars_2",
+      "y": 90
+    },
+    "amount=2,facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/jars_2",
+      "y": 90
+    },
+    "amount=2,facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/jars_2"
+    },
+    "amount=2,facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/jars_2"
+    },
+    "amount=2,facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/jars_2",
+      "y": 180
+    },
+    "amount=2,facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/jars_2",
+      "y": 180
+    },
+    "amount=2,facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/jars_2",
+      "y": 270
+    },
+    "amount=2,facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/jars_2",
+      "y": 270
+    },
+    "amount=3,facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/jars_3",
+      "y": 90
+    },
+    "amount=3,facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/jars_3",
+      "y": 90
+    },
+    "amount=3,facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/jars_3"
+    },
+    "amount=3,facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/jars_3"
+    },
+    "amount=3,facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/jars_3",
+      "y": 180
+    },
+    "amount=3,facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/jars_3",
+      "y": 180
+    },
+    "amount=3,facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/jars_3",
+      "y": 270
+    },
+    "amount=3,facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/jars_3",
+      "y": 270
+    },
+    "amount=4,facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/jars_4",
+      "y": 90
+    },
+    "amount=4,facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/jars_4",
+      "y": 90
+    },
+    "amount=4,facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/jars_4"
+    },
+    "amount=4,facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/jars_4"
+    },
+    "amount=4,facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/jars_4",
+      "y": 180
+    },
+    "amount=4,facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/jars_4",
+      "y": 180
+    },
+    "amount=4,facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/jars_4",
+      "y": 270
+    },
+    "amount=4,facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/jars_4",
+      "y": 270
+    },
+    "amount=5,facing=east,waterlogged=false": {
+      "model": "dustydecorations:block/jars_5",
+      "y": 90
+    },
+    "amount=5,facing=east,waterlogged=true": {
+      "model": "dustydecorations:block/jars_5",
+      "y": 90
+    },
+    "amount=5,facing=north,waterlogged=false": {
+      "model": "dustydecorations:block/jars_5"
+    },
+    "amount=5,facing=north,waterlogged=true": {
+      "model": "dustydecorations:block/jars_5"
+    },
+    "amount=5,facing=south,waterlogged=false": {
+      "model": "dustydecorations:block/jars_5",
+      "y": 180
+    },
+    "amount=5,facing=south,waterlogged=true": {
+      "model": "dustydecorations:block/jars_5",
+      "y": 180
+    },
+    "amount=5,facing=west,waterlogged=false": {
+      "model": "dustydecorations:block/jars_5",
+      "y": 270
+    },
+    "amount=5,facing=west,waterlogged=true": {
+      "model": "dustydecorations:block/jars_5",
+      "y": 270
+    }
+  }
+}

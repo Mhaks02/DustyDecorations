@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_honeycomb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:honeycomb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shoddy_copper_light": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:shoddy_copper_light"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:waxed_shoddy_copper_light_from_honeycomb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_honeycomb",
+      "has_shoddy_copper_light"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:waxed_shoddy_copper_light_from_honeycomb"
+    ]
+  }
+}

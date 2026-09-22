@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_big_cooking_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:big_cooking_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_copper_frying_pan": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:copper_frying_pan"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_frying_pan": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:iron_frying_pan"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:pots_and_pans"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_big_cooking_pot",
+      "has_iron_frying_pan",
+      "has_copper_frying_pan"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:pots_and_pans"
+    ]
+  }
+}

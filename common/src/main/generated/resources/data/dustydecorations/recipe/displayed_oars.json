@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:wooden_shovel"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "~": {
+      "tag": "c:ropes"
+    }
+  },
+  "pattern": [
+    "@ @",
+    "~I~",
+    "I I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:displayed_oars"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:black_wool"
+    },
+    "@": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "~": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "~@",
+    "~#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:stellar_wallpaper"
+  }
+}

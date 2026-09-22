@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/waxed_corrugated_metal_pressure_plate",
+  "textures": {
+    "texture": "dustydecorations:block/waxed_corrugated_metal_block"
+  }
+}

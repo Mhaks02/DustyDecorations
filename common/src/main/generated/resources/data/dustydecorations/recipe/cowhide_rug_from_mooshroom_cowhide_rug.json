@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dustydecorations:mooshroom_cowhide_rug"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:cowhide_rug"
+  }
+}

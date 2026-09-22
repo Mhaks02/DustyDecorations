@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "~": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "#~",
+    "~#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "dustydecorations:burlap"
+  }
+}

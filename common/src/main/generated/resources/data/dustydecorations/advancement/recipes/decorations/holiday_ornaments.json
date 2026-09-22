@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dyes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dyes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ropes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ropes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:holiday_ornaments"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:wool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ropes",
+      "has_dyes",
+      "has_wool"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:holiday_ornaments"
+    ]
+  }
+}

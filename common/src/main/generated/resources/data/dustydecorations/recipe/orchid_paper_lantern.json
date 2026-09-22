@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dustydecorations:orchid_paper_lantern"
+    },
+    {
+      "item": "minecraft:blue_orchid"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:orchid_paper_lantern"
+  }
+}

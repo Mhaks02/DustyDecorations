@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dustydecorations:taiga_paper_lantern"
+    },
+    {
+      "item": "minecraft:spruce_sapling"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:taiga_paper_lantern"
+  }
+}

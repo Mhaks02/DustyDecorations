@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_wicker_basket_produce",
+  "textures": {
+    "produce": "dustydecorations:block/salmon_wicker_basket"
+  }
+}

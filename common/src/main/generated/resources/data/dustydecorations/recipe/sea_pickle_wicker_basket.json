@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wicker_baskets",
+  "ingredients": [
+    {
+      "item": "minecraft:sea_pickle"
+    },
+    {
+      "item": "minecraft:sea_pickle"
+    },
+    {
+      "item": "minecraft:sea_pickle"
+    },
+    {
+      "item": "dustydecorations:wicker_basket"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:sea_pickle_wicker_basket"
+  }
+}

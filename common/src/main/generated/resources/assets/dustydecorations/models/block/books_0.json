@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_books",
+  "textures": {
+    "0": "dustydecorations:block/books/0"
+  }
+}

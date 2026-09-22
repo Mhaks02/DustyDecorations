@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "dustydecorations:block/green_cushion",
+    "side": "dustydecorations:block/green_cushion",
+    "top": "dustydecorations:block/green_cushion"
+  }
+}

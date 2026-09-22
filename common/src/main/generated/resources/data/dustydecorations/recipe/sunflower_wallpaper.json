@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:white_wool"
+    },
+    "@": {
+      "item": "minecraft:sunflower"
+    },
+    "~": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "~@",
+    "~#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:sunflower_wallpaper"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "variants": {
+    "facing=east,in_wall=false,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=false,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=false,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=false,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=true,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=true,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=true,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,in_wall=true,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,in_wall=false,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=false,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=false,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=false,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=true,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=true,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=true,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,in_wall=true,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,in_wall=false,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true
+    },
+    "facing=south,in_wall=false,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true
+    },
+    "facing=south,in_wall=false,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true
+    },
+    "facing=south,in_wall=false,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true
+    },
+    "facing=south,in_wall=true,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true
+    },
+    "facing=south,in_wall=true,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true
+    },
+    "facing=south,in_wall=true,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "facing=south,in_wall=true,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "facing=west,in_wall=false,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=false,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=false,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=false,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=true,open=false,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=true,open=false,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=true,open=true,waterlogged=false": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,in_wall=true,open=true,waterlogged=true": {
+      "model": "dustydecorations:block/corrugated_metal_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    }
+  }
+}

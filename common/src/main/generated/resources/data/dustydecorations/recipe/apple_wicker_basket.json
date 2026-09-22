@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wicker_baskets",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "dustydecorations:wicker_basket"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:apple_wicker_basket"
+  }
+}

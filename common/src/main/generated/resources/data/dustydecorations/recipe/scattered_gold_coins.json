@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dustydecorations:gold_coins"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "dustydecorations:scattered_gold_coins"
+  }
+}

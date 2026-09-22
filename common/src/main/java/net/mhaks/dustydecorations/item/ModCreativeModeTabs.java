@@ -1,0 +1,457 @@
+package net.mhaks.dustydecorations.item;
+
+import net.mhaks.dustydecorations.ModConstants;
+import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.registration.RegistrationProvider;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
+import java.util.function.Supplier;
+
+public class ModCreativeModeTabs {
+    public static final RegistrationProvider<CreativeModeTab> CREATIVE_TABS = RegistrationProvider.get(BuiltInRegistries.CREATIVE_MODE_TAB, ModConstants.MOD_ID);
+
+    public static final Supplier<CreativeModeTab> DUSTY_DECORATIONS_TAB = CREATIVE_TABS.register("dusty_decorations_tab",
+            () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
+                    .icon(() -> new ItemStack(ModBlocks.DUSTY_DECORATIONS_BARREL.get()))
+                    .title(Component.translatable("creativetab.dustydecorations.dusty_decorations_tab"))
+                    .displayItems((parameters, output) -> {
+
+                        output.accept(ModBlocks.OAK_BANISTER.get());
+                        output.accept(ModBlocks.SPRUCE_BANISTER.get());
+                        output.accept(ModBlocks.BIRCH_BANISTER.get());
+                        output.accept(ModBlocks.JUNGLE_BANISTER.get());
+                        output.accept(ModBlocks.ACACIA_BANISTER.get());
+                        output.accept(ModBlocks.DARK_OAK_BANISTER.get());
+                        output.accept(ModBlocks.MANGROVE_BANISTER.get());
+                        output.accept(ModBlocks.CHERRY_BANISTER.get());
+                        output.accept(ModBlocks.BAMBOO_BANISTER.get());
+                        output.accept(ModBlocks.DRY_BAMBOO_BANISTER.get());
+                        output.accept(ModBlocks.CRIMSON_BANISTER.get());
+                        output.accept(ModBlocks.WARPED_BANISTER.get());
+
+                        output.accept(ModBlocks.OAK_LARGE_SHELF.get());
+                        output.accept(ModBlocks.SPRUCE_LARGE_SHELF.get());
+                        output.accept(ModBlocks.BIRCH_LARGE_SHELF.get());
+                        output.accept(ModBlocks.JUNGLE_LARGE_SHELF.get());
+                        output.accept(ModBlocks.ACACIA_LARGE_SHELF.get());
+                        output.accept(ModBlocks.DARK_OAK_LARGE_SHELF.get());
+                        output.accept(ModBlocks.MANGROVE_LARGE_SHELF.get());
+                        output.accept(ModBlocks.CHERRY_LARGE_SHELF.get());
+                        output.accept(ModBlocks.BAMBOO_LARGE_SHELF.get());
+                        output.accept(ModBlocks.CRIMSON_LARGE_SHELF.get());
+                        output.accept(ModBlocks.WARPED_LARGE_SHELF.get());
+
+                        output.accept(ModBlocks.APPLE_BARREL.get());
+                        output.accept(ModBlocks.SWEET_BERRIES_BARREL.get());
+                        output.accept(ModBlocks.GLOW_BERRIES_BARREL.get());
+                        output.accept(ModBlocks.CARROT_BARREL.get());
+                        output.accept(ModBlocks.POTATO_BARREL.get());
+                        output.accept(ModBlocks.BEETROOT_BARREL.get());
+                        output.accept(ModBlocks.SEA_PICKLE_BARREL.get());
+                        output.accept(ModBlocks.COD_BARREL.get());
+                        output.accept(ModBlocks.SALMON_BARREL.get());
+                        output.accept(ModBlocks.EMPTY_BARREL.get());
+
+                        output.accept(ModBlocks.SUNFLOWER_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.REGAL_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.VINE_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.MONSTER_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SAILOR_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.COPPER_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.STELLAR_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.PUMPKIN_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SOUL_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.FOREST_FESTIVE_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.STRIPED_FESTIVE_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SNOWMEN_WALLPAPER_BLOCK.get());
+                        output.accept(ModBlocks.SNOWFLAKE_WALLPAPER_BLOCK.get());
+
+                        output.accept(ModBlocks.WHITE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_WOOL_AWNING.get());
+                        output.accept(ModBlocks.GRAY_WOOL_AWNING.get());
+                        output.accept(ModBlocks.BLACK_WOOL_AWNING.get());
+                        output.accept(ModBlocks.BROWN_WOOL_AWNING.get());
+                        output.accept(ModBlocks.RED_WOOL_AWNING.get());
+                        output.accept(ModBlocks.ORANGE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.YELLOW_WOOL_AWNING.get());
+                        output.accept(ModBlocks.LIME_WOOL_AWNING.get());
+                        output.accept(ModBlocks.GREEN_WOOL_AWNING.get());
+                        output.accept(ModBlocks.CYAN_WOOL_AWNING.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.BLUE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.PURPLE_WOOL_AWNING.get());
+                        output.accept(ModBlocks.MAGENTA_WOOL_AWNING.get());
+                        output.accept(ModBlocks.PINK_WOOL_AWNING.get());
+
+                        output.accept(ModBlocks.PAPER_LANTERN.get());
+                        output.accept(ModBlocks.SAKURA_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.TAIGA_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.ORCHID_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.PANDA_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.VILLAGER_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.CREEPER_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.CHICKEN_JOCKEY_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.PILLAGER_PAPER_LANTERN.get());
+                        output.accept(ModBlocks.WARDEN_PAPER_LANTERN.get());
+
+
+                        output.accept(ModBlocks.CREAM_SEAGLASS.get());
+                        output.accept(ModBlocks.HAZEL_SEAGLASS.get());
+                        output.accept(ModBlocks.LIQUORICE_SEAGLASS.get());
+                        output.accept(ModBlocks.MOCHA_SEAGLASS.get());
+                        output.accept(ModBlocks.SCARLET_SEAGLASS.get());
+                        output.accept(ModBlocks.HONEY_SEAGLASS.get());
+                        output.accept(ModBlocks.MINT_SEAGLASS.get());
+                        output.accept(ModBlocks.TEAL_SEAGLASS.get());
+                        output.accept(ModBlocks.CERULEAN_SEAGLASS.get());
+                        output.accept(ModBlocks.TAUPE_SEAGLASS.get());
+
+                        output.accept(ModBlocks.CREAM_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.HAZEL_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.LIQUORICE_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.MOCHA_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.SCARLET_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.HONEY_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.MINT_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.TEAL_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.CERULEAN_SEAGLASS_PANE.get());
+                        output.accept(ModBlocks.TAUPE_SEAGLASS_PANE.get());
+
+                        output.accept(ModBlocks.CREAM_SEA_WINDOW.get());
+                        output.accept(ModBlocks.HAZEL_SEA_WINDOW.get());
+                        output.accept(ModBlocks.LIQUORICE_SEA_WINDOW.get());
+                        output.accept(ModBlocks.MOCHA_SEA_WINDOW.get());
+                        output.accept(ModBlocks.SCARLET_SEA_WINDOW.get());
+                        output.accept(ModBlocks.HONEY_SEA_WINDOW.get());
+                        output.accept(ModBlocks.MINT_SEA_WINDOW.get());
+                        output.accept(ModBlocks.TEAL_SEA_WINDOW.get());
+                        output.accept(ModBlocks.CERULEAN_SEA_WINDOW.get());
+                        output.accept(ModBlocks.TAUPE_SEA_WINDOW.get());
+
+                        output.accept(ModBlocks.CREAM_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.HAZEL_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.LIQUORICE_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.MOCHA_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.SCARLET_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.HONEY_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.MINT_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.TEAL_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.CERULEAN_SEA_WINDOW_PANE.get());
+                        output.accept(ModBlocks.TAUPE_SEA_WINDOW_PANE.get());
+
+                        output.accept(ModBlocks.CREAM_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.HAZEL_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.LIQUORICE_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.MOCHA_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.SCARLET_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.HONEY_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.MINT_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.TEAL_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.CERULEAN_SEAGLASS_LAMP.get());
+                        output.accept(ModBlocks.TAUPE_SEAGLASS_LAMP.get());
+
+                        output.accept(ModBlocks.SEAGLASS_SAND.get());
+                        output.accept(ModBlocks.SEAGLASS_GRAVEL.get());
+
+                        output.accept(ModBlocks.RUSTED_ANCHOR.get());
+                        output.accept(ModBlocks.LIFE_PRESERVER.get());
+                        output.accept(ModBlocks.DISPLAYED_OARS.get());
+                        output.accept(ModBlocks.TREASURE_MAP.get());
+                        output.accept(ModBlocks.SCATTERED_PAPERS.get());
+                        output.accept(ModBlocks.POSTERS.get());
+                        output.accept(ModBlocks.PAPER_STACK.get());
+                        output.accept(ModBlocks.GLASS_BUOY.get());
+                        output.accept(ModBlocks.SMALL_GLASS_BUOYS.get());
+                        output.accept(ModBlocks.WOODEN_BUOYS.get());
+                        output.accept(ModBlocks.ROPE.get());
+                        output.accept(ModBlocks.COILED_ROPE.get());
+                        output.accept(ModBlocks.HANGING_COD.get());
+                        output.accept(ModBlocks.HANGING_SALMON.get());
+                        output.accept(ModBlocks.HANGING_KNIVES.get());
+                        output.accept(ModBlocks.WEDGED_KNIFE.get());
+                        output.accept(ModBlocks.WEDGED_CLEAVER.get());
+                        output.accept(ModBlocks.CUTTING_BOARD.get());
+                        output.accept(ModBlocks.KNIFE_AND_CUTTING_BOARD.get());
+                        output.accept(ModBlocks.IRON_FRYING_PAN.get());
+                        output.accept(ModBlocks.COPPER_FRYING_PAN.get());
+                        output.accept(ModBlocks.BIG_COOKING_POT.get());
+                        output.accept(ModBlocks.POTS_AND_PANS.get());
+                        output.accept(Items.BOWL);
+                        output.accept(ModBlocks.JARS.get());
+                        output.accept(ModBlocks.HONEY_JAR.get());
+                        output.accept(ModBlocks.INK_AND_QUILL.get());
+                        output.accept(ModBlocks.CLUTTERED_SMALL_SHELF.get());
+                        output.accept(ModBlocks.EMPTY_SMALL_SHELF.get());
+                        output.accept(ModBlocks.SMALL_BOOKSHELF.get());
+                        output.accept(ModBlocks.BOOKS.get());
+                        output.accept(ModBlocks.BOOK_STACK.get());
+                        output.accept(ModBlocks.GLOBE.get());
+                        output.accept(ModBlocks.VINTAGE_GLOBE.get());
+                        output.accept(ModBlocks.BOVINE_SKULL.get());
+                        output.accept(ModBlocks.EQUINE_SKULL.get());
+                        output.accept(ModBlocks.CANINE_SKULL.get());
+                        output.accept(ModBlocks.FISH_BONES.get());
+                        output.accept(ModBlocks.SMALL_SHARK_JAW.get());
+                        output.accept(ModBlocks.BIG_SHARK_JAW.get());
+                        output.accept(ModBlocks.MEGALODON_TOOTH.get());
+                        output.accept(ModBlocks.FISHING_LURES.get());
+                        output.accept(ModBlocks.STONE_MARINE_FOSSIL.get());
+                        output.accept(ModBlocks.DEEPSLATE_MARINE_FOSSIL.get());
+
+                        output.accept(ModBlocks.GOLD_COINS_BLOCK.get());
+                        output.accept(ModBlocks.GOLD_COINS_LAYER.get());
+                        output.accept(ModBlocks.SCATTERED_GOLD_COINS.get());
+//                        output.accept(ModBlocks.SANDSTONE_TILE_BLOCK.get());
+//                        output.accept(ModBlocks.SANDSTONE_TILE_STAIRS.get());
+//                        output.accept(ModBlocks.SANDSTONE_TILE_SLAB.get());
+//                        output.accept(ModBlocks.MOSAIC_SANDSTONE_TILE_BLOCK.get());
+                        output.accept(ModBlocks.BIG_NAUTILUS_SHELL.get());
+                        output.accept(ModBlocks.BIG_NAUTILUS_LANTERN.get());
+                        output.accept(ModBlocks.SMALL_NAUTILUS_SHELL.get());
+                        output.accept(ModBlocks.COLD_NAUTILUS_WIND_CHIME.get());
+
+                        output.accept(ModBlocks.BURLAP_BLOCK.get());
+                        output.accept(ModBlocks.BURLAP_STAIRS.get());
+                        output.accept(ModBlocks.BURLAP_SLAB.get());
+                        output.accept(ModBlocks.BURLAP_CARPET.get());
+                        output.accept(ModBlocks.BURLAP_AWNING.get());
+                        output.accept(ModBlocks.BURLAP_SACK.get());
+
+                        output.accept(ModBlocks.SAILOR_FLAG.get());
+                        output.accept(ModBlocks.SAILOR_PENNON.get());
+
+                        output.accept(ModBlocks.CERAMIC_POT.get());
+                        output.accept(ModBlocks.GLAZED_CERAMIC_POT.get());
+
+                        output.accept(ModBlocks.VINTAGE_CASH_REGISTER.get());
+
+                        output.accept(ModBlocks.HANGING_SAUSAGES.get());
+                        output.accept(ModBlocks.WRAPPED_MEAT.get());
+                        output.accept(ModBlocks.COWHIDE_RUG.get());
+                        output.accept(ModBlocks.MOOSHROOM_COWHIDE_RUG.get());
+
+                        output.accept(ModBlocks.COPPER_LIGHT.get());
+                        output.accept(ModBlocks.WAXED_COPPER_LIGHT.get());
+                        output.accept(ModBlocks.SHODDY_COPPER_LIGHT.get());
+                        output.accept(ModBlocks.WAXED_SHODDY_COPPER_LIGHT.get());
+
+                        output.accept(ModBlocks.CAMERA_QUADROPOD.get());
+                        output.accept(ModBlocks.CAMERA.get());
+                        output.accept(ModBlocks.MOVIE_CAMERA.get());
+
+                        output.accept(ModBlocks.WICKER_BLOCK.get());
+                        output.accept(ModBlocks.WICKER_STAIRS.get());
+                        output.accept(ModBlocks.WICKER_SLAB.get());
+                        output.accept(ModBlocks.WICKER_BASKET.get());
+                        output.accept(ModBlocks.APPLE_WICKER_BASKET.get());
+                        output.accept(ModBlocks.SWEET_BERRIES_WICKER_BASKET.get());
+                        output.accept(ModBlocks.GLOW_BERRIES_WICKER_BASKET.get());
+                        output.accept(ModBlocks.CARROT_WICKER_BASKET.get());
+                        output.accept(ModBlocks.POTATO_WICKER_BASKET.get());
+                        output.accept(ModBlocks.BEETROOT_WICKER_BASKET.get());
+                        output.accept(ModBlocks.SEA_PICKLE_WICKER_BASKET.get());
+                        output.accept(ModBlocks.COD_WICKER_BASKET.get());
+                        output.accept(ModBlocks.SALMON_WICKER_BASKET.get());
+                        output.accept(ModBlocks.PINK_PETALS_WICKER_BASKET.get());
+                        output.accept(ModBlocks.LILAC_WICKER_BASKET.get());
+                        output.accept(ModBlocks.ROSE_BUSH_WICKER_BASKET.get());
+                        output.accept(ModBlocks.PEONY_WICKER_BASKET.get());
+
+                        output.accept(ModBlocks.GOURD.get());
+                        output.accept(ModBlocks.HANGING_GOURDS.get());
+                        output.accept(ModBlocks.CARVED_BEETROOT.get());
+                        output.accept(ModBlocks.BEET_O_LANTERN.get());
+
+                        output.accept(ModBlocks.BEETROOT_SCARECROW.get());
+                        output.accept(ModBlocks.PUMPKIN_SCARECROW.get());
+
+                        output.accept(ModBlocks.MINI_SNOWMAN.get());
+                        output.accept(ModBlocks.PLUSHIE.get());
+                        output.accept(ModBlocks.NUTCRACKER.get());
+                        output.accept(ModBlocks.FALL_GARLAND.get());
+                        output.accept(ModBlocks.WINTER_GARLAND.get());
+                        output.accept(ModBlocks.WINTER_WREATH.get());
+                        output.accept(ModBlocks.FAIRY_LIGHTS.get());
+                        output.accept(ModBlocks.HOLIDAY_ORNAMENTS.get());
+                        output.accept(ModBlocks.GIANT_ANCHOR.get());
+                        output.accept(ModBlocks.GIANT_CHAIN.get());
+
+                        output.accept(ModBlocks.PLAIN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.PLAIN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.PLAIN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.WHITE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.WHITE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.GRAY_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.GRAY_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.GRAY_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.BLACK_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.BLACK_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.BLACK_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.BROWN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.BROWN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.BROWN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.RED_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.RED_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.RED_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.ORANGE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.ORANGE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.ORANGE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.YELLOW_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.YELLOW_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.YELLOW_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.LIME_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.LIME_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.LIME_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.GREEN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.GREEN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.GREEN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.CYAN_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.CYAN_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.CYAN_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.BLUE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.BLUE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.BLUE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.PURPLE_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.PURPLE_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.PURPLE_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.MAGENTA_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.MAGENTA_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.MAGENTA_CUSHION_SLAB.get());
+                        output.accept(ModBlocks.PINK_CUSHION_BLOCK.get());
+                        output.accept(ModBlocks.PINK_CUSHION_STAIRS.get());
+                        output.accept(ModBlocks.PINK_CUSHION_SLAB.get());
+
+                        output.accept(ModBlocks.SEASTONE_QUOIN.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_GRANITE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_DIORITE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_ANDESITE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_TUFF_QUOIN.get());
+                        output.accept(ModBlocks.PACKED_MUD_QUOIN.get());
+                        output.accept(ModBlocks.SANDSTONE_QUOIN.get());
+                        output.accept(ModBlocks.RED_SANDSTONE_QUOIN.get());
+                        output.accept(ModBlocks.POLISHED_BLACKSTONE_QUOIN.get());
+
+                        output.accept(ModBlocks.SEASTONE_MURAL.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_MURAL.get());
+                        output.accept(ModBlocks.GRANITE_MURAL.get());
+                        output.accept(ModBlocks.DIORITE_MURAL.get());
+                        output.accept(ModBlocks.ANDESITE_MURAL.get());
+
+                        output.accept(ModBlocks.SEASTONE_BLOCK.get());
+                        output.accept(ModBlocks.SEASTONE_STAIRS.get());
+                        output.accept(ModBlocks.SEASTONE_SLAB.get());
+                        output.accept(ModBlocks.SEASTONE_WALL.get());
+                        output.accept(ModBlocks.SEASTONE_BRICKS.get());
+                        output.accept(ModBlocks.CHISELED_SEASTONE_BRICKS.get());
+                        output.accept(ModBlocks.SEASTONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.SEASTONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.SEASTONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_BLOCK.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_SLAB.get());
+                        output.accept(ModBlocks.SMOOTH_SEASTONE_WALL.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICKS.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.CORAL_EMBEDDED_SEASTONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_BLOCK.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_STAIRS.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_SLAB.get());
+                        output.accept(ModBlocks.SNOWY_COBBLESTONE_WALL.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICKS.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.SNOWY_STONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICKS.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.SMOOTH_STONE_BRICK_WALL.get());
+
+                        output.accept(ModBlocks.CORRUGATED_METAL_BLOCK.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_GRATE.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_STAIRS.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_SLAB.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_FENCE.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_FENCE_GATE.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_DOOR.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_TRAPDOOR.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_BUTTON.get());
+                        output.accept(ModBlocks.CORRUGATED_METAL_ROOFING.get());
+
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_BLOCK.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_GRATE.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_STAIRS.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_SLAB.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_FENCE.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_FENCE_GATE.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_DOOR.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_TRAPDOOR.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_BUTTON.get());
+                        output.accept(ModBlocks.WAXED_CORRUGATED_METAL_ROOFING.get());
+
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_BLOCK.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_STAIRS.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_SLAB.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_FENCE_GATE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_DOOR.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_TRAPDOOR.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_BUTTON.get());
+                        output.accept(ModBlocks.RUSTED_CORRUGATED_METAL_ROOFING.get());
+
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BLOCK.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_GRATE.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_STAIRS.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_SLAB.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_FENCE_GATE.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_DOOR.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_TRAPDOOR.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_BUTTON.get());
+                        output.accept(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_ROOFING.get());
+
+                        output.accept(ModItems.CREAM_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.HAZEL_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.LIQUORICE_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.MOCHA_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.SCARLET_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.HONEY_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.TEAL_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.MINT_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.CERULEAN_SEAGLASS_FRAGMENTS.get());
+                        output.accept(ModItems.TAUPE_SEAGLASS_FRAGMENTS.get());
+
+                        output.accept(ModItems.BURLAP.get());
+                        output.accept(ModItems.RAW_BRATWURST.get());
+                        output.accept(ModItems.SMOKED_BRATWURST.get());
+                        output.accept(ModItems.BRATWURST_HOT_DOG.get());
+                        output.accept(ModItems.NAUTILUS_GOLEM_SPAWN_EGG.get());
+
+                        output.accept(ModItems.COPPER_NUGGET.get());
+                        output.accept(ModItems.CORRUGATED_METAL_SHEET.get());
+
+                    }).build());
+    
+
+    public static void registerModCreativeModeTabs() {
+        ModConstants.LOGGER.info("Registering Mod Creative Tabs for " + ModConstants.MOD_ID);
+    }
+
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "~": {
+      "tag": "c:ropes"
+    }
+  },
+  "pattern": [
+    "#~",
+    "~#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "dustydecorations:wicker"
+  }
+}

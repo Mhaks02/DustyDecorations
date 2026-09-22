@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:book"
+    },
+    "~": {
+      "item": "dustydecorations:empty_small_shelf"
+    }
+  },
+  "pattern": [
+    "#",
+    "~"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:small_bookshelf"
+  }
+}

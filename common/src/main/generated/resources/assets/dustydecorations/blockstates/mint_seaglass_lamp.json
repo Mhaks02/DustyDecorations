@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "dustydecorations:block/mint_seaglass_lamp_off"
+    },
+    "lit=true": {
+      "model": "dustydecorations:block/mint_seaglass_lamp_on"
+    }
+  }
+}

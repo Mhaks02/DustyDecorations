@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:hay_block"
+    },
+    "@": {
+      "item": "dustydecorations:carved_beetroot"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "^": {
+      "item": "minecraft:wheat"
+    },
+    "~": {
+      "item": "dustydecorations:burlap"
+    }
+  },
+  "pattern": [
+    "~@~",
+    "^#^",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:beetroot_scarecrow"
+  }
+}

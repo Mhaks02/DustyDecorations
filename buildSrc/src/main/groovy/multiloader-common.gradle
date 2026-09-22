@@ -4,7 +4,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_id}-${project.name}-${minecraft_version}"
+    archivesName = "${mod_id}-${project.name}+${minecraft_version}"
 }
 
 java {
@@ -41,6 +41,13 @@ repositories {
     maven {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com'
+    }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
     }
 }
 
@@ -99,7 +106,8 @@ processResources {
 //            "forge_version": forge_version,
 //            "forge_loader_version_range": forge_loader_version_range,
             'credits'                      : credits,
-            'java_version'                 : java_version
+            'java_version'                 : java_version,
+            'homepage'                     : homepage
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {

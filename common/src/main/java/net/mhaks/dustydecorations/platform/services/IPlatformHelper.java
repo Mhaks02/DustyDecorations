@@ -1,5 +1,11 @@
 package net.mhaks.dustydecorations.platform.services;
 
+import net.mhaks.dustydecorations.gui.menu.custom.VintageCashRegisterMenu;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.MenuType;
+
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +39,7 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    void openVintageCashRegisterMenu(MenuProvider provider, Player player, BlockPos blockPos);
+    MenuType<VintageCashRegisterMenu> registerMenu();
 }

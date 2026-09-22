@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gourd": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:gourd"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ropes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ropes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:hanging_gourds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ropes",
+      "has_gourd"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:hanging_gourds"
+    ]
+  }
+}

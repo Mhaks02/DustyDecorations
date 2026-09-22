@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wool_awnings",
+  "key": {
+    "#": {
+      "item": "minecraft:gray_carpet"
+    },
+    "@": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "## ",
+    " @#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:gray_wool_awning"
+  }
+}

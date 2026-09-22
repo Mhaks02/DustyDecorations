@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dustydecorations:block/red_cushion_slab"
+    },
+    "type=double": {
+      "model": "dustydecorations:block/red_cushion"
+    },
+    "type=top": {
+      "model": "dustydecorations:block/red_cushion_slab_top"
+    }
+  }
+}

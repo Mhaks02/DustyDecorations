@@ -1,0 +1,7 @@
+{
+	"parent" : "dustydecorations:block/template_wool_awning",
+	"textures" : {
+		"awning" : "dustydecorations:block/burlap_awning",
+		"particle" : "dustydecorations:block/burlap_awning"
+	}
+}

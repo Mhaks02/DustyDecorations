@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "gold_nugget",
+  "ingredients": [
+    {
+      "item": "dustydecorations:gold_coins_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:gold_nugget"
+  }
+}

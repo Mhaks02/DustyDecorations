@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "seaglass",
+  "key": {
+    "#": {
+      "item": "dustydecorations:teal_seaglass_fragments"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:teal_seaglass"
+  }
+}

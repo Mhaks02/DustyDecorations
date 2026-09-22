@@ -1,0 +1,149 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pumpkin_scarecrow_top",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "pumpkin_scarecrow",
+					"pivot": [4, 10, -2],
+					"cubes": [
+						{
+							"origin": [-4, 0, -2],
+							"size": [8, 5, 4],
+							"uv": {
+								"north": {"uv": [12, 19], "uv_size": [-8, 5]},
+								"east": {"uv": [0, 19], "uv_size": [4, 5]},
+								"south": {"uv": [16, 19], "uv_size": [8, 5]},
+								"west": {"uv": [12, 19], "uv_size": [4, 5]},
+								"up": {"uv": [12, 19], "uv_size": [-8, -4]},
+								"down": {"uv": [20, 19], "uv_size": [-8, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "pumpkin_scarecrow",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{
+							"origin": [-4, 12, -4],
+							"size": [8, 4, 8],
+							"uv": {
+								"north": {"uv": [40, 8], "uv_size": [8, 4]},
+								"east": {"uv": [32, 8], "uv_size": [8, 4]},
+								"south": {"uv": [56, 8], "uv_size": [8, 4]},
+								"west": {"uv": [48, 8], "uv_size": [8, 4]},
+								"up": {"uv": [48, 8], "uv_size": [-8, -8]}
+							}
+						},
+						{
+							"origin": [-8, 10.14482, -8.66533],
+							"size": [16, 0, 16],
+							"pivot": [0, 8.25, 0.0574],
+							"rotation": [-22.5, 0, 0],
+							"uv": {
+								"up": {"uv": [47, 64], "uv_size": [-16, -16]}
+							}
+						},
+						{
+							"origin": [-4, 5, -4],
+							"size": [8, 7, 8],
+							"uv": {
+								"north": {"uv": [8, 38], "uv_size": [8, 7]},
+								"east": {"uv": [0, 38], "uv_size": [8, 7]},
+								"south": {"uv": [24, 38], "uv_size": [8, 7]},
+								"west": {"uv": [16, 38], "uv_size": [8, 7]},
+								"down": {"uv": [24, 38], "uv_size": [-8, -8]}
+							}
+						}
+					]
+				},
+				{
+					"name": "arm_right",
+					"parent": "pumpkin_scarecrow",
+					"pivot": [14, 17, -2],
+					"cubes": [
+						{
+							"origin": [-14, 1, -2],
+							"size": [10, 4, 4],
+							"uv": {
+								"north": {"uv": [30, 23], "uv_size": [10, 4]},
+								"east": {"uv": [44, 15], "uv_size": [-4, 4]},
+								"south": {"uv": [30, 19], "uv_size": [10, 4]},
+								"up": {"uv": [30, 31], "uv_size": [10, -4]},
+								"down": {"uv": [40, 19], "uv_size": [-10, -4]}
+							}
+						},
+						{
+							"origin": [-16, 0.37767, 2.01346],
+							"size": [3, 6, 0],
+							"pivot": [0, 8.25, 0.0574],
+							"rotation": [-22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [49, 14], "uv_size": [-3, 6]},
+								"south": {"uv": [46, 14], "uv_size": [3, 6]}
+							}
+						},
+						{
+							"origin": [-14, 0.4216, -2.00472],
+							"size": [3, 6, 0],
+							"pivot": [0, 8.25, 0.0574],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [49, 20], "uv_size": [-3, -6]},
+								"south": {"uv": [46, 20], "uv_size": [3, -6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "arm_left",
+					"parent": "pumpkin_scarecrow",
+					"pivot": [14, 17, -2],
+					"cubes": [
+						{
+							"origin": [4, 1, -2],
+							"size": [10, 4, 4],
+							"uv": {
+								"north": {"uv": [30, 19], "uv_size": [10, 4]},
+								"south": {"uv": [30, 23], "uv_size": [10, 4]},
+								"west": {"uv": [40, 15], "uv_size": [4, 4]},
+								"up": {"uv": [40, 31], "uv_size": [-10, -4]},
+								"down": {"uv": [30, 19], "uv_size": [10, -4]}
+							}
+						},
+						{
+							"origin": [13, 0.37767, 2.01346],
+							"size": [3, 6, 0],
+							"pivot": [0, 8.25, 0.0574],
+							"rotation": [-22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [46, 14], "uv_size": [3, 6]},
+								"south": {"uv": [49, 14], "uv_size": [-3, 6]}
+							}
+						},
+						{
+							"origin": [11, 0.4216, -2.00472],
+							"size": [3, 6, 0],
+							"pivot": [0, 8.25, 0.0574],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [46, 20], "uv_size": [3, -6]},
+								"south": {"uv": [49, 20], "uv_size": [-3, -6]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

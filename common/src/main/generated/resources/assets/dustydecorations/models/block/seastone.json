@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dustydecorations:block/seastone_end",
+    "side": "dustydecorations:block/seastone_side"
+  }
+}

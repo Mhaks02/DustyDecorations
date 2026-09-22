@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hazel_seaglass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:hazel_seaglass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:hazel_seaglass_pane"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hazel_seaglass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:hazel_seaglass_pane"
+    ]
+  }
+}

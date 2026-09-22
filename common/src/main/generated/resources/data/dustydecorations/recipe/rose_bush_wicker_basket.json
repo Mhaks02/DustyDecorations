@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wicker_baskets",
+  "ingredients": [
+    {
+      "item": "minecraft:rose_bush"
+    },
+    {
+      "item": "minecraft:rose_bush"
+    },
+    {
+      "item": "minecraft:rose_bush"
+    },
+    {
+      "item": "dustydecorations:wicker_basket"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:rose_bush_wicker_basket"
+  }
+}

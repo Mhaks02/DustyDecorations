@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_sailor_pennon",
+  "textures": {
+    "0": "dustydecorations:block/sailor_pennon/1"
+  }
+}

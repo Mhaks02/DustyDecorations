@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_plushie",
+  "textures": {
+    "0": "dustydecorations:block/plushie/ari"
+  }
+}

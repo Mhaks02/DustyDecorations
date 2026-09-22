@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:sea_pickle"
+    },
+    [
+      {
+        "item": "minecraft:barrel"
+      },
+      {
+        "item": "dustydecorations:empty_barrel"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:sea_pickle_barrel"
+  }
+}

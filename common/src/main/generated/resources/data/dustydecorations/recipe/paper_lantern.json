@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "@": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:paper_lantern"
+  }
+}

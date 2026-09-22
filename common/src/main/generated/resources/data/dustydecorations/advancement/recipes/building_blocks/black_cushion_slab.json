@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:black_cushion"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:black_cushion_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_cushion"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:black_cushion_slab"
+    ]
+  }
+}

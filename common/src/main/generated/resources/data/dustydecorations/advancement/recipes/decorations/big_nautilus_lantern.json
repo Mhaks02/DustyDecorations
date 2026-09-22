@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_big_nautilus_shell": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:big_nautilus_shell"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lantern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:lantern"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:big_nautilus_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_big_nautilus_shell",
+      "has_lantern"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:big_nautilus_lantern"
+    ]
+  }
+}

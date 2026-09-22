@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "*": {
+      "tag": "c:dyes"
+    },
+    "^": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "~": {
+      "tag": "c:ropes"
+    }
+  },
+  "pattern": [
+    " ~ ",
+    "*^*"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dustydecorations:fairy_lights"
+  }
+}

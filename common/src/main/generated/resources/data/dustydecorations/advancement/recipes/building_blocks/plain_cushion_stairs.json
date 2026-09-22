@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plain_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:plain_cushion"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:plain_cushion_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plain_cushion"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:plain_cushion_stairs"
+    ]
+  }
+}

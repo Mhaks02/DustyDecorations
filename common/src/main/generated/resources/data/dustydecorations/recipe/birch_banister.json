@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "banisters",
+  "key": {
+    "#": {
+      "item": "minecraft:birch_fence"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "dustydecorations:birch_banister"
+  }
+}

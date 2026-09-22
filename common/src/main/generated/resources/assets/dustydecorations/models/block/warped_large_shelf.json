@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_large_shelf",
+  "textures": {
+    "planks": "minecraft:block/warped_planks"
+  }
+}

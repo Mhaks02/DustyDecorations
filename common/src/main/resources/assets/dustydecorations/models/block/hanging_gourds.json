@@ -1,0 +1,171 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "dustydecorations:block/hanging_gourds",
+		"particle": "dustydecorations:block/hanging_gourds"
+	},
+	"elements": [
+		{
+			"name": "rope",
+			"from": [0, 6, 8],
+			"to": [16, 16, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 12.5, 8]},
+			"faces": {
+				"north": {"uv": [12, 0, 16, 2.5], "texture": "#0"},
+				"east": {"uv": [0, 13.5, 0, 16], "texture": "#0"},
+				"south": {"uv": [16, 0, 12, 2.5], "texture": "#0"},
+				"west": {"uv": [15.25, 13.5, 15.25, 16], "texture": "#0"},
+				"up": {"uv": [4, 13.5, 0, 13.5], "texture": "#0"},
+				"down": {"uv": [16, 13.5, 12, 13.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-1, -1, 5],
+			"to": [4, 8, 10],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [1.5, 3.5, 7.5]},
+			"faces": {
+				"north": {"uv": [1.25, 9.25, 2.5, 11.5], "texture": "#0"},
+				"east": {"uv": [0, 9.25, 1.25, 11.5], "texture": "#0"},
+				"south": {"uv": [3.75, 9.25, 5, 11.5], "texture": "#0"},
+				"west": {"uv": [2.5, 9.25, 3.75, 11.5], "texture": "#0"},
+				"up": {"uv": [2.5, 9.25, 1.25, 8], "texture": "#0"},
+				"down": {"uv": [3.75, 8, 2.5, 9.25], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1.75, 6.75, 6],
+			"to": [4.75, 11.75, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3.25, 11.25, 7.5]},
+			"faces": {
+				"north": {"uv": [8.75, 8.75, 9.5, 10], "texture": "#0"},
+				"east": {"uv": [8, 8.75, 8.75, 10], "texture": "#0"},
+				"south": {"uv": [10.25, 8.75, 11, 10], "texture": "#0"},
+				"west": {"uv": [9.5, 8.75, 10.25, 10], "texture": "#0"},
+				"up": {"uv": [9.5, 8.75, 8.75, 8], "texture": "#0"},
+				"down": {"uv": [10.25, 8, 9.5, 8.75], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 2, 4],
+			"to": [12, 9, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.75, 8]},
+			"faces": {
+				"north": {"uv": [2, 2, 4, 3.75], "texture": "#0"},
+				"east": {"uv": [0, 2, 2, 3.75], "texture": "#0"},
+				"south": {"uv": [6, 2, 8, 3.75], "texture": "#0"},
+				"west": {"uv": [4, 2, 6, 3.75], "texture": "#0"},
+				"up": {"uv": [4, 2, 2, 0], "texture": "#0"},
+				"down": {"uv": [6, 0, 4, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 9, 7],
+			"to": [9, 11, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.75, 8]},
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"east": {"uv": [8, 0.5, 8.5, 1], "texture": "#0"},
+				"south": {"uv": [9.5, 0.5, 10, 1], "texture": "#0"},
+				"west": {"uv": [9, 0.5, 9.5, 1], "texture": "#0"},
+				"up": {"uv": [9, 0.5, 8.5, 0], "texture": "#0"},
+				"down": {"uv": [9.5, 0, 9, 0.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10, -6, 5.5],
+			"to": [16, 2, 11.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [13, 1, 8]},
+			"faces": {
+				"north": {"uv": [5.5, 4, 3.5, 5.5], "rotation": 270, "texture": "#0"},
+				"east": {"uv": [5, 5.5, 7, 7], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [3.5, 5.5, 1.5, 4], "rotation": 270, "texture": "#0"},
+				"west": {"uv": [1.5, 5.5, 3.5, 7], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [0, 5.5, 1.5, 7], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [3.5, 5.5, 5, 7], "texture": "#0"}
+			}
+		},
+		{
+			"from": [13, 2, 7],
+			"to": [15, 6, 9],
+			"rotation": {"angle": 45, "axis": "y", "origin": [14, 1, 9]},
+			"faces": {
+				"north": {"uv": [10.5, 4, 9.5, 4.5], "rotation": 270, "texture": "#0"},
+				"east": {"uv": [10, 4.5, 11, 5], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [9.5, 4.5, 8.5, 4], "rotation": 270, "texture": "#0"},
+				"west": {"uv": [8.5, 4.5, 9.5, 5], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [8, 4.5, 8.5, 5], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [9.5, 4.5, 10, 5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 1.75, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 1.75, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 122.5, 0],
+			"translation": [0, 2.75, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -67.5, 0],
+			"translation": [0, 2.75, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, -167.5, 0],
+			"translation": [0, 1.75, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"rotation": [12, 0, 0],
+			"translation": [0, -13, -5.5],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"fixed": {
+			"translation": [0, 2.5, -2.25],
+			"scale": [0.7, 0.7, 0.7]
+		}
+	},
+	"groups": [
+		{
+			"name": "hanging_gourds",
+			"origin": [8, 12.5, 8],
+			"color": 0,
+			"children": [
+				0,
+				{
+					"name": "gourd_three",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [1, 2]
+				},
+				{
+					"name": "gourd_one",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [3, 4]
+				},
+				{
+					"name": "gourd_two",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [5, 6]
+				}
+			]
+		}
+	]
+}

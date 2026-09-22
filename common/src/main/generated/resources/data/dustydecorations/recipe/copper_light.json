@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "dustydecorations:copper_nugget"
+    },
+    "@": {
+      "item": "minecraft:redstone_torch"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:copper_light"
+  }
+}

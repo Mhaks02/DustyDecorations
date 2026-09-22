@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "dustydecorations:block/rusted_corrugated_metal_block",
+    "side": "dustydecorations:block/rusted_corrugated_metal_block",
+    "top": "dustydecorations:block/rusted_corrugated_metal_block"
+  }
+}

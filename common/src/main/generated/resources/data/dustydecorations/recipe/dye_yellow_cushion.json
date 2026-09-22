@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "cushions",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    [
+      {
+        "item": "dustydecorations:white_cushion"
+      },
+      {
+        "item": "dustydecorations:light_gray_cushion"
+      },
+      {
+        "item": "dustydecorations:gray_cushion"
+      },
+      {
+        "item": "dustydecorations:black_cushion"
+      },
+      {
+        "item": "dustydecorations:brown_cushion"
+      },
+      {
+        "item": "dustydecorations:red_cushion"
+      },
+      {
+        "item": "dustydecorations:orange_cushion"
+      },
+      {
+        "item": "dustydecorations:lime_cushion"
+      },
+      {
+        "item": "dustydecorations:green_cushion"
+      },
+      {
+        "item": "dustydecorations:cyan_cushion"
+      },
+      {
+        "item": "dustydecorations:light_blue_cushion"
+      },
+      {
+        "item": "dustydecorations:blue_cushion"
+      },
+      {
+        "item": "dustydecorations:purple_cushion"
+      },
+      {
+        "item": "dustydecorations:magenta_cushion"
+      },
+      {
+        "item": "dustydecorations:pink_cushion"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "dustydecorations:yellow_cushion"
+  }
+}

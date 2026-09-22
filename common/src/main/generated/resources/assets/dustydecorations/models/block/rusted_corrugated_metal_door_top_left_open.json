@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "dustydecorations:block/rusted_corrugated_metal_door_bottom",
+    "top": "dustydecorations:block/rusted_corrugated_metal_door_top"
+  }
+}

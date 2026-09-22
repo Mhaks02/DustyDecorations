@@ -1,0 +1,40 @@
+{
+  "values": {
+    "dustydecorations:copper_light": {
+      "next_oxidation_stage": "dustydecorations:shoddy_copper_light"
+    },
+    "dustydecorations:corrugated_metal_block": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_block"
+    },
+    "dustydecorations:corrugated_metal_button": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_button"
+    },
+    "dustydecorations:corrugated_metal_door": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_door"
+    },
+    "dustydecorations:corrugated_metal_fence": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_fence"
+    },
+    "dustydecorations:corrugated_metal_fence_gate": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_fence_gate"
+    },
+    "dustydecorations:corrugated_metal_grate": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_grate"
+    },
+    "dustydecorations:corrugated_metal_pressure_plate": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_pressure_plate"
+    },
+    "dustydecorations:corrugated_metal_roofing": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_roofing"
+    },
+    "dustydecorations:corrugated_metal_slab": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_slab"
+    },
+    "dustydecorations:corrugated_metal_stairs": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_stairs"
+    },
+    "dustydecorations:corrugated_metal_trapdoor": {
+      "next_oxidation_stage": "dustydecorations:rusted_corrugated_metal_trapdoor"
+    }
+  }
+}

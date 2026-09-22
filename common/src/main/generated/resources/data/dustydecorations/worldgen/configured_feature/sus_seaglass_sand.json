@@ -1,0 +1,19 @@
+{
+  "type": "dustydecorations:sus_seaglass",
+  "config": {
+    "targets": [
+      {
+        "state": {
+          "Name": "dustydecorations:seaglass_sand",
+          "Properties": {
+            "dusted": "0"
+          }
+        },
+        "target": {
+          "block": "minecraft:sand",
+          "predicate_type": "minecraft:block_match"
+        }
+      }
+    ]
+  }
+}

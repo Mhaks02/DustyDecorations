@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "dustydecorations:block/waxed_rusted_corrugated_metal_block"
+  }
+}
