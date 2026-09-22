@@ -107,7 +107,8 @@ processResources {
 //            "forge_loader_version_range": forge_loader_version_range,
             'credits'                      : credits,
             'java_version'                 : java_version,
-            'homepage'                     : homepage
+            'homepage'                     : homepage,
+            'geckolib_version'             : geckolib_version
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {
