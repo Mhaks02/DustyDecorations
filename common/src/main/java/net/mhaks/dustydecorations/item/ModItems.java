@@ -60,13 +60,13 @@ public class ModItems {
             ));
 
     public static final RegistryObject<Item, Item> RAW_BRATWURST = registerItem("raw_bratwurst_sausage",
-            () -> new Item(new Item.Properties()
+            () -> new Item(new Item.Properties().food(ModFoods.RAW_BRATWURST)
             ));
     public static final RegistryObject<Item, Item> SMOKED_BRATWURST = registerItem("smoked_bratwurst_sausage",
-            () -> new Item(new Item.Properties()
+            () -> new Item(new Item.Properties().food(ModFoods.SMOKED_BRATWURST)
             ));
     public static final RegistryObject<Item, Item> BRATWURST_HOT_DOG = registerItem("bratwurst_hot_dog",
-            () -> new Item(new Item.Properties()
+            () -> new Item(new Item.Properties().food(ModFoods.BRATWURST_HOT_DOG)
             ));
 
     public static final RegistryObject<Item, Item> NAUTILUS_GOLEM_SPAWN_EGG = registerItem("nautilus_golem_spawn_egg",
