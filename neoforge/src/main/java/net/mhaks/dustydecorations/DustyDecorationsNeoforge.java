@@ -96,6 +96,8 @@ public class DustyDecorationsNeoforge {
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WAXED_RUSTED_CORRUGATED_METAL_GRATE.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAZEL_SEAGLASS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MOCHA_SEAGLASS.get(), RenderType.translucent());
