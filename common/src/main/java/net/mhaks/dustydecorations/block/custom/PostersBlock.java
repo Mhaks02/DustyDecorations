@@ -1,8 +1,12 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -13,16 +17,20 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class PostersBlock extends HorizontalDirectionalBlock {
+    public static final IntegerProperty TEXTURE = ModConstants.TEXTURE_11;
     public static final MapCodec<PostersBlock> CODEC = simpleCodec(PostersBlock::new);
 
     public PostersBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(defaultBlockState()
+                        .setValue(TEXTURE, 0)
                 .setValue(FACING, Direction.NORTH));
     }
 
@@ -93,7 +101,23 @@ public class PostersBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+        super.onPlace(state, level, pos, oldState, movedByPiston);
+        this.registerDefaultState(defaultBlockState()
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 11)));
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!level.isClientSide() && player.isShiftKeyDown()) {
+                level.setBlockAndUpdate(pos, state.cycle(TEXTURE));
+            return InteractionResult.SUCCESS;
+        }
+        return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, TEXTURE);
     }
 }
