@@ -15,7 +15,7 @@ ___
 - Additionally, pressing shift and right-clicking on `Posters` will cycle through its texture variants
 - Geckolib 4.9.x works fine now
 ### Fixed
-- Moved `addBlocksToBlockEntityType` and `registerAttributes` methods to neoforge's common events bus subscriber instead of client: fixes server crash on world generation 
+- Moved `addBlocksToBlockEntityType` and `registerAttributes` methods to neoforge's common events bus subscriber instead of client: fixes server crash on world generation and nautilus golem throwing an error on spawn 
 - Broken `Nautilus Wind Chime` animation with Geckolib 4.9
 
 ___
