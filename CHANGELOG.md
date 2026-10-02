@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ___
+## 2.1.1 <sub><sup>(hotfix for Fabric)</sup></sub> – _2026.10.02_
+### Fixed
+- Wrong semantic for Geckolib version range in `fabric.mod.json`
+  - Fixes [Issue #2](https://github.com/Mhaks02/DustyDecorations/issues/2)
+___
 ## 2.1.0 – _2026.10.02_
 ### Added
 - open/close sounds for the `Vintage Cash Register`
