@@ -1,8 +1,10 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -59,6 +61,7 @@ public class SeaglassLampBlock extends Block implements SimpleWaterloggedBlock {
         if (!level.isClientSide()) {
             level.setBlockAndUpdate(pos, state.cycle(LIT));
         }
+        level.playSound(player, pos, ModSoundEvents.SEAGLASS_LAMP_TOGGLE.get(), SoundSource.BLOCKS, 1.0f, level.getRandom().nextFloat() * 0.1f + 0.7f);
         return InteractionResult.SUCCESS;
     }
 

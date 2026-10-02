@@ -91,4 +91,8 @@ public class VintageCashRegisterMenu extends AbstractContainerMenu {
         super.removed(player);
         this.cashRegister.stopOpen(player);
     }
+
+    public Container getCashRegister() {
+        return this.cashRegister;
+    }
 }

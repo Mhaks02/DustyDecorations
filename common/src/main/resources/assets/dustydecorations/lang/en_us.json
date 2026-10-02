@@ -389,7 +389,14 @@
   "item.dustydecorations.smoked_bratwurst_sausage": "Smoked Bratwurst Sausage",
   "item.dustydecorations.taupe_seaglass_fragments": "Taupe Seaglass Fragments",
   "item.dustydecorations.teal_seaglass_fragments": "Teal Seaglass Fragments",
-  "subtitles.dustydecorations.block.corrugated_metal_close": "Corrugated Metal Closes",
-  "subtitles.dustydecorations.block.corrugated_metal_open": "Corrugated Metal Opens",
+  "subtitles.dustydecorations.block.corrugated_metal.close": "Corrugated Metal closes",
+  "subtitles.dustydecorations.block.corrugated_metal.open": "Corrugated Metal opens",
+  "subtitles.dustydecorations.block.vintage_cash_register.open": "Vintage Cash Register opens",
+  "subtitles.dustydecorations.block.vintage_cash_register.close": "Vintage Cash Register closes",
+  "subtitles.dustydecorations.block.copper_light.turn_on": "Copper Light turns on",
+  "subtitles.dustydecorations.block.copper_light.turn_off": "Copper Light turns off",
+  "subtitles.dustydecorations.block.copper_light.hum": "Copper Light hums",
+  "subtitles.dustydecorations.block.seaglass_lamp.toggle": "Seaglass Lamp clicks",
+  "subtitles.dustydecorations.block.nautilus_wind_chime.tinkle": "Nautilus Wind Chime tinkles",
   "tooltip.dustydecorations.copper_nugget": "Backported from Vanilla 1.21.9"
 }

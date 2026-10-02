@@ -1,14 +1,64 @@
 {
   "corrugated_metal_open": {
-    "subtitle": "subtitles.dustydecorations.block.corrugated_metal_open",
+    "subtitle": "subtitles.dustydecorations.block.corrugated_metal.open",
     "sounds": [
       "dustydecorations:corrugated_metal_open"
     ]
   },
   "corrugated_metal_close": {
-    "subtitle": "subtitles.dustydecorations.block.corrugated_metal_close",
+    "subtitle": "subtitles.dustydecorations.block.corrugated_metal.close",
     "sounds": [
       "dustydecorations:corrugated_metal_close"
     ]
+  },
+  "vintage_cash_register_open": {
+    "subtitle": "subtitles.dustydecorations.block.vintage_cash_register.open",
+    "sounds": [
+      "dustydecorations:vintage_cash_register_open"
+    ]
+  },
+  "vintage_cash_register_close": {
+    "subtitle": "subtitles.dustydecorations.block.vintage_cash_register.close",
+    "sounds": [
+      "dustydecorations:vintage_cash_register_close"
+    ]
+  },
+  "copper_light_on": {
+    "subtitle": "subtitles.dustydecorations.block.copper_light.turn_on",
+    "sounds": [
+      "dustydecorations:copper_light_on_1",
+      "dustydecorations:copper_light_on_2",
+      "dustydecorations:copper_light_on_3"
+    ]
+  },
+  "copper_light_off": {
+    "subtitle": "subtitles.dustydecorations.block.copper_light.turn_off",
+    "sounds": [
+      "dustydecorations:copper_light_off_1",
+      "dustydecorations:copper_light_off_2"
+    ]
+  },
+  "copper_light_hum": {
+    "subtitle": "subtitles.dustydecorations.block.copper_light.hum",
+    "sounds": [
+      "dustydecorations:copper_light_hum"
+    ]
+  },
+  "seaglass_lamp_toggle":{
+    "subtitle": "subtitles.dustydecorations.block.seaglass_lamp.toggle",
+    "sounds": [
+      "dustydecorations:seaglass_lamp_toggle"
+    ]
+  },
+  "nautilus_wind_chime":{
+    "subtitle": "subtitles.dustydecorations.block.nautilus_wind_chime.tinkle",
+    "sounds": [
+      "dustydecorations:nautilus_wind_chime_1",
+      "dustydecorations:nautilus_wind_chime_2",
+      "dustydecorations:nautilus_wind_chime_3",
+      "dustydecorations:nautilus_wind_chime_4",
+      "dustydecorations:nautilus_wind_chime_5"
+    ]
   }
+
 }

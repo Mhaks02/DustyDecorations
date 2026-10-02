@@ -2,10 +2,14 @@ package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.mhaks.dustydecorations.block.entity.custom.NautilusWindChimeBlockEntity;
+import net.mhaks.dustydecorations.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -65,6 +69,13 @@ public class NautilusWindChimeBlock extends BaseEntityBlock {
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
         return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
+
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        if (random.nextInt(14) == 0) {
+            level.playLocalSound(pos, ModSoundEvents.NAUTILUS_WIND_CHIME.get(), SoundSource.BLOCKS, random.nextFloat() * 0.25F + 0.25F, random.nextFloat() + 0.5F, false);
+        }
     }
 
     @Override
