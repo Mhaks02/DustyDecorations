@@ -30,5 +30,6 @@ ___
 - `Waxed Corrugated Stairs`, `Waxed Corrugated Slab`, `Waxed Rusted Corrugated Stairs`, `Waxed Rusted Corrugated Slab`, `Waxed Corrugated Fence Gate`, and `Waxed Rusted Corrugated Fence Gate` broken block and item models
 
 ___
-## 2.0.0 – _2026.09.22_
-Re-made the whole mod from scratch.
+## 2.0 is here 🎉 – _2026.09.22_
+Re-made the whole mod from scratch, it is no longer a MCreator project!  
+If you intend on updating from an older version of the mod, please **make backups** of your worlds, as the 2.0 version is game-breaking and will make most if not all of your blocks and items disappear
