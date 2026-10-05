@@ -27,6 +27,7 @@ public class ModConstants {
     public static IntegerProperty TEXTURE_6 = IntegerProperty.create("texture", 0, 5);
     public static IntegerProperty TEXTURE_7 = IntegerProperty.create("texture", 0, 6);
     public static IntegerProperty TEXTURE_9 = IntegerProperty.create("texture", 0, 8);
+    public static IntegerProperty TEXTURE_11 = IntegerProperty.create("texture", 0, 10);
 
     public static IntegerProperty MODEL_6 = IntegerProperty.create("amount", 0, 5);
 

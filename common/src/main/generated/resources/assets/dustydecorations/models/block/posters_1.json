@@ -1,0 +1,6 @@
+{
+  "parent": "dustydecorations:block/template_posters",
+  "textures": {
+    "0": "dustydecorations:block/posters/1"
+  }
+}

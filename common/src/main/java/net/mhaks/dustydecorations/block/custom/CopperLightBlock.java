@@ -1,10 +1,13 @@
 package net.mhaks.dustydecorations.block.custom;
 
+import net.mhaks.dustydecorations.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -62,12 +65,14 @@ public class CopperLightBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        BlockState blockState = state.cycle(LIT);
         if (!level.isClientSide()) {
-            level.setBlockAndUpdate(pos, state.cycle(LIT));
-            if (state.getValue(WATERLOGGED)) {
+            level.setBlockAndUpdate(pos, blockState);
+            if (blockState.getValue(WATERLOGGED)) {
                 level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
             }
         }
+        this.playOnOffSound(player, level, pos, blockState.getValue(LIT));
         return InteractionResult.SUCCESS;
     }
 
@@ -80,11 +85,19 @@ public class CopperLightBlock extends Block implements SimpleWaterloggedBlock {
                     state = state.setValue(LIT, flag);
                 }
                 level.setBlockAndUpdate(pos, state.setValue(POWERED, flag));
+                this.playOnOffSound(null, level, pos, flag);
                 if (state.getValue(WATERLOGGED)) {
                     level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
                 }
             }
         }
+    }
+
+    private void playOnOffSound(Entity source, Level level, BlockPos pos, boolean turnsOn) {
+        level.playSound(source, pos,
+                turnsOn ? ModSoundEvents.COPPER_LIGHT_ON.get() : ModSoundEvents.COPPER_LIGHT_OFF.get(),
+                SoundSource.BLOCKS, 1.0f, level.getRandom().nextFloat() * 0.1f + 0.7f
+        );
     }
 
     @Override

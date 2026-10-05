@@ -19,6 +19,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 
@@ -36,8 +37,8 @@ public class DustyDecorationsNeoforge {
 
     }
 
-    @EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
-    public static class ClientModEvents {
+    @EventBusSubscriber(modid = ModConstants.MOD_ID)
+    public static class CommonModEvents {
 
         @SubscribeEvent
         public static void registerAttributes(EntityAttributeCreationEvent event) {
@@ -45,14 +46,20 @@ public class DustyDecorationsNeoforge {
         }
 
         @SubscribeEvent
+        public static void addBlocksToBlockEntityType(BlockEntityTypeAddBlocksEvent event) {
+            event.modify(BlockEntityType.BRUSHABLE_BLOCK, ModBlocks.SEAGLASS_SAND.get(), ModBlocks.SEAGLASS_GRAVEL.get());
+        }
+
+    }
+
+    @EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
+    public static class ClientModEvents {
+
+        @SubscribeEvent
         public static void registerScreen(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.VINTAGE_CASH_REGISTER_MENU.get(), VintageCashRegisterScreen::new);
         }
 
-        @SubscribeEvent
-        public static void addBlocksToBlockEntityType(BlockEntityTypeAddBlocksEvent event) {
-            event.modify(BlockEntityType.BRUSHABLE_BLOCK, ModBlocks.SEAGLASS_SAND.get(), ModBlocks.SEAGLASS_GRAVEL.get());
-        }
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)

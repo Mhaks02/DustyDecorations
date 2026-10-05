@@ -245,7 +245,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customHorizontalBlockAndFlatItem(ModBlocks.DISPLAYED_OARS);
         customHorizontalFaceBlockAndFlatBlockItem(ModBlocks.TREASURE_MAP);
         scatteredPapersAndFlatItem();
-        flatItem(ModBlocks.POSTERS);
+        postersAndFlatItem();
         customHorizontalBlockAndItem(ModBlocks.PAPER_STACK);
         fourTexturesCustomBlockAndItem(ModBlocks.GLASS_BUOY);
         threeTexturesCustomHorizontalBlockAndItem(ModBlocks.SMALL_GLASS_BUOYS);
@@ -708,6 +708,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction)blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
         });
         flatItem(ModBlocks.SCATTERED_PAPERS);
+    }
+    private void postersAndFlatItem() {
+        getVariantBuilder(ModBlocks.POSTERS.get()).forAllStates(blockState -> {
+            String blockPath = ModBlocks.POSTERS.getId().getPath();
+            int i = blockState.getValue(ModConstants.TEXTURE_11);
+            ModelFile model = models().withExistingParent(BLOCK_FOLDER + blockPath + "_" + i, modLoc(BLOCK_FOLDER + "template_" + blockPath))
+                    .texture("0", BLOCK_FOLDER + blockPath + "/" + i);
+            Function<BlockState, ModelFile> modelFunc = ($ -> model);
+            return ConfiguredModel.builder().modelFile(modelFunc.apply(blockState)).rotationY(((int)((Direction) blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)).toYRot() + 180) % 360).build();
+        });
+        flatItem(ModBlocks.POSTERS);
     }
     private void sailorFlagAndItem() {
         String blockPath = ModBlocks.SAILOR_FLAG.getId().getPath();
