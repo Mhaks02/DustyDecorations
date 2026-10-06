@@ -7,6 +7,8 @@ import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -1719,16 +1721,18 @@ public class ModBlocks {
 
 
     private static RegistryObject<Block, Block> registerBlock(String name, Supplier<Block> block) {
+        block.get().properties().setId(ResourceKey.create(Registries.BLOCK, ModConstants.identifierOf(name)));
         RegistryObject<Block, Block> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
     private static RegistryObject<Block, Block> registerBlockWithoutItem(String name, Supplier<Block> block) {
-        return BLOCKS.register(name, block);
+        ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, ModConstants.identifierOf(name));
+        return BLOCKS.register(name, () -> new Block(block.get().properties().setId(key)));
     }
 
     private static <T extends Block> void registerBlockItem(String name, Supplier<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ModConstants.identifierOf(name)))));
     }
 
 
