@@ -6,12 +6,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.renderer.GeoRenderer;
 
 public class CameraQuadropodBlockModel extends GeoModel<CameraQuadropodBlockEntity> {
 
     @Override
-    public ResourceLocation getModelResource(CameraQuadropodBlockEntity animatable) {
+    public ResourceLocation getModelResource(CameraQuadropodBlockEntity animatable, @Nullable GeoRenderer<CameraQuadropodBlockEntity> renderer) {
         BlockState blockState = animatable.getBlockState();
         return switch (blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
             case UPPER -> switch (blockState.getValue(ModConstants.ATTACHED_CAMERA)) {
@@ -24,7 +26,7 @@ public class CameraQuadropodBlockModel extends GeoModel<CameraQuadropodBlockEnti
     }
 
     @Override
-    public ResourceLocation getTextureResource(CameraQuadropodBlockEntity animatable) {
+    public ResourceLocation getTextureResource(CameraQuadropodBlockEntity animatable, @Nullable GeoRenderer<CameraQuadropodBlockEntity> renderer) {
         BlockState blockState = animatable.getBlockState();
         return switch (blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
             case UPPER -> switch (blockState.getValue(ModConstants.ATTACHED_CAMERA)) {
