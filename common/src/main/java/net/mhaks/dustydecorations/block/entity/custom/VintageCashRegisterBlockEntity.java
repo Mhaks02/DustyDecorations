@@ -133,7 +133,7 @@ public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
     }
 
     void playSound(BlockState state, SoundEvent sound) {
-        Vec3i vec3i = state.getValue(VintageCashRegisterBlock.FACING).getNormal();
+        Vec3i vec3i = state.getValue(VintageCashRegisterBlock.FACING).getUnitVec3i();
         double d0 = (double) this.worldPosition.getX() + 0.5 + (double) vec3i.getX() / 2.0;
         double d1 = (double) this.worldPosition.getY() + 0.5 + (double) vec3i.getY() / 2.0;
         double d2 = (double) this.worldPosition.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;
