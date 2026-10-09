@@ -3,14 +3,12 @@ package net.mhaks.dustydecorations.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -76,7 +74,7 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
         BlockState blockState = this.defaultBlockState()
                 .setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER));
-        return blockPos.getY() < level.getMaxBuildHeight() - 1 && level.getBlockState(blockPos.above()).canBeReplaced(context)
+        return blockPos.getY() < level.getMaxY() - 1 && level.getBlockState(blockPos.above()).canBeReplaced(context)
                 ? blockState
                 : null;
     }
@@ -103,16 +101,16 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
     }
 
     @Override
-    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
         DoubleBlockHalf doubleBlockHalf = state.getValue(HALF);
         state = state.setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER);
         if (state.getValue(WATERLOGGED)) {
-            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+            scheduledTickAccess.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
         if (direction.getAxis() != Direction.Axis.Y || doubleBlockHalf == DoubleBlockHalf.LOWER != (direction == Direction.UP)) {
             return doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canSurvive(level, pos)
                     ? Blocks.AIR.defaultBlockState()
-                    : super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+                    : super.updateShape(state, level, scheduledTickAccess, pos, direction, neighborPos, neighborState, random);
         } else {
             return neighborState.getBlock() instanceof GiantAnchorBlock && neighborState.getValue(HALF) != doubleBlockHalf
                     ? neighborState.setValue(HALF, doubleBlockHalf).setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER)
