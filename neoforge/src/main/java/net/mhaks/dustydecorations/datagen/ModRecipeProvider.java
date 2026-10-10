@@ -1216,9 +1216,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     protected static void barrel(RecipeOutput recipeOutput, ItemLike barrel, ItemLike ingredient) {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, barrel)
-                .requires(ingredient)
-                .requires(Ingredient.of(Blocks.BARREL, ModBlocks.EMPTY_BARREL.get()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, barrel)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', ingredient)
+                .define('@', Ingredient.of(Blocks.BARREL, ModBlocks.EMPTY_BARREL.get()))
                 // has_barrel instead?
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
                 .unlockedBy("has_wooden_slabs", has(ItemTags.WOODEN_SLABS))
