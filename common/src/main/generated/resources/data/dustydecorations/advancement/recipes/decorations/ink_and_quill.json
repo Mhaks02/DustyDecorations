@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "dustydecorations:copper_nugget"
+            "items": "#c:nuggets/copper"
           }
         ]
       },

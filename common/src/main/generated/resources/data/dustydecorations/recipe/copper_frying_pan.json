@@ -6,7 +6,7 @@
       "item": "minecraft:copper_ingot"
     },
     "~": {
-      "item": "dustydecorations:copper_nugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "pattern": [
