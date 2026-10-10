@@ -6,7 +6,13 @@
 				"identifier": "geometry.camera_quadropod_top",
 				"texture_width": 16,
 				"texture_height": 16
-			}
+			},
+			"bones": [
+				{
+					"name": "camera_quadropod_top",
+					"pivot": [0, 0, 0]
+				}
+			]
 		}
 	]
 }
