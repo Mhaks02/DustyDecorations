@@ -360,9 +360,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("~  ")
                 .pattern("###")
                 .define('#', Items.COPPER_INGOT)
-                .define('~', ModItems.COPPER_NUGGET.get())
+                .define('~', ModTags.Items.COPPER_NUGGETS)
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
-                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
+                .unlockedBy("has_copper_nugget", has(ModTags.Items.COPPER_NUGGETS))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BIG_COOKING_POT.get())
@@ -412,11 +412,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', Items.FEATHER)
                 .define('B', Items.GLASS_BOTTLE)
                 .define('I', Items.INK_SAC)
-                .define('#', ModItems.COPPER_NUGGET.get())
+                .define('#', ModTags.Items.COPPER_NUGGETS)
                 .unlockedBy("has_feather", has(Items.FEATHER))
                 .unlockedBy("has_glass_bottle", has(Items.GLASS_BOTTLE))
                 .unlockedBy("has_ink_sac", has(Items.INK_SAC))
-                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
+                .unlockedBy("has_copper_nugget", has(ModTags.Items.COPPER_NUGGETS))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.EMPTY_SMALL_SHELF.get(), 6)
                 .pattern("###")
@@ -614,9 +614,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("#@#")
                 .pattern("###")
-                .define('#', ModItems.COPPER_NUGGET.get())
+                .define('#', ModTags.Items.COPPER_NUGGETS)
                 .define('@', Blocks.REDSTONE_TORCH)
-                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
+                .unlockedBy("has_copper_nugget", has(ModTags.Items.COPPER_NUGGETS))
                 .unlockedBy("has_redstone_torch", has(Blocks.REDSTONE_TORCH))
                 .save(recipeOutput);
         wax(recipeOutput, RecipeCategory.REDSTONE, ModBlocks.WAXED_COPPER_LIGHT.get(), ModBlocks.COPPER_LIGHT.get());
