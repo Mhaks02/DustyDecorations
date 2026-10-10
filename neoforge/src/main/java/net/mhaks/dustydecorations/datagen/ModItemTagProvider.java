@@ -54,5 +54,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Blocks.HORN_CORAL.asItem())
                 .add(Blocks.TUBE_CORAL.asItem());
 
+        tag(ModTags.Items.COPPER_NUGGETS)
+                .add(ModItems.COPPER_NUGGET.get());
+        tag(ModTags.Items.NUGGETS)
+                .addTag(ModTags.Items.COPPER_NUGGETS);
     }
 }
