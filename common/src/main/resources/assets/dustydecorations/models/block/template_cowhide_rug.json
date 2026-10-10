@@ -4,15 +4,15 @@
 	"render_type": "minecraft:cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"particle": "#cowhide"
+		"particle": "#0"
 	},
 	"elements": [
 		{
 			"from": [-8, 0.25, -8],
 			"to": [24, 0.25, 24],
 			"faces": {
-				"up": {"uv": [0, 0, 16, 16], "texture": "#cowhide"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#cowhide", "cullface": "down"}
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "down"}
 			}
 		}
 	],

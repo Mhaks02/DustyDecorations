@@ -41,7 +41,7 @@ public class CowhideRugBlock extends HorizontalDirectionalBlock {
     @Override
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         this.registerDefaultState(defaultBlockState()
-                .setValue(TEXTURE, RandomSource.create().nextInt(0, 4)));
+                .setValue(TEXTURE, RandomSource.create().nextInt(0, 3)));
     }
 
     @Override
