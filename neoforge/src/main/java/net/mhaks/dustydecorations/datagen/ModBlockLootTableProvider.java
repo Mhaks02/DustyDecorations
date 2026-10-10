@@ -39,7 +39,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        ModConstants.LOGGER.info("Generating!!");
+        ModConstants.LOGGER.info("Generating Block loot tables!");
         dropSelf(ModBlocks.OAK_BANISTER.get());
         dropSelf(ModBlocks.SPRUCE_BANISTER.get());
         dropSelf(ModBlocks.BIRCH_BANISTER.get());
