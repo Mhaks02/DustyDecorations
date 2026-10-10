@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:porkchop"
+    },
+    {
+      "tag": "minecraft:meat"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "dustydecorations:raw_bratwurst_sausage"
+  }
+}

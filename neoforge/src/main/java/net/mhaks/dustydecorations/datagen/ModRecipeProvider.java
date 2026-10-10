@@ -982,6 +982,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.RAW_BRATWURST.get(), 4)
+                .requires(Items.PORKCHOP)
+                .requires(ItemTags.MEAT)
+                .unlockedBy("has_meat", has(ItemTags.MEAT))
+                .save(recipeOutput);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_BRATWURST.get()), RecipeCategory.FOOD, ModItems.SMOKED_BRATWURST.get(),
+                        0.35F, 200)
+                .unlockedBy("has_raw_bratwurst", has(ModItems.RAW_BRATWURST.get()))
+                .save(recipeOutput);
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.RAW_BRATWURST.get()), RecipeCategory.FOOD, ModItems.SMOKED_BRATWURST.get(),
+                        0.35F, 600)
+                .unlockedBy("has_raw_bratwurst", has(ModItems.RAW_BRATWURST.get()))
+                .save(recipeOutput, ModConstants.identifierOf("smoked_bratwurst_from_campfire_cooking"));
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.RAW_BRATWURST.get()), RecipeCategory.FOOD, ModItems.SMOKED_BRATWURST.get(),
+                        0.35F, 100)
+                .unlockedBy("has_raw_bratwurst", has(ModItems.RAW_BRATWURST.get()))
+                .save(recipeOutput, ModConstants.identifierOf("smoked_bratwurst_from_smoking"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BRATWURST_HOT_DOG.get())
+                .requires(ModItems.SMOKED_BRATWURST.get())
+                .requires(Items.BREAD)
+                .unlockedBy("has_raw_bratwurst", has(ModItems.RAW_BRATWURST.get()))
+                .unlockedBy("has_bread", has(Items.BREAD))
+                .save(recipeOutput);
+
 
         //TODO: stonecutting recipes
 //

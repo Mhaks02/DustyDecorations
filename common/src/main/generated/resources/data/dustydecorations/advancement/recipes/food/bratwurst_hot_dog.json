@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bread": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bread"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_raw_bratwurst": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:raw_bratwurst_sausage"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:bratwurst_hot_dog"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_bratwurst",
+      "has_bread"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:bratwurst_hot_dog"
+    ]
+  }
+}

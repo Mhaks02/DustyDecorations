@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_bratwurst": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dustydecorations:raw_bratwurst_sausage"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dustydecorations:smoked_bratwurst_from_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_bratwurst"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dustydecorations:smoked_bratwurst_from_smoking"
+    ]
+  }
+}
