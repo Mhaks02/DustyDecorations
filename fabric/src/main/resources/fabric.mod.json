@@ -30,7 +30,8 @@
         "fabric-api": "*",
         "minecraft": "${minecraft_version_range_semver}",
         "java": ">=${java_version}",
-        "geckolib": "${geckolib_version_range_semver}"
+        "geckolib": "${geckolib_version_range_semver}",
+        "forgeconfigapiport": ">=${config_api_version}"
     },
     "suggests": {
         "another-mod": "*"

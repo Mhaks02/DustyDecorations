@@ -49,6 +49,10 @@ repositories {
             includeGroup("software.bernie.geckolib")
         }
     }
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
 }
 
 // Declare capabilities on the outgoing configurations.
@@ -111,7 +115,8 @@ processResources {
             'homepage'                     : homepage,
             'geckolib_version'             : geckolib_version,
             'geckolib_version_range'       : geckolib_version_range,
-            'geckolib_version_range_semver': geckolib_version_range_semver
+            'geckolib_version_range_semver': geckolib_version_range_semver,
+            'config_api_version'           : config_api_version
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {
