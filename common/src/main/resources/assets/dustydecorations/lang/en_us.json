@@ -399,5 +399,10 @@
   "subtitles.dustydecorations.block.copper_light.hum": "Copper Light hums",
   "subtitles.dustydecorations.block.seaglass_lamp.toggle": "Seaglass Lamp clicks",
   "subtitles.dustydecorations.block.nautilus_wind_chime.tinkle": "Nautilus Wind Chime tinkles",
-  "tooltip.dustydecorations.copper_nugget": "Backported from Vanilla 1.21.9"
+  "tooltip.dustydecorations.copper_nugget": "Backported from Vanilla 1.21.9",
+  "screen.dustydecorations.migration_warning.title": "Updating to",
+  "screen.dustydecorations.migration_warning.ok": "Understood! I'll make backups",
+  "screen.dustydecorations.migration_warning.body.1": "It looks like you may be updating from an old version of Dusty Decorations!\nThe mod has been rewritten from scratch and a LOT of game-breaking changes were made...",
+  "screen.dustydecorations.migration_warning.body.2": "Please make backups of your worlds",
+  "screen.dustydecorations.migration_warning.body.3": "\nbefore loading any of your saves!\nMost Dusty Decorations blocks and items will simply vanish from them!"
 }

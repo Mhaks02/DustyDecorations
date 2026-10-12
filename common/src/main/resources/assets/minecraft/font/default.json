@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "dustydecorations:gui/sprites/dusty_decorations_barrel.png",
+      "height": 16,
+      "ascent": 12,
+      "chars": [
+        "\ufff3"
+      ]
+    }
+  ]
+}

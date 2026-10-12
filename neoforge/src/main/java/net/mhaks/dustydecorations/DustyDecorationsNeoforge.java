@@ -2,11 +2,14 @@ package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.config.ConfigClient;
+import net.mhaks.dustydecorations.config.alert.ConfigMigrationManager;
+import net.mhaks.dustydecorations.config.alert.MigrationScreen;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -21,7 +24,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.client.event.ScreenEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 
@@ -38,6 +41,8 @@ public class DustyDecorationsNeoforge {
         DustyDecorations.init();
 
         modContainer.registerConfig(ModConfig.Type.CLIENT, ConfigClient.SPEC);
+        DustyDecorationsClient.manageClientConfig();
+
     }
 
     @EventBusSubscriber(modid = ModConstants.MOD_ID)
@@ -57,6 +62,15 @@ public class DustyDecorationsNeoforge {
 
     @EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
     public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void onScreenOpen(ScreenEvent.Opening event) {
+            if (!(event.getScreen() instanceof TitleScreen)) return;
+            if (ConfigMigrationManager.wasPromptShown()) return;
+            if (!ConfigMigrationManager.needsMigrationPrompt()) return;
+
+            event.setNewScreen(new MigrationScreen(event.getNewScreen()));
+        }
 
         @SubscribeEvent
         public static void registerScreen(RegisterMenuScreensEvent event) {

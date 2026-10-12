@@ -399,5 +399,10 @@
   "subtitles.dustydecorations.block.copper_light.hum": "Lampe en cuivre qui bourdonne",
   "subtitles.dustydecorations.block.seaglass_lamp.toggle": "Lampe en verre de mer qui clique",
   "subtitles.dustydecorations.block.nautilus_wind_chime.tinkle": "Carillon en nautile qui tinte",
-  "tooltip.dustydecorations.copper_nugget": "Rétro-porté depuis la Vanilla 1.21.9"
+  "tooltip.dustydecorations.copper_nugget": "Rétro-porté depuis la Vanilla 1.21.9",
+  "screen.dustydecorations.migration_warning.title": "Mise à jour vers",
+  "screen.dustydecorations.migration_warning.ok": "Compris ! Je créerai des backups",
+  "screen.dustydecorations.migration_warning.body.1": "Il semblerait que vous ayez mis à jour Dusty Decorations depuis une ancienne version !\nLe mod a été refait entièrement, ceci apportant BEAUCOUP de changements qui risquent de casser le jeu...",
+  "screen.dustydecorations.migration_warning.body.2": "Faites des backups de vos mondes",
+  "screen.dustydecorations.migration_warning.body.3": "\navant de lancer vos sauvegardes!\nLa plupart des blocs et objets Dusty Decorations vont tout simplement disparaître !"
 }

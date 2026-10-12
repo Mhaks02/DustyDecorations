@@ -25,6 +25,8 @@ public class DustyDecorationsFabric implements ModInitializer {
         DustyDecorations.init();
 
         NeoForgeConfigRegistry.INSTANCE.register(ModConstants.MOD_ID, ModConfig.Type.CLIENT, ConfigClient.SPEC);
+        DustyDecorationsClient.manageClientConfig();
+
         ModWorldGeneration.generateWorldGen();
 
 

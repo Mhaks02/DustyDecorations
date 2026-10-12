@@ -3,7 +3,9 @@ package net.mhaks.dustydecorations;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.config.alert.MigrationScreen;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
 import net.mhaks.dustydecorations.gui.screen.custom.VintageCashRegisterScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -13,6 +15,8 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 public class DustyDecorationsClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> MigrationScreen.openWarningScreen(screen));
 
         DustyDecorationsClient.registerRenderers(EntityRendererRegistry::register, BlockEntityRenderers::register);
 
