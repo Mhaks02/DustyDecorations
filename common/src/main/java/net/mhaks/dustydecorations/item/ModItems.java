@@ -78,7 +78,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()) {
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-                    tooltipComponents.add(Component.translatable("tooltip.dustydecorations.copper_nugget").withStyle(style -> style.withColor(ChatFormatting.GRAY)));
+                    tooltipComponents.add(Component.translatable("tooltip.dustydecorations.copper_nugget").withStyle(ChatFormatting.GRAY));
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
                 }
             });
