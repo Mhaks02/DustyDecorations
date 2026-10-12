@@ -1,13 +1,16 @@
 package net.mhaks.dustydecorations;
 
+import fuzs.forgeconfigapiport.fabric.api.neoforge.v4.NeoForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.config.ConfigClient;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.worldgen.ModWorldGeneration;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.neoforged.fml.config.ModConfig;
 
 public class DustyDecorationsFabric implements ModInitializer {
     
@@ -21,6 +24,7 @@ public class DustyDecorationsFabric implements ModInitializer {
         ModConstants.LOGGER.info("Hello Fabric world!");
         DustyDecorations.init();
 
+        NeoForgeConfigRegistry.INSTANCE.register(ModConstants.MOD_ID, ModConfig.Type.CLIENT, ConfigClient.SPEC);
         ModWorldGeneration.generateWorldGen();
 
 

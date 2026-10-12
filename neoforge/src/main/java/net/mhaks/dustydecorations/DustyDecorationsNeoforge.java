@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.config.ConfigClient;
 import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.gui.menu.ModMenuTypes;
@@ -17,6 +18,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -35,6 +37,7 @@ public class DustyDecorationsNeoforge {
         ModConstants.LOGGER.info("Hello NeoForge world!");
         DustyDecorations.init();
 
+        modContainer.registerConfig(ModConfig.Type.CLIENT, ConfigClient.SPEC);
     }
 
     @EventBusSubscriber(modid = ModConstants.MOD_ID)
