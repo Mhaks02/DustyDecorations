@@ -699,6 +699,7 @@ public class ModBlocks {
             () -> new WoodenBuoysBlock(BlockBehaviour.Properties.of()
                     .strength(.3f)
                     .sound(SoundType.WOOD)
+                    .noOcclusion()
             ));
     //TODO: conditional blockstate to connect rope to coiled rope
     public static final RegistryObject<Block, Block> ROPE = registerBlock("rope",
