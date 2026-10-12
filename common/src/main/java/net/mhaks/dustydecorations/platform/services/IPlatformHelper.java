@@ -6,6 +6,8 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.MenuType;
 
+import java.nio.file.Path;
+
 public interface IPlatformHelper {
 
     /**
@@ -39,6 +41,30 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    enum Side {
+        CLIENT, SERVER;
+
+        public boolean isClient() {
+            return this == CLIENT;
+        }
+        public boolean isServer() {
+            return this == SERVER;
+        }
+
+        public void ifClient(Runnable runnable) {
+            if (isClient()) runnable.run();
+        }
+        public void ifServer(Runnable runnable) {
+            if (isServer()) runnable.run();
+        }
+    }
+
+    default Side getPhysicalSide() {
+        throw new AssertionError();
+    }
+
+    Path getConfigDir();
 
     void openVintageCashRegisterMenu(MenuProvider provider, Player player, BlockPos blockPos);
     MenuType<VintageCashRegisterMenu> registerMenu();
