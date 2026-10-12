@@ -1268,7 +1268,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
     protected static void paperLantern(RecipeOutput recipeOutput, ItemLike paperLantern, Ingredient ingredient) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, paperLantern)
-                .requires(paperLantern)
+                .requires(ModBlocks.PAPER_LANTERN.get())
                 .requires(ingredient)
                 .unlockedBy("has_paper_lantern", has(ModBlocks.PAPER_LANTERN.get()))
                 .save(recipeOutput);
