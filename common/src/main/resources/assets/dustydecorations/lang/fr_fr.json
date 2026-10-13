@@ -404,5 +404,5 @@
   "screen.dustydecorations.migration_warning.ok": "Compris ! Je créerai des backups",
   "screen.dustydecorations.migration_warning.body.1": "Il semblerait que vous ayez mis à jour Dusty Decorations depuis une ancienne version !\nLe mod a été refait entièrement, BEAUCOUP de changements qui risquent de casser le jeu ont été apportés...",
   "screen.dustydecorations.migration_warning.body.2": "Faites des backups de vos sauvegardes",
-  "screen.dustydecorations.migration_warning.body.3": "\navant de lancer vos mondes pour y jouer !\nLa plupart des blocs et objets de Dusty Decorations vont disparaître !"
+  "screen.dustydecorations.migration_warning.body.3": "\navant de les lancer !\nLa plupart des blocs et objets de Dusty Decorations vont disparaître !"
 }
