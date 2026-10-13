@@ -5,6 +5,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ___
+## 2.3.0 – _2026.10.13_
+### Added
+- `copper_nugget` item to `#c:nuggets/copper` tag
+- `#c:nuggets/copper` to `#c:nuggets` tag
+- `Forge Config API Port` is now a required dependency on `Fabric`
+- The mod will now show a Warning Screen when launching the game if it detects a Dusty Decorations 1.x config file, urging players to **make backups** of their worlds
+### Fixed
+- Missing `crafting` and `cooking recipes` for `Raw Bratwurst`, `Smoked Bratwurst`, and `Bratwurst Hot Dog`
+- `camera_quadropod_top.geo.json` having no `bones` array at all, causing issue for the `AzureLib Armor` mod
+  - Fixes [Issue #6](https://github.com/Mhaks02/DustyDecorations/issues/6) and probably issues [#3](https://github.com/Mhaks02/DustyDecorations/issues/3) and [#4](https://github.com/Mhaks02/DustyDecorations/issues/4) as well
+- `Cowhide Rug` and `Mooshroom Cowhide Rug` broken model and wrong block state
+  - Fixes [Issue #5](https://github.com/Mhaks02/DustyDecorations/issues/5)
+- Wrong ingredient in `Paper Lantern` recipes
+- `Wooden Buoys` culling the block behind them when they shouldn't
+### Changed
+- `Bratwurst Hot Dog` `nutrition` and `saturation` values from `5` and `0.6` to `6` and `1.0` respectively
+- All `Barrel` recipes now require `8` of the `"ingredient"` item instead of `1`
+- All recipes that require a `copper_nugget` item now require any item with the `#c:nuggets/copper` tag instead, making them compatible with any other mods
+- Removed duplicated element in `Equine Skull` model, doesn't change anything visually
+
+___
 ## 2.2.0 – _2026.10.05_
 ### Added
 - `fr_fr` localisation
@@ -20,8 +41,8 @@ ___
 ___
 ## 2.1.0 – _2026.10.02_
 ### Added
-- open/close sounds for the `Vintage Cash Register`
-- on/off sounds for the `Seaglass Lamp` and the `Copper Light` (all variants)
+- Open/close sounds for the `Vintage Cash Register`
+- On/off sounds for the `Seaglass Lamp` and the `Copper Light` (all variants)
 - tinkling sounds for the `Nautilus Wind Chime`
 ### Changed
 - `Posters` now behave like other blocks of the same type (e.g., `Scattered Papers`): textures are randomised every time the block is placed instead of them being bound to its position in the world
