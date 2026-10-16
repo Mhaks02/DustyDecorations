@@ -917,7 +917,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.BLUE_CUSHION_BLOCK.get().asItem(),
                 ModBlocks.PURPLE_CUSHION_BLOCK.get().asItem(),
                 ModBlocks.MAGENTA_CUSHION_BLOCK.get().asItem(),
-                ModBlocks.PINK_CUSHION_BLOCK.get().asItem()
+                ModBlocks.PINK_CUSHION_BLOCK.get().asItem(),
+                ModBlocks.PLAIN_CUSHION_BLOCK.get().asItem()
         );
         colorBlockWithDye(recipeOutput, dyes, cushions, "cushions");
         //TODO: should add another craft (toggleable in the settings maybe), like the universal dyeing crafts from Vanilla Tweaks
