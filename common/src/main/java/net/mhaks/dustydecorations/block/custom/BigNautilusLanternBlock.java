@@ -9,6 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -49,7 +50,7 @@ public class BigNautilusLanternBlock extends HorizontalDirectionalBlock {
     private void trySpawnGolem(Level level, BlockPos blockPos) {
         BlockPattern.BlockPatternMatch blockPattern$blockPatternMatch = this.getOrCreateNautilusGolemFull().find(level, blockPos);
         if (blockPattern$blockPatternMatch != null) {
-            NautilusGolemEntity nautilusGolem = ModEntityTypes.NAUTILUS_GOLEM.get().create(level);
+            NautilusGolemEntity nautilusGolem = ModEntityTypes.NAUTILUS_GOLEM.get().create(level, EntitySpawnReason.TRIGGERED);
             if (nautilusGolem != null) {
                 spawnGolemInWorld(level, blockPattern$blockPatternMatch, nautilusGolem, blockPattern$blockPatternMatch.getBlock(0, 1, 0).getPos());
             }

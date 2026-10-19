@@ -3,16 +3,19 @@ package net.mhaks.dustydecorations.block.entity.client;
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.custom.ScarecrowBlock;
 import net.mhaks.dustydecorations.block.entity.custom.CameraQuadropodBlockEntity;
+import net.mhaks.dustydecorations.block.entity.custom.NautilusWindChimeBlockEntity;
 import net.mhaks.dustydecorations.block.entity.custom.ScarecrowBlockEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.renderer.GeoRenderer;
 
 public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
 
     @Override
-    public ResourceLocation getModelResource(ScarecrowBlockEntity animatable) {
+    public ResourceLocation getModelResource(ScarecrowBlockEntity animatable, @Nullable GeoRenderer<ScarecrowBlockEntity> renderer) {
         ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) animatable.getBlockState().getBlock()).getType();
         if (scarecrow$type == ScarecrowBlock.Types.BEETROOT) {
             return animatable.getBlockState().getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
@@ -28,7 +31,7 @@ public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
     }
 
     @Override
-    public ResourceLocation getTextureResource(ScarecrowBlockEntity animatable) {
+    public ResourceLocation getTextureResource(ScarecrowBlockEntity animatable, @Nullable GeoRenderer<ScarecrowBlockEntity> renderer) {
         String texture = ResourceLocation.tryParse(animatable.getBlockState().getBlockHolder().getRegisteredName()).getPath();
         return ModConstants.identifierOf("textures/block/" + texture + ".png");
     }

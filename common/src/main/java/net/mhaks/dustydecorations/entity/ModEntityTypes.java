@@ -5,8 +5,9 @@ import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.mhaks.dustydecorations.registration.RegistrationProvider;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 
 public class ModEntityTypes {
@@ -18,7 +19,7 @@ public class ModEntityTypes {
 //                    .immuneTo()
                     .eyeHeight(1.2f)
                     .clientTrackingRange(10)
-                    .build("nautilus_golem")
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, ModConstants.identifierOf("nautilus_golem")))
     );
 
     public static void registerModEntityTypes() {

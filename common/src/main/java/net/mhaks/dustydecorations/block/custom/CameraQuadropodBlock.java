@@ -6,23 +6,25 @@ import net.mhaks.dustydecorations.block.ModBlocks;
 import net.mhaks.dustydecorations.block.entity.custom.CameraQuadropodBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -32,7 +34,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class CameraQuadropodBlock extends BaseEntityBlock {
     public static final MapCodec<CameraQuadropodBlock> CODEC = simpleCodec(CameraQuadropodBlock::new);
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     public static final EnumProperty<ModConstants.AttachedCamera> CAMERA = ModConstants.ATTACHED_CAMERA;
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
@@ -94,13 +96,15 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
                     .setValue(FACING, context.getHorizontalDirection())
                     .setValue(CAMERA, ModConstants.AttachedCamera.NONE)
                     .setValue(LIT, false);
-            return context.getClickedPos().getY() < context.getLevel().getMaxBuildHeight() - 1 && context.getLevel().getBlockState(context.getClickedPos().above()).canBeReplaced(context)
+            return context.getClickedPos().getY() < context.getLevel().getMaxY() - 1 && context.getLevel().getBlockState(context.getClickedPos().above()).canBeReplaced(context)
                     ? blockState
                     : null;
     }
 
+
+
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (state.getValue(CAMERA) == ModConstants.AttachedCamera.NONE) {
             if (stack.is(ModBlocks.CAMERA.get().asItem()) && !level.isClientSide) {
                 level.setBlockAndUpdate(pos, state.setValue(CAMERA, ModConstants.AttachedCamera.CAMERA).setValue(FACING, player.getDirection()));
@@ -108,7 +112,7 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
             if (stack.is(ModBlocks.MOVIE_CAMERA.get().asItem()) && !level.isClientSide) {
                 level.setBlockAndUpdate(pos, state.setValue(CAMERA, ModConstants.AttachedCamera.MOVIE_CAMERA).setValue(FACING, player.getDirection()));
             }
-            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         } else {
             return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
         }
@@ -127,19 +131,19 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
             if (!level.isClientSide) {
                 level.setBlockAndUpdate(pos, state.cycle(LIT));
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         } else {
             return InteractionResult.PASS;
         }
     }
 
     @Override
-    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
         DoubleBlockHalf half = state.getValue(HALF);
         if (direction.getAxis() != Direction.Axis.Y || half == DoubleBlockHalf.LOWER != (direction == Direction.UP)) {
             return half == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canSurvive(level, pos)
                     ? Blocks.AIR.defaultBlockState()
-                    : super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+                    : super.updateShape(state, level, scheduledTickAccess, pos, direction, neighborPos, neighborState, random);
         } else {
             return neighborState.getBlock() instanceof CameraQuadropodBlock && neighborState.getValue(HALF) != half
                     ? neighborState.setValue(HALF, half)

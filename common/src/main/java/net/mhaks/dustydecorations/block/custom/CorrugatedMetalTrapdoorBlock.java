@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
@@ -32,7 +33,7 @@ public class CorrugatedMetalTrapdoorBlock extends TrapDoorBlock {
             return InteractionResult.PASS;
         } else {
             this.toggle(state, level, pos, player);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
     }
 
@@ -54,7 +55,7 @@ public class CorrugatedMetalTrapdoorBlock extends TrapDoorBlock {
     }
 
     @Override
-    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston) {
         if (!level.isClientSide) {
             boolean flag = level.hasNeighborSignal(pos);
             if (flag != state.getValue(POWERED)) {

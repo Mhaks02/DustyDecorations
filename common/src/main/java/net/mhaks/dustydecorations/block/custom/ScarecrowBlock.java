@@ -7,6 +7,7 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 import net.mhaks.dustydecorations.block.entity.custom.ScarecrowBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -14,15 +15,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -31,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 
 public class ScarecrowBlock extends BaseEntityBlock {
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     private final ScarecrowBlock.Type type;
     public static final MapCodec<ScarecrowBlock> CODEC = RecordCodecBuilder.mapCodec(
@@ -95,7 +97,7 @@ public class ScarecrowBlock extends BaseEntityBlock {
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState blockState = this.defaultBlockState()
                 .setValue(FACING, context.getHorizontalDirection().getOpposite());
-        return context.getClickedPos().getY() < context.getLevel().getMaxBuildHeight() - 1 && context.getLevel().getBlockState(context.getClickedPos().above()).canBeReplaced(context)
+        return context.getClickedPos().getY() < context.getLevel().getMaxY() - 1 && context.getLevel().getBlockState(context.getClickedPos().above()).canBeReplaced(context)
                 ? blockState
                 : null;
     }
@@ -123,15 +125,15 @@ public class ScarecrowBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
+    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
         DoubleBlockHalf doubleBlockHalf = state.getValue(HALF);
-        if (facing.getAxis() != Direction.Axis.Y || doubleBlockHalf == DoubleBlockHalf.LOWER != (facing == Direction.UP)) {
-            return doubleBlockHalf == DoubleBlockHalf.LOWER && facing == Direction.DOWN && !state.canSurvive(level, currentPos)
+        if (direction.getAxis() != Direction.Axis.Y || doubleBlockHalf == DoubleBlockHalf.LOWER != (direction == Direction.UP)) {
+            return doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canSurvive(level, pos)
                     ? Blocks.AIR.defaultBlockState()
-                    : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+                    : super.updateShape(state, level, scheduledTickAccess, pos, direction, neighborPos, neighborState, random);
         } else {
-            return facingState.getBlock() instanceof ScarecrowBlock && facingState.getValue(HALF) != doubleBlockHalf
-                    ? facingState.setValue(HALF, doubleBlockHalf)
+            return neighborState.getBlock() instanceof ScarecrowBlock && neighborState.getValue(HALF) != doubleBlockHalf
+                    ? neighborState.setValue(HALF, doubleBlockHalf)
                     : Blocks.AIR.defaultBlockState();
         }
     }

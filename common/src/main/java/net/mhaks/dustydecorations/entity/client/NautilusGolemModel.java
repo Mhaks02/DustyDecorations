@@ -4,21 +4,23 @@ import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animation.AnimationState;
 import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
+import software.bernie.geckolib.renderer.GeoRenderer;
 
 public class NautilusGolemModel extends GeoModel<NautilusGolemEntity> {
 
     @Override
-    public ResourceLocation getModelResource(NautilusGolemEntity animatable) {
+    public ResourceLocation getModelResource(NautilusGolemEntity animatable, @Nullable GeoRenderer<NautilusGolemEntity> renderer) {
         return ModConstants.identifierOf("geo/entity/nautilus_golem.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureResource(NautilusGolemEntity animatable) {
+    public ResourceLocation getTextureResource(NautilusGolemEntity animatable, @Nullable GeoRenderer<NautilusGolemEntity> renderer) {
         return ModConstants.identifierOf("textures/entity/nautilus_golem.png");
     }
 

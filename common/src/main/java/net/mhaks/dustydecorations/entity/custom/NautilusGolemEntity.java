@@ -1,7 +1,6 @@
 package net.mhaks.dustydecorations.entity.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -9,7 +8,6 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -57,7 +55,7 @@ public class NautilusGolemEntity extends AbstractGolem implements GeoEntity {
 //        this.goalSelector.addGoal(15, new AvoidEntityGoal<>(this, ElderGuardian.class, 12.0f, 1.2, 1.2));
 //        this.goalSelector.addGoal(15, new AvoidEntityGoal<>(this, WitherBoss.class, 12.0f, 1.2, 1.2));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
-        this.targetSelector.addGoal(8, new NearestAttackableTargetGoal<>(this, Mob.class, 5, true, false, this::attackPredicate));
+        this.targetSelector.addGoal(8, new NearestAttackableTargetGoal<>(this, Mob.class, 5, true, false, (entity, level) -> attackPredicate(entity)));
     }
 
     private boolean attackPredicate(LivingEntity livingEntity) {
@@ -147,7 +145,7 @@ public class NautilusGolemEntity extends AbstractGolem implements GeoEntity {
                     double d2 = this.random.nextGaussian() * 0.02;
                     this.level().addParticle(ParticleTypes.HAPPY_VILLAGER, this.getRandomX(1.0), this.getRandomY() + 1.0, this.getRandomZ(1.0), d0, d1, d2);
                 }
-                return InteractionResult.sidedSuccess(this.level().isClientSide);
+                return InteractionResult.SUCCESS;
             }
         }
     }
