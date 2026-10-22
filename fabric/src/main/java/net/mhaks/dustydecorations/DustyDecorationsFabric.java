@@ -1,6 +1,6 @@
 package net.mhaks.dustydecorations;
 
-import fuzs.forgeconfigapiport.fabric.api.neoforge.v4.NeoForgeConfigRegistry;
+import fuzs.forgeconfigapiport.fabric.api.v5.ConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -24,7 +24,7 @@ public class DustyDecorationsFabric implements ModInitializer {
         ModConstants.LOGGER.info("Hello Fabric world!");
         DustyDecorations.init();
 
-        NeoForgeConfigRegistry.INSTANCE.register(ModConstants.MOD_ID, ModConfig.Type.CLIENT, ConfigClient.SPEC);
+        ConfigRegistry.INSTANCE.register(ModConstants.MOD_ID, ModConfig.Type.CLIENT, ConfigClient.SPEC);
         DustyDecorationsClient.manageClientConfig();
 
         ModWorldGeneration.generateWorldGen();
