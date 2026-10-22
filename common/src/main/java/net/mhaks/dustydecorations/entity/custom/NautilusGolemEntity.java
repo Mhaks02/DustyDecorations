@@ -17,8 +17,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.AbstractGolem;
+import net.minecraft.world.entity.animal.golem.AbstractGolem;
 import net.minecraft.world.entity.monster.*;
+import net.minecraft.world.entity.monster.skeleton.Skeleton;
+import net.minecraft.world.entity.monster.skeleton.WitherSkeleton;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+import net.minecraft.world.entity.monster.zombie.ZombieVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -26,13 +30,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class NautilusGolemEntity extends AbstractGolem implements GeoEntity {
@@ -161,15 +167,15 @@ public class NautilusGolemEntity extends AbstractGolem implements GeoEntity {
 //    }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag compound) {
-        super.addAdditionalSaveData(compound);
-        compound.putBoolean("PlayerCreated", this.isPlayerCreated());
+    protected void addAdditionalSaveData(ValueOutput p_421640_) {
+        super.addAdditionalSaveData(p_421640_);
+        p_421640_.putBoolean("PlayerCreated", this.isPlayerCreated());
     }
 
     @Override
-    public void readAdditionalSaveData(CompoundTag compound) {
-        super.readAdditionalSaveData(compound);
-        this.setPlayerCreated(compound.getBoolean("PlayerCreated"));
+    protected void readAdditionalSaveData(ValueInput p_422339_) {
+        super.readAdditionalSaveData(p_422339_);
+        this.setPlayerCreated(p_422339_.getBooleanOr("PlayerCreated", false));
     }
 
     public boolean isPlayerCreated() {
@@ -193,29 +199,28 @@ public class NautilusGolemEntity extends AbstractGolem implements GeoEntity {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "idle/walk", state -> {
+        controllers.add(new AnimationController<>("idle/walk", state -> {
             if (state.isMoving()) {
                 return state.setAndContinue(WALK_ANIM);
             }
             return state.setAndContinue(IDLE_ANIM);
         }));
-        controllers.add(new AnimationController<>(this, "swim", state -> {
+        controllers.add(new AnimationController<>("swim", state -> {
             if (NautilusGolemEntity.this.isInWater()) {
                 return state.setAndContinue(SWIM_ANIM);
             }
             return PlayState.STOP;
         }));
-        controllers.add(new AnimationController<>(this, "fall", state -> {
+        controllers.add(new AnimationController<>("fall", state -> {
             if (NautilusGolemEntity.this.isFallFlying()) {
                 return state.setAndContinue(FALL_ANIM);
             }
             return PlayState.STOP;
         }));
-        controllers.add(new AnimationController<>(this, "attack", state -> {
+        controllers.add(new AnimationController<>("attack", state -> {
             if (NautilusGolemEntity.this.swinging) {
                 return state.setAndContinue(ATTACK_ANIM);
             }
-            state.resetCurrentAnimation();
             return PlayState.STOP;
         }));
     }
