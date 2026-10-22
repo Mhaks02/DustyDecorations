@@ -94,7 +94,7 @@ public class GiantAnchorBlock extends HorizontalDirectionalBlock implements Simp
 
     @Override
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide && player.isCreative()) {
+        if (!level.isClientSide() && player.isCreative()) {
             ScarecrowBlock.preventDropFromBottomPart(level, pos, state, player);
         }
         return super.playerWillDestroy(level, pos, state, player);

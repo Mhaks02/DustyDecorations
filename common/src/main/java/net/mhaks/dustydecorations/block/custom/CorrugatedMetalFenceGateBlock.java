@@ -73,7 +73,7 @@ public class CorrugatedMetalFenceGateBlock extends FenceGateBlock implements Sim
 
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             boolean flag = level.hasNeighborSignal(pos);
             if (state.getValue(POWERED) != flag) {
                 level.setBlock(pos, state.setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag)), 2);

@@ -59,7 +59,7 @@ public class DecorativeBowlBlock extends Block implements SimpleWaterloggedBlock
     }
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(Items.BOWL);
     }
 

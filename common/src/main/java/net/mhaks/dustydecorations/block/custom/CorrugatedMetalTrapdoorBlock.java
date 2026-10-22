@@ -56,7 +56,7 @@ public class CorrugatedMetalTrapdoorBlock extends TrapDoorBlock {
 
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             boolean flag = level.hasNeighborSignal(pos);
             if (flag != state.getValue(POWERED)) {
                 if (state.getValue(OPEN) != flag) {
