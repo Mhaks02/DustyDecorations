@@ -2,32 +2,32 @@ package net.mhaks.dustydecorations.block.entity.client;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.entity.custom.CameraQuadropodBlockEntity;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.renderer.GeoRenderer;
+import software.bernie.geckolib.renderer.base.GeoRenderState;
 
 public class CameraQuadropodBlockModel extends GeoModel<CameraQuadropodBlockEntity> {
 
     @Override
-    public ResourceLocation getModelResource(CameraQuadropodBlockEntity animatable, @Nullable GeoRenderer<CameraQuadropodBlockEntity> renderer) {
-        BlockState blockState = animatable.getBlockState();
+    public Identifier getModelResource(GeoRenderState renderState) {
+        BlockState blockState = renderState.getGeckolibData(DataTickets.BLOCKSTATE);
         return switch (blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
             case UPPER -> switch (blockState.getValue(ModConstants.ATTACHED_CAMERA)) {
-                case NONE -> ModConstants.identifierOf("geo/block/camera_quadropod_top.geo.json");
-                case CAMERA -> ModConstants.identifierOf("geo/block/camera_on_quadropod.geo.json");
-                case MOVIE_CAMERA -> ModConstants.identifierOf("geo/block/movie_camera_on_quadropod.geo.json");
+                case NONE -> ModConstants.identifierOf("camera_quadropod_top");
+                case CAMERA -> ModConstants.identifierOf("camera_on_quadropod");
+                case MOVIE_CAMERA -> ModConstants.identifierOf("movie_camera_on_quadropod");
             };
-            case LOWER -> ModConstants.identifierOf("geo/block/camera_quadropod.geo.json");
+            case LOWER -> ModConstants.identifierOf("camera_quadropod");
         };
     }
 
     @Override
-    public ResourceLocation getTextureResource(CameraQuadropodBlockEntity animatable, @Nullable GeoRenderer<CameraQuadropodBlockEntity> renderer) {
-        BlockState blockState = animatable.getBlockState();
+    public Identifier getTextureResource(GeoRenderState renderState) {
+        BlockState blockState = renderState.getGeckolibData(DataTickets.BLOCKSTATE);
         return switch (blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
             case UPPER -> switch (blockState.getValue(ModConstants.ATTACHED_CAMERA)) {
                 case NONE -> ModConstants.identifierOf("textures/block/camera_quadropod.png");
@@ -39,12 +39,12 @@ public class CameraQuadropodBlockModel extends GeoModel<CameraQuadropodBlockEnti
     }
 
     @Override
-    public ResourceLocation getAnimationResource(CameraQuadropodBlockEntity animatable) {
+    public Identifier getAnimationResource(CameraQuadropodBlockEntity animatable) {
         BlockState blockState = animatable.getBlockState();
         DoubleBlockHalf half = blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF);
         ModConstants.AttachedCamera camera = blockState.getValue(ModConstants.ATTACHED_CAMERA);
         return (half == DoubleBlockHalf.UPPER && camera == ModConstants.AttachedCamera.MOVIE_CAMERA)
-                ? ModConstants.identifierOf("animations/block/movie_camera_on_quadropod.animation.json")
+                ? ModConstants.identifierOf("movie_camera_on_quadropod")
                 : null;
     }
 }

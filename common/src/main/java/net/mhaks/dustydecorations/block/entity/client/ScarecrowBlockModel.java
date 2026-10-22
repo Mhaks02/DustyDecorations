@@ -2,45 +2,46 @@ package net.mhaks.dustydecorations.block.entity.client;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.custom.ScarecrowBlock;
-import net.mhaks.dustydecorations.block.entity.custom.CameraQuadropodBlockEntity;
-import net.mhaks.dustydecorations.block.entity.custom.NautilusWindChimeBlockEntity;
 import net.mhaks.dustydecorations.block.entity.custom.ScarecrowBlockEntity;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.renderer.GeoRenderer;
+import software.bernie.geckolib.renderer.base.GeoRenderState;
 
 public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
 
     @Override
-    public ResourceLocation getModelResource(ScarecrowBlockEntity animatable, @Nullable GeoRenderer<ScarecrowBlockEntity> renderer) {
-        ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) animatable.getBlockState().getBlock()).getType();
+    public Identifier getModelResource(GeoRenderState renderState) {
+        BlockState blockState = renderState.getGeckolibData(DataTickets.BLOCKSTATE);
+        ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) blockState.getBlock()).getType();
         if (scarecrow$type == ScarecrowBlock.Types.BEETROOT) {
-            return animatable.getBlockState().getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
-                    ? ModConstants.identifierOf("geo/block/beetroot_scarecrow_top.geo.json")
-                    : ModConstants.identifierOf("geo/block/beetroot_scarecrow_bottom.geo.json");
+            return blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
+                    ? ModConstants.identifierOf("beetroot_scarecrow_top")
+                    : ModConstants.identifierOf("beetroot_scarecrow_bottom");
         }
         if (scarecrow$type == ScarecrowBlock.Types.PUMPKIN) {
-            return animatable.getBlockState().getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
-                    ? ModConstants.identifierOf("geo/block/pumpkin_scarecrow_top.geo.json")
-                    : ModConstants.identifierOf("geo/block/pumpkin_scarecrow_bottom.geo.json");
+            return blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
+                    ? ModConstants.identifierOf("pumpkin_scarecrow_top")
+                    : ModConstants.identifierOf("pumpkin_scarecrow_bottom");
         }
         return null;
     }
 
     @Override
-    public ResourceLocation getTextureResource(ScarecrowBlockEntity animatable, @Nullable GeoRenderer<ScarecrowBlockEntity> renderer) {
-        String texture = ResourceLocation.tryParse(animatable.getBlockState().getBlockHolder().getRegisteredName()).getPath();
+    public Identifier getTextureResource(GeoRenderState renderState) {
+        BlockState blockState = renderState.getGeckolibData(DataTickets.BLOCKSTATE);
+        String texture = Identifier.tryParse(blockState.getBlockHolder().getRegisteredName()).getPath();
         return ModConstants.identifierOf("textures/block/" + texture + ".png");
     }
 
     @Override
-    public ResourceLocation getAnimationResource(ScarecrowBlockEntity animatable) {
+    public Identifier getAnimationResource(ScarecrowBlockEntity animatable) {
         ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) animatable.getBlockState().getBlock()).getType();
         return scarecrow$type == ScarecrowBlock.Types.BEETROOT
-                ? ModConstants.identifierOf("animations/block/beetroot_scarecrow.animation.json")
-                : ModConstants.identifierOf("animations/block/pumpkin_scarecrow.animation.json");
+                ? ModConstants.identifierOf("beetroot_scarecrow")
+                : ModConstants.identifierOf("pumpkin_scarecrow");
     }
 }
