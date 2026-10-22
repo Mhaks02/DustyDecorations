@@ -2,43 +2,25 @@ package net.mhaks.dustydecorations.entity.client;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.entity.custom.NautilusGolemEntity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Mth;
-import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.cache.object.GeoBone;
-import software.bernie.geckolib.constant.DataTickets;
+import net.minecraft.resources.Identifier;
 import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.model.data.EntityModelData;
-import software.bernie.geckolib.renderer.GeoRenderer;
+import software.bernie.geckolib.renderer.base.GeoRenderState;
 
 public class NautilusGolemModel extends GeoModel<NautilusGolemEntity> {
 
     @Override
-    public ResourceLocation getModelResource(NautilusGolemEntity animatable, @Nullable GeoRenderer<NautilusGolemEntity> renderer) {
+    public Identifier getModelResource(GeoRenderState renderState) {
         return ModConstants.identifierOf("geo/entity/nautilus_golem.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureResource(NautilusGolemEntity animatable, @Nullable GeoRenderer<NautilusGolemEntity> renderer) {
+    public Identifier getTextureResource(GeoRenderState renderState) {
         return ModConstants.identifierOf("textures/entity/nautilus_golem.png");
     }
 
     @Override
-    public ResourceLocation getAnimationResource(NautilusGolemEntity animatable) {
+    public Identifier getAnimationResource(NautilusGolemEntity animatable) {
         return ModConstants.identifierOf("animations/entity/nautilus_golem.animation.json");
     }
 
-
-    @Override
-    public void setCustomAnimations(NautilusGolemEntity animatable, long instanceId, AnimationState<NautilusGolemEntity> animationState) {
-        GeoBone head = getAnimationProcessor().getBone("Head");
-
-        if (head != null) {
-            EntityModelData entityModelData = animationState.getData(DataTickets.ENTITY_MODEL_DATA);
-
-            head.setRotX(entityModelData.headPitch() * Mth.DEG_TO_RAD);
-            head.setRotY(entityModelData.netHeadYaw() * Mth.DEG_TO_RAD);
-        }
-    }
 }
