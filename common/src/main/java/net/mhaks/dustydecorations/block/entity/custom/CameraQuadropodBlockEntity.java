@@ -9,7 +9,9 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.animation.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class CameraQuadropodBlockEntity extends BlockEntity implements GeoBlockEntity {
@@ -22,14 +24,13 @@ public class CameraQuadropodBlockEntity extends BlockEntity implements GeoBlockE
     //TODO: easing in and out would be cool
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controller", 0, state -> {
-
+        controllers.add(new AnimationController<>("controller", 0, animatable -> {
             if (this.getBlockState().getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
                     && this.getBlockState().getValue(ModConstants.ATTACHED_CAMERA) == ModConstants.AttachedCamera.MOVIE_CAMERA) {
                 if (this.getBlockState().getValue(BlockStateProperties.LIT)) {
-                    return state.setAndContinue(RawAnimation.begin().thenPlay("rolling"));
+                    return animatable.setAndContinue(RawAnimation.begin().thenPlay("rolling"));
                 } else {
-                    state.resetCurrentAnimation();
+                    animatable.controller().reset();
                     return PlayState.STOP;
                 }
             }
@@ -37,7 +38,6 @@ public class CameraQuadropodBlockEntity extends BlockEntity implements GeoBlockE
         }));
     }
 
-    @Override
     public double getBoneResetTime() {
         return 20;
     }

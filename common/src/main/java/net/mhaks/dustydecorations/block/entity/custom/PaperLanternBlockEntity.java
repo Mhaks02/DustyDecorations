@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.util.RenderUtil;
@@ -19,7 +20,7 @@ public class PaperLanternBlockEntity extends BlockEntity implements GeoBlockEnti
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(new AnimationController<>(this, "controller", 0,
+        controllerRegistrar.add(new AnimationController<>("controller", 0,
                 state -> state.setAndContinue(RawAnimation.begin().thenPlay("idle"))));
     }
 
@@ -28,8 +29,8 @@ public class PaperLanternBlockEntity extends BlockEntity implements GeoBlockEnti
         return CACHE;
     }
 
-    @Override
-    public double getTick(Object blockEntity) {
-        return RenderUtil.getCurrentTick();
-    }
+//    @Override
+//    public double getTick(Object blockEntity) {
+//        return RenderUtil.getCurrentTick();
+//    }
 }

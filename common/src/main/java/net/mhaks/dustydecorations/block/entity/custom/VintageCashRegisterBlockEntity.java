@@ -17,6 +17,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.entity.ContainerUser;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -25,6 +26,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 
 public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
@@ -48,7 +51,7 @@ public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
         }
 
         @Override
-        protected boolean isOwnContainer(Player player) {
+        public boolean isOwnContainer(Player player) {
             if (player.containerMenu instanceof VintageCashRegisterMenu) {
                 Container container = ((VintageCashRegisterMenu) player.containerMenu).getCashRegister();
                 return container == VintageCashRegisterBlockEntity.this;
@@ -61,7 +64,6 @@ public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
     public VintageCashRegisterBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntityTypes.VINTAGE_CASH_REGISTER_BLOCK_ENTITY.get(), pos, blockState);
     }
-
 
 
     @Override
@@ -95,16 +97,16 @@ public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
+    protected void loadAdditional(ValueInput p_422403_) {
+        super.loadAdditional(p_422403_);
         this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        ContainerHelper.loadAllItems(tag, this.items, registries);
+        ContainerHelper.loadAllItems(p_422403_, this.items);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
-        ContainerHelper.saveAllItems(tag, this.items, registries);
+    protected void saveAdditional(ValueOutput p_422073_) {
+        super.saveAdditional(p_422073_);
+        ContainerHelper.saveAllItems(p_422073_, this.items);
     }
 
     @Override
@@ -113,16 +115,16 @@ public class VintageCashRegisterBlockEntity extends BaseContainerBlockEntity {
     }
 
     @Override
-    public void startOpen(Player player) {
-        if (!this.remove && !player.isSpectator()) {
-            this.openersCounter.incrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
+    public void startOpen(ContainerUser user) {
+        if (!this.remove && !user.getLivingEntity().isSpectator()) {
+            this.openersCounter.incrementOpeners(user.getLivingEntity(), this.getLevel(), this.getBlockPos(), this.getBlockState(), user.getContainerInteractionRange());
         }
     }
 
     @Override
-    public void stopOpen(Player player) {
-        if (!this.remove && !player.isSpectator()) {
-            this.openersCounter.decrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
+    public void stopOpen(ContainerUser user) {
+        if (!this.remove && !user.getLivingEntity().isSpectator()) {
+            this.openersCounter.decrementOpeners(user.getLivingEntity(), this.getLevel(), this.getBlockPos(), this.getBlockState());
         }
     }
 
