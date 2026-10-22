@@ -6,20 +6,18 @@ import net.mhaks.dustydecorations.item.ModItems;
 import net.mhaks.dustydecorations.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagProvider extends ItemTagsProvider {
+public class ModItemTagProvider extends net.neoforged.neoforge.common.data.ItemTagsProvider {
     public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-                              CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, blockTags, ModConstants.MOD_ID, existingFileHelper);
+                              CompletableFuture<TagsProvider.TagLookup<Block>> blockTags) {
+        super(output, lookupProvider, ModConstants.MOD_ID);
     }
 
     @Override
@@ -54,9 +52,5 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Blocks.HORN_CORAL.asItem())
                 .add(Blocks.TUBE_CORAL.asItem());
 
-        tag(ModTags.Items.COPPER_NUGGETS)
-                .add(ModItems.COPPER_NUGGET.get());
-        tag(ModTags.Items.NUGGETS)
-                .addTag(ModTags.Items.COPPER_NUGGETS);
     }
 }

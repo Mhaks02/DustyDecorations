@@ -19,14 +19,13 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+public class ModRecipeProvider extends RecipeProvider {
     private static final String MOD_ID = ModConstants.MOD_ID + ":";
 
     protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput recipeOutput) {
@@ -237,7 +236,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" # ")
                 .pattern("###")
                 .define('#', ModItems.CORRUGATED_METAL_SHEET.get())
-                .define('I', Blocks.CHAIN)
+                .define('I', Blocks.IRON_CHAIN)
                 .unlockedBy("has_corrugated_metal_sheet", has(ModItems.CORRUGATED_METAL_SHEET.get()))
                 .save(this.output);
         shaped(RecipeCategory.DECORATIONS, ModBlocks.LIFE_PRESERVER.get())
