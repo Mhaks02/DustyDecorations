@@ -6,11 +6,11 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 
 public class VintageCashRegisterScreen extends AbstractContainerScreen<VintageCashRegisterMenu> {
-    private static final ResourceLocation CONTAINER_TEXTURE = ModConstants.identifierOf("textures/gui/container/vintage_cash_register.png");
+    private static final Identifier CONTAINER_TEXTURE = ModConstants.identifierOf("textures/gui/container/vintage_cash_register.png");
 
     public VintageCashRegisterScreen(VintageCashRegisterMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);

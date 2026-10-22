@@ -2,7 +2,7 @@ package net.mhaks.dustydecorations;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.stats.StatFormatter;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.StringRepresentable;
@@ -16,8 +16,8 @@ public class ModConstants {
 	public static final String MOD_ID = "dustydecorations";
 	public static final String MOD_NAME = "DustyDecorations";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
-    public static ResourceLocation identifierOf(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    public static Identifier identifierOf(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
     public static IntegerProperty TEXTURE_2 = IntegerProperty.create("texture", 0, 1);
@@ -59,13 +59,13 @@ public class ModConstants {
         }
     }
 
-//    public static final ResourceLocation OPEN_CASH_REGISTER = makeCustomStat("open_cash_register", StatFormatter.DEFAULT);
+//    public static final Identifier OPEN_CASH_REGISTER = makeCustomStat("open_cash_register", StatFormatter.DEFAULT);
 //
-//    private static ResourceLocation makeCustomStat(String key, StatFormatter formatter) {
-//        ResourceLocation resourcelocation = identifierOf(key);
-//        Registry.register(BuiltInRegistries.CUSTOM_STAT, key, resourcelocation);
-//        Stats.CUSTOM.get(resourcelocation, formatter);
-//        return resourcelocation;
+//    private static Identifier makeCustomStat(String key, StatFormatter formatter) {
+//        Identifier Identifier = identifierOf(key);
+//        Registry.register(BuiltInRegistries.CUSTOM_STAT, key, Identifier);
+//        Stats.CUSTOM.get(Identifier, formatter);
+//        return Identifier;
 //    }
 
 

@@ -2,7 +2,7 @@ package net.mhaks.dustydecorations.util;
 
 import net.mhaks.dustydecorations.ModConstants;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -28,7 +28,7 @@ public class ModTags {
             return TagKey.create(Registries.BLOCK, ModConstants.identifierOf(name));
         }
         private static TagKey<Block> createCommonTag(String name) {
-            return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", name));
+            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("c", name));
         }
     }
 
@@ -49,13 +49,13 @@ public class ModTags {
         private static TagKey<Item> bindTag(String name) {
             return TagKey.create(Registries.ITEM, ModConstants.identifierOf(name));
         }
-        private static TagKey<Item> createTag(final ResourceLocation name) {
+        private static TagKey<Item> createTag(final Identifier name) {
             return TagKey.create(Registries.ITEM, name);
         }
         private static TagKey<Item> bindCommonTag(String name) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", name));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", name));
         }
-        private static TagKey<Item> createCommonTag(final ResourceLocation name) {
+        private static TagKey<Item> createCommonTag(final Identifier name) {
             return TagKey.create(Registries.ITEM, name);
         }
     }
