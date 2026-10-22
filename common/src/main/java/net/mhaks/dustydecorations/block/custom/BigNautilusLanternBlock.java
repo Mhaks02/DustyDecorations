@@ -59,7 +59,7 @@ public class BigNautilusLanternBlock extends HorizontalDirectionalBlock {
 
     private static void spawnGolemInWorld(Level level, BlockPattern.BlockPatternMatch patternMatch, Entity golem, BlockPos blockPos) {
         clearPatternBlocks(level, patternMatch);
-        golem.moveTo((double) blockPos.getX() + 0.5, (double) blockPos.getY() + 0.05, (double) blockPos.getZ() + 0.5, 0.0f, 0.0f);
+        golem.snapTo((double) blockPos.getX() + 0.5, (double) blockPos.getY() + 0.05, (double) blockPos.getZ() + 0.5, 0.0f, 0.0f);
         level.addFreshEntity(golem);
 
         for (ServerPlayer serverPlayer : level.getEntitiesOfClass(ServerPlayer.class, golem.getBoundingBox().inflate(5.0))) {
@@ -82,7 +82,7 @@ public class BigNautilusLanternBlock extends HorizontalDirectionalBlock {
         for (int i = 0; i < patternMatch.getWidth(); i++) {
             for (int j = 0; j < patternMatch.getHeight(); j++) {
                 BlockInWorld blockInWorld = patternMatch.getBlock(i, j, 0);
-                level.blockUpdated(blockInWorld.getPos(), Blocks.AIR);
+                level.updateNeighborsAt(blockInWorld.getPos(), Blocks.AIR);
             }
         }
     }
