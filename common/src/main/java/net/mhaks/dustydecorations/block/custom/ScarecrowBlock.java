@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.custom.ScarecrowBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -32,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
-public class ScarecrowBlock extends BaseEntityBlock {
+public class ScarecrowBlock extends Block implements EntityBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     private final ScarecrowBlock.Type type;
@@ -49,7 +50,7 @@ public class ScarecrowBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
 
@@ -90,7 +91,7 @@ public class ScarecrowBlock extends BaseEntityBlock {
 
     @Override
     protected RenderShape getRenderShape(BlockState state) {
-        return RenderShape.ENTITYBLOCK_ANIMATED;
+        return RenderShape.INVISIBLE;
     }
 
     @Override
@@ -104,7 +105,7 @@ public class ScarecrowBlock extends BaseEntityBlock {
 
     @Override
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             if (player.isCreative()) {
                 preventDropFromBottomPart(level, pos, state, player);
             }
@@ -168,7 +169,7 @@ public class ScarecrowBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new ScarecrowBlockEntity(pos, state);
+        return ModBlockEntityTypes.SCARECROW_BLOCK_ENTITY.get().create(pos, state);
     }
 
     public ScarecrowBlock.Type getType() {

@@ -1,7 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.mhaks.dustydecorations.block.entity.custom.PaperLanternBlockEntity;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class PaperLanternBlock extends BaseEntityBlock {
+public class PaperLanternBlock extends Block implements EntityBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final MapCodec<PaperLanternBlock> CODEC = simpleCodec(PaperLanternBlock::new);
 
@@ -31,7 +31,7 @@ public class PaperLanternBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
 
@@ -45,7 +45,7 @@ public class PaperLanternBlock extends BaseEntityBlock {
 
     @Override
     protected RenderShape getRenderShape(BlockState state) {
-        return RenderShape.ENTITYBLOCK_ANIMATED;
+        return RenderShape.INVISIBLE;
     }
 
     @Override
@@ -77,8 +77,8 @@ public class PaperLanternBlock extends BaseEntityBlock {
     }
 
     @Override
-    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new PaperLanternBlockEntity(blockPos, blockState);
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get().create(pos, state);
     }
 
     @Override

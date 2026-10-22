@@ -1,6 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.custom.VintageCashRegisterBlockEntity;
 import net.mhaks.dustydecorations.gui.menu.custom.VintageCashRegisterMenu;
 import net.mhaks.dustydecorations.platform.Services;
@@ -27,7 +28,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class VintageCashRegisterBlock extends BaseEntityBlock {
+public class VintageCashRegisterBlock extends Block implements EntityBlock {
     public static final MapCodec<VintageCashRegisterBlock> CODEC = simpleCodec(VintageCashRegisterBlock::new);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -56,14 +57,8 @@ public class VintageCashRegisterBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        Containers.dropContentsOnDestroy(state, newState, level, pos);
-        super.onRemove(state, level, pos, newState, movedByPiston);
-    }
-
-    @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         } else {
             BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -77,7 +72,7 @@ public class VintageCashRegisterBlock extends BaseEntityBlock {
         }
     }
 
-    //    protected Stat<ResourceLocation> getOpenCashRegisterStat() {
+    //    protected Stat<Identifier> getOpenCashRegisterStat() {
 //        return Stats.CUSTOM.get(ModConstants.OPEN_CASH_REGISTER);
 //    }
 
@@ -92,7 +87,7 @@ public class VintageCashRegisterBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
 
@@ -111,6 +106,6 @@ public class VintageCashRegisterBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new VintageCashRegisterBlockEntity(pos, state);
+        return ModBlockEntityTypes.VINTAGE_CASH_REGISTER_BLOCK_ENTITY.get().create(pos, state);
     }
 }

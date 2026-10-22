@@ -3,9 +3,12 @@ package net.mhaks.dustydecorations.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.mhaks.dustydecorations.ModConstants;
 import net.mhaks.dustydecorations.block.ModBlocks;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.custom.CameraQuadropodBlockEntity;
+import net.mhaks.dustydecorations.entity.ModEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -32,7 +35,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class CameraQuadropodBlock extends BaseEntityBlock {
+public class CameraQuadropodBlock extends Block implements EntityBlock {
     public static final MapCodec<CameraQuadropodBlock> CODEC = simpleCodec(CameraQuadropodBlock::new);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
@@ -80,7 +83,7 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
 
     @Override
     protected RenderShape getRenderShape(BlockState state) {
-        return RenderShape.ENTITYBLOCK_ANIMATED;
+        return RenderShape.INVISIBLE;
     }
 
     @Override
@@ -106,10 +109,10 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (state.getValue(CAMERA) == ModConstants.AttachedCamera.NONE) {
-            if (stack.is(ModBlocks.CAMERA.get().asItem()) && !level.isClientSide) {
+            if (stack.is(ModBlocks.CAMERA.get().asItem()) && !level.isClientSide()) {
                 level.setBlockAndUpdate(pos, state.setValue(CAMERA, ModConstants.AttachedCamera.CAMERA).setValue(FACING, player.getDirection()));
             }
-            if (stack.is(ModBlocks.MOVIE_CAMERA.get().asItem()) && !level.isClientSide) {
+            if (stack.is(ModBlocks.MOVIE_CAMERA.get().asItem()) && !level.isClientSide()) {
                 level.setBlockAndUpdate(pos, state.setValue(CAMERA, ModConstants.AttachedCamera.MOVIE_CAMERA).setValue(FACING, player.getDirection()));
             }
             return InteractionResult.SUCCESS;
@@ -128,7 +131,7 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (state.getValue(CAMERA) == ModConstants.AttachedCamera.MOVIE_CAMERA) {
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 level.setBlockAndUpdate(pos, state.cycle(LIT));
             }
             return InteractionResult.SUCCESS;
@@ -153,7 +156,7 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
 
     @Override
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             if (player.isCreative()) {
                 preventDropFromBottomPart(level, pos, state, player);
             }
@@ -185,7 +188,7 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
 
@@ -196,6 +199,6 @@ public class CameraQuadropodBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new CameraQuadropodBlockEntity(pos, state);
+        return ModBlockEntityTypes.CAMERA_QUADROPOD_BLOCK_ENTITY.get().create(pos, state);
     }
 }

@@ -1,7 +1,7 @@
 package net.mhaks.dustydecorations.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.mhaks.dustydecorations.block.entity.custom.NautilusWindChimeBlockEntity;
+import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,7 +22,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class NautilusWindChimeBlock extends BaseEntityBlock {
+public class NautilusWindChimeBlock extends Block implements EntityBlock {
     public static final MapCodec<NautilusWindChimeBlock> CODEC = simpleCodec(NautilusWindChimeBlock::new);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -41,7 +41,7 @@ public class NautilusWindChimeBlock extends BaseEntityBlock {
 
     @Override
     protected RenderShape getRenderShape(BlockState state) {
-        return RenderShape.ENTITYBLOCK_ANIMATED;
+        return RenderShape.INVISIBLE;
     }
 
     @Override
@@ -79,7 +79,7 @@ public class NautilusWindChimeBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
 
@@ -90,6 +90,6 @@ public class NautilusWindChimeBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new NautilusWindChimeBlockEntity(pos, state);
+        return ModBlockEntityTypes.NAUTILUS_WIND_CHIME_BLOCK_ENTITY.get().create(pos, state);
     }
 }
