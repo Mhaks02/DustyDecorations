@@ -55,7 +55,7 @@ public class ModItems {
 
     public static final RegistryObject<Item, Item> NAUTILUS_GOLEM_SPAWN_EGG = registerItem("nautilus_golem_spawn_egg",
             SpawnEggItem::new,
-            new Item.Properties()
+            () -> new Item.Properties()
                     .spawnEgg(ModEntityTypes.NAUTILUS_GOLEM.get())
     );
 
@@ -71,6 +71,9 @@ public class ModItems {
     }
     private static RegistryObject<Item, Item> registerItem(String name, Function<Item.Properties, Item> factory, Item.Properties properties) {
         return ITEMS.register(name, () -> factory.apply(properties.setId(ResourceKey.create(Registries.ITEM, ModConstants.identifierOf(name)))));
+    }
+    private static RegistryObject<Item, Item> registerItem(String name, Function<Item.Properties, Item> factory, Supplier<Item.Properties> properties) {
+        return ITEMS.register(name, () -> factory.apply(properties.get().setId(ResourceKey.create(Registries.ITEM, ModConstants.identifierOf(name)))));
     }
 
     public static void registerModItems() {
