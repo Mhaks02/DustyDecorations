@@ -16,7 +16,7 @@ public class ModBlockEntityTypes {
     public static final RegistrationProvider<BlockEntityType<?>> BLOCK_ENTITIES = RegistrationProvider.get(BuiltInRegistries.BLOCK_ENTITY_TYPE, ModConstants.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<?>, BlockEntityType<?>> PAPER_LANTERN_BLOCK_ENTITY =
-            register("paper_lantern_block_entity",
+            register("paper_lantern",
                     PaperLanternBlockEntity::new,
                     () -> Set.of(ModBlocks.PAPER_LANTERN.get(),
                             ModBlocks.SAKURA_PAPER_LANTERN.get(),
@@ -31,26 +31,26 @@ public class ModBlockEntityTypes {
                     ));
 
     public static final RegistryObject<BlockEntityType<?>, BlockEntityType<?>> CAMERA_QUADROPOD_BLOCK_ENTITY =
-            register("camera_quadropod_block_entity",
+            register("camera_quadropod",
                     CameraQuadropodBlockEntity::new,
                     () -> Set.of(ModBlocks.CAMERA_QUADROPOD.get()
                     ));
 
     public static final RegistryObject<BlockEntityType<?>, BlockEntityType<?>> SCARECROW_BLOCK_ENTITY =
-            register("scarecrow_block_entity",
+            register("scarecrow",
                     ScarecrowBlockEntity::new,
                     () -> Set.of(ModBlocks.BEETROOT_SCARECROW.get(),
                             ModBlocks.PUMPKIN_SCARECROW.get()
                     ));
 
     public static final RegistryObject<BlockEntityType<?>, BlockEntityType<?>> VINTAGE_CASH_REGISTER_BLOCK_ENTITY =
-            register("vintage_cash_register_block_entity",
+            register("vintage_cash_register",
                     VintageCashRegisterBlockEntity::new,
                     () -> Set.of(ModBlocks.VINTAGE_CASH_REGISTER.get()
                     ));
 
     public static final RegistryObject<BlockEntityType<?>, BlockEntityType<?>> NAUTILUS_WIND_CHIME_BLOCK_ENTITY =
-            register("nautilus_wind_chime_block_entity",
+            register("nautilus_wind_chime",
                     NautilusWindChimeBlockEntity::new,
                     () -> Set.of(ModBlocks.COLD_NAUTILUS_WIND_CHIME.get()
                     ));

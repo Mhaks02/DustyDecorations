@@ -17,11 +17,11 @@ public class CameraQuadropodBlockModel extends GeoModel<CameraQuadropodBlockEnti
         BlockState blockState = renderState.getGeckolibData(DataTickets.BLOCKSTATE);
         return switch (blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
             case UPPER -> switch (blockState.getValue(ModConstants.ATTACHED_CAMERA)) {
-                case NONE -> ModConstants.identifierOf("camera_quadropod_top");
-                case CAMERA -> ModConstants.identifierOf("camera_on_quadropod");
-                case MOVIE_CAMERA -> ModConstants.identifierOf("movie_camera_on_quadropod");
+                case NONE -> ModConstants.identifierOf("block/camera_quadropod_top");
+                case CAMERA -> ModConstants.identifierOf("block/camera_on_quadropod");
+                case MOVIE_CAMERA -> ModConstants.identifierOf("block/movie_camera_on_quadropod");
             };
-            case LOWER -> ModConstants.identifierOf("camera_quadropod");
+            case LOWER -> ModConstants.identifierOf("block/camera_quadropod");
         };
     }
 
@@ -44,7 +44,7 @@ public class CameraQuadropodBlockModel extends GeoModel<CameraQuadropodBlockEnti
         DoubleBlockHalf half = blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF);
         ModConstants.AttachedCamera camera = blockState.getValue(ModConstants.ATTACHED_CAMERA);
         return (half == DoubleBlockHalf.UPPER && camera == ModConstants.AttachedCamera.MOVIE_CAMERA)
-                ? ModConstants.identifierOf("movie_camera_on_quadropod")
+                ? ModConstants.identifierOf("block/movie_camera_on_quadropod")
                 : null;
     }
 }

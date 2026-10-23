@@ -2,6 +2,7 @@ package net.mhaks.dustydecorations;
 
 import net.mhaks.dustydecorations.block.entity.ModBlockEntityTypes;
 import net.mhaks.dustydecorations.block.entity.client.CameraQuadropodBlockRenderer;
+import net.mhaks.dustydecorations.block.entity.client.PaperLanternBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.client.ScarecrowBlockRenderer;
 import net.mhaks.dustydecorations.block.entity.custom.NautilusWindChimeBlockEntity;
 import net.mhaks.dustydecorations.block.entity.custom.PaperLanternBlockEntity;
@@ -39,8 +40,7 @@ public class DustyDecorationsClient {
 
         entityRenderers.accept(ModEntityTypes.NAUTILUS_GOLEM.get(), NautilusGolemRenderer::new);
 
-        blockEntityRenderers.accept(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(),
-                context -> new GeoBlockRenderer(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get()));
+        blockEntityRenderers.accept(ModBlockEntityTypes.PAPER_LANTERN_BLOCK_ENTITY.get(), PaperLanternBlockRenderer::new);
         blockEntityRenderers.accept(ModBlockEntityTypes.CAMERA_QUADROPOD_BLOCK_ENTITY.get(), CameraQuadropodBlockRenderer::new);
         blockEntityRenderers.accept(ModBlockEntityTypes.SCARECROW_BLOCK_ENTITY.get(), ScarecrowBlockRenderer::new);
         blockEntityRenderers.accept(ModBlockEntityTypes.NAUTILUS_WIND_CHIME_BLOCK_ENTITY.get(),

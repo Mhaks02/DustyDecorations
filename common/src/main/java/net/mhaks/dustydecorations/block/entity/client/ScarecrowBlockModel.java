@@ -19,13 +19,13 @@ public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
         ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) blockState.getBlock()).getType();
         if (scarecrow$type == ScarecrowBlock.Types.BEETROOT) {
             return blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
-                    ? ModConstants.identifierOf("beetroot_scarecrow_top")
-                    : ModConstants.identifierOf("beetroot_scarecrow_bottom");
+                    ? ModConstants.identifierOf("block/beetroot_scarecrow_top")
+                    : ModConstants.identifierOf("block/beetroot_scarecrow_bottom");
         }
         if (scarecrow$type == ScarecrowBlock.Types.PUMPKIN) {
             return blockState.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER
-                    ? ModConstants.identifierOf("pumpkin_scarecrow_top")
-                    : ModConstants.identifierOf("pumpkin_scarecrow_bottom");
+                    ? ModConstants.identifierOf("block/pumpkin_scarecrow_top")
+                    : ModConstants.identifierOf("block/pumpkin_scarecrow_bottom");
         }
         return null;
     }
@@ -41,7 +41,7 @@ public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
     public Identifier getAnimationResource(ScarecrowBlockEntity animatable) {
         ScarecrowBlock.Type scarecrow$type = ((ScarecrowBlock) animatable.getBlockState().getBlock()).getType();
         return scarecrow$type == ScarecrowBlock.Types.BEETROOT
-                ? ModConstants.identifierOf("beetroot_scarecrow")
-                : ModConstants.identifierOf("pumpkin_scarecrow");
+                ? ModConstants.identifierOf("block/beetroot_scarecrow")
+                : ModConstants.identifierOf("block/pumpkin_scarecrow");
     }
 }

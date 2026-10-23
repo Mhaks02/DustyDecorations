@@ -10,7 +10,7 @@ public class NautilusGolemModel extends GeoModel<NautilusGolemEntity> {
 
     @Override
     public Identifier getModelResource(GeoRenderState renderState) {
-        return ModConstants.identifierOf("geo/entity/nautilus_golem.geo.json");
+        return ModConstants.identifierOf("entity/nautilus_golem");
     }
 
     @Override
@@ -20,7 +20,7 @@ public class NautilusGolemModel extends GeoModel<NautilusGolemEntity> {
 
     @Override
     public Identifier getAnimationResource(NautilusGolemEntity animatable) {
-        return ModConstants.identifierOf("animations/entity/nautilus_golem.animation.json");
+        return ModConstants.identifierOf("entity/nautilus_golem");
     }
 
 }
