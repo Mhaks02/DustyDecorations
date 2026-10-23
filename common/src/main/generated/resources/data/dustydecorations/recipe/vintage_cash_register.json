@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:copper_ingot"
-    },
-    "*": {
-      "item": "minecraft:gold_nugget"
-    },
-    "@": {
-      "item": "dustydecorations:gold_coins"
-    },
-    "I": {
-      "item": "minecraft:gold_ingot"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    }
+    "#": "minecraft:copper_ingot",
+    "*": "minecraft:gold_nugget",
+    "@": "dustydecorations:gold_coins",
+    "I": "minecraft:gold_ingot",
+    "R": "minecraft:redstone"
   },
   "pattern": [
     "***",

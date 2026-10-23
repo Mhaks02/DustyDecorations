@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:pink_petals"
-    },
-    {
-      "item": "minecraft:pink_petals"
-    },
-    {
-      "item": "minecraft:pink_petals"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:pink_petals",
+    "minecraft:pink_petals",
+    "minecraft:pink_petals",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

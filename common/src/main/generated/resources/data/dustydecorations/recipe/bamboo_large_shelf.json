@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "large_shelves",
   "key": {
-    "#": {
-      "item": "minecraft:bamboo_planks"
-    },
-    "@": {
-      "item": "dustydecorations:empty_small_shelf"
-    }
+    "#": "minecraft:bamboo_planks",
+    "@": "dustydecorations:empty_small_shelf"
   },
   "pattern": [
     "###",

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "dustydecorations:block/coral_embedded_seastone_bricks",
-    "side": "dustydecorations:block/coral_embedded_seastone_bricks",
-    "top": "dustydecorations:block/coral_embedded_seastone_bricks"
-  }
-}

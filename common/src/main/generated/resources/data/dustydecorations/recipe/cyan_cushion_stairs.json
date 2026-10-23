@@ -3,9 +3,7 @@
   "category": "building",
   "group": "cushion_stairs",
   "key": {
-    "#": {
-      "item": "dustydecorations:cyan_cushion"
-    }
+    "#": "dustydecorations:cyan_cushion"
   },
   "pattern": [
     "#  ",

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:blue_wool"
-    },
-    "@": {
-      "item": "minecraft:map"
-    },
-    "^": {
-      "item": "minecraft:copper_ingot"
-    }
+    "#": "minecraft:blue_wool",
+    "@": "minecraft:map",
+    "^": "minecraft:copper_ingot"
   },
   "pattern": [
     " @",

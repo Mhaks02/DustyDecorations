@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_lantern"
-    },
-    {
-      "item": "minecraft:arrow"
-    }
+    "dustydecorations:pillager_paper_lantern",
+    "minecraft:arrow"
   ],
   "result": {
     "count": 1,

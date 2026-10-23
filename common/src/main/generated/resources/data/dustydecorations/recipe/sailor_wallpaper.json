@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:blue_wool"
-    },
-    "@": {
-      "item": "minecraft:bone_meal"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "#": "minecraft:blue_wool",
+    "@": "minecraft:bone_meal",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

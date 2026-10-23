@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:big_cooking_pot"
-    },
-    {
-      "item": "dustydecorations:iron_frying_pan"
-    },
-    {
-      "item": "dustydecorations:copper_frying_pan"
-    }
+    "dustydecorations:big_cooking_pot",
+    "dustydecorations:iron_frying_pan",
+    "dustydecorations:copper_frying_pan"
   ],
   "result": {
     "count": 4,

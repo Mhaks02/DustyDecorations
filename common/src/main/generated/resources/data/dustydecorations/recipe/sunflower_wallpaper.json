@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:white_wool"
-    },
-    "@": {
-      "item": "minecraft:sunflower"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "#": "minecraft:white_wool",
+    "@": "minecraft:sunflower",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

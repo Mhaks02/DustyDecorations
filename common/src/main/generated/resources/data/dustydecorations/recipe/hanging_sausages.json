@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:raw_bratwurst_sausage"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "#": "dustydecorations:raw_bratwurst_sausage",
+    "~": "#c:ropes"
   },
   "pattern": [
     "~~~",

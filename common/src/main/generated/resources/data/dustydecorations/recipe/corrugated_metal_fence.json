@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:corrugated_metal_block"
-    },
-    "@": {
-      "item": "dustydecorations:corrugated_metal_sheet"
-    }
+    "#": "dustydecorations:corrugated_metal_block",
+    "@": "dustydecorations:corrugated_metal_sheet"
   },
   "pattern": [
     "#@#",

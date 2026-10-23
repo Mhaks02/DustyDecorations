@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:salmon"
-    },
-    {
-      "item": "minecraft:salmon"
-    },
-    {
-      "item": "minecraft:salmon"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:salmon",
+    "minecraft:salmon",
+    "minecraft:salmon",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

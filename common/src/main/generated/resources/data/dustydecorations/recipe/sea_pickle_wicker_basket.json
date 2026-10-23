@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:sea_pickle"
-    },
-    {
-      "item": "minecraft:sea_pickle"
-    },
-    {
-      "item": "minecraft:sea_pickle"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:sea_pickle",
+    "minecraft:sea_pickle",
+    "minecraft:sea_pickle",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

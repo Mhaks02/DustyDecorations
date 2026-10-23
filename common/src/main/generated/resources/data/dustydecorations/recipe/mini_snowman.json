@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:snow_block"
-    },
-    "-": {
-      "tag": "minecraft:wool_carpets"
-    },
-    "o": {
-      "item": "minecraft:snowball"
-    }
+    "#": "minecraft:snow_block",
+    "-": "#minecraft:wool_carpets",
+    "o": "minecraft:snowball"
   },
   "pattern": [
     "-",

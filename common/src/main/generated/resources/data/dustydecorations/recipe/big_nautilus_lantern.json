@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:big_nautilus_shell"
-    },
-    "^": {
-      "item": "minecraft:lantern"
-    }
+    "#": "dustydecorations:big_nautilus_shell",
+    "^": "minecraft:lantern"
   },
   "pattern": [
     "#",

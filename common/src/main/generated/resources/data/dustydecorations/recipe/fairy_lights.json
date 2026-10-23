@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "*": {
-      "tag": "c:dyes"
-    },
-    "^": {
-      "item": "minecraft:glowstone_dust"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "*": "#c:dyes",
+    "^": "minecraft:glowstone_dust",
+    "~": "#c:ropes"
   },
   "pattern": [
     " ~ ",

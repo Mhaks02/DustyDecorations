@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "large_shelves",
   "key": {
-    "#": {
-      "item": "minecraft:dark_oak_planks"
-    },
-    "@": {
-      "item": "dustydecorations:empty_small_shelf"
-    }
+    "#": "minecraft:dark_oak_planks",
+    "@": "dustydecorations:empty_small_shelf"
   },
   "pattern": [
     "###",

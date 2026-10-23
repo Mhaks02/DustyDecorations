@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:ceramic_pot"
-    }
+    "dustydecorations:ceramic_pot"
   ],
   "result": {
     "count": 1,

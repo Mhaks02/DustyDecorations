@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:gold_coins"
-    }
+    "dustydecorations:gold_coins"
   ],
   "result": {
     "count": 4,

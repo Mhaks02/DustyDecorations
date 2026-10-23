@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:cobblestone"
-    },
-    "@": {
-      "item": "minecraft:snowball"
-    }
+    "#": "minecraft:cobblestone",
+    "@": "minecraft:snowball"
   },
   "pattern": [
     "###",

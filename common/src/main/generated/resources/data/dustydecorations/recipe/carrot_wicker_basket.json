@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:carrot"
-    },
-    {
-      "item": "minecraft:carrot"
-    },
-    {
-      "item": "minecraft:carrot"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:carrot",
+    "minecraft:carrot",
+    "minecraft:carrot",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "seaglass_panes",
   "key": {
-    "#": {
-      "item": "dustydecorations:mocha_seaglass"
-    }
+    "#": "dustydecorations:mocha_seaglass"
   },
   "pattern": [
     "###",

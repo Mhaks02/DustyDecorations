@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "minecraft:wool"
-    },
-    "*": {
-      "tag": "c:dyes"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "#": "#minecraft:wool",
+    "*": "#c:dyes",
+    "~": "#c:ropes"
   },
   "pattern": [
     " ~ ",

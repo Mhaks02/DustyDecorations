@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_stack"
-    }
+    "dustydecorations:paper_stack"
   ],
   "result": {
     "count": 9,

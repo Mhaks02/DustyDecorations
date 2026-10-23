@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": {
-      "item": "dustydecorations:corrugated_metal_sheet"
-    }
+    "#": "dustydecorations:corrugated_metal_sheet"
   },
   "pattern": [
     "##",

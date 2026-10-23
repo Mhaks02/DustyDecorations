@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "large_shelves",
   "key": {
-    "#": {
-      "item": "minecraft:birch_planks"
-    },
-    "@": {
-      "item": "dustydecorations:empty_small_shelf"
-    }
+    "#": "minecraft:birch_planks",
+    "@": "dustydecorations:empty_small_shelf"
   },
   "pattern": [
     "###",

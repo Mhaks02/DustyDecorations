@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:spruce_leaves"
-    },
-    "^": {
-      "item": "minecraft:sweet_berries"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "#": "minecraft:spruce_leaves",
+    "^": "minecraft:sweet_berries",
+    "~": "#c:ropes"
   },
   "pattern": [
     "#~#",

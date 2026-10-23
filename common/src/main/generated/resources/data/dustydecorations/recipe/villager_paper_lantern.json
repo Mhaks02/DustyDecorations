@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_lantern"
-    },
-    {
-      "item": "minecraft:emerald"
-    }
+    "dustydecorations:villager_paper_lantern",
+    "minecraft:emerald"
   ],
   "result": {
     "count": 1,

@@ -1,6 +1,0 @@
-{
-  "parent": "dustydecorations:block/template_book_stack",
-  "textures": {
-    "0": "dustydecorations:block/book_stack/0"
-  }
-}

@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:glow_berries",
+    "minecraft:glow_berries",
+    "minecraft:glow_berries",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

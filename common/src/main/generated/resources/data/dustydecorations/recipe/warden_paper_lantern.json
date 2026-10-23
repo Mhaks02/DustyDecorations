@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_lantern"
-    },
-    {
-      "item": "minecraft:echo_shard"
-    }
+    "dustydecorations:warden_paper_lantern",
+    "minecraft:echo_shard"
   ],
   "result": {
     "count": 1,

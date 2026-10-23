@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:burlap"
-    },
-    "@": {
-      "item": "minecraft:wheat"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "#": "dustydecorations:burlap",
+    "@": "minecraft:wheat",
+    "~": "#c:ropes"
   },
   "pattern": [
     " #~",

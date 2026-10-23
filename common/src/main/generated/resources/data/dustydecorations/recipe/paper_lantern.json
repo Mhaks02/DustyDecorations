@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:paper"
-    },
-    "@": {
-      "item": "minecraft:torch"
-    }
+    "#": "minecraft:paper",
+    "@": "minecraft:torch"
   },
   "pattern": [
     "###",

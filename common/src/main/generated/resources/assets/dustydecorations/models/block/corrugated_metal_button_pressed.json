@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_pressed",
-  "textures": {
-    "texture": "dustydecorations:block/corrugated_metal_block"
-  }
-}

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wool_awnings",
   "key": {
-    "#": {
-      "item": "minecraft:brown_carpet"
-    },
-    "@": {
-      "item": "minecraft:stick"
-    }
+    "#": "minecraft:brown_carpet",
+    "@": "minecraft:stick"
   },
   "pattern": [
     "## ",

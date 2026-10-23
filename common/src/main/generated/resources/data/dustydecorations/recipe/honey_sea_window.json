@@ -3,12 +3,8 @@
   "category": "building",
   "group": "sea_windows",
   "key": {
-    "#": {
-      "item": "dustydecorations:honey_seaglass_fragments"
-    },
-    "@": {
-      "tag": "minecraft:planks"
-    }
+    "#": "dustydecorations:honey_seaglass_fragments",
+    "@": "#minecraft:planks"
   },
   "pattern": [
     " # ",

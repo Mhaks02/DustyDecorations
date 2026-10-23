@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "minecraft:wool"
-    },
-    "-": {
-      "tag": "minecraft:wool_carpets"
-    },
-    "@": {
-      "item": "dustydecorations:burlap"
-    }
+    "#": "#minecraft:wool",
+    "-": "#minecraft:wool_carpets",
+    "@": "dustydecorations:burlap"
   },
   "pattern": [
     " - ",

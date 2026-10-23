@@ -3,9 +3,7 @@
   "category": "building",
   "group": "cushion_slabs",
   "key": {
-    "#": {
-      "item": "dustydecorations:white_cushion"
-    }
+    "#": "dustydecorations:white_cushion"
   },
   "pattern": [
     "###"

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "dustydecorations:smooth_stone_bricks"
-    }
+    "#": "dustydecorations:smooth_stone_bricks"
   },
   "pattern": [
     "#  ",

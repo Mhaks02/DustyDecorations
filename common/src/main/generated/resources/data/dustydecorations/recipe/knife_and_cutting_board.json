@@ -2,16 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:cutting_board"
-    },
+    "dustydecorations:cutting_board",
     [
-      {
-        "item": "dustydecorations:wedged_knife"
-      },
-      {
-        "item": "dustydecorations:wedged_cleaver"
-      }
+      "dustydecorations:wedged_knife",
+      "dustydecorations:wedged_cleaver"
     ]
   ],
   "result": {

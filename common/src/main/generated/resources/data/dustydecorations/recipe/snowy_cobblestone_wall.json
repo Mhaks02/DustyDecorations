@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "dustydecorations:snowy_cobblestone"
-    }
+    "#": "dustydecorations:snowy_cobblestone"
   },
   "pattern": [
     "###",

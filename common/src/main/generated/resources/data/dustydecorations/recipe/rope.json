@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:wheat"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "#": "minecraft:wheat",
+    "~": "#c:ropes"
   },
   "pattern": [
     "#~",

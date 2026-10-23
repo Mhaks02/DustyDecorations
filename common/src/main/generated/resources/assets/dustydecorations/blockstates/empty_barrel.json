@@ -1,32 +1,17 @@
 {
   "variants": {
-    "facing=east,waterlogged=false": {
+    "facing=east": {
       "model": "dustydecorations:block/empty_barrel",
       "y": 90
     },
-    "facing=east,waterlogged=true": {
-      "model": "dustydecorations:block/empty_barrel",
-      "y": 90
-    },
-    "facing=north,waterlogged=false": {
+    "facing=north": {
       "model": "dustydecorations:block/empty_barrel"
     },
-    "facing=north,waterlogged=true": {
-      "model": "dustydecorations:block/empty_barrel"
-    },
-    "facing=south,waterlogged=false": {
+    "facing=south": {
       "model": "dustydecorations:block/empty_barrel",
       "y": 180
     },
-    "facing=south,waterlogged=true": {
-      "model": "dustydecorations:block/empty_barrel",
-      "y": 180
-    },
-    "facing=west,waterlogged=false": {
-      "model": "dustydecorations:block/empty_barrel",
-      "y": 270
-    },
-    "facing=west,waterlogged=true": {
+    "facing=west": {
       "model": "dustydecorations:block/empty_barrel",
       "y": 270
     }

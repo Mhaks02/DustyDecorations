@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:cowhide_rug"
-    },
-    {
-      "tag": "c:mushrooms"
-    }
+    "dustydecorations:cowhide_rug",
+    "#c:mushrooms"
   ],
   "result": {
     "count": 1,

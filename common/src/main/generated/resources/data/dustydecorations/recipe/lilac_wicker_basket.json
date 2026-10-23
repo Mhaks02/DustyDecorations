@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:lilac"
-    },
-    {
-      "item": "minecraft:lilac"
-    },
-    {
-      "item": "minecraft:lilac"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:lilac",
+    "minecraft:lilac",
+    "minecraft:lilac",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

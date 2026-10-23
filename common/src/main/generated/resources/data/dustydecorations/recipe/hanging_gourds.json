@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:gourd"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "#": "dustydecorations:gourd",
+    "~": "#c:ropes"
   },
   "pattern": [
     "~~~",

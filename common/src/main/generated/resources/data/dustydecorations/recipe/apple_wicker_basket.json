@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:apple"
-    },
-    {
-      "item": "minecraft:apple"
-    },
-    {
-      "item": "minecraft:apple"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:apple",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

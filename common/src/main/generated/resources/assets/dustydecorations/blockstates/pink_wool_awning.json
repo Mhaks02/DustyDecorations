@@ -1,32 +1,17 @@
 {
   "variants": {
-    "facing=east,waterlogged=false": {
+    "facing=east": {
       "model": "dustydecorations:block/pink_wool_awning",
       "y": 90
     },
-    "facing=east,waterlogged=true": {
-      "model": "dustydecorations:block/pink_wool_awning",
-      "y": 90
-    },
-    "facing=north,waterlogged=false": {
+    "facing=north": {
       "model": "dustydecorations:block/pink_wool_awning"
     },
-    "facing=north,waterlogged=true": {
-      "model": "dustydecorations:block/pink_wool_awning"
-    },
-    "facing=south,waterlogged=false": {
+    "facing=south": {
       "model": "dustydecorations:block/pink_wool_awning",
       "y": 180
     },
-    "facing=south,waterlogged=true": {
-      "model": "dustydecorations:block/pink_wool_awning",
-      "y": 180
-    },
-    "facing=west,waterlogged=false": {
-      "model": "dustydecorations:block/pink_wool_awning",
-      "y": 270
-    },
-    "facing=west,waterlogged=true": {
+    "facing=west": {
       "model": "dustydecorations:block/pink_wool_awning",
       "y": 270
     }

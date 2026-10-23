@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:book"
-    },
-    "~": {
-      "item": "dustydecorations:empty_small_shelf"
-    }
+    "#": "minecraft:book",
+    "~": "dustydecorations:empty_small_shelf"
   },
   "pattern": [
     "#",

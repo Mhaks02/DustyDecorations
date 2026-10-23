@@ -3,22 +3,12 @@
   "category": "building",
   "key": {
     "#": [
-      {
-        "item": "minecraft:white_wool"
-      },
-      {
-        "item": "minecraft:green_wool"
-      },
-      {
-        "item": "minecraft:red_wool"
-      }
+      "minecraft:white_wool",
+      "minecraft:green_wool",
+      "minecraft:red_wool"
     ],
-    "@": {
-      "item": "minecraft:sugar"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "@": "minecraft:sugar",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

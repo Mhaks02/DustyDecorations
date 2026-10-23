@@ -3,9 +3,7 @@
   "category": "building",
   "group": "sea_window_panes",
   "key": {
-    "#": {
-      "item": "dustydecorations:mocha_sea_window"
-    }
+    "#": "dustydecorations:mocha_sea_window"
   },
   "pattern": [
     "###",

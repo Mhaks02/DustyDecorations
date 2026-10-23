@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:copper_ingot"
-    },
-    "@": {
-      "item": "minecraft:gold_ingot"
-    },
-    "S": {
-      "item": "minecraft:spyglass"
-    },
-    "^": {
-      "item": "minecraft:redstone"
-    }
+    "#": "minecraft:copper_ingot",
+    "@": "minecraft:gold_ingot",
+    "S": "minecraft:spyglass",
+    "^": "minecraft:redstone"
   },
   "pattern": [
     "###",

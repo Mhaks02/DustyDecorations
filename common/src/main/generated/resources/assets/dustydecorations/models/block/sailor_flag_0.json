@@ -1,6 +1,0 @@
-{
-  "parent": "dustydecorations:block/template_sailor_flag",
-  "textures": {
-    "0": "dustydecorations:block/sailor_flag/0"
-  }
-}

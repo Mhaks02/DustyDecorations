@@ -3,58 +3,23 @@
   "category": "building",
   "group": "cushions",
   "ingredients": [
-    {
-      "item": "minecraft:lime_dye"
-    },
+    "minecraft:lime_dye",
     [
-      {
-        "item": "dustydecorations:white_cushion"
-      },
-      {
-        "item": "dustydecorations:light_gray_cushion"
-      },
-      {
-        "item": "dustydecorations:gray_cushion"
-      },
-      {
-        "item": "dustydecorations:black_cushion"
-      },
-      {
-        "item": "dustydecorations:brown_cushion"
-      },
-      {
-        "item": "dustydecorations:red_cushion"
-      },
-      {
-        "item": "dustydecorations:orange_cushion"
-      },
-      {
-        "item": "dustydecorations:yellow_cushion"
-      },
-      {
-        "item": "dustydecorations:green_cushion"
-      },
-      {
-        "item": "dustydecorations:cyan_cushion"
-      },
-      {
-        "item": "dustydecorations:light_blue_cushion"
-      },
-      {
-        "item": "dustydecorations:blue_cushion"
-      },
-      {
-        "item": "dustydecorations:purple_cushion"
-      },
-      {
-        "item": "dustydecorations:magenta_cushion"
-      },
-      {
-        "item": "dustydecorations:pink_cushion"
-      },
-      {
-        "item": "dustydecorations:plain_cushion"
-      }
+      "dustydecorations:white_cushion",
+      "dustydecorations:light_gray_cushion",
+      "dustydecorations:gray_cushion",
+      "dustydecorations:black_cushion",
+      "dustydecorations:brown_cushion",
+      "dustydecorations:red_cushion",
+      "dustydecorations:orange_cushion",
+      "dustydecorations:yellow_cushion",
+      "dustydecorations:green_cushion",
+      "dustydecorations:cyan_cushion",
+      "dustydecorations:light_blue_cushion",
+      "dustydecorations:blue_cushion",
+      "dustydecorations:purple_cushion",
+      "dustydecorations:magenta_cushion",
+      "dustydecorations:pink_cushion"
     ]
   ],
   "result": {

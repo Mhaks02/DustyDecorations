@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:orange_wool"
-    },
-    "@": {
-      "item": "minecraft:pumpkin_seeds"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "#": "minecraft:orange_wool",
+    "@": "minecraft:pumpkin_seeds",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_lantern"
-    },
-    {
-      "item": "minecraft:bamboo"
-    }
+    "dustydecorations:panda_paper_lantern",
+    "minecraft:bamboo"
   ],
   "result": {
     "count": 1,

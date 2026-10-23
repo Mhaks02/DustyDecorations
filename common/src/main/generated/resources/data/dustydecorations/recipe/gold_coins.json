@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:gold_coins_block"
-    }
+    "#": "dustydecorations:gold_coins_block"
   },
   "pattern": [
     "###"

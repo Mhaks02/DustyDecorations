@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:leather"
-    },
-    "@": {
-      "item": "dustydecorations:burlap_block"
-    },
-    "o": {
-      "item": "minecraft:iron_nugget"
-    }
+    "#": "minecraft:leather",
+    "@": "dustydecorations:burlap_block",
+    "o": "minecraft:iron_nugget"
   },
   "pattern": [
     "@#@",

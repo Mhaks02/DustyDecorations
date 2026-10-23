@@ -3,9 +3,7 @@
   "category": "building",
   "group": "seaglass",
   "key": {
-    "#": {
-      "item": "dustydecorations:liquorice_seaglass_fragments"
-    }
+    "#": "dustydecorations:liquorice_seaglass_fragments"
   },
   "pattern": [
     "##",

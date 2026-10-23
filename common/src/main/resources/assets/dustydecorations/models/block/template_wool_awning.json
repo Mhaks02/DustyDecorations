@@ -1,12 +1,8 @@
 {
-	"format_version": "1.9.0",
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"render_type": "minecraft:cutout",
 	"texture_size": [32, 32],
-	"textures": {
-		"awning": "#awning",
-		"particle": "#particle"
-	},
 	"elements": [
 		{
 			"name": "top",
@@ -121,6 +117,7 @@
 		{
 			"name": "wool_awning",
 			"origin": [0, 0.87707, 0.21793],
+			"scope": 0,
 			"color": 0,
 			"children": [0, 1, 2, 3, 4]
 		}

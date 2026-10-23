@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_lantern"
-    },
-    {
-      "item": "minecraft:cherry_sapling"
-    }
+    "dustydecorations:sakura_paper_lantern",
+    "minecraft:cherry_sapling"
   ],
   "result": {
     "count": 1,

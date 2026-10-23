@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:lime_wool"
-    },
-    "@": {
-      "item": "minecraft:vine"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "#": "minecraft:lime_wool",
+    "@": "minecraft:vine",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

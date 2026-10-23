@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "banisters",
   "key": {
-    "#": {
-      "item": "minecraft:cherry_fence"
-    }
+    "#": "minecraft:cherry_fence"
   },
   "pattern": [
     "###"

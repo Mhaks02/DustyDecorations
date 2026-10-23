@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "dustydecorations:block/burlap_block",
-    "side": "dustydecorations:block/burlap_block",
-    "top": "dustydecorations:block/burlap_block"
-  }
-}

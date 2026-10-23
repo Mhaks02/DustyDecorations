@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "banisters",
   "key": {
-    "#": {
-      "item": "minecraft:mangrove_fence"
-    }
+    "#": "minecraft:mangrove_fence"
   },
   "pattern": [
     "###"

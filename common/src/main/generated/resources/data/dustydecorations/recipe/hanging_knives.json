@@ -3,19 +3,11 @@
   "category": "misc",
   "key": {
     "#": [
-      {
-        "item": "dustydecorations:wedged_knife"
-      },
-      {
-        "item": "dustydecorations:wedged_cleaver"
-      }
+      "dustydecorations:wedged_knife",
+      "dustydecorations:wedged_cleaver"
     ],
-    "@": {
-      "tag": "minecraft:planks"
-    },
-    "^": {
-      "item": "minecraft:iron_nugget"
-    }
+    "@": "#minecraft:planks",
+    "^": "minecraft:iron_nugget"
   },
   "pattern": [
     "@^@",

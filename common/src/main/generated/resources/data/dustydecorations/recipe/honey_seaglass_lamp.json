@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "seaglass_lamps",
   "key": {
-    "#": {
-      "item": "dustydecorations:honey_seaglass"
-    },
-    "@": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "I": {
-      "item": "minecraft:copper_ingot"
-    }
+    "#": "dustydecorations:honey_seaglass",
+    "@": "minecraft:redstone_lamp",
+    "I": "minecraft:copper_ingot"
   },
   "pattern": [
     " # ",

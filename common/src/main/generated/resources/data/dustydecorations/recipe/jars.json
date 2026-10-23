@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "minecraft:terracotta"
-    },
-    "@": {
-      "tag": "c:glass_blocks/cheap"
-    }
+    "#": "#minecraft:terracotta",
+    "@": "#c:glass_blocks/cheap"
   },
   "pattern": [
     "@@",

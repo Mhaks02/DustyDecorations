@@ -1,6 +1,0 @@
-{
-  "parent": "dustydecorations:block/template_wicker_basket_produce",
-  "textures": {
-    "produce": "dustydecorations:block/sea_pickle_wicker_basket"
-  }
-}

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:paper"
-    },
-    "@": {
-      "tag": "c:foods/raw_meat"
-    }
+    "#": "minecraft:paper",
+    "@": "#c:foods/raw_meat"
   },
   "pattern": [
     " # ",

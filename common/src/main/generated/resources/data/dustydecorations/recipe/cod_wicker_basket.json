@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:cod"
-    },
-    {
-      "item": "minecraft:cod"
-    },
-    {
-      "item": "minecraft:cod"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:cod",
+    "minecraft:cod",
+    "minecraft:cod",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

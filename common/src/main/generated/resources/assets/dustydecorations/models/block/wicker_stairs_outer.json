@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "dustydecorations:block/wicker",
-    "side": "dustydecorations:block/wicker",
-    "top": "dustydecorations:block/wicker"
-  }
-}

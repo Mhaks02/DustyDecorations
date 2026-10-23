@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:carved_beetroot"
-    },
-    "I": {
-      "item": "minecraft:torch"
-    }
+    "#": "dustydecorations:carved_beetroot",
+    "I": "minecraft:torch"
   },
   "pattern": [
     "#",

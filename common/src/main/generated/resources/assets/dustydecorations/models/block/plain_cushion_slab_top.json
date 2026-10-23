@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "dustydecorations:block/plain_cushion",
-    "side": "dustydecorations:block/plain_cushion",
-    "top": "dustydecorations:block/plain_cushion"
-  }
-}

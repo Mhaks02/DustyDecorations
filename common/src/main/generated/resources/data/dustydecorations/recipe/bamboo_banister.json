@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "banisters",
   "key": {
-    "B": {
-      "item": "minecraft:bamboo_block"
-    },
-    "F": {
-      "item": "minecraft:bamboo_fence"
-    }
+    "B": "minecraft:bamboo_block",
+    "F": "minecraft:bamboo_fence"
   },
   "pattern": [
     "BFB"

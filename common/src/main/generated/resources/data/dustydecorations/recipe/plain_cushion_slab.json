@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "dustydecorations:plain_cushion"
-    }
+    "#": "dustydecorations:plain_cushion"
   },
   "pattern": [
     "###"

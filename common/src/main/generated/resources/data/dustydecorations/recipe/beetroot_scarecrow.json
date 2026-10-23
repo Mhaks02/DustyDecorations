@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:hay_block"
-    },
-    "@": {
-      "item": "dustydecorations:carved_beetroot"
-    },
-    "I": {
-      "item": "minecraft:stick"
-    },
-    "^": {
-      "item": "minecraft:wheat"
-    },
-    "~": {
-      "item": "dustydecorations:burlap"
-    }
+    "#": "minecraft:hay_block",
+    "@": "dustydecorations:carved_beetroot",
+    "I": "minecraft:stick",
+    "^": "minecraft:wheat",
+    "~": "dustydecorations:burlap"
   },
   "pattern": [
     "~@~",

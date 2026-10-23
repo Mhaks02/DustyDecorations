@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:brown_wool"
-    },
-    "@": {
-      "item": "minecraft:map"
-    },
-    "^": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "minecraft:brown_wool",
+    "@": "minecraft:map",
+    "^": "minecraft:gold_ingot"
   },
   "pattern": [
     " @",

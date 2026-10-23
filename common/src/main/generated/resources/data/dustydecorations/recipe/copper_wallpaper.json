@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:cyan_wool"
-    },
-    "@": {
-      "item": "minecraft:copper_ingot"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "#": "minecraft:cyan_wool",
+    "@": "minecraft:copper_ingot",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

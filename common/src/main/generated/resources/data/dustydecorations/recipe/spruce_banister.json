@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "banisters",
   "key": {
-    "#": {
-      "item": "minecraft:spruce_fence"
-    }
+    "#": "minecraft:spruce_fence"
   },
   "pattern": [
     "###"

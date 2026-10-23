@@ -2,20 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:light_blue_wool"
-    },
+    "#": "minecraft:light_blue_wool",
     "@": [
-      {
-        "item": "minecraft:pumpkin"
-      },
-      {
-        "item": "minecraft:jack_o_lantern"
-      }
+      "minecraft:pumpkin",
+      "minecraft:jack_o_lantern"
     ],
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

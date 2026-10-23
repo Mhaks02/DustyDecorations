@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "dustydecorations:paper_lantern"
-    },
-    {
-      "item": "minecraft:gunpowder"
-    }
+    "dustydecorations:creeper_paper_lantern",
+    "minecraft:gunpowder"
   ],
   "result": {
     "count": 1,

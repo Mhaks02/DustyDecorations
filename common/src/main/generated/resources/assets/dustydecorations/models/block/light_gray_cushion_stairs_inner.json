@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "dustydecorations:block/light_gray_cushion",
-    "side": "dustydecorations:block/light_gray_cushion",
-    "top": "dustydecorations:block/light_gray_cushion"
-  }
-}

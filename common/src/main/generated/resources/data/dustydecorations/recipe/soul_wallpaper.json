@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:purple_wool"
-    },
-    "@": {
-      "item": "minecraft:soul_sand"
-    },
-    "~": {
-      "item": "minecraft:paper"
-    }
+    "#": "minecraft:purple_wool",
+    "@": "minecraft:soul_sand",
+    "~": "minecraft:paper"
   },
   "pattern": [
     "~@",

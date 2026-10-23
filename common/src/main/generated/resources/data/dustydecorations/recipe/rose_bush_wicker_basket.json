@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:rose_bush"
-    },
-    {
-      "item": "minecraft:rose_bush"
-    },
-    {
-      "item": "minecraft:rose_bush"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:rose_bush",
+    "minecraft:rose_bush",
+    "minecraft:rose_bush",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

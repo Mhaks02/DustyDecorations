@@ -1,6 +1,0 @@
-{
-  "parent": "dustydecorations:block/template_fishing_lures",
-  "textures": {
-    "0": "dustydecorations:block/fishing_lures/1"
-  }
-}

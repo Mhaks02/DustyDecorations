@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:scattered_gold_coins"
-    }
+    "#": "dustydecorations:scattered_gold_coins"
   },
   "pattern": [
     "##",

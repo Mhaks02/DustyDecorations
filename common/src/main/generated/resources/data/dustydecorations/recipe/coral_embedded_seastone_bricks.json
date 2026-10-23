@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "dustydecorations:seastone_bricks"
-    },
-    "@": {
-      "tag": "c:corals"
-    }
+    "#": "dustydecorations:seastone_bricks",
+    "@": "#c:corals"
   },
   "pattern": [
     "###",

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "dustydecorations:jars"
-    },
-    "~": {
-      "item": "dustydecorations:empty_small_shelf"
-    }
+    "#": "dustydecorations:jars",
+    "~": "dustydecorations:empty_small_shelf"
   },
   "pattern": [
     "#",

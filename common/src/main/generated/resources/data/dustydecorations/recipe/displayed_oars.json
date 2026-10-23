@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "@": {
-      "item": "minecraft:wooden_shovel"
-    },
-    "I": {
-      "item": "minecraft:stick"
-    },
-    "~": {
-      "tag": "c:ropes"
-    }
+    "@": "minecraft:wooden_shovel",
+    "I": "minecraft:stick",
+    "~": "#c:ropes"
   },
   "pattern": [
     "@ @",

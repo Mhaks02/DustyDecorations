@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "wicker_baskets",
   "ingredients": [
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "dustydecorations:wicker_basket"
-    }
+    "minecraft:beetroot",
+    "minecraft:beetroot",
+    "minecraft:beetroot",
+    "dustydecorations:wicker_basket"
   ],
   "result": {
     "count": 1,

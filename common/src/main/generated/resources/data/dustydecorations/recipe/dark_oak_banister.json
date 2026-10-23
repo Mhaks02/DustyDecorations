@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "banisters",
   "key": {
-    "#": {
-      "item": "minecraft:dark_oak_fence"
-    }
+    "#": "minecraft:dark_oak_fence"
   },
   "pattern": [
     "###"

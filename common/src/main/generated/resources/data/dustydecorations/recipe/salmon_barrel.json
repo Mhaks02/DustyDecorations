@@ -1,23 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "#": {
-      "item": "minecraft:salmon"
-    },
-    "@": [
-      {
-        "item": "minecraft:barrel"
-      },
-      {
-        "item": "dustydecorations:empty_barrel"
-      }
+  "ingredients": [
+    "minecraft:salmon",
+    [
+      "minecraft:barrel",
+      "dustydecorations:empty_barrel"
     ]
-  },
-  "pattern": [
-    "###",
-    "#@#",
-    "###"
   ],
   "result": {
     "count": 1,

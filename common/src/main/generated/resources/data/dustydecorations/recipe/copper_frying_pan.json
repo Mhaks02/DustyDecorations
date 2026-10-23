@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:copper_ingot"
-    },
-    "~": {
-      "tag": "c:nuggets/copper"
-    }
+    "#": "minecraft:copper_ingot",
+    "~": "#c:nuggets/copper"
   },
   "pattern": [
     "~  ",
