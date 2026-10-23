@@ -24,6 +24,7 @@ public class ModTags {
         public static final TagKey<Block> QUOINS = createTag("quoins");
         public static final TagKey<Block> MURALS = createTag("murals");
 
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.create(Registries.BLOCK, ModConstants.identifierOf(name));
         }
@@ -41,9 +42,6 @@ public class ModTags {
 
         public static final TagKey<Item> NAUTILUS_SHELLS = bindTag("nautilus_shells");
         public static final TagKey<Item> COLD_SEAGLASS_FRAGMENTS = bindTag("cold_seaglass_fragments");
-
-        public static final TagKey<Item> NUGGETS = bindCommonTag("nuggets");
-        public static final TagKey<Item> COPPER_NUGGETS = bindCommonTag("nuggets/copper");
 
 
         private static TagKey<Item> bindTag(String name) {
