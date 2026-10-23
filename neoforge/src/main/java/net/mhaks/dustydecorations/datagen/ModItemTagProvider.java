@@ -58,5 +58,21 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.COPPER_NUGGET.get());
         tag(ModTags.Items.NUGGETS)
                 .addTag(ModTags.Items.COPPER_NUGGETS);
+
+        tag(Tags.Items.ROPES)
+                .add(ModBlocks.ROPE.get().asItem());
+
+
+        copy(ModTags.Blocks.BANISTERS, ModTags.Items.BANISTERS);
+        copy(ModTags.Blocks.LARGE_SHELVES, ModTags.Items.LARGE_SHELVES);
+        copy(ModTags.Blocks.BARRELS, ModTags.Items.BARRELS);
+        copy(ModTags.Blocks.WOOL_AWNINGS, ModTags.Items.WOOL_AWNINGS);
+        copy(ModTags.Blocks.PAPER_LANTERNS, ModTags.Items.PAPER_LANTERNS);
+        copy(ModTags.Blocks.SEAGLASS_LAMPS, ModTags.Items.SEAGLASS_LAMPS);
+        copy(ModTags.Blocks.WICKER_BASKETS, ModTags.Items.WICKER_BASKETS);
+        copy(ModTags.Blocks.SCARECROWS, ModTags.Items.SCARECROWS);
+        copy(ModTags.Blocks.CUSHIONS, ModTags.Items.CUSHIONS);
+        copy(ModTags.Blocks.QUOINS, ModTags.Items.QUOINS);
+        copy(ModTags.Blocks.MURALS, ModTags.Items.MURALS);
     }
 }

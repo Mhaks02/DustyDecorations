@@ -35,9 +35,17 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> CORALS = bindCommonTag("corals");
 
-//        public static final TagKey<Item> BANISTERS = bindTag("banisters");
-//        public static final TagKey<Item> LARGE_SHELVES = bindTag("large_shelves");
-//        public static final TagKey<Item> BARRELS = bindTag("BARRELS");
+        public static final TagKey<Item> BANISTERS = bindTag("banisters");
+        public static final TagKey<Item> LARGE_SHELVES = bindTag("large_shelves");
+        public static final TagKey<Item> BARRELS = bindTag("barrels");
+        public static final TagKey<Item> WOOL_AWNINGS = bindTag("wool_awnings");
+        public static final TagKey<Item> PAPER_LANTERNS = bindTag("paper_lanterns");
+        public static final TagKey<Item> SEAGLASS_LAMPS = bindTag("seaglass_lamps");
+        public static final TagKey<Item> WICKER_BASKETS = bindTag("wicker_baskets");
+        public static final TagKey<Item> SCARECROWS = bindTag("scarecrows");
+        public static final TagKey<Item> CUSHIONS = bindTag("cushions");
+        public static final TagKey<Item> QUOINS = bindTag("quoins");
+        public static final TagKey<Item> MURALS = bindTag("murals");
 
         public static final TagKey<Item> NAUTILUS_SHELLS = bindTag("nautilus_shells");
         public static final TagKey<Item> COLD_SEAGLASS_FRAGMENTS = bindTag("cold_seaglass_fragments");
@@ -49,14 +57,8 @@ public class ModTags {
         private static TagKey<Item> bindTag(String name) {
             return TagKey.create(Registries.ITEM, ModConstants.identifierOf(name));
         }
-        private static TagKey<Item> createTag(final ResourceLocation name) {
-            return TagKey.create(Registries.ITEM, name);
-        }
         private static TagKey<Item> bindCommonTag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", name));
-        }
-        private static TagKey<Item> createCommonTag(final ResourceLocation name) {
-            return TagKey.create(Registries.ITEM, name);
         }
     }
 
