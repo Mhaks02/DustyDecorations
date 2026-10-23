@@ -7,27 +7,23 @@ import net.mhaks.dustydecorations.block.custom.GoldCoinsLayerBlock;
 import net.mhaks.dustydecorations.registration.RegistryObject;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.models.model.ModelLocationUtils;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
 import java.util.function.Function;
-
+/*
 public class ModBlockStateProvider extends BlockStateProvider {
     private static final String BLOCK_FOLDER = "block/";
     private static final String ITEM_FOLDER = "item/";
-    private static final ResourceLocation GENERATED = ResourceLocation.tryParse("item/generated");
+    private static final Identifier GENERATED = Identifier.tryParse("item/generated");
 
-    private static final ResourceLocation CUTOUT = ResourceLocation.tryParse("cutout");
-    private static final ResourceLocation TRANSLUCENT = ResourceLocation.tryParse("translucent");
+    private static final Identifier CUTOUT = Identifier.tryParse("cutout");
+    private static final Identifier TRANSLUCENT = Identifier.tryParse("translucent");
 
     private static final String FLAT = "flat";
     private static final String TOP = "_top";
@@ -934,42 +930,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(block.get(), models().cubeAll(block.getId().getPath(), getBlockPath(blockTexture, textureSuffix)));
     }
     private void stairsBlockAndItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> allSidesTexture) {
-        ResourceLocation texture = blockTexture(allSidesTexture.get());
+        Identifier texture = blockTexture(allSidesTexture.get());
         stairsBlock((StairBlock) stairBlock.get(), texture, texture, texture);
         blockItem(stairBlock);
     }
     private void stairsBlockAndItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> allSidesTexture, String suffix) {
-        ResourceLocation texture = getBlockPath(allSidesTexture, suffix);
+        Identifier texture = getBlockPath(allSidesTexture, suffix);
         stairsBlock((StairBlock) stairBlock.get(), texture, texture, texture);
         blockItem(stairBlock);
     }
     private void stairsBlockAndItem(RegistryObject<Block, Block> stairBlock, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
-        ResourceLocation side = getBlockPath(sideTexture, SIDE);
-        ResourceLocation end = getBlockPath(endTexture, END);
+        Identifier side = getBlockPath(sideTexture, SIDE);
+        Identifier end = getBlockPath(endTexture, END);
         stairsBlock((StairBlock) stairBlock.get(), side, end, end);
         blockItem(stairBlock);
     }
     private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture) {
-        ResourceLocation texture = blockTexture(doubleSlabSideEndTexture.get());
+        Identifier texture = blockTexture(doubleSlabSideEndTexture.get());
         slabBlock((SlabBlock) slabBlock.get(), texture, texture, texture, texture);
         blockItem(slabBlock);
     }
     private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabSideEndTexture, String suffix) {
-        ResourceLocation doubleSlab = blockTexture(doubleSlabSideEndTexture.get());
-        ResourceLocation texture = getBlockPath(doubleSlabSideEndTexture, suffix);
+        Identifier doubleSlab = blockTexture(doubleSlabSideEndTexture.get());
+        Identifier texture = getBlockPath(doubleSlabSideEndTexture, suffix);
         slabBlock((SlabBlock) slabBlock.get(), doubleSlab, texture, texture, texture);
         blockItem(slabBlock);
     }
     private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideEndTexture) {
-        ResourceLocation doubleSlab = blockTexture(doubleSlabTexture.get());
-        ResourceLocation texture = blockTexture(sideEndTexture.get());
+        Identifier doubleSlab = blockTexture(doubleSlabTexture.get());
+        Identifier texture = blockTexture(sideEndTexture.get());
         slabBlock((SlabBlock) slabBlock.get(), doubleSlab, texture, texture, texture);
         blockItem(slabBlock);
     }
     private void slabBlockAndItem(RegistryObject<Block, Block> slabBlock, RegistryObject<Block, Block> doubleSlabTexture, RegistryObject<Block, Block> sideTexture, RegistryObject<Block, Block> endTexture) {
-        ResourceLocation doubleSlab = blockTexture(doubleSlabTexture.get());
-        ResourceLocation side = getBlockPath(sideTexture, SIDE);
-        ResourceLocation end = getBlockPath(endTexture, END);
+        Identifier doubleSlab = blockTexture(doubleSlabTexture.get());
+        Identifier side = getBlockPath(sideTexture, SIDE);
+        Identifier end = getBlockPath(endTexture, END);
         slabBlock((SlabBlock) slabBlock.get(), doubleSlab, side, end, end);
         blockItem(slabBlock);
     }
@@ -1054,7 +1050,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     //TODO: maybe change the texture someday cuz it's wacky but oh well
     private void waxedFenceBlockAndItem(RegistryObject<Block, Block> waxedFenceBlock) {
         String waxed = waxedFenceBlock.getId().getPath();
-        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxed.substring(6));
+        Identifier nonWaxedTexture = modLoc(BLOCK_FOLDER + waxed.substring(6));
         fenceBlock((FenceBlock) waxedFenceBlock.get(), nonWaxedTexture);
         itemModels().withExistingParent(ITEM_FOLDER + waxed, mcLoc(BLOCK_FOLDER + "fence_inventory"))
                 .texture("texture", modLoc(BLOCK_FOLDER + waxed));
@@ -1077,7 +1073,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void waxedTrapdoorBlockAndItem(RegistryObject<Block, Block> waxedTrapdoorBlock, RegistryObject<Block, Block> textureBlock) {
         String waxed = waxedTrapdoorBlock.getId().getPath();
         String waxedTexture = textureBlock.getId().getPath();
-        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
+        Identifier nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
         trapdoorBlock((TrapDoorBlock) waxedTrapdoorBlock.get(), nonWaxedTexture, true);
         itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed + BOTTOM))
                 .texture("texture", BLOCK_FOLDER + waxedTexture);
@@ -1086,7 +1082,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void waxedPressurePlateBlockAndItem(RegistryObject<Block, Block> waxedPressurePlateBlock, RegistryObject<Block, Block> textureBlock) {
         String waxed = waxedPressurePlateBlock.getId().getPath();
         String waxedTexture = textureBlock.getId().getPath();
-        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
+        Identifier nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
         pressurePlateBlock((PressurePlateBlock) waxedPressurePlateBlock.get(), nonWaxedTexture);
         itemModels().withExistingParent(ITEM_FOLDER + waxed, modLoc(BLOCK_FOLDER + waxed))
                 .texture("texture", BLOCK_FOLDER + waxedTexture);
@@ -1095,7 +1091,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void waxedButtonBlockAndItem(RegistryObject<Block, Block> waxedButtonBlock, RegistryObject<Block, Block> textureBlock) {
         String waxed = waxedButtonBlock.getId().getPath();
         String waxedTexture = textureBlock.getId().getPath();
-        ResourceLocation nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
+        Identifier nonWaxedTexture = modLoc(BLOCK_FOLDER + waxedTexture.substring(6));
         buttonBlock((ButtonBlock) waxedButtonBlock.get(), nonWaxedTexture);
         itemModels().withExistingParent(ITEM_FOLDER + waxed, mcLoc(BLOCK_FOLDER + "button_inventory"))
                 .texture("texture", modLoc(BLOCK_FOLDER + waxedTexture));
@@ -1136,11 +1132,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
 
-    private ResourceLocation getBlockPath(RegistryObject<Block, Block> block) {
+    private Identifier getBlockPath(RegistryObject<Block, Block> block) {
         return ModelLocationUtils.getModelLocation(block.get());
     }
-    private ResourceLocation getBlockPath(RegistryObject<Block, Block> block, String suffix) {
+    private Identifier getBlockPath(RegistryObject<Block, Block> block, String suffix) {
         return ModelLocationUtils.getModelLocation(block.get(), suffix);
     }
 
 }
+
+ */
