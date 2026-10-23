@@ -52,5 +52,8 @@ public class ModItemTagProvider extends net.neoforged.neoforge.common.data.ItemT
                 .add(Blocks.HORN_CORAL.asItem())
                 .add(Blocks.TUBE_CORAL.asItem());
 
+        tag(Tags.Items.ROPES)
+                .add(ModBlocks.ROPE.get().asItem());
+
     }
 }
